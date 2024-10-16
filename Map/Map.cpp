@@ -1,6 +1,8 @@
 #include "Map.h"
 
 //DEFINING CLASS MEMBERS FOR MAP
+vector<Continent*> Map::continents;
+
 //CONSTRUCTORS 
 Map::Map() {
     
@@ -36,10 +38,10 @@ void Map::setContinents(vector<Continent*> continents) {
     Map::continents = continents;
 }
 
-bool Map::validate() const {
+bool Map::validate() {
     bool firstEntry = true;
     
-    for (Continent* c : continents) {
+    for (Continent* c : Map::continents) {
         for (Territory* t : c->getTerritories()) {
             if (firstEntry) {
                 recursiveFind(*t); //Determine which Territories can be reached or "found" along a traversal starting from an arbitrary territory.
@@ -94,12 +96,12 @@ string MapLoader::getFilePath() const {
     return this->filePath;
 }
 
-Map* MapLoader::loadMap() {
+bool MapLoader::loadMap() {
     std::ifstream file(filePath);
     if (!file.is_open()) {
         cout << "in file not open" << endl;
         cout << "Failed to open the map file." << endl;
-        return NULL;
+        return false;
     }
 
     string line;
@@ -148,7 +150,7 @@ Map* MapLoader::loadMap() {
                 continents.push_back(c);
             } else {
                 cout << "Map contains invalid Continent specifications" << endl;
-                return NULL;
+                return false;
             }
         }
 
@@ -182,7 +184,7 @@ Map* MapLoader::loadMap() {
                     } else {
                         cout << "Continent Processed: " << currentContinent << endl;
                         cout << "Continent Expected: " << continents[0]->getName() << endl;
-                        return NULL;
+                        return false;
                     }
                 } else if (currentContinent.compare(match.str(5)) == 0) {
                     territoriesInContinent.back()++;
@@ -193,12 +195,12 @@ Map* MapLoader::loadMap() {
                     } else {
                         cout << "Continent Processed: " << currentContinent << endl;
                         cout << "Continent Expected: " << continents[territoriesInContinent.size()]->getName() << endl;
-                        return NULL;
+                        return false;
                     }
                 }
             } else {
                 cout << "Map contains invalid Territory specifications" << endl;
-                return NULL;
+                return false;
             }
         } 
     }
@@ -229,9 +231,8 @@ Map* MapLoader::loadMap() {
         delete t;
     }
 
-    Map *map = new Map(continents);
-    return map;
-    
+    Map::setContinents(continents);
+    return true;
 }
 
 ostream& operator<<(ostream& os, const MapLoader& mapLoader) {

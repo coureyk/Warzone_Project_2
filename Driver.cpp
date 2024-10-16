@@ -48,4 +48,12 @@ int main(int argc, char* argv[]) {
     waitForEnter();
     testGameStates();
     std::cout << "testGameStates() is finished" << std::endl;
+
+    //Deallocate memory for Map
+    for (Continent* c : Map::getContinents()) {
+        for (Territory* t : c->getTerritories()) {
+            delete t;
+        }
+        delete c;
+    }
 }

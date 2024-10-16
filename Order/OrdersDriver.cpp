@@ -1,11 +1,11 @@
 #include "OrdersDriver.h"
 
 void testOrdersLists() {
-    Deploy o1(5, "Turkey");
-    Advance o2(10, "Germany", "Russia");
-    Bomb o3("Canada");
-    Blockade o4("Mexico");
-    Airlift o5(10, "Wisconsin", "Tallahassee");
+    Deploy o1("Kevin", 5, "Turkey");
+    Advance o2("Kevin", 10, "Germany", "Russia");
+    Bomb o3("Kevin", "Canada");
+    Blockade o4("Kevin", "Mexico");
+    Airlift o5("Kevin", 10, "Wisconsin", "Tallahassee");
     Negotiate o6("Kevin", "Liam");
 
     o1.execute(); //execute calls validate()

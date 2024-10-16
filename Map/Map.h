@@ -32,7 +32,7 @@ public:
     static void setContinents(vector<Continent*>);
 
     //User-Defined Functions
-    bool validate() const;
+    static bool validate();
     static void recursiveFind(Territory& t);
 
 };
@@ -48,7 +48,7 @@ private:
 public: 
     MapLoader(string filePath);
     string getFilePath() const;
-    Map* loadMap(); // Loads a map from a file
+    bool loadMap(); // Loads a map from a file
 };
 
 //Overload operator<<

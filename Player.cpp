@@ -65,39 +65,39 @@ std::cout << R"HERE(Which order would you like to issue?
 
 	int input = 0;
 	std::cin >> input;
-	Bomb* bomb = new Bomb("");
+	Bomb* bomb = new Bomb("Liam", "");
 	switch (input) {
 	case 1:
 	{
-		Deploy* deploy = new Deploy(0, "");
+		Deploy* deploy = new Deploy("Liam", 0, "");
 		ordersList->addLast(deploy);
 		std::cout << "Deploy added";
 	}
 	break;
 	case 2:
 	{
-		Advance* advance = new Advance(0, "", "");
+		Advance* advance = new Advance("Liam", 0, "", "");
 		ordersList->addLast(advance);
 		std::cout << "Advance added";
 	}
 	break;
 	case 3:
 	{
-		Bomb* bomb = new Bomb(0);
+		Bomb* bomb = new Bomb("Liam", 0);
 		ordersList->addLast(bomb);
 		std::cout << "Bomb added";
 	}
 	break;
 	case 4:
 	{
-		Blockade* blockade = new Blockade("");
+		Blockade* blockade = new Blockade("Liam", "");
 		ordersList->addLast(blockade);
 		std::cout << "Blockade added";
 	}
 	break;
 	case 5:
 	{
-		Airlift* airlift = new Airlift(0, "", "");
+		Airlift* airlift = new Airlift("Liam", 0, "", "");
 		ordersList->addLast(airlift);
 		std::cout << "Airlift added";
 	}
@@ -191,7 +191,7 @@ void testPlayers() {
 
 	OrdersList* list = new OrdersList;
 
-	Deploy* order1 = new Deploy(1, std::string("Alaska"));
+	Deploy* order1 = new Deploy("Liam", 1, std::string("Alaska"));
 
 	list->addLast(order1);
 
