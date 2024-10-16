@@ -6,6 +6,7 @@ Territory::Territory() {
     neighbors = vector<Territory*>(); //initializing neighbors as empty vector
     armies = 0;
     wasVisited = false;
+    owner = "None";
 }
 
 Territory::Territory(string name) {
@@ -13,6 +14,7 @@ Territory::Territory(string name) {
     neighbors = vector<Territory*>(); //initializing neighbors as empty vector
     armies = 0;
     wasVisited = false;
+    owner = "None";
 }
 
 Territory::Territory(const Territory& other) {
@@ -20,6 +22,7 @@ Territory::Territory(const Territory& other) {
     neighbors = other.getNeighbors(); //shallow copy. To be corrected in A2.
     armies = other.getArmies();
     wasVisited = other.getVisitedStatus();
+    owner = other.getOwner();
 }
 
 //DESTRUCTOR
@@ -35,6 +38,7 @@ Territory& Territory::operator=(const Territory& other) {
         neighbors = other.getNeighbors();
         armies = other.getArmies();
         wasVisited = other.getVisitedStatus();
+        owner = other.getOwner();
     }
     return *this;
 }
@@ -56,6 +60,10 @@ bool Territory::getVisitedStatus() const {
     return wasVisited;
 }
 
+string Territory::getOwner() const {
+    return owner;
+}
+
 //SETTERS
 void Territory::setName(string name) {
     this->name = name;
@@ -71,6 +79,10 @@ void Territory::setArmies(int armies) {
 
 void Territory::setVisitedStatus(bool visitedStatus) {
     this->wasVisited = visitedStatus;
+}
+
+void Territory::setOwner(string owner) {
+    this->owner = owner;
 }
 
 //USER-DEFINED FUNCTIONS

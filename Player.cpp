@@ -2,27 +2,18 @@
 #include <iostream>
 
 Player::Player(const std::vector<Territory>& territories, const OrdersList& ordersList, const Hand& hand) {
-
 	this->territories = new std::vector<Territory>(territories);
-
 	this->ordersList = new OrdersList(ordersList);
-
 	this->hand = new Hand(hand);
-
 }
 
 Player::Player() {
-
 	territories = new std::vector<Territory>;
-
 	ordersList = new OrdersList;
-
 	hand = new Hand;
-
 }
 
 Player::Player(const Player& otherPlayer) {
-
 	if (otherPlayer.territories != nullptr) {
 		territories = new std::vector<Territory>(*otherPlayer.territories);
 	}
@@ -30,14 +21,12 @@ Player::Player(const Player& otherPlayer) {
 		territories = nullptr;
 	}
 
-
 	if (otherPlayer.ordersList != nullptr) {
 		ordersList = new OrdersList(*otherPlayer.ordersList);
 	}
 	else {
 		ordersList = nullptr;
 	}
-
 
 	if (otherPlayer.hand != nullptr) {
 		hand = new Hand(*otherPlayer.hand);
@@ -53,27 +42,20 @@ Player::~Player() {
 	delete hand;
 }
 
-
-
 std::vector<Territory>* Player::toDefend() {
-
 	std::vector<Territory>* territories = new std::vector<Territory>;
 	std::cout << "These territories are to be defended. Whatever that entails";
 	return territories;
-
 }
 
 std::vector<Territory>* Player::toAttack() {
-
 	std::vector<Territory>* territories = new std::vector<Territory>;
 	std::cout << "These territories are to be attacked. Whatever that entails";
 	return territories;
-
 }
 
 void Player::issueOrder() {
-
-	std::cout << R"HERE(Which order would you like to issue?
+std::cout << R"HERE(Which order would you like to issue?
 \nEnter 1 for Deploy
 \nEnter 2 for Advance
 \nEnter 3 for Bomb
@@ -82,13 +64,9 @@ void Player::issueOrder() {
 \nEnter 6 for Negotiate\n)HERE" << std::endl;
 
 	int input = 0;
-
 	std::cin >> input;
-
 	Bomb* bomb = new Bomb("");
-
 	switch (input) {
-
 	case 1:
 	{
 		Deploy* deploy = new Deploy(0, "");
@@ -134,12 +112,9 @@ void Player::issueOrder() {
 	default:
 		std::cout << "Not a valid input.";
 	}
-
-
 }
 
 Player& Player::operator=(const Player& otherPlayer) {
-
 	if (this == &otherPlayer)
 		return *this;
 
@@ -153,20 +128,16 @@ Player& Player::operator=(const Player& otherPlayer) {
 	}
 	ordersList = new OrdersList(*otherPlayer.ordersList);
 
-
 	if (hand != nullptr) {
 		delete hand;
 	}
 	hand = new Hand(*otherPlayer.hand);
 
 	return *this;
-
-
 }
 
 
 //FOR NOW
-
 void Player::toString() {
 
 }

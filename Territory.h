@@ -14,6 +14,7 @@ private:
     vector<Territory*> neighbors;
     int armies;
     bool wasVisited;
+    string owner;
 
 public:
     //Constructors
@@ -32,12 +33,14 @@ public:
     vector<Territory*> getNeighbors() const;
     int getArmies() const;
     bool getVisitedStatus() const;
+    string getOwner() const;
 
     //Setters
     void setName(string name);
     void setNeighbors(vector<Territory*> neighbors);
     void setArmies(int armies);
     void setVisitedStatus(bool visitedStatus);
+    void setOwner(string owner);
 
     //User-defined functions
     void addNeighbor(Territory* territory);

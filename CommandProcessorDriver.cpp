@@ -1,11 +1,4 @@
-#include <iostream>
-#include "CommandProcessing.h"
-
-class CommandProcessorInteractiveDriver {
-public:
-    static void testInteractiveConsole();
-    static void testFileInput(const std::string& filename);
-};
+#include "CommandProcessorDriver.h"
 
 void CommandProcessorInteractiveDriver::testInteractiveConsole() {
     std::cout << "Interactive CommandProcessor Test" << std::endl;
@@ -79,16 +72,12 @@ void CommandProcessorInteractiveDriver::testFileInput(const std::string& filenam
     }*/
 }
 
-int main(int argc, char* argv[]) {
-    
+void testCommandProcessor(int argc, char* argv[]) {
     if (argc == 2 && std::string(argv[1]) == "-console") {
         CommandProcessorInteractiveDriver::testInteractiveConsole();
     } else if (argc == 3 && std::string(argv[1]) == "-file") {
         CommandProcessorInteractiveDriver::testFileInput(argv[2]);
     } else {
         std::cerr << "Usage: " << argv[0] << " -console OR " << argv[0] << " -file <filename>" << std::endl;
-        return 1;
     }
-
-    return 0;
 }
