@@ -1,5 +1,6 @@
 #include "CommandProcessorDriver.h"
 
+
 void CommandProcessorInteractiveDriver::testInteractiveConsole() {
     std::cout << "Interactive CommandProcessor Test" << std::endl;
     std::cout << "Enter commands manually (type 'exit' to quit):" << std::endl;
@@ -7,37 +8,15 @@ void CommandProcessorInteractiveDriver::testInteractiveConsole() {
     CommandProcessor processor;
 
     while (true) {
+        Command* command = processor.getCommand();  // Get command from console input
 
-
-        // Prompt user for input
-        /*
-        std::cout << "\nEnter command: ";
-        std::string userInput;
-        std::getline(std::cin, userInput);
-        */
-        processor.getCommand();
-    
-
-        // Exit condition
-       /* if (userInput == "exit") {
+        // Check if the user wants to exit
+        if (command && command->getCommandText() == "exit") {
             std::cout << "Exiting interactive test." << std::endl;
             break;
         }
 
-        // Create a Command object from user input
-        Command* command = new Command(userInput);
-        */
-
-        // Validate the command and get the result
-       // bool isValid = processor.validate(command);
-      
-
-        // Display results
-       /* std::cout << "Command: " << userInput << " | Valid: "
-                  << (isValid ? "Yes" : "No") << " | Effect: " 
-                  << *command << std::endl;*/
-
-
+        // Command processing and output handled by `getCommand()`
     }
 }
 
@@ -45,39 +24,36 @@ void CommandProcessorInteractiveDriver::testFileInput(const std::string& filenam
     std::cout << "Testing FileCommandProcessorAdapter with file input:" << std::endl;
 
     FileCommandProcessorAdapter fileProcessor(filename);
-    Command* command;
 
-    // Loop to read all commands in the file
-    while ((command = fileProcessor.getCommand()) != nullptr) {
-        // Display the current state after each command
-       // std::cout << "Current State: " << fileProcessor.getCurrentState() << std::endl;
+    while (true) {
+        Command* command = fileProcessor.getCommand();  // Read command from file
+        if (!command) break;  // End of file or null command
 
-        // Command output is handled within getCommand(), so no need to print here again
-        // The command is managed by CommandProcessor, so no need to delete here
+        // Command processing and output handled by `getCommand()`
     }
-   /* Command* command;
-
-    while ((command = fileProcessor.getCommand()) != nullptr) {
-    
-
-        // Validate the command and get the result
-        bool isValid = fileProcessor.validate(command);
-
-        // Display results
-        std::cout << "Command: " << command->getCommandText() << " | Valid: "
-                  << (isValid ? "Yes" : "No") << " | Effect: "
-                  << *command << std::endl;
-
-      
-    }*/
 }
 
 void testCommandProcessor(int argc, char* argv[]) {
-    if (argc == 2 && std::string(argv[1]) == "-console") {
+    std::string inputMode;
+    std::cout << "Choose input mode:\n";
+    std::cout << "1. Console mode\n";
+    std::cout << "2. File mode\n";
+    std::cout << "Enter '1' for console or '2' for file: ";
+    std::getline(std::cin, inputMode);
+
+    if (inputMode == "1") {
+        // Console mode
         CommandProcessorInteractiveDriver::testInteractiveConsole();
-    } else if (argc == 3 && std::string(argv[1]) == "-file") {
-        CommandProcessorInteractiveDriver::testFileInput(argv[2]);
-    } else {
-        std::cerr << "Usage: " << argv[0] << " -console OR " << argv[0] << " -file <filename>" << std::endl;
+    } 
+    else if (inputMode == "2") {
+        // File mode
+        std::string filename;
+        std::cout << "Enter the file name: ";
+        std::getline(std::cin, filename);
+
+        CommandProcessorInteractiveDriver::testFileInput(filename);
+    } 
+    else {
+        std::cerr << "Invalid input. Please restart and enter '1' or '2'." << std::endl;
     }
 }

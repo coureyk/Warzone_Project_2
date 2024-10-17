@@ -134,26 +134,67 @@ bool CommandProcessor::validate(Command* command) {
 void CommandProcessor::saveEffect(Command* command, const std::string& effect) {
     command->saveEffect(effect);
 }
-
-
-FileCommandProcessorAdapter::FileCommandProcessorAdapter(const std::string& filename) : commandFile(new std::ifstream(filename)) {
+std::string CommandProcessor::getCurrentState() const {
+    switch (currentState) {
+        case Start: return "Start";
+        case MapLoaded: return "MapLoaded";
+        case MapValidated: return "MapValidated";
+        case PlayersAdded: return "PlayersAdded";
+        case AssignReinforcement: return "AssignReinforcement";
+        case Win: return "Win";
+        case ExitProgram: return "ExitProgram";
+        default: return "Unknown";
+    }
+}
+std::ostream& operator<<(std::ostream& os, const CommandProcessor& processor) {
+    os << "Current State: " << processor.getCurrentState() << "\nCommands:\n";
+    for (const auto& command : *processor.commands) {  // This should work
+        os << *command << "\n";
+    }
+    return os;
+}
+FileCommandReader::FileCommandReader(const std::string& filename) : filename(filename) {
+    commandFile = new std::ifstream(filename);
     if (!commandFile->is_open()) {
-        std::cerr << "Failed to open command file." << std::endl;
+        std::cerr << "Failed to open command file: " << filename << std::endl;
     }
 }
 
-FileCommandProcessorAdapter::~FileCommandProcessorAdapter() {
+// Destructor
+FileCommandReader::~FileCommandReader() {
     if (commandFile->is_open()) commandFile->close();
     delete commandFile;
 }
 
-Command* FileCommandProcessorAdapter::getCommand() {
-    if (!commandFile->is_open() || commandFile->eof()) return nullptr;
-
+std::string FileCommandReader::readCommandFromFile() {
     std::string commandText;
-    std::getline(*commandFile, commandText);
+    if (commandFile->is_open() && std::getline(*commandFile, commandText)) {
+        return commandText;
+    }
+    return "";  // Return an empty string if the file is closed or at the end
+}
+
+bool FileCommandReader::eof() const {
+    return !commandFile->is_open() || commandFile->eof();
+}
+FileCommandProcessorAdapter::FileCommandProcessorAdapter(const std::string& filename)
+    : fileCommandReader(new FileCommandReader(filename)) {}
+
+// Destructor
+FileCommandProcessorAdapter::~FileCommandProcessorAdapter() {
+    delete fileCommandReader;  // Clean up FileCommandReader
+}
+
+
+Command* FileCommandProcessorAdapter::getCommand() {
+    if (fileCommandReader->eof()) return nullptr;
+
+    std::string commandText = fileCommandReader->readCommandFromFile();
+    if (commandText.empty()) return nullptr;
+
+    // Create a new Command object and process it as per CommandProcessor logic
     Command* command = new Command(commandText);
-    saveCommand(command);
+    saveCommand(command);  // Save the command in the CommandProcessor
     bool isValid = validate(command);
     std::cout  << *command << " | Valid: "
                   << (isValid ? "Yes" : "No") <<std::endl;
