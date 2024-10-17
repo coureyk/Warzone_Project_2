@@ -67,8 +67,8 @@ void Order::setTargetTerritory(string targetTerritory) {
     this->targetTerritory = targetTerritory;
 }
 
-void Order::setSourcePlayer(string sourcPlayer) {
-    this->sourcePlayer = sourcPlayer;
+void Order::setSourcePlayer(string sourcePlayer) {
+    this->sourcePlayer = sourcePlayer;
 }
 
 void Order::setTargetPlayer(string targetPlayer) {
@@ -218,18 +218,62 @@ bool Advance::validate() {
         }
     }
 
-    for (Territory* t : sourceTerritory->getNeighbors()) {
-        if (t->getName().compare(targetTerritory->getName())) { //check if targetTerritory is a neighbor of sourceTerritory
-            if (t->getOwner().compare(targetTerritory->getOwner()) == 0) { // check if sourceTerritory and targetTerritory belong to sourcePlayer
-                sourceTerritory->setArmies(sourceTerritory->getArmies() - getArmyUnits()); //remove army units from source territory
-                targetTerritory->setArmies(targetTerritory->getArmies() + getArmyUnits()); //add army units to targetTerritory
-            } else {
-                cout << "TO BE DEFINED" << endl;
+    if (sourceFound && targetFound) {
+        for (Territory* t : sourceTerritory->getNeighbors()) {
+            if (t->getName().compare(targetTerritory->getName())) { //check if targetTerritory is a neighbor of sourceTerritory
+                if (t->getOwner().compare(targetTerritory->getOwner()) == 0) { // check if sourceTerritory and targetTerritory belong to sourcePlayer
+                    sourceTerritory->setArmies(sourceTerritory->getArmies() - getArmyUnits()); //remove army units from source territory
+                    targetTerritory->setArmies(targetTerritory->getArmies() + getArmyUnits()); //add army units to targetTerritory
+                } else { //if sourceTerritory owner is not targetTerritory owner do the following:
+                    
+                    std::srand(static_cast<unsigned int>(std::time(0))); // seed the random number generator
+                    int randomValue{};
+
+                    int remainingDefenders = targetTerritory->getArmies();
+                    for (int i = 0; i < getArmyUnits(); i++) {
+                        randomValue = std::rand() % 100 + 1; //stores a value between 1 and 100
+                        if (randomValue <= 60) { //ensures an attacker has a 60% chance of killing a defendent.
+                            remainingDefenders--;
+                        }
+                    }
+
+                    int remainingAttackers = getArmyUnits();
+                    for (int i = 0; i < targetTerritory->getArmies(); i++) {
+                        randomValue = std::rand() % 100 + 1; //stores a value between 1 and 100
+                        if (randomValue <= 70) { //ensures a defender has a 70% chance of killing an attacker.
+                            remainingAttackers--;
+                        }
+                    }
+
+                    if (remainingDefenders < 0) { //ensures lowest remainingDefenders is 0.
+                        remainingDefenders = 0;
+                    }
+                    if (remainingAttackers < 0) { //ensure lowest remainingAttackers is 0.
+                        remainingAttackers = 0;
+                    }
+
+                    if (remainingDefenders ==  0) {
+                        sourceTerritory->setArmies(sourceTerritory->getArmies() - getArmyUnits()); //update armies on attacker's land
+                        targetTerritory->setArmies(remainingAttackers); //update armies on defender's land
+                        targetTerritory->setOwner(getSourcePlayer()); //make attacker new owner of targetTerritory
+                    } else {
+                        sourceTerritory->setArmies(sourceTerritory->getArmies() - getArmyUnits() + remainingAttackers); //update armies on attacker's land (remaining attackers are assumed to return back home)
+                        targetTerritory->setArmies(remainingDefenders);
+                    }
+                }
+                cout << "CREATE CARD HERE" << endl;
+                return true;
             }
-            return true;
         }
+        cout << "Invalid Order. " << getSourcePlayer() << " is attempting to advance from " << getSourceTerritory() << " to a non-adjacent territory " << getTargetTerritory() << ".\n" << endl;
+        return false;
+    } else if (sourceFound && !targetFound) {
+        cout << "Invalid Order. " << getSourcePlayer() << " is attempting to advance from " << getSourceTerritory() << " to an unknown territory " << getTargetTerritory() << ".\n" << endl;
+    } else if (!sourceFound && targetFound) {
+        cout << "Invalid Order. " << getSourcePlayer() << " is attempting to advance from an unknown territory: " << getSourceTerritory() << ".\n" << endl;
+    } else {
+        cout << "Invalid Order. " << getSourcePlayer() << " is attempting to advance from an unknown territory " << getSourceTerritory() << " to an unknown territory " << getTargetTerritory() << ".\n" << endl;
     }
-    cout << "Invalid Order. " << getSourcePlayer() << " is attempting to advance from " << getSourceTerritory() << " to non-adjacent territory " << getTargetTerritory() << ".\n" << endl;
     return false;
 }
 

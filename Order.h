@@ -1,7 +1,14 @@
 #ifndef ORDER_H
 #define ORDER_H
 
+class Map; //forward declaration
+class MapLoader; //forward declaration
+class OrdersList; //forward declaration
+class Order; //forward declaration
+class Player; //forward declaration
+
 #include "Map.h"
+#include "Player.h"
 #include <string>
 #include <iostream>
 
@@ -12,13 +19,13 @@ using std::string;
 //Order is an abstract class which is extended by Deploy, Advance, Bomb, Blockade, Airlift and Negotiate
 class Order {
 private:
+    int armyUnits;
+    Territory* sourceTerritory;
+    Territory* targetTerritory;
+    Player* sourcePlayer;
+    Player* targetPlayer;
     string orderType;
     bool hasExecuted;
-    int armyUnits;
-    string sourceTerritory;
-    string targetTerritory;
-    string sourcePlayer;
-    string targetPlayer;
 
 public:
     //Default Constructor
@@ -28,21 +35,21 @@ public:
     virtual void execute() = 0; //To be defined by subclasses in Part 2 (according to Prof. Joey Paquet)
 
     //These must be constant functions so they may be invoked by a const Deploy, Advance, ... object
+    int getArmyUnits() const;
+    Territory* getSourceTerritory() const;
+    Territory* getTargetTerritory() const;
+    Player* getSourcePlayer() const;
+    Player* getTargetPlayer() const;
     string getOrderType() const;
     bool getExecutionStatus() const;
-    int getArmyUnits() const;
-    string getSourceTerritory() const;
-    string getTargetTerritory() const;
-    string getSourcePlayer() const;
-    string getTargetPlayer() const;
 
+    void setArmyUnits(int armyUnits);
+    void setSourceTerritory(Territory* sourceTerritory);
+    void setTargetTerritory(Territory* targetTerritory);
+    void setSourcePlayer(Player* sourcePlayer);
+    void setTargetPlayer(Player* targetPlayer);
     void setOrderType(string orderType);
     void setExecutionStatus(bool hasExecuted);
-    void setArmyUnits(int armyUnits);
-    void setSourceTerritory(string sourceTerritory);
-    void setTargetTerritory(string targetTerritory);
-    void setSourcePlayer(string sourcePlayer);
-    void setTargetPlayer(string targetPlayer);
 
     virtual string toString() const = 0; //This function returns a string representation of the Order that invokes it, and is meant to act as a helper function for overloaded operator "<<".
 
@@ -54,7 +61,7 @@ ostream& operator<<(ostream& os, const Order& order);
 class Deploy : public Order {
 public:
     //Constructors
-    Deploy(string sourcePlayer, int armyUnits, string targetTerritory);
+    Deploy(Player* sourcePlayer, int armyUnits, Territory* targetTerritory);
     Deploy(const Deploy& other);
 
     //Overloading operator "="
@@ -69,7 +76,7 @@ public:
 class Advance : public Order {
 public:
     //Constructors
-    Advance(string sourcePlayer, int armyUnits, string sourceTerritory, string targetTerritory);
+    Advance(Player* sourcePlayer, int armyUnits, Territory* sourceTerritory, Territory* targetTerritory);
     Advance(const Advance& other);
 
     //Overloading operator "="
@@ -84,7 +91,7 @@ public:
 class Bomb : public Order {
 public:
     //Constructors
-    Bomb(string sourcePlayer, string targetTerritory);
+    Bomb(Player* sourcePlayer, Territory* targetTerritory);
     Bomb(const Bomb& other);
 
     //Overloading operator "="
@@ -99,7 +106,7 @@ public:
 class Blockade : public Order {
 public:
     //Constructors
-    Blockade(string sourcePlayer, string targetTerritory);
+    Blockade(Player* sourcePlayer, Territory* targetTerritory);
     Blockade(const Blockade& other);
 
     //Overloading operator "="
@@ -114,7 +121,7 @@ public:
 class Airlift : public Order {
 public:
     //Constructors
-    Airlift(string sourcePlayer, int armyUnits, string sourceTerritory, string targetTerritory);
+    Airlift(Player* sourcePlayer, int armyUnits, Territory* sourceTerritory, Territory* targetTerritory);
     Airlift(const Airlift& other);
 
     //Overloading operator "="
@@ -129,7 +136,7 @@ public:
 class Negotiate : public Order {
 public:
     //Constructors
-    Negotiate(string sourcePlayer, string targetPlayer);
+    Negotiate(Player* sourcePlayer, Player* targetPlayer);
     Negotiate(const Negotiate& other);
 
     //Overloading operator "="

@@ -1,7 +1,8 @@
 #include "Player.h"
 #include <iostream>
 
-Player::Player(const std::vector<Territory>& territories, const OrdersList& ordersList, const Hand& hand) {
+Player::Player(const std::string name, const std::vector<Territory>& territories, const OrdersList& ordersList, const Hand& hand) {
+	this->name = name;
 	this->territories = new std::vector<Territory>(territories);
 	this->ordersList = new OrdersList(ordersList);
 	this->hand = new Hand(hand);
@@ -63,48 +64,54 @@ std::cout << R"HERE(Which order would you like to issue?
 \nEnter 5 for Airlift
 \nEnter 6 for Negotiate\n)HERE" << std::endl;
 
+	Player* sourcePlayer = new Player();
+	Player* targetPlayer = new Player();
+
+	Territory* sourceTerritory = new Territory();
+	Territory* targetTerritory = new Territory();
+
 	int input = 0;
 	std::cin >> input;
-	Bomb* bomb = new Bomb("Liam", "");
+	Bomb* bomb = new Bomb(sourcePlayer, sourceTerritory);
 	switch (input) {
 	case 1:
 	{
-		Deploy* deploy = new Deploy("Liam", 0, "");
+		Deploy* deploy = new Deploy(sourcePlayer, 0, targetTerritory);
 		ordersList->addLast(deploy);
 		std::cout << "Deploy added";
 	}
 	break;
 	case 2:
 	{
-		Advance* advance = new Advance("Liam", 0, "", "");
+		Advance* advance = new Advance(sourcePlayer, 0, sourceTerritory, targetTerritory);
 		ordersList->addLast(advance);
 		std::cout << "Advance added";
 	}
 	break;
 	case 3:
 	{
-		Bomb* bomb = new Bomb("Liam", 0);
+		Bomb* bomb = new Bomb(sourcePlayer, 0);
 		ordersList->addLast(bomb);
 		std::cout << "Bomb added";
 	}
 	break;
 	case 4:
 	{
-		Blockade* blockade = new Blockade("Liam", "");
+		Blockade* blockade = new Blockade(sourcePlayer, targetTerritory);
 		ordersList->addLast(blockade);
 		std::cout << "Blockade added";
 	}
 	break;
 	case 5:
 	{
-		Airlift* airlift = new Airlift("Liam", 0, "", "");
+		Airlift* airlift = new Airlift(sourcePlayer, 0, sourceTerritory, targetTerritory);
 		ordersList->addLast(airlift);
 		std::cout << "Airlift added";
 	}
 	break;
 	case 6:
 	{
-		Negotiate* negotiate = new Negotiate("", "");
+		Negotiate* negotiate = new Negotiate(sourcePlayer, targetPlayer);
 		ordersList->addLast(negotiate);
 		std::cout << "Negotiate added";
 	}
@@ -138,6 +145,18 @@ Player& Player::operator=(const Player& otherPlayer) {
 
 
 //FOR NOW
+std::string Player::getName() const {
+	return name;
+}
+
+std::vector<std::string> Player::getNegotiatedPlayers() const {
+	return negotiatedPlayers;
+}
+
+void Player::addNegotiatedPlayers(std::string negotiatedPlayer) {
+	negotiatedPlayers.push_back(negotiatedPlayer);
+}
+
 void Player::toString() {
 
 }
@@ -191,11 +210,12 @@ void testPlayers() {
 
 	OrdersList* list = new OrdersList;
 
-	Deploy* order1 = new Deploy("Liam", 1, std::string("Alaska"));
+	Player* player1 = new Player("Liam", *territories, *list, *hand1);
+
+	Deploy* order1 = new Deploy(player1, 1, territory1);
 
 	list->addLast(order1);
 
-	Player* player1 = new Player(*territories, *list, *hand1);
 
 	player1->issueOrder();
 }
