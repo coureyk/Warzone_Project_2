@@ -36,20 +36,43 @@ class CommandProcessor{
     CommandProcessor();
     CommandProcessor(const CommandProcessor& other);
     CommandProcessor& operator=(const CommandProcessor& other);
-    ~CommandProcessor();
+    virtual ~CommandProcessor();
 
     virtual Command* getCommand();
     bool validate(Command* command);
     void saveEffect(Command* command, const std::string& effect);
-    
+    std::string getCurrentState() const;
+    friend std::ostream& operator<<(std::ostream& os, const CommandProcessor& processor);
 };
-class FileCommandProcessorAdapter : public CommandProcessor{
-    private:
+class FileCommandReader {
+private:
     std::ifstream* commandFile;
-    public:
+    std::string filename;
+
+public:
+    FileCommandReader(const std::string& filename);
+    FileCommandReader(const FileCommandReader& other) = delete;  // Disable copy constructor
+    FileCommandReader& operator=(const FileCommandReader& other) = delete;  // Disable assignment operator
+    ~FileCommandReader();
+
+    std::string readCommandFromFile();
+    bool eof() const;
+
+    friend std::ostream& operator<<(std::ostream& os, const FileCommandReader& reader);  // Stream insertion operator
+};
+
+class FileCommandProcessorAdapter : public CommandProcessor {
+private:
+    FileCommandReader* fileCommandReader;  // Raw pointer to FileCommandReader
+
+public:
     FileCommandProcessorAdapter(const std::string& filename);
-    ~FileCommandProcessorAdapter();
+    FileCommandProcessorAdapter(const FileCommandProcessorAdapter& other) = delete;  // Disable copy constructor
+    FileCommandProcessorAdapter& operator=(const FileCommandProcessorAdapter& other) = delete;  // Disable assignment operator
+    ~FileCommandProcessorAdapter() override;
 
     Command* getCommand() override;
+
+    friend std::ostream& operator<<(std::ostream& os, const FileCommandProcessorAdapter& adapter);  // Stream insertion operator
 };
 #endif
