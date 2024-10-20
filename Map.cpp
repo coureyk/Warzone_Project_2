@@ -1,6 +1,218 @@
 #include "Map.h"
 
-//DEFINING CLASS MEMBERS FOR MAP
+//====================================================DEFINING CLASS MEMBERS FOR TERRITORY====================================================
+
+//CONSTRUCTORS
+Territory::Territory() {
+    name = "";
+    neighbors = vector<Territory*>(); //initializing neighbors as empty vector
+    armies = 0;
+    wasVisited = false;
+    owner = "None";
+}
+
+Territory::Territory(string name) {
+    this->name = name;
+    neighbors = vector<Territory*>(); //initializing neighbors as empty vector
+    armies = 0;
+    wasVisited = false;
+    owner = "None";
+}
+
+Territory::Territory(const Territory& other) {
+    name = other.getName();
+    neighbors = other.getNeighbors(); //shallow copy. To be corrected in A2.
+    armies = other.getArmies();
+    wasVisited = other.getVisitedStatus();
+    owner = other.getOwner();
+}
+
+//DESTRUCTOR
+Territory::~Territory() {
+
+}
+
+//OVERLOADING OPERATOR=
+Territory& Territory::operator=(const Territory& other) {
+    //check for self-assignment
+    if (this != &other) {
+        name = other.getName();
+        neighbors = other.getNeighbors();
+        armies = other.getArmies();
+        wasVisited = other.getVisitedStatus();
+        owner = other.getOwner();
+    }
+    return *this;
+}
+
+//GETTERS
+string Territory::getName() const {
+    return name;
+}
+
+vector<Territory*> Territory::getNeighbors() const {
+    return neighbors;
+}
+
+int Territory::getArmies() const {
+    return armies;
+}
+
+bool Territory::getVisitedStatus() const {
+    return wasVisited;
+}
+
+string Territory::getOwner() const {
+    return owner;
+}
+
+//SETTERS
+void Territory::setName(string name) {
+    this->name = name;
+}
+
+void Territory::setNeighbors(vector<Territory*> neighbors) {
+    this->neighbors = neighbors;
+}
+
+void Territory::setArmies(int armies) {
+    this->armies = armies;
+}
+
+void Territory::setVisitedStatus(bool visitedStatus) {
+    this->wasVisited = visitedStatus;
+}
+
+void Territory::setOwner(string owner) {
+    this->owner = owner;
+}
+
+//USER-DEFINED FUNCTIONS
+void Territory::addNeighbor(Territory* territory) {
+    this->neighbors.push_back(territory);
+}
+
+string Territory::toString() const {
+    string neighbors = "";
+    for (int i = 0; i < getNeighbors().size(); i++) {
+        if (i != getNeighbors().size() - 1) {
+            neighbors.append(getNeighbors()[i]->getName() + ", ");
+        }
+        else {
+            neighbors.append(getNeighbors()[i]->getName() + ".");
+        }
+    }
+
+    return name + " has the following the neighbors: " + neighbors + "\n";
+}
+
+//OVERLOADING OPERATOR<<
+ostream& operator<<(ostream& os, const Territory& territory) {
+    os << territory.toString();
+    return os;
+}
+
+
+//====================================================DEFINING CLASS MEMBERS FOR CONTINENT====================================================
+
+//CONSTRUCTORS
+Continent::Continent() {
+
+}
+
+Continent::Continent(string name, int score) {
+    this->name = name;
+    this->score = score;
+    territories = vector<Territory*>(); //initializing territories as empty vector
+    wasVisited = wasVisited;
+}
+
+Continent::Continent(const Continent& other) {
+    name = other.getName();
+    score = other.getScore();
+    territories = other.getTerritories(); //shallow copy. To be corrected in A2
+    wasVisited = other.getVisitedStatus();
+}
+
+//DESTRUCTOR
+Continent::~Continent() {
+
+}
+
+//OVERLOADING OPERATOR=
+Continent& Continent::operator=(const Continent& other) {
+    //check for self-assignment
+    if (this != &other) {
+        name = other.getName();
+        score = other.getScore();
+        territories = other.getTerritories(); //shallow copy. To be corrected in A2
+        wasVisited = other.getVisitedStatus();
+    }
+    return *this;
+}
+
+//GETTERS
+string Continent::getName() const {
+    return name;
+}
+
+int Continent::getScore() const {
+    return score;
+}
+
+vector<Territory*> Continent::getTerritories() const {
+    return territories;
+}
+
+bool Continent::getVisitedStatus() const {
+    return wasVisited;
+}
+
+//SETTERS
+void Continent::setName(string name) {
+    this->name = name;
+}
+
+void Continent::setScore(int score) {
+    this->score = score;
+}
+
+void Continent::setTerritories(vector<Territory*> contents) {
+    this->territories = contents;
+}
+
+void Continent::setVisitedStatus(bool visitedStatus) {
+    this->wasVisited = visitedStatus;
+}
+
+//USER-DEFINED FUNCTIONS
+void Continent::addTerritory(Territory* territory) {
+    this->territories.push_back(territory);
+}
+
+string Continent::toString() const {
+    string territories = "";
+
+    for (int i = 0; i < getTerritories().size(); i++) {
+        if (i != getTerritories().size() - 1) {
+            territories.append(getTerritories()[i]->getName() + ", ");
+        }
+        else {
+            territories.append(getTerritories()[i]->getName() + ".");
+        }
+    }
+    return name + " contains the following territories: " + territories + "\n";
+}
+
+//OVERLOADING OPERATOR<<
+ostream& operator<<(ostream& os, const Continent& continent) {
+    os << continent.toString();
+    return os;
+}
+
+
+//====================================================DEFINING CLASS MEMBERS FOR MAP====================================================
+
 vector<Continent*> Map::continents;
 
 //CONSTRUCTORS 
@@ -72,7 +284,7 @@ ostream& operator<<(ostream& os, const Map& map) {
 }
 
 
-//DEFINING CLASS MEMBERS FOR MAP_LOADER
+//====================================================DEFINING CLASS MEMBERS FOR MAP_LOADER====================================================
 
 MapLoader::MapLoader(string filePath) {
     this->filePath = filePath;
