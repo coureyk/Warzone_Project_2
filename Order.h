@@ -1,13 +1,9 @@
 #ifndef ORDER_H
 #define ORDER_H
 
-class Map; //forward declaration
-class MapLoader; //forward declaration
-class OrdersList; //forward declaration
-class Order; //forward declaration
-class Player; //forward declaration
+//Forward declarations due to circular dependency with Player.h
+class Player;
 
-#include "Map.h"
 #include "Player.h"
 #include <iostream>
 #include <string>

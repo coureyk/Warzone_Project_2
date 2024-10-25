@@ -51,7 +51,7 @@ public:
     void setVisitedStatus(bool visitedStatus);
     void setOwner(string owner);
 
-    //User-defined functions
+    //Service Methods
     void addNeighbor(Territory* territory);
     string toString() const;
 };
@@ -93,7 +93,7 @@ public:
     void setTerritories(vector<Territory*>);
     void setVisitedStatus(bool visitedStatus);
 
-    //User-Defined Functions
+    //Service Methods
     void addTerritory(Territory* territory);
     string toString() const;
 };
@@ -107,6 +107,9 @@ ostream& operator<<(ostream& os, const Continent& continent);
 class Map {
 private:
     static vector<Continent*> continents;
+
+    //Helper Function
+    static void DFS(Territory& t);
 
 public:
     //Constructors
@@ -126,10 +129,8 @@ public:
     //Setters
     static void setContinents(vector<Continent*>);
 
-    //User-Defined Functions
+    //Service Methods
     static bool validate();
-    static void recursiveFind(Territory& t);
-
 };
 
 //Overload oeprator<<

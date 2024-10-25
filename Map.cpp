@@ -87,7 +87,7 @@ void Territory::setOwner(string owner) {
     this->owner = owner;
 }
 
-//USER-DEFINED FUNCTIONS
+//SERVICE METHODS
 void Territory::addNeighbor(Territory* territory) {
     this->neighbors.push_back(territory);
 }
@@ -185,7 +185,7 @@ void Continent::setVisitedStatus(bool visitedStatus) {
     this->wasVisited = visitedStatus;
 }
 
-//USER-DEFINED FUNCTIONS
+//SERVICE METHODS
 void Continent::addTerritory(Territory* territory) {
     this->territories.push_back(territory);
 }
@@ -236,29 +236,31 @@ Map::~Map() {
 //OVERLOAD OPERATOR=
 Map& Map::operator=(const Map& other) {
     if (this != &other) { // Self-assignment check
-
+        //do nothing
     }
     return *this;
 }
 
-//USER-DEFINED FUNCTIONS
+//GETTERS
 vector<Continent*> Map::getContinents() {
     return Map::continents;
 }
 
+//SETTERS
 void Map::setContinents(vector<Continent*> continents) {
     Map::continents = continents;
 }
 
+//SERVICE METHODS
 bool Map::validate() {
     bool firstEntry = true;
     
     for (Continent* c : Map::continents) {
         for (Territory* t : c->getTerritories()) {
             if (firstEntry) {
-                recursiveFind(*t); //Determine which Territories can be reached or "found" along a traversal starting from an arbitrary territory.
+                DFS(*t); //Determine which Territories can be reached along a traversal starting from an arbitrary territory.
                 firstEntry = false;
-            } else if (t->getVisitedStatus() == false) { //Loop through all Territories within all continents to determine whether or not there exists a Territroy that was not found.
+            } else if (t->getVisitedStatus() == false) { //Loop through remamining Territories within all continents to determine whether or not there exists a Territroy that was not found.
                 cout << t->getName() << " is not connected to an arbitray node." << endl;
                 return false;
             }
@@ -267,11 +269,12 @@ bool Map::validate() {
     return true;
 }
 
-void Map::recursiveFind(Territory& t) {
+//HELPER METHODS
+void Map::DFS(Territory& t) {
     t.setVisitedStatus(true);
     for (Territory* neighbor : t.getNeighbors()) {
         if (neighbor->getVisitedStatus() == false) {
-            recursiveFind(*neighbor);
+            DFS(*neighbor);
         } else {
             continue;
         }
@@ -290,20 +293,6 @@ MapLoader::MapLoader(string filePath) {
     this->filePath = filePath;
 }
 
-static inline string trim(const string& s) {
-    auto start = s.begin();
-    while (start != s.end() && std::isspace(*start)) {
-        start++;
-    }
-
-    auto end = s.end();
-    do {
-        end--;
-    } while (std::distance(start, end) > 0 && std::isspace(*end));
-
-    return string(start, end + 1);
-}
-
 string MapLoader::getFilePath() const {
     return this->filePath;
 }
@@ -311,26 +300,21 @@ string MapLoader::getFilePath() const {
 bool MapLoader::loadMap() {
     std::ifstream file(filePath);
     if (!file.is_open()) {
-        cout << "in file not open" << endl;
         cout << "Failed to open the map file." << endl;
         return false;
     }
 
-    string line;
     vector<Continent*> continents;
-    vector<Territory*> territories;
-    vector<Territory*> neighbors;
-    string currentContinent;
     vector<int> territoriesInContinent;
-    vector<int> neighborsForTerritory;
-    int territoriesCount = 0;
+    vector<Territory*> territories;
+    vector<vector<string>> neighbors; //2d vector
+    string currentContinent;
 
+    string line;
     bool readingContinents = false;
     bool readingTerritories = false;
 
     while (getline(file, line)) {
-        line = trim(line);
-
         if (line.empty()) {
             continue;
         }
@@ -352,7 +336,6 @@ bool MapLoader::loadMap() {
             std::regex re("([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1})=(\\d+)");
  
             // flag type for determining the matching behavior
-            // && here it is for matches on strings.
             std::smatch match;
  
             // we can use member function on match
@@ -368,47 +351,35 @@ bool MapLoader::loadMap() {
 
         if (readingTerritories) {
             std::regex re("([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1}),(\\d+),(\\d+),([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1}),([^\\n]+)");
-
-            // flag type for determining the matching behavior
-            // && here it is for matches on strings.
             std::smatch match;
  
-            // we can use member function on match
-            // to extract the matched pattern.
             if (std::regex_search(line, match, re) == true) {
                 Territory* t = new Territory(match.str(1));
                 territories.push_back(t);
 
+                //Create and store neighboring Territories in seperate vector of vectors "neighbors" that will be processed later.
                 stringstream ss(match.str(7));
                 string temp;
-                int neighborsCount = 0;
+                vector<string> neighborsOfT;
                 while (getline(ss, temp, ',')) {
-                    neighborsCount++;
-                    Territory* t = new Territory(temp);
-                    neighbors.push_back(t);
+                    string neighbor = temp;
+                    neighborsOfT.push_back(neighbor);
                 }
-                neighborsForTerritory.push_back(neighborsCount);
+                neighbors.push_back(neighborsOfT);
                 
-                if (currentContinent.empty()) {
+                //Keep track of the number of Territories at a given Continent
+                if (currentContinent.compare(match.str(5)) != 0) {
                     currentContinent = match.str(5);
-                    if (currentContinent.compare(continents[0]->getName()) == 0) {
+                    int i = territoriesInContinent.size();
+                    if (currentContinent.compare(continents[i]->getName()) == 0) {
                         territoriesInContinent.push_back(1);
                     } else {
                         cout << "Continent Processed: " << currentContinent << endl;
-                        cout << "Continent Expected: " << continents[0]->getName() << endl;
+                        cout << "Continent Expected: " << continents[i]->getName() << endl;
                         return false;
                     }
-                } else if (currentContinent.compare(match.str(5)) == 0) {
-                    territoriesInContinent.back()++;
                 } else {
-                    currentContinent = match.str(5);
-                    if (currentContinent.compare(continents[territoriesInContinent.size()]->getName()) == 0) {
-                        territoriesInContinent.push_back(1);
-                    } else {
-                        cout << "Continent Processed: " << currentContinent << endl;
-                        cout << "Continent Expected: " << continents[territoriesInContinent.size()]->getName() << endl;
-                        return false;
-                    }
+                    territoriesInContinent.back()++;
                 }
             } else {
                 cout << "Map contains invalid Territory specifications" << endl;
@@ -419,28 +390,28 @@ bool MapLoader::loadMap() {
 
     file.close();
 
-    int currentIndex = 0;
+    //Assign the appropriate neighbors to all Territories.
     for (int i = 0; i < territories.size(); i++) {
-        const int MAX_NEIGHBOR_INDEX = currentIndex + neighborsForTerritory[i];
-        for (int j = currentIndex; j < MAX_NEIGHBOR_INDEX; j++, currentIndex++) {
+        const int MAX_NEIGHBOR_INDEX = neighbors[i].size();
+        for (int j = 0; j < MAX_NEIGHBOR_INDEX; j++) {
+            //The names contained within the "neighbors" vector are searched for throughout the "territories" vector. Once a match is found, this Territory is set as the neighbor of a given Territory.
             for (Territory* t : territories) {
-                if (neighbors[j]->getName().compare(t->getName()) == 0) {
+                if (t->getName().compare(neighbors[i][j]) == 0) {
                     territories[i]->addNeighbor(t);
-                    break; //ensure that if duplicate named Territory is present, it will not have any neighbors connected to it (making it disconected from the rest of the graph)
+                    break; //Ensures that if a duplicate named Territory is present, it will not have any neighbors connected to it (making it disconected from the rest of the graph, and thus making the map invalid)
                 }
             }
         }
     }
 
-    currentIndex = 0;
+    //Assign the appropriate Territories to all Continents.
+    int currentIndex = 0;
     for (int i = 0; i < continents.size(); i++) {
-        for (int j = 0; j < territoriesInContinent[i]; j++) {
+        const int MAX_TERRITORY_INDEX = territoriesInContinent[i];
+        for (int j = 0; j < MAX_TERRITORY_INDEX; j++) {
             continents[i]->addTerritory(territories[currentIndex]);
             currentIndex++;
         }
-    }
-    for (Territory* t : neighbors) {
-        delete t;
     }
 
     Map::setContinents(continents);

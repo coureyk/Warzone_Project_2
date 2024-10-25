@@ -1,19 +1,12 @@
-#include "Cards.h"
-#include "CardsDriver.h"
-
-#include "GameEngine.h"
-
-#include "OrdersDriver.h"
-
-#include "Player.h"
-
-#include "MapDriver.h"
-
 #include "CommandProcessorDriver.h"
+#include "MapDriver.h"
+#include "Player.h"
+#include "OrdersDriver.h"
+#include "CardsDriver.h"
+#include "GameEngine.h"
 
 void waitForEnter() {
     std::cout << "Press Enter to continue..." << std::endl;
-    std::cin.ignore();  // Ignores any leftover input (like a previous newline)
     std::cin.get();     // Waits for the user to press Enter
 }
 
@@ -22,7 +15,6 @@ int main(int argc, char* argv[]) {
     waitForEnter();
     testCommandProcessor(argc, argv);
     std::cout << "testCommandProcessor() is finished" << std::endl;
-
 
     std::cout << "testLoadMaps() is invoked" << std::endl;
     waitForEnter();

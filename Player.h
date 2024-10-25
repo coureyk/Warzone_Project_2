@@ -1,4 +1,15 @@
 #pragma once
+
+//Forward declarations due to circular dependency with Order.h
+class Order;
+class Deploy;
+class Advance;
+class Bomb;
+class Blockade;
+class Airlift;
+class Negotiate;
+class OrdersList;
+
 #include <vector>
 #include "Map.h"
 #include "Order.h"
