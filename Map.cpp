@@ -332,58 +332,78 @@ bool MapLoader::loadMap() {
             continue;
         }
         
+        int numOfContinents = 0;
+        const int MAX_CONTINENTS = 32;
         if (readingContinents) {
-            std::regex re("([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1})=(\\d+)");
- 
-            // flag type for determining the matching behavior
-            std::smatch match;
- 
-            // we can use member function on match
-            // to extract the matched pattern.
-            if (std::regex_search(line, match, re) == true) {
-                Continent* c = new Continent(match.str(1), std::stoi(match.str(3)));
-                continents.push_back(c);
+            //If the current number of Continents is less than 32, process the next Continent.
+            if (numOfContinents < MAX_CONTINENTS) {
+                std::regex re("([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1})=(\\d+)");
+                std::smatch match;
+
+                if (std::regex_search(line, match, re) == true) {
+                    Continent* c = new Continent(match.str(1), std::stoi(match.str(3)));
+                    continents.push_back(c);
+                    numOfContinents++;
+                } else {
+                    cout << "Map contains invalid Continent specifications" << endl;
+                    return false;
+                }
             } else {
-                cout << "Map contains invalid Continent specifications" << endl;
+                cout << "Error. Map contains more than " << MAX_CONTINENTS << " continents." << endl;
                 return false;
             }
         }
 
+        int numOfTerritories = 0;
+        const int MAX_TERRITORIES = 255;
         if (readingTerritories) {
-            std::regex re("([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1}),(\\d+),(\\d+),([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1}),([^\\n]+)");
-            std::smatch match;
- 
-            if (std::regex_search(line, match, re) == true) {
-                Territory* t = new Territory(match.str(1));
-                territories.push_back(t);
+            //If the current numOfTerritories is less than 255, process the next Territory.
+            if (numOfTerritories < MAX_TERRITORIES) {
+                std::regex re("([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1}),(\\d+),(\\d+),([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1}),([^\\n]+)");
+                std::smatch match;
+    
+                if (std::regex_search(line, match, re) == true) {
+                    Territory* t = new Territory(match.str(1));
+                    territories.push_back(t);
 
-                //Create and store neighboring Territories in seperate vector of vectors "neighbors" that will be processed later.
-                stringstream ss(match.str(7));
-                string temp;
-                vector<string> neighborsOfT;
-                while (getline(ss, temp, ',')) {
-                    string neighbor = temp;
-                    neighborsOfT.push_back(neighbor);
-                }
-                neighbors.push_back(neighborsOfT);
-                
-                //Keep track of the number of Territories at a given Continent
-                if (currentContinent.compare(match.str(5)) != 0) {
-                    currentContinent = match.str(5);
-                    int i = territoriesInContinent.size();
-                    if (currentContinent.compare(continents[i]->getName()) == 0) {
-                        territoriesInContinent.push_back(1);
+                    //Create and store neighboring Territories in seperate vector of vectors "neighbors" that will be processed later.
+                    stringstream ss(match.str(7));
+                    string temp;
+                    vector<string> neighborsOfT;
+                    const int MAX_NEIGHBORS = 0;
+                    
+                    //If the amount of neighbors for any Territory is less than 10, process the next neighbor.
+                    while (getline(ss, temp, ',')) {
+                        if (neighborsOfT.size() < 10) {
+                            string neighbor = temp;
+                            neighborsOfT.push_back(neighbor);
+                        } else {
+                            cout << "Error. Map contains territory: " << t->getName() << " that is connected to more than " << MAX_NEIGHBORS << " neighbors." << endl;
+                        }
+                    }
+                    neighbors.push_back(neighborsOfT);
+                    
+                    //Keep track of the number of Territories at a given Continent
+                    if (currentContinent.compare(match.str(5)) != 0) {
+                        currentContinent = match.str(5);
+                        int i = territoriesInContinent.size();
+                        if (currentContinent.compare(continents[i]->getName()) == 0) {
+                            territoriesInContinent.push_back(1);
+                        } else {
+                            cout << "Continent Processed: " << currentContinent << endl;
+                            cout << "Continent Expected: " << continents[i]->getName() << endl;
+                            return false;
+                        }
                     } else {
-                        cout << "Continent Processed: " << currentContinent << endl;
-                        cout << "Continent Expected: " << continents[i]->getName() << endl;
-                        return false;
+                        territoriesInContinent.back()++;
                     }
                 } else {
-                    territoriesInContinent.back()++;
+                    cout << "Map contains invalid Territory specifications" << endl;
+                    return false;
                 }
             } else {
-                cout << "Map contains invalid Territory specifications" << endl;
-                return false;
+                cout << "Error. Map contains more than " << MAX_TERRITORIES << " territories." << endl;
+                return false;        
             }
         } 
     }
