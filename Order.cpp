@@ -123,7 +123,6 @@ string Deploy::toString() const {
 }
 
 bool Deploy::validate() {
-    //check if sourcePlayer is owner of targetTerritory
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
     string targetTerritoryOwner = getTargetTerritory()->getOwner();
@@ -203,7 +202,6 @@ bool Advance::validate() {
     int sourceTerritoryArmyUnits = getSourceTerritory()->getArmies();
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
     
-    //check if sourcePlayer owns sourceTerritory
     if (sourcePlayer.compare(sourceTerritoryOwner) != 0) {
         cout << "Invalid order. " << sourcePlayer << " cannot advance from foreign territory: " << sourceTerritory << ".\n" << endl;
         return false;
@@ -278,7 +276,6 @@ bool Advance::validate() {
             getTargetTerritory()->setArmies(remainingDefenders);
         }
     }
-    cout << "CREATE CARD HERE" << endl;
     return true;
 }
 
