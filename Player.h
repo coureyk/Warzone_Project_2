@@ -20,13 +20,15 @@ class Player {
 protected:
 	std::string name;
 
-	std::vector<std::string> negotiatedPlayers;
-
 	std::vector<Territory>* territories;
 
 	OrdersList* ordersList;
 
 	Hand* hand;
+	
+	int reinforcementPool;
+
+	std::vector<std::string> negotiatedPlayers;
 
 public:
 
@@ -36,7 +38,7 @@ public:
 
 	Player(const Player& player);
 
-	Player(const std::string name, const std::vector<Territory>& territories, const OrdersList& ordersList, const Hand& hand);
+	Player(const std::string name, const std::vector<Territory>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinformentPool);
 
 	std::vector<Territory>* toDefend();
 
@@ -51,6 +53,10 @@ public:
 	std::string getName() const;
 
 	std::vector<std::string> getNegotiatedPlayers() const;
+
+	int getReinforcementPool();
+
+	void setReinforcementPool(int reinforcementPool);
 
 	void addNegotiatedPlayers(std::string);
 

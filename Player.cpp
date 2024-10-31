@@ -1,40 +1,28 @@
 #include "Player.h"
 #include <iostream>
 
-Player::Player(const std::string name, const std::vector<Territory>& territories, const OrdersList& ordersList, const Hand& hand) {
+Player::Player(const std::string name, const std::vector<Territory>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinforcementPool) {
 	this->name = name;
 	this->territories = new std::vector<Territory>(territories);
 	this->ordersList = new OrdersList(ordersList);
 	this->hand = new Hand(hand);
+	this->reinforcementPool = reinforcementPool;
 }
 
 Player::Player() {
+	name = "";
 	territories = new std::vector<Territory>;
 	ordersList = new OrdersList;
 	hand = new Hand;
+	reinforcementPool = 0;
 }
 
 Player::Player(const Player& otherPlayer) {
-	if (otherPlayer.territories != nullptr) {
-		territories = new std::vector<Territory>(*otherPlayer.territories);
-	}
-	else {
-		territories = nullptr;
-	}
-
-	if (otherPlayer.ordersList != nullptr) {
-		ordersList = new OrdersList(*otherPlayer.ordersList);
-	}
-	else {
-		ordersList = nullptr;
-	}
-
-	if (otherPlayer.hand != nullptr) {
-		hand = new Hand(*otherPlayer.hand);
-	}
-	else {
-		hand = nullptr;
-	}
+	name = otherPlayer.name;
+	territories = new std::vector<Territory>(*otherPlayer.territories);
+	ordersList = new OrdersList(*otherPlayer.ordersList);
+	hand = new Hand(*otherPlayer.hand);
+	reinforcementPool = otherPlayer.reinforcementPool;
 }
 
 Player::~Player() {
@@ -153,6 +141,14 @@ std::vector<std::string> Player::getNegotiatedPlayers() const {
 	return negotiatedPlayers;
 }
 
+int Player::getReinforcementPool() {
+	return reinforcementPool;
+}
+
+void Player::setReinforcementPool(int reinforcementPool) {
+	this->reinforcementPool = reinforcementPool;
+}
+
 void Player::addNegotiatedPlayers(std::string negotiatedPlayer) {
 	negotiatedPlayers.push_back(negotiatedPlayer);
 }
@@ -210,7 +206,9 @@ void testPlayers() {
 
 	OrdersList* list = new OrdersList;
 
-	Player* player1 = new Player("Liam", *territories, *list, *hand1);
+	int reinforcementPool = 10;
+
+	Player* player1 = new Player("Liam", *territories, *list, *hand1, reinforcementPool);
 
 	Deploy* order1 = new Deploy(player1, 1, territory1);
 

@@ -18,6 +18,7 @@ Midwest U.S.=8
 Baja California,105,385,Mexico,California,Western Mexico
 Western Mexico,175,385,Mexico,Baja California,Arizona,New Mexico,Texas,Eastern Mexico
 Eastern Mexico,275,425,Mexico,Western Mexico,Texas
+Eastern Mexico,275,425,Mexico,Western Mexico,Texas
 
 
 Washington,80,50,Northwest U.S.,British Columbia,Idaho,Oregon

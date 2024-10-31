@@ -123,13 +123,20 @@ string Deploy::toString() const {
 }
 
 bool Deploy::validate() {
-    //check if targetTerritory is owned by sourcePlayer
-    if (getSourcePlayer()->getName().compare(getTargetTerritory()->getOwner()) == 0) {
+    //check if sourcePlayer is owner of targetTerritory
+    string sourcePlayer = getSourcePlayer()->getName();
+    string targetTerritory = getTargetTerritory()->getName();
+    string targetTerritoryOwner = getTargetTerritory()->getOwner();
+    int currentArmyUnits = getTargetTerritory()->getArmies();
+    int currentReinforcementPool = getSourcePlayer()->getReinforcementPool();
+
+    if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
         cout << "Valid Order." << endl;
-        getTargetTerritory()->setArmies(getTargetTerritory()->getArmies() + getArmyUnits());
+        getTargetTerritory()->setArmies(currentArmyUnits + getArmyUnits()); //increase number of armyUnits on targetTerritory
+        getSourcePlayer()->setReinforcementPool(currentReinforcementPool - getArmyUnits()); //decrease number of armyUnits in reinforcementPool
         return true;
     } else {
-        cout << "Invalid order. " << getSourcePlayer()->getName() << " cannot deploy to foreign territory: " << getTargetTerritory()->getName() << ".\n" << endl;
+        cout << "Invalid order. " << sourcePlayer << " cannot deploy to foreign territory: " << targetTerritory << ".\n" << endl;
         return false;
     }
 }
@@ -188,47 +195,57 @@ string Advance::toString() const {
 }
 
 bool Advance::validate() {
-
+    string sourcePlayer = getSourcePlayer()->getName();
+    string sourceTerritoryOwner = getSourceTerritory()->getOwner();
+    string targetTerritoryOwner = getTargetTerritory()->getOwner();
+    string sourceTerritory = getSourceTerritory()->getName();
+    string targetTerritory = getTargetTerritory()->getName();
+    int sourceTerritoryArmyUnits = getSourceTerritory()->getArmies();
+    int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
+    
     //check if sourcePlayer owns sourceTerritory
-    if (getSourceTerritory()->getOwner().compare(getSourcePlayer()->getName()) != 0) {
-        cout << "Invalid order. " << getSourcePlayer() << " cannot advance from foreign territory: " << getSourceTerritory() << ".\n" << endl;
+    if (sourcePlayer.compare(sourceTerritoryOwner) != 0) {
+        cout << "Invalid order. " << sourcePlayer << " cannot advance from foreign territory: " << sourceTerritory << ".\n" << endl;
         return false;
     }
 
     //check if targetTerritory is adjacent to sourceTerritory
     bool targetIsNeighbor = false;
     for (Territory* neighbor : getSourceTerritory()->getNeighbors()) {
-        if (neighbor->getName().compare(getTargetTerritory()->getName())) {
+        if (neighbor->getName().compare(targetTerritory)) {
             targetIsNeighbor = true;
             break;
         }
     }
 
     if (!targetIsNeighbor) {
-        cout << "Invalid order. " << getSourcePlayer()->getName() << " cannot advance to non-adjacent territory: " << getTargetTerritory()->getName() << ".\n" << endl;
+        cout << "Invalid order. " << sourcePlayer << " cannot advance to non-adjacent territory: " << targetTerritory << ".\n" << endl;
         return false;
     }
 
     //Continue if targetIsNeighbor
     //Check if territory owners have a truce
     for (string negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
-        if (negotiatedPlayer.compare(getTargetTerritory()->getOwner()) == 0) {
-            cout << "Invalid order. " << "Negotiations between " << getSourcePlayer()->getName() << " and " << getTargetTerritory()->getOwner() << " have prevented the advancement from " << getSourceTerritory()->getName() << " to " << getTargetTerritory()->getName() << ".\n" << endl;
+        if (negotiatedPlayer.compare(targetTerritoryOwner) == 0) {
+            cout << "Invalid order. " << "Negotiations between " << sourcePlayer << " and " << targetTerritoryOwner << " have prevented the advancement from " << sourceTerritory << " to " << targetTerritory << ".\n" << endl;
         }
         return false;
     }
 
     //Check if sourceTerritory and targetTerritory belong to same owner
-    if (getSourceTerritory()->getOwner().compare(getTargetTerritory()->getOwner()) == 0) {
-        getSourceTerritory()->setArmies(getSourceTerritory()->getArmies() - getArmyUnits()); //remove army units from source territory
-        getTargetTerritory()->setArmies(getTargetTerritory()->getArmies() + getArmyUnits()); //add army units to targetTerritory
+    if (sourceTerritoryOwner.compare(targetTerritoryOwner) == 0) {
+        sourceTerritoryArmyUnits -= getArmyUnits(); //remove army units from source territory
+        targetTerritoryArmyUnits += getArmyUnits(); //add army units to targetTerritory
+
+        getSourceTerritory()->setArmies(sourceTerritoryArmyUnits); 
+        getTargetTerritory()->setArmies(targetTerritoryArmyUnits); 
         return true;
     } else {
         //If sourceTerritory owner is not targetTerritory owner do the following:
         std::srand(static_cast<unsigned int>(std::time(0))); // seed the random number generator
         int randomValue{};
 
-        int remainingDefenders = getTargetTerritory()->getArmies();
+        int remainingDefenders = targetTerritoryArmyUnits;
         for (int i = 0; i < getArmyUnits(); i++) {
             randomValue = std::rand() % 100 + 1; //stores a value between 1 and 100
             if (randomValue <= 60) { //ensures an attacker has a 60% chance of killing a defendent.
@@ -237,7 +254,7 @@ bool Advance::validate() {
         }
 
         int remainingAttackers = getArmyUnits();
-        for (int i = 0; i < getTargetTerritory()->getArmies(); i++) {
+        for (int i = 0; i < targetTerritoryArmyUnits; i++) {
             randomValue = std::rand() % 100 + 1; //stores a value between 1 and 100
             if (randomValue <= 70) { //ensures a defender has a 70% chance of killing an attacker.
                 remainingAttackers--;
@@ -252,11 +269,11 @@ bool Advance::validate() {
         }
 
         if (remainingDefenders ==  0) {
-            getSourceTerritory()->setArmies(getSourceTerritory()->getArmies() - getArmyUnits()); //update armies on attacker's land
+            getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits()); //update armies on attacker's land
             getTargetTerritory()->setArmies(remainingAttackers); //update armies on defender's land
-            getTargetTerritory()->setOwner(getSourcePlayer()->getName()); //make attacker new owner of targetTerritory
+            getTargetTerritory()->setOwner(sourcePlayer); //make attacker new owner of targetTerritory
         } else {
-            getSourceTerritory()->setArmies(getSourceTerritory()->getArmies() - getArmyUnits() + remainingAttackers); //update armies on attacker's land (remaining attackers are assumed to return back home)
+            getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits() + remainingAttackers); //update armies on attacker's land (remaining attackers are assumed to return back home)
             getTargetTerritory()->setArmies(remainingDefenders);
         }
     }
@@ -311,37 +328,42 @@ string Bomb::toString() const {
 }
 
 bool Bomb::validate() {
+    string sourcePlayer = getSourcePlayer()->getName();
+    string targetTerritory = getTargetTerritory()->getName();
+    string targetTerritoryOwner = getTargetTerritory()->getOwner();
+    int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
+    
     //check if sourcePlayer is attempting to bomb his own territory
-    if(getSourcePlayer()->getName().compare(getTargetTerritory()->getOwner()) == 0) {
-        cout << "Invalid order. " << getSourcePlayer()->getName() << " cannot bomb domestic territory: " << getTargetTerritory()->getName() << ".\n" << endl;
+    if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
+        cout << "Invalid order. " << sourcePlayer << " cannot bomb domestic territory: " << targetTerritory << ".\n" << endl;
         return false;
     }
 
     //check if targetTerritory is a neighbor of sourceTerritory
     bool targetIsNeighbor = false;
     for (Territory* neighbor : getSourceTerritory()->getNeighbors()) {
-        if (neighbor->getName().compare(getTargetTerritory()->getName()) == 0) {
+        if (neighbor->getName().compare(targetTerritory) == 0) {
             targetIsNeighbor = true;
             break;
         }
     }
 
     if (!targetIsNeighbor) {
-        cout << "Invalid order. " << getSourcePlayer()->getName() << " cannot bomb territory: " << getTargetTerritory()->getName() << " that is not adjacent to any domestic territories.\n" << endl;
+        cout << "Invalid order. " << sourcePlayer << " cannot bomb territory: " << targetTerritory << " that is not adjacent to any domestic territories.\n" << endl;
         return false;
     }
 
     //check if territory owners have a truce
     for (string negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
-        if (negotiatedPlayer.compare(getTargetTerritory()->getOwner()) == 0) {
-            cout << "Invalid order. " << "Negotiations between " << getSourcePlayer()->getName() << " and " << getTargetTerritory()->getOwner() << " have prevented the bombing of " << getTargetTerritory()->getName() << ".\n" << endl;
+        if (negotiatedPlayer.compare(targetTerritoryOwner) == 0) {
+            cout << "Invalid order. " << "Negotiations between " << sourcePlayer << " and " << targetTerritoryOwner << " have prevented the bombing of " << targetTerritoryOwner << ".\n" << endl;
         }
         return false;
     }
 
     //if this point is reached, Bomb order is valid
     //half of the army units on targetTerritory are now annihilated
-    getTargetTerritory()->setArmies(getTargetTerritory()->getArmies() / 2);
+    getTargetTerritory()->setArmies(targetTerritoryArmyUnits / 2);
     return true;
 }
 
@@ -392,13 +414,18 @@ string Blockade::toString() const {
 }
 
 bool Blockade::validate() {
+    string sourcePlayer = getSourcePlayer()->getName();
+    string targetTerritory = getTargetTerritory()->getName();
+    string targetTerritoryOwner = getTargetTerritory()->getOwner();
+    int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
+    
     //check if the targetTerritory belongs to sourcePlayer
-    if (getSourcePlayer()->getName().compare(getTargetTerritory()->getOwner()) == 0) {
-        getTargetTerritory()->setArmies(getTargetTerritory()->getArmies() * 2); //double the # of army units on targetTerritory
+    if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
+        getTargetTerritory()->setArmies(targetTerritoryArmyUnits * 2); //double the # of army units on targetTerritory
         getTargetTerritory()->setOwner("None"); //make targetTerritory a neutral territory
         return true;
     } else {
-        cout << "Invalid order. " << getSourcePlayer()->getName() << " cannot blockade foreign territory: " << getTargetTerritory()->getName() << ".\n" << endl;
+        cout << "Invalid order. " << sourcePlayer << " cannot blockade foreign territory: " << targetTerritory << ".\n" << endl;
         return false;
     }
 }
@@ -517,13 +544,16 @@ string Negotiate::toString() const {
 }
 
 bool Negotiate::validate() {
+    string sourcePlayer = getSourcePlayer()->getName();
+    string targetPlayer = getTargetPlayer()->getName();
+
     //check if sourcePlayer is the same as targetPlayer
-    if (getSourcePlayer()->getName().compare(getTargetPlayer()->getName()) != 0) {
-        getSourcePlayer()->addNegotiatedPlayers(getTargetPlayer()->getName());
-        getTargetPlayer()->addNegotiatedPlayers(getSourcePlayer()->getName());
+    if (sourcePlayer.compare(targetPlayer) != 0) {
+        getSourcePlayer()->addNegotiatedPlayers(targetPlayer);
+        getTargetPlayer()->addNegotiatedPlayers(sourcePlayer);
         return true;
     }
-    cout << "Invalid Order. " << getSourcePlayer()->getName() << " cannot negotiate with self.\n" << endl;
+    cout << "Invalid Order. " << sourcePlayer << " cannot negotiate with self.\n" << endl;
     return false;
 }
 

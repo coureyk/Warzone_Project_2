@@ -14,7 +14,7 @@ class Command{
     std::string* effect;
 
     public:
-    Command(const std::string& text);
+    Command(const std::string& text);           //!!!Should pass Game State and Player Name as well as text to constructors
     Command(const Command& other);             // Copy constructor
     Command& operator=(const Command& other);  // Assignment operator
     ~Command();                                // Destructor
@@ -25,9 +25,9 @@ class Command{
 class CommandProcessor{
     private:
     enum GameState { Start, MapLoaded, MapValidated, PlayersAdded, AssignReinforcement, Win, ExitProgram };
-    GameState currentState;  // Track the current state
-    std::set<std::string> playerNames;
-    std::vector<Command*>* commands;
+    GameState currentState;  // Track the current state !!!This should be responsibility of GAMEENGINE
+    std::set<std::string> playerNames; // !!!Don't need to keep track of this if we store commands in queue
+    std::vector<Command*>* commands; //Make this a queue
     std::string readCommand();
     protected:
     void saveCommand(Command* command);
