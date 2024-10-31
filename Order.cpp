@@ -272,6 +272,7 @@ bool Advance::validate() {
             getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits()); //update armies on attacker's land
             getTargetTerritory()->setArmies(remainingAttackers); //update armies on defender's land
             getTargetTerritory()->setOwner(sourcePlayer); //make attacker new owner of targetTerritory
+            getSourcePlayer()->getHand()->addCard(Deck::draw()); //sourcePlayer receives a card for conquering at least one territory during their turn.
         } else {
             getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits() + remainingAttackers); //update armies on attacker's land (remaining attackers are assumed to return back home)
             getTargetTerritory()->setArmies(remainingDefenders);

@@ -36,7 +36,7 @@ public:
 
 class Deck {
 private:
-    std::vector<Card*>* cards;  // Pointer to a collection of cards
+    static std::vector<Card*>* cards;  // Pointer to a collection of cards
 
 public:
     Deck();
@@ -44,9 +44,9 @@ public:
     ~Deck();  // Destructor
     Deck& operator=(const Deck& other);  // Assignment operator
 
-    Card* draw();  // Draw a card from the deck
-    void returnCard(Card* card);  // Return a played card to the deck
-    void showDeck() const;  // Display the cards in the deck
+    static Card* draw();  // Draw a card from the deck
+    static void returnCard(Card* card);  // Return a played card to the deck
+    static void showDeck();  // Display the cards in the deck
 };
 
 class Hand {

@@ -145,6 +145,10 @@ int Player::getReinforcementPool() {
 	return reinforcementPool;
 }
 
+Hand* Player::getHand() {
+	return hand;
+}
+
 void Player::setReinforcementPool(int reinforcementPool) {
 	this->reinforcementPool = reinforcementPool;
 }

@@ -56,6 +56,8 @@ public:
 
 	int getReinforcementPool();
 
+	Hand* getHand();
+
 	void setReinforcementPool(int reinforcementPool);
 
 	void addNegotiatedPlayers(std::string);

@@ -108,7 +108,7 @@ void Deck::returnCard(Card* card) {
     std::cout << "Returned " << card->getType() << " card to the deck." << std::endl;
 }
 
-void Deck::showDeck() const {
+void Deck::showDeck() {
     std::cout << "Deck contains the following cards:" << std::endl;
     for (Card* card : *cards) {
         std::cout << "- " << card->getType()
