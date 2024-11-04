@@ -44,7 +44,7 @@ void CommandProcessorInteractiveDriver::testFileInput(const std::string& filenam
     delete fileProcessor;
 }
 
-void testCommandProcessor(int argc, char* argv[]) {
+void testCommandProcessor() {
     std::string inputMode;
     std::cout << "Choose input mode:\n";
     std::cout << "1. Console mode\n";

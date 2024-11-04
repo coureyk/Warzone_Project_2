@@ -8,4 +8,4 @@ public:
     static void testFileInput(const std::string& filename);
 };
 
-void testCommandProcessor(int argc, char* argv[]);
+void testCommandProcessor();

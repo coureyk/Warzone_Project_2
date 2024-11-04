@@ -13,7 +13,7 @@ void waitForEnter() {
 int main(int argc, char* argv[]) {
     std::cout << "testCommandProcessor() is invoked" << std::endl;
     waitForEnter();
-    testCommandProcessor(argc, argv);
+    testCommandProcessor();
     std::cout << "testCommandProcessor() is finished" << std::endl;
 
     std::cout << "testLoadMaps() is invoked" << std::endl;
