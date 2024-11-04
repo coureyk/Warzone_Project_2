@@ -1,6 +1,7 @@
 #include "CommandProcessing.h"
 #include <iostream>
-
+#include "LoggingObserver.h"
+#include <memory>
 class CommandProcessorInteractiveDriver {
 public:
     static void testInteractiveConsole();

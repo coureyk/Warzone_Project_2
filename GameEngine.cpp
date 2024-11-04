@@ -5,7 +5,7 @@ the game by using the notion of state, transition, and command.
  */
 
 
-int GameEngine::state = GameEngine::INITIALISED;
+int GameEngine::state = GameEngine::START;
 
 /*sets the state to the corresponding command*/
 void GameEngine::setState(const std::string command) {

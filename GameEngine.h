@@ -3,9 +3,10 @@
 #include <string>
 #include <iostream>
 #include <cstdio>
-
+class CommandProcessor;
 class GameEngine
 {
+    friend class CommandProcessor; 
 public:
     // Method to display the available options based on the current state
     void displayNextPath(int currentState);

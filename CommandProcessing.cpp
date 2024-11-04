@@ -1,6 +1,6 @@
 #include "CommandProcessing.h"
 
-Command::Command(const std::string& text) : commandText(new std::string(text)), effect(new std::string("")) {}
+Command::Command(const std::string& text) : commandText(new std::string(text)), effect(new std::string("Null")) {}
 
 Command::Command(const Command& other) : commandText(new std::string(*other.commandText)), effect(new std::string(*other.effect)) {}
 
@@ -19,6 +19,7 @@ Command::~Command() {
 
 void Command::saveEffect(const std::string& effectText) {
     *effect = effectText;
+    Notify();
 }
 std::string Command::getCommandText() const {
     return *commandText;  // Return the dereferenced command text
@@ -26,6 +27,10 @@ std::string Command::getCommandText() const {
 std::ostream& operator<<(std::ostream& os, const Command& command) {
     os << "Command: " << *command.commandText << " | Effect: " << *command.effect;
     return os;
+}
+std::string Command::stringToLog() {
+    return *effect;
+
 }
 CommandProcessor::CommandProcessor() 
     : commands(new std::vector<Command*>()), currentState(Start) {}
@@ -49,9 +54,10 @@ CommandProcessor& CommandProcessor::operator=(const CommandProcessor& other) {
     return *this;
 }
 
-
 CommandProcessor::~CommandProcessor() {
-    for (auto command : *commands) delete command;
+    for (auto command : *commands){
+         delete command;
+    }
     delete commands;
 }
 
@@ -64,15 +70,18 @@ std::string CommandProcessor::readCommand() {
 
 void CommandProcessor::saveCommand(Command* command) {
     commands->push_back(command);
+    Notify();
 }
 
 Command* CommandProcessor::getCommand() {
     std::string commandText = readCommand();
     Command* command = new Command(commandText);
+    LogObserver *logObserver = new LogObserver(command);
     saveCommand(command);
     bool isValid = validate(command);
     std::cout << *command << " | Valid: "
                   << (isValid ? "Yes" : "No")  << std::endl;
+    delete logObserver;
     return command;
 }
 
@@ -81,59 +90,69 @@ bool CommandProcessor::validate(Command* command) {
     std::istringstream stream(cmdText);
     std::string commandType, parameter;
     stream >> commandType;
-
+    
     bool isValid = false;
 
-    if (commandType == "loadmap" && (currentState == Start || currentState == MapLoaded)) {
+       if (commandType == "loadmap" && (gameEngine->state == GameEngine::START || gameEngine->state == GameEngine::MAP_LOADED)) {
         if (stream >> parameter) {  // Ensure parameter is provided
             isValid = true;
             currentState = MapLoaded;
+            gameEngine->setState("loadmap");
+    
         } else {
-            saveEffect(command, "Invalid command: 'loadmap' requires a <mapfile> parameter.");
+            std::cout<< "Invalid command: 'loadmap' requires a <mapfile> parameter."<<std::endl;
+            //saveEffect(command, "Invalid command: 'loadmap' requires a <mapfile> parameter.");
+            command->saveEffect("Invalid command: 'loadmap' requires a <mapfile> parameter.");
         }
     } 
-    else if (commandType == "validatemap" && currentState == MapLoaded) {
+    else if (commandType == "validatemap" && gameEngine->state == GameEngine::MAP_LOADED) {
         isValid = true;
         currentState = MapValidated;
+        gameEngine->setState("validatemap");
     } 
-    else if (commandType == "addplayer" && (currentState == MapValidated || currentState == PlayersAdded)) {
+    else if (commandType == "addplayer" && (gameEngine->state == GameEngine::MAP_VALIDATED || gameEngine->state == GameEngine::PLAYERS_ADDED)) {
         if (stream >> parameter) {  // Ensure parameter is provided
             if (playerNames.find(parameter) == playerNames.end()) {
                 playerNames.insert(parameter);
                 isValid = true;
                 currentState = PlayersAdded;
+                gameEngine->setState("addplayer");
             } else {
-                saveEffect(command, "Invalid command: Player name '" + parameter + "' is already added.");
+                std::cout<< "Invalid command: Player name '" + parameter + "' is already added."<<std::endl;
+                command->saveEffect("Invalid command: Player name '" + parameter + "' is already added.");
             }
         } else {
-            saveEffect(command, "Invalid command: 'addplayer' requires a <playername> parameter.");
+            std::cout<<"Invalid command: 'addplayer' requires a <playername> parameter."<<std::endl;
+            command->saveEffect("Invalid command: 'addplayer' requires a <playername> parameter.");
         }
     } 
-    else if (commandType == "gamestart" && currentState == PlayersAdded) {
+    else if (commandType == "gamestart" && gameEngine->state == GameEngine::PLAYERS_ADDED) {
         isValid = true;
         currentState = AssignReinforcement;
+        gameEngine->setState("assigncountries");
     } 
-    else if (commandType == "replay" && currentState == Win) {
+    else if (commandType == "replay" && gameEngine->state == GameEngine::WIN) {
         isValid = true;
         currentState = Start;
+        gameEngine->setState("start");
     } 
-    else if (commandType == "quit" && currentState == Win) {
+    else if (commandType == "quit" && gameEngine->state == GameEngine::WIN) {
         isValid = true;
         currentState = ExitProgram;
+        gameEngine->setState("end");
     } 
 
     if (isValid) {
-        saveEffect(command, "Command executed successfully.");
+        std::cout<<"Command executed successfully."<<std::endl;
+        command->saveEffect("Command executed successfully.");
     } else if (command->getCommandText() == cmdText) {  // Avoid overwriting specific error
-        saveEffect(command, "Invalid command in the current state or syntax error.");
+    std::cout<<"Invalid command in the current state or syntax error."<<std::endl;
+        command->saveEffect("Invalid command in the current state or syntax error.");
     }
     
     return isValid;
 }
 
-void CommandProcessor::saveEffect(Command* command, const std::string& effect) {
-    command->saveEffect(effect);
-}
 std::string CommandProcessor::getCurrentState() const {
     switch (currentState) {
         case Start: return "Start";
@@ -148,10 +167,17 @@ std::string CommandProcessor::getCurrentState() const {
 }
 std::ostream& operator<<(std::ostream& os, const CommandProcessor& processor) {
     os << "Current State: " << processor.getCurrentState() << "\nCommands:\n";
-    for (const auto& command : *processor.commands) {  // This should work
+    for (const auto& command : *processor.commands) {  
         os << *command << "\n";
     }
     return os;
+}
+std::string CommandProcessor::stringToLog() {
+   if (!commands->empty()) {
+        // Access the last command and retrieve its text
+        return commands->back()->getCommandText();
+    }
+    return "No commands available.";
 }
 FileCommandReader::FileCommandReader(const std::string& filename) : filename(filename) {
     commandFile = new std::ifstream(filename);
@@ -194,9 +220,11 @@ Command* FileCommandProcessorAdapter::getCommand() {
 
     // Create a new Command object and process it as per CommandProcessor logic
     Command* command = new Command(commandText);
+    LogObserver *logObserver = new LogObserver(command);
     saveCommand(command);  // Save the command in the CommandProcessor
     bool isValid = validate(command);
     std::cout  << *command << " | Valid: "
                   << (isValid ? "Yes" : "No") <<std::endl;
+    delete logObserver;
     return command;
 }
