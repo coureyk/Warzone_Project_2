@@ -51,10 +51,11 @@ bool Card::isCardAvailable() const {
     return *isAvailable;  // Check if the card is available
 }
 
-// Constructor: Initialize the deck with cards of all types
-Deck::Deck() {
-    cards = new std::vector<Card*>();
 
+// Constructor: Initialize the deck with cards of all types
+std::vector<Card*>* Deck::cards = new std::vector<Card*>();
+
+Deck::Deck() {
     for (int i = 0; i < 2; ++i) {
         cards->push_back(new Card(CardType::BOMB));
         cards->push_back(new Card(CardType::REINFORCEMENT));
