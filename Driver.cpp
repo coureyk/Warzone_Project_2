@@ -4,6 +4,7 @@
 #include "OrdersDriver.h"
 #include "CardsDriver.h"
 #include "GameEngine.h"
+#include "LoggingObserver.h"
 
 void waitForEnter() {
     std::cout << "Press Enter to continue..." << std::endl;

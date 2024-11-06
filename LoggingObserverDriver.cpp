@@ -25,8 +25,8 @@ void testLoggingObserver() {
     delete logObserver;
     delete processor;
 }
-int main() {
+void testObserver() {
   testLoggingObserver();
 
-    return 0;
+    
 }
