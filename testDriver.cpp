@@ -1,5 +1,12 @@
-#include "CommandProcessorDriver.h"
-
+#include <iostream>
+#include "CommandProcessing.h"
+#include "LoggingObserver.h"
+#include <memory>
+class CommandProcessorInteractiveDriver {
+public:
+    static void testInteractiveConsole();
+    static void testFileInput(const std::string& filename);
+};
 
 void CommandProcessorInteractiveDriver::testInteractiveConsole() {
     std::cout << "Interactive CommandProcessor Test" << std::endl;
@@ -44,7 +51,7 @@ void CommandProcessorInteractiveDriver::testFileInput(const std::string& filenam
     delete fileProcessor;
 }
 
-void testCommandProcessor() {
+int main() {
     std::string inputMode;
     std::cout << "Choose input mode:\n";
     std::cout << "1. Console mode\n";
@@ -66,5 +73,8 @@ void testCommandProcessor() {
     } 
     else {
         std::cerr << "Invalid input. Please restart and enter '1' or '2'." << std::endl;
+        return 1;
     }
+
+    return 0;
 }

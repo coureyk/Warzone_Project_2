@@ -6,29 +6,32 @@
 #include <vector>
 #include <fstream>
 #include <set>
-#include <sstream> 
-
-class Command{
+#include <sstream>
+#include "LoggingObserver.h" 
+#include "GameEngine.h"
+class Command: public Subject, public ILoggable{
     private:
     std::string* commandText;
     std::string* effect;
 
     public:
-    Command(const std::string& text);           //!!!Should pass Game State and Player Name as well as text to constructors
+    Command(const std::string& text);
     Command(const Command& other);             // Copy constructor
     Command& operator=(const Command& other);  // Assignment operator
     ~Command();                                // Destructor
     void saveEffect(const std::string& effect);
     std::string getCommandText() const;
     friend std::ostream& operator<<(std::ostream& os, const Command& command); // Stream insertion operator
+    std::string stringToLog();
 };
-class CommandProcessor{
+class CommandProcessor: public Subject, public ILoggable{
     private:
     enum GameState { Start, MapLoaded, MapValidated, PlayersAdded, AssignReinforcement, Win, ExitProgram };
-    GameState currentState;  // Track the current state !!!This should be responsibility of GAMEENGINE
-    std::set<std::string> playerNames; // !!!Don't need to keep track of this if we store commands in queue
-    std::vector<Command*>* commands; //Make this a queue
+    GameState currentState;  // Track the current state
+    std::set<std::string> playerNames;
+    std::vector<Command*>* commands;
     std::string readCommand();
+    GameEngine* gameEngine;
     protected:
     void saveCommand(Command* command);
 
@@ -40,9 +43,10 @@ class CommandProcessor{
 
     virtual Command* getCommand();
     bool validate(Command* command);
-    void saveEffect(Command* command, const std::string& effect);
+   // void saveEffect(Command* command, const std::string& effect);
     std::string getCurrentState() const;
     friend std::ostream& operator<<(std::ostream& os, const CommandProcessor& processor);
+    std::string stringToLog();
 };
 class FileCommandReader {
 private:
