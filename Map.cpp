@@ -124,7 +124,7 @@ Continent::Continent(string name, int score) {
     this->name = name;
     this->score = score;
     territories = vector<Territory*>(); //initializing territories as empty vector
-    wasVisited = wasVisited;
+    wasVisited = false;
 }
 
 Continent::Continent(const Continent& other) {
