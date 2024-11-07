@@ -1,9 +1,9 @@
 #include "Player.h"
 #include <iostream>
 
-Player::Player(const std::string name, const std::vector<Territory>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinforcementPool) {
+Player::Player(const std::string name, const std::vector<Territory*>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinforcementPool) {
 	this->name = name;
-	this->territories = new std::vector<Territory>(territories);
+	this->territories = territories;
 	this->ordersList = new OrdersList(ordersList);
 	this->hand = new Hand(hand);
 	this->reinforcementPool = reinforcementPool;
@@ -11,7 +11,6 @@ Player::Player(const std::string name, const std::vector<Territory>& territories
 
 Player::Player() {
 	name = "";
-	territories = new std::vector<Territory>;
 	ordersList = new OrdersList;
 	hand = new Hand;
 	reinforcementPool = 0;
@@ -19,26 +18,25 @@ Player::Player() {
 
 Player::Player(const Player& otherPlayer) {
 	name = otherPlayer.name;
-	territories = new std::vector<Territory>(*otherPlayer.territories);
+	territories = std::vector<Territory*>(otherPlayer.territories);
 	ordersList = new OrdersList(*otherPlayer.ordersList);
 	hand = new Hand(*otherPlayer.hand);
 	reinforcementPool = otherPlayer.reinforcementPool;
 }
 
 Player::~Player() {
-	delete territories;
 	delete ordersList;
 	delete hand;
 }
 
-std::vector<Territory>* Player::toDefend() {
-	std::vector<Territory>* territories = new std::vector<Territory>;
+std::vector<Territory*> Player::toDefend() {
+	std::vector<Territory*> territories;
 	std::cout << "These territories are to be defended. Whatever that entails";
 	return territories;
 }
 
-std::vector<Territory>* Player::toAttack() {
-	std::vector<Territory>* territories = new std::vector<Territory>;
+std::vector<Territory*> Player::toAttack() {
+	std::vector<Territory*> territories;
 	std::cout << "These territories are to be attacked. Whatever that entails";
 	return territories;
 }
@@ -113,10 +111,7 @@ Player& Player::operator=(const Player& otherPlayer) {
 	if (this == &otherPlayer)
 		return *this;
 
-	if (territories != nullptr)
-		delete territories;
-
-	territories = new std::vector<Territory>(*otherPlayer.territories);
+	territories = std::vector<Territory*>(otherPlayer.territories);
 
 	if (ordersList != nullptr) {
 		delete ordersList;
@@ -165,8 +160,8 @@ void Player::toString() {
 std::ostream& operator<<(std::ostream& os, const Player& player)
 {
 	os << "Player Territories: ";
-	if (player.territories != nullptr) {
-		for (const Territory& territory : *player.territories) {
+	if (!player.territories.empty()) {
+		for (const Territory* territory : player.territories) {
 			os << territory << " ";  // Assuming Territory has an overloaded operator<<
 		}
 	}
@@ -194,13 +189,13 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
 }
 
 void testPlayers() {
-	std::vector<Territory>* territories = new std::vector<Territory>;
+	std::vector<Territory*> territories;
 
 	Continent* continent1 = new Continent("America", 1);
 
 	Territory* territory1 = new Territory("Montreal");
 
-	territories->push_back(*territory1);
+	territories.push_back(territory1);
 
 	Card* card1 = new Card(BOMB);
 
@@ -212,7 +207,7 @@ void testPlayers() {
 
 	int reinforcementPool = 10;
 
-	Player* player1 = new Player("Liam", *territories, *list, *hand1, reinforcementPool);
+	Player* player1 = new Player("Liam", territories, *list, *hand1, reinforcementPool);
 
 	Deploy* order1 = new Deploy(player1, 1, territory1);
 

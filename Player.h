@@ -20,7 +20,7 @@ class Player {
 protected:
 	std::string name;
 
-	std::vector<Territory>* territories;
+	std::vector<Territory*> territories;
 
 	OrdersList* ordersList;
 
@@ -38,11 +38,11 @@ public:
 
 	Player(const Player& player);
 
-	Player(const std::string name, const std::vector<Territory>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinformentPool);
+	Player(const std::string name, const std::vector<Territory*>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinformentPool);
 
-	std::vector<Territory>* toDefend();
+	std::vector<Territory*> toDefend();
 
-	std::vector<Territory>* toAttack();
+	std::vector<Territory*> toAttack();
 
 	void issueOrder();
 
