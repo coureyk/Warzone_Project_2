@@ -12,7 +12,7 @@ void Subject::Attach(Observer* o){
   _observers->push_back(o);
 };
 void Subject::Detach(Observer* o){
-  //_observers->erase(std::remove(_observers->begin(), _observers->end(),o), _observers->end());
+  _observers->erase(std::remove(_observers->begin(), _observers->end(),o), _observers->end());
 };
 void Subject::Notify(){
     for (auto it = _observers->begin(); it != _observers->end(); ++it) {

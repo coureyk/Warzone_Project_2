@@ -5,6 +5,7 @@
 #include "CardsDriver.h"
 #include "GameEngine.h"
 #include "LoggingObserver.h"
+#include "LoggingObserverDriver.h"
 
 void waitForEnter() {
     std::cout << "Press Enter to continue..." << std::endl;
@@ -16,6 +17,11 @@ int main(int argc, char* argv[]) {
     waitForEnter();
     testCommandProcessor();
     std::cout << "testCommandProcessor() is finished" << std::endl;
+
+    std::cout << "LoggingObserver() is invoked" << std::endl;
+    waitForEnter();
+    testLoggingObserver();
+    std::cout << "LoggingObserver() is finished" << std::endl;
 
     std::cout << "testLoadMaps() is invoked" << std::endl;
     waitForEnter();
