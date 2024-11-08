@@ -130,7 +130,6 @@ bool Deploy::validate() {
     int currentReinforcementPool = getSourcePlayer()->getReinforcementPool();
 
     if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
-        cout << "Valid Order." << endl;
         getTargetTerritory()->setArmies(currentArmyUnits + getArmyUnits()); //increase number of armyUnits on targetTerritory
         getSourcePlayer()->setReinforcementPool(currentReinforcementPool - getArmyUnits()); //decrease number of armyUnits in reinforcementPool
         return true;
@@ -201,7 +200,7 @@ bool Advance::validate() {
     string targetTerritory = getTargetTerritory()->getName();
     int sourceTerritoryArmyUnits = getSourceTerritory()->getArmies();
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
-    
+
 
     if (sourcePlayer.compare(sourceTerritoryOwner) != 0) {
         cout << "Invalid order. " << sourcePlayer << " cannot advance from foreign territory: " << sourceTerritory << ".\n" << endl;
@@ -340,7 +339,7 @@ bool Bomb::validate() {
 
     //check if targetTerritory is a neighbor of sourceTerritory
     bool targetIsNeighbor = false;
-    for (Territory* neighbor : getSourceTerritory()->getNeighbors()) {
+    for (Territory* neighbor : getSourcePlayer()->toDefend()) {
         if (neighbor->getName().compare(targetTerritory) == 0) {
             targetIsNeighbor = true;
             break;

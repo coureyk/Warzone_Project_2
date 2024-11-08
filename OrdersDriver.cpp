@@ -41,21 +41,18 @@ void testOrdersLists() {
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool);
 
+    s1->setOwner(sourcePlayer->getName());
+    s2->setOwner(sourcePlayer->getName());
+    t1->setOwner(targetPlayer->getName());
+    t2->setOwner(targetPlayer->getName());
+
+
     Deploy *o1 = new Deploy(sourcePlayer, 5, s1);
     Advance *o2 = new Advance(sourcePlayer, 10, s1, s2);
     Bomb *o3 = new Bomb(sourcePlayer, t2);
     Blockade *o4 = new Blockade(sourcePlayer, t1);
     Airlift *o5 = new Airlift(sourcePlayer, 10, s1, t1);
     Negotiate *o6 = new Negotiate(sourcePlayer, targetPlayer);
-
-    cout << *o1 << endl;
-    cout << *o2 << endl;
-    cout << *o3 << endl;
-    cout << *o4 << endl;
-    cout << *o5 << endl;
-    cout << *o6 << endl;
-
-
 
     o1->execute(); //execute calls validate()
     o2->execute();
