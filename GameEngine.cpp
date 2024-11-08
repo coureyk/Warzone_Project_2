@@ -1,4 +1,6 @@
 #include "GameEngine.h"
+#include "Player.h"
+#include "Map.h"
 
 /* Implement a group of C++ classes that implements a game engine that controls the flow of
 the game by using the notion of state, transition, and command.
@@ -6,6 +8,84 @@ the game by using the notion of state, transition, and command.
 
 
 int GameEngine::state = GameEngine::START;
+
+
+
+void mainGameLoop(){
+    
+    while(true){
+
+
+        
+        
+        
+        
+        break;
+
+
+    }
+}
+
+void GameEngine::reinforcementPhase(Player& player){
+
+    int territoryCount = player.getTerritories().size();
+    bool ownsContinent = false;
+    int continentScore;
+    
+
+    // for(const Continent* continent: Map::getContinents()){
+    //    if(continent->getTerritories() == player.getTerritories()){
+    //         ownsContinent = true;
+    //    }
+    // } NOT SURE IF THIS WOULD WORK.
+   
+
+    for(const Continent* continent: Map::getContinents()){
+
+        int continentSize = continent->getTerritories().size();
+
+        int counter = 0;
+
+        if(continent->getTerritories().size() > territoryCount)
+            break;
+
+        for(Territory* territory: continent->getTerritories()){
+            for(Territory* playerTerritory: player.getTerritories()){
+                if(playerTerritory->getName() == territory->getName()){
+                    counter += 1;
+                    break;
+                }                
+            }
+        }
+
+        if(counter == continentSize){
+            ownsContinent = true;
+            continentScore = continent->getScore();
+            break;
+        }
+    }
+
+
+    if(ownsContinent){
+        player.setReinforcementPool(player.getReinforcementPool() + continentScore);
+    }
+    else if(territoryCount < 9){
+        player.setReinforcementPool(player.getReinforcementPool() + 3);
+    }else{
+        player.setReinforcementPool(player.getReinforcementPool() + territoryCount/3);
+    }
+
+}
+
+void GameEngine::issueOrderPhase(){
+
+
+}
+
+void GameEngine::executeOrdersPhase(){
+
+
+}
 
 /*sets the state to the corresponding command*/
 void GameEngine::setState(const std::string command) {

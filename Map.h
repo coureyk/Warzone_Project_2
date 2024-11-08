@@ -24,7 +24,7 @@ private:
     int armies;
     bool wasVisited;
     string owner;
-
+    
 public:
     //Constructors
     Territory();

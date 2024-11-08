@@ -20,7 +20,7 @@ class Player {
 protected:
 	std::string name;
 
-	std::vector<Territory*> territories;
+	std::vector<Territory*>* territories;
 
 	OrdersList* ordersList;
 
@@ -66,7 +66,7 @@ public:
 
 	friend std::ostream& operator<<(std::ostream& os, const Player& player);
 
-
+	std::vector<Territory*>& getTerritories();
 };
 
 void testPlayers();

@@ -151,6 +151,17 @@ Hand& Hand::operator=(const Hand& other) {
     }
     return *this;
 }
+
+std::ostream& operator<<(std::ostream& os, const Hand& hand){
+    if(hand.getCardCount() > 0){
+        for(Card* card: *hand.handCards){
+            os << card->getType();
+        }
+    }else{
+        os<< "There are no cards present within this hand" << std::endl;
+    }
+    return os;
+}
 void Hand::addCard(Card* card) {
     handCards->push_back(card);
     std::cout << "Added " << card->getType() << " card to hand." << std::endl;
