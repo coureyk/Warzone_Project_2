@@ -1,6 +1,4 @@
 #include "GameEngine.h"
-#include "Player.h"
-#include "Map.h"
 
 /* Implement a group of C++ classes that implements a game engine that controls the flow of
 the game by using the notion of state, transition, and command.
@@ -73,12 +71,12 @@ void GameEngine::reinforcementPhase(Player& player){
 
 }
 
-void GameEngine::issueOrderPhase(){
+void GameEngine::issueOrderPhase(Player& player){
 
 
 }
 
-void GameEngine::executeOrdersPhase(){
+void GameEngine::executeOrdersPhase(Player& player){
 
 
 }

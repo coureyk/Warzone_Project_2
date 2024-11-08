@@ -106,6 +106,7 @@ ostream& operator<<(ostream& os, const Continent& continent);
 
 class Map {
 private:
+    
     static vector<Continent*> continents; //SHOULD EVENTUALLY MAKE THIS A * TO A VECTOR OF CONTINENT*
 
     //Helper Function

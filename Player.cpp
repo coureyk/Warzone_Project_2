@@ -35,12 +35,12 @@ Player::~Player() {
 	hand = NULL;
 }
 
-std::vector<Territory*> Player::toDefend() {
+std::vector<Territory*>& Player::toDefend() {
 	//std::cout << "These territories are to be defended. Whatever that entails";
-	return territories;
+	return *territories;
 }
 
-std::vector<Territory*>* Player::toAttack() {
+std::vector<Territory*>& Player::toAttack() {
 	
 	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
 	//std::cout << "These territories are to be attacked. Whatever that entails";
@@ -61,7 +61,7 @@ std::vector<Territory*>* Player::toAttack() {
 
 	}
 
-	return attackableTerritories;
+	return *attackableTerritories;
 }
 
 void Player::issueOrder() {

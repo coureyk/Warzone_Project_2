@@ -3,11 +3,21 @@
 #include <string>
 #include <iostream>
 #include <cstdio>
+#include <vector>
+#include "Player.h"
+#include "Map.h"
+
 class CommandProcessor;
 
 class GameEngine
 {
-    friend class CommandProcessor; 
+
+private:
+
+    std::vector<Player*>* players;
+
+    friend class CommandProcessor;
+
 public:
     // Method to display the available options based on the current state
     void displayNextPath(int currentState);
@@ -23,9 +33,10 @@ public:
 
     void reinforcementPhase(Player& player);
 
-    void issueOrderPhase();
+    void issueOrderPhase(Player& player);
 
-    void executeOrdersPhase();
+    void executeOrdersPhase(Player& player);
+
     /*The state represents a certain phase of the game and dictates what are the valid actions
     or user commands that take place in this phase. Some actions or commands may eventually
     trigger a transition to another state, which is what controls the flow of the game.
