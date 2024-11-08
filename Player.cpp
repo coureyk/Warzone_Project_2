@@ -3,6 +3,10 @@
 
 Player::Player(const std::string name, const std::vector<Territory*>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinforcementPool) {
 	this->name = name;
+	//Assign this player as owner of the given territories
+	for (Territory* t : territories) {
+		t->setOwner(name);
+	}
 	this->territories = territories;
 	this->ordersList = new OrdersList(ordersList);
 	this->hand = new Hand(hand);

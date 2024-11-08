@@ -18,12 +18,22 @@ void testOrdersLists() {
     Continent* c2 = Map::getContinents()[1];
 
     Territory* s1 = c1->getTerritories()[0];
-    Territory* s2 = c1->getTerritories()[1];
-    Territory* t1 = c1->getTerritories()[2];
-    Territory* t2 = c2->getTerritories()[3];
+    Territory* t1 = c1->getTerritories()[1];
+
+    Territory* s2 = c1->getTerritories()[2];
+    Territory* t2 = c2->getTerritories()[0];
 
     vector<Territory*> srcTerritories;
     vector<Territory*> tarTerritories;
+
+    int MAX_SRC_TERRITORIES = 0;
+    int MAX_TAR_TERRITORIES = 0;
+    for (Continent* c : Map::getContinents()) {
+        for (Territory* t : c->getTerritories()) {
+            
+        }
+    }
+
     srcTerritories.push_back(s1);
     srcTerritories.push_back(s2);
     tarTerritories.push_back(t1);
@@ -42,8 +52,9 @@ void testOrdersLists() {
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool);
 
     s1->setOwner(sourcePlayer->getName());
-    s2->setOwner(sourcePlayer->getName());
     t1->setOwner(targetPlayer->getName());
+        
+    s2->setOwner(sourcePlayer->getName());
     t2->setOwner(targetPlayer->getName());
 
 
