@@ -1,8 +1,5 @@
 // LoggingObserverDriver.cpp
-#include "CommandProcessing.h"
- // Define similar files for Order, OrderList, GameEngine as per the provided code
-#include "LoggingObserver.h"
-#include <memory>
+#include "LoggingObserverDriver.h"
 
 void testLoggingObserver() {
     // Create LogObserver
@@ -27,6 +24,4 @@ void testLoggingObserver() {
 }
 void testObserver() {
   testLoggingObserver();
-
-    
 }
