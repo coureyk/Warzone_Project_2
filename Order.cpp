@@ -186,7 +186,7 @@ Advance& Advance::operator=(const Advance& other)
 
 string Advance::toString() const {
     if (!this->getExecutionStatus()) {
-        return "Order Type: " + this->getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to move " + std::to_string(this->getArmyUnits()) + " army units from " + this->getSourceTerritory()->getName() + " to " + this->getTargetTerritory()->getName() + "\n";
+        return "Order Type: " + this->getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to move " + std::to_string(getArmyUnits()) + " army units from " + getSourceTerritory()->getName() + " to " + getTargetTerritory()->getName() + "\n";    
     }
     else {
         return "Advance Execution Summary\n";
@@ -202,6 +202,7 @@ bool Advance::validate() {
     int sourceTerritoryArmyUnits = getSourceTerritory()->getArmies();
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
     
+
     if (sourcePlayer.compare(sourceTerritoryOwner) != 0) {
         cout << "Invalid order. " << sourcePlayer << " cannot advance from foreign territory: " << sourceTerritory << ".\n" << endl;
         return false;
