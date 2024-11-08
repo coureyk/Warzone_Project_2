@@ -34,8 +34,7 @@ Player::~Player() {
 }
 
 std::vector<Territory*> Player::toDefend() {
-	std::vector<Territory*> territories;
-	std::cout << "These territories are to be defended. Whatever that entails";
+	//std::cout << "These territories are to be defended. Whatever that entails";
 	return territories;
 }
 

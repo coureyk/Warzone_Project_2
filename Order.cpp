@@ -486,7 +486,7 @@ bool Airlift::validate() {
         cout << "Invalid Order. " << getSourcePlayer()->getName() << " cannot execute an airlift from foreign territory: " << getSourceTerritory()->getName() << ".\n" << endl;
         return false;    
     } else if (getTargetTerritory()->getOwner().compare(getSourcePlayer()->getName()) != 0 ) {
-        cout << "Invalid Order. " << getSourcePlayer()->getName() << " cannot execute an airlift to an unknown territory: " << getTargetTerritory()->getName() << ".\n" << endl;
+        cout << "Invalid Order. " << getSourcePlayer()->getName() << " cannot execute an airlift to foreign territory: " << getTargetTerritory()->getName() << ".\n" << endl;
         return false;
     }
 
