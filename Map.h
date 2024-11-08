@@ -20,7 +20,7 @@ using std::vector;
 class Territory {
 private:
     string name;
-    vector<Territory*> neighbors;
+    vector<Territory*> neighbors; //SHOULD EVENTUALLY MAKE THIS A * TO A VECTOR OF TERRITORY*
     int armies;
     bool wasVisited;
     string owner;
@@ -28,7 +28,7 @@ private:
 public:
     //Constructors
     Territory();
-    Territory(string name);
+    Territory(const string& name);
     Territory(const Territory& other);
 
     //Destructor
@@ -45,14 +45,14 @@ public:
     string getOwner() const;
 
     //Setters
-    void setName(string name);
+    void setName(const string& name);
     void setNeighbors(vector<Territory*> neighbors);
-    void setArmies(int armies);
-    void setVisitedStatus(bool visitedStatus);
-    void setOwner(string owner);
+    void setArmies(const int& armies);
+    void setVisitedStatus(const bool& visitedStatus);
+    void setOwner(const string& owner);
 
     //Service Methods
-    void addNeighbor(Territory* territory);
+    void addNeighbor(Territory* const territory);
     string toString() const;
 };
 
@@ -66,13 +66,13 @@ class Continent {
 private:
     string name;
     int score;
-    vector<Territory*> territories;
+    vector<Territory*> territories; //SHOULD EVENTUALLY MAKE THIS A * TO A VECTOR OF TERRITORY*
     bool wasVisited;
 
 public:
     //Constructors
     Continent();
-    Continent(string name, int score);
+    Continent(const string& name, const int& score);
     Continent(const Continent& other);
 
     //Destructor
@@ -88,13 +88,13 @@ public:
     bool getVisitedStatus() const;
 
     //Setters
-    void setName(string name);
-    void setScore(int score);
-    void setTerritories(vector<Territory*>);
-    void setVisitedStatus(bool visitedStatus);
+    void setName(const string& name);
+    void setScore(const int& score);
+    void setTerritories(vector<Territory*> territories);
+    void setVisitedStatus(const bool& visitedStatus);
 
     //Service Methods
-    void addTerritory(Territory* territory);
+    void addTerritory(Territory* const territory);
     string toString() const;
 };
 
@@ -106,7 +106,7 @@ ostream& operator<<(ostream& os, const Continent& continent);
 
 class Map {
 private:
-    static vector<Continent*> continents;
+    static vector<Continent*> continents; //SHOULD EVENTUALLY MAKE THIS A * TO A VECTOR OF CONTINENT*
 
     //Helper Function
     static void DFS(Territory& t);
@@ -144,7 +144,7 @@ private:
     string filePath;
 
 public: 
-    MapLoader(string filePath);
+    MapLoader(const string& filePath);
     string getFilePath() const;
     bool loadMap(); // Loads a map from a file
 };

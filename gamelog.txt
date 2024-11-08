@@ -53,3 +53,12 @@ loadmap a
 Invalid command in the current state or syntax error.
 exit
 Invalid command in the current state or syntax error.
+Invalid command in the current state or syntax error.
+Invalid command in the current state or syntax error.
+Invalid command in the current state or syntax error.
+1
+Invalid command in the current state or syntax error.
+quit
+Invalid command in the current state or syntax error.
+exit
+Invalid command in the current state or syntax error.

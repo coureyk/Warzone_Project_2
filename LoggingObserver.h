@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <algorithm>
 class Subject;
 class Observer{
     public:

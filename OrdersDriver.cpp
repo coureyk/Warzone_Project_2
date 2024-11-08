@@ -17,17 +17,30 @@ void testOrdersLists() {
     Continent* c1 = Map::getContinents()[0];
     Continent* c2 = Map::getContinents()[1];
 
-    Territory* s1 = c1->getTerritories()[0];
-    Territory* s2 = c1->getTerritories()[1];
-    Territory* t1 = c1->getTerritories()[2];
-    Territory* t2 = c2->getTerritories()[3];
+    vector<Territory*> srcTerritories; //will contain Baja California and Eastern Mexico
+    vector<Territory*> tarTerritories; // will contain Western Mexico and Washington
 
-    vector<Territory*> srcTerritories;
-    vector<Territory*> tarTerritories;
-    srcTerritories.push_back(s1);
-    srcTerritories.push_back(s2);
-    tarTerritories.push_back(t1);
-    tarTerritories.push_back(t2);
+    int counter = 0;
+    const int NUM_OF_PLAYERS = 2;
+    const int MAX_TERRITORIES = 2;
+    for (Continent* c : Map::getContinents()) {
+        for (Territory* t : c->getTerritories()) {
+            if (counter % NUM_OF_PLAYERS == 0) {
+                srcTerritories.push_back(t);
+                counter++;
+            } else if (counter % NUM_OF_PLAYERS == 1) {
+                tarTerritories.push_back(t);
+                counter++;
+            }
+
+            if (counter == MAX_TERRITORIES * NUM_OF_PLAYERS) {
+                break;
+            }
+        }
+        if (counter == MAX_TERRITORIES * NUM_OF_PLAYERS) {
+            break;
+        }
+    }
 
     OrdersList srcOrdersList;
     OrdersList tarOrdersList;
@@ -41,21 +54,13 @@ void testOrdersLists() {
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool);
 
-    Deploy *o1 = new Deploy(sourcePlayer, 5, s1);
-    Advance *o2 = new Advance(sourcePlayer, 10, s1, s2);
-    Bomb *o3 = new Bomb(sourcePlayer, t2);
-    Blockade *o4 = new Blockade(sourcePlayer, t1);
-    Airlift *o5 = new Airlift(sourcePlayer, 10, s1, t1);
+
+    Deploy *o1 = new Deploy(sourcePlayer, 5, srcTerritories[0]);
+    Advance *o2 = new Advance(sourcePlayer, 10, srcTerritories[0], srcTerritories[1]);
+    Bomb *o3 = new Bomb(sourcePlayer, tarTerritories[1]);
+    Blockade *o4 = new Blockade(sourcePlayer, tarTerritories[0]);
+    Airlift *o5 = new Airlift(sourcePlayer, 10, srcTerritories[0], srcTerritories[1]);
     Negotiate *o6 = new Negotiate(sourcePlayer, targetPlayer);
-
-    cout << *o1 << endl;
-    cout << *o2 << endl;
-    cout << *o3 << endl;
-    cout << *o4 << endl;
-    cout << *o5 << endl;
-    cout << *o6 << endl;
-
-
 
     o1->execute(); //execute calls validate()
     o2->execute();
