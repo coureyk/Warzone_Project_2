@@ -35,10 +35,30 @@ std::vector<Territory*> Player::toDefend() {
 	return territories;
 }
 
-std::vector<Territory*> Player::toAttack() {
-	std::vector<Territory*> territories;
-	std::cout << "These territories are to be attacked. Whatever that entails";
-	return territories;
+std::vector<Territory*>* Player::toAttack() {
+	
+	
+
+	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+	//std::cout << "These territories are to be attacked. Whatever that entails";
+
+	for (Territory* territory : this->territories) {
+		for (Territory* neighbor : territory->getNeighbors()) {
+			bool isAlly = false;
+			for (Territory* allyTerritories : this->territories) {
+				if (neighbor->getName() == allyTerritories->getName()) {
+					isAlly = true;
+					break;
+				}
+			}
+
+			if (!isAlly)
+				attackableTerritories->push_back(neighbor);
+		}
+
+	}
+
+	return attackableTerritories;
 }
 
 void Player::issueOrder() {

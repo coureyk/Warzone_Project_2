@@ -42,7 +42,7 @@ public:
 
 	std::vector<Territory*> toDefend();
 
-	std::vector<Territory*> toAttack();
+	std::vector<Territory*>* toAttack();
 
 	void issueOrder();
 
