@@ -212,7 +212,7 @@ void testPlayers() {
 
 	Continent* continent1 = new Continent("America", 1);
 
-	Territory* territory1 = new Territory("Montreal", "Quebec");
+	Territory* territory1 = new Territory("Montreal");
 
 	territories.push_back(territory1);
 
