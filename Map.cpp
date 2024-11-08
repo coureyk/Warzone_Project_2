@@ -11,7 +11,7 @@ Territory::Territory() {
     owner = "None";
 }
 
-Territory::Territory(string name) {
+Territory::Territory(const string& name) {
     this->name = name;
     neighbors = vector<Territory*>(); //initializing neighbors as empty vector
     armies = 0;
@@ -67,7 +67,7 @@ string Territory::getOwner() const {
 }
 
 //SETTERS
-void Territory::setName(string name) {
+void Territory::setName(const string& name) {
     this->name = name;
 }
 
@@ -75,20 +75,20 @@ void Territory::setNeighbors(vector<Territory*> neighbors) {
     this->neighbors = neighbors;
 }
 
-void Territory::setArmies(int armies) {
+void Territory::setArmies(const int& armies) {
     this->armies = armies;
 }
 
-void Territory::setVisitedStatus(bool visitedStatus) {
+void Territory::setVisitedStatus(const bool& visitedStatus) {
     this->wasVisited = visitedStatus;
 }
 
-void Territory::setOwner(string owner) {
+void Territory::setOwner(const string& owner) {
     this->owner = owner;
 }
 
 //SERVICE METHODS
-void Territory::addNeighbor(Territory* territory) {
+void Territory::addNeighbor(Territory* const territory) {
     this->neighbors.push_back(territory);
 }
 
@@ -120,7 +120,7 @@ Continent::Continent() {
 
 }
 
-Continent::Continent(string name, int score) {
+Continent::Continent(const string& name, const int& score) {
     this->name = name;
     this->score = score;
     territories = vector<Territory*>(); //initializing territories as empty vector
@@ -169,11 +169,11 @@ bool Continent::getVisitedStatus() const {
 }
 
 //SETTERS
-void Continent::setName(string name) {
+void Continent::setName(const string& name) {
     this->name = name;
 }
 
-void Continent::setScore(int score) {
+void Continent::setScore(const int& score) {
     this->score = score;
 }
 
@@ -181,12 +181,12 @@ void Continent::setTerritories(vector<Territory*> contents) {
     this->territories = contents;
 }
 
-void Continent::setVisitedStatus(bool visitedStatus) {
+void Continent::setVisitedStatus(const bool& visitedStatus) {
     this->wasVisited = visitedStatus;
 }
 
 //SERVICE METHODS
-void Continent::addTerritory(Territory* territory) {
+void Continent::addTerritory(Territory* const territory) {
     this->territories.push_back(territory);
 }
 
@@ -289,7 +289,7 @@ ostream& operator<<(ostream& os, const Map& map) {
 
 //====================================================DEFINING CLASS MEMBERS FOR MAP_LOADER====================================================
 
-MapLoader::MapLoader(string filePath) {
+MapLoader::MapLoader(const string& filePath) {
     this->filePath = filePath;
 }
 

@@ -41,13 +41,13 @@ public:
     string getOrderType() const;
     bool getExecutionStatus() const;
 
-    void setArmyUnits(int armyUnits);
-    void setSourceTerritory(Territory* sourceTerritory);
-    void setTargetTerritory(Territory* targetTerritory);
-    void setSourcePlayer(Player* sourcePlayer);
-    void setTargetPlayer(Player* targetPlayer);
-    void setOrderType(string orderType);
-    void setExecutionStatus(bool hasExecuted);
+    void setArmyUnits(const int& armyUnits);
+    void setSourceTerritory(Territory* const sourceTerritory);
+    void setTargetTerritory(Territory* const targetTerritory);
+    void setSourcePlayer(Player* const sourcePlayer);
+    void setTargetPlayer(Player* const targetPlayer);
+    void setOrderType(const string& orderType);
+    void setExecutionStatus(const bool hasExecuted);
 
     virtual string toString() const = 0; //This function returns a string representation of the Order that invokes it, and is meant to act as a helper function for overloaded operator "<<".
 
@@ -62,7 +62,7 @@ ostream& operator<<(ostream& os, const Order& order);
 class Deploy : public Order {
 public:
     //Constructors
-    Deploy(Player* sourcePlayer, int armyUnits, Territory* targetTerritory);
+    Deploy(Player* const sourcePlayer, const int armyUnits, Territory* const targetTerritory);
     Deploy(const Deploy& other);
 
     //Overloading operator "="
@@ -80,7 +80,7 @@ public:
 class Advance : public Order {
 public:
     //Constructors
-    Advance(Player* sourcePlayer, int armyUnits, Territory* sourceTerritory, Territory* targetTerritory);
+    Advance(Player* const sourcePlayer, const int armyUnits, Territory* const sourceTerritory, Territory* const targetTerritory);
     Advance(const Advance& other);
 
     //Overloading operator "="
@@ -98,7 +98,7 @@ public:
 class Bomb : public Order {
 public:
     //Constructors
-    Bomb(Player* sourcePlayer, Territory* targetTerritory);
+    Bomb(Player* const sourcePlayer, Territory* const targetTerritory);
     Bomb(const Bomb& other);
 
     //Overloading operator "="
@@ -116,7 +116,7 @@ public:
 class Blockade : public Order {
 public:
     //Constructors
-    Blockade(Player* sourcePlayer, Territory* targetTerritory);
+    Blockade(Player* const sourcePlayer, Territory* const targetTerritory);
     Blockade(const Blockade& other);
 
     //Overloading operator "="
@@ -134,7 +134,7 @@ public:
 class Airlift : public Order {
 public:
     //Constructors
-    Airlift(Player* sourcePlayer, int armyUnits, Territory* sourceTerritory, Territory* targetTerritory);
+    Airlift(Player* const sourcePlayer, const int armyUnits, Territory* const sourceTerritory, Territory* const targetTerritory);
     Airlift(const Airlift& other);
 
     //Overloading operator "="
@@ -152,7 +152,7 @@ public:
 class Negotiate : public Order {
 public:
     //Constructors
-    Negotiate(Player* sourcePlayer, Player* targetPlayer);
+    Negotiate(Player* const sourcePlayer, Player* const targetPlayer);
     Negotiate(const Negotiate& other);
 
     //Overloading operator "="
@@ -180,13 +180,13 @@ private:
     public:
         //Constructors
         Node();
-        Node(Order* element, Node* prev, Node* next);
+        Node(Order* const element, Node* const prev, Node* const next);
 
-        Order* getElement();
-        Node* getPrev();
-        Node* getNext();
-        void setPrev(Node* prev);
-        void setNext(Node* next);
+        Order* getElement() const;
+        Node* getPrev() const;
+        Node* getNext() const;
+        void setPrev(Node* const prev);
+        void setNext(Node* const next);
     };
 
     //Sentinel Nodes. They ensure that the insertion and/or removal of a node will always occur between two nodes.
@@ -204,10 +204,10 @@ public:
     bool isEmpty() const;
     Node* first() const;
     Node* last() const;
-    Node* getNode(int i) const;
-    void addLast(Order* element);
-    Order* remove(Node* node);
-    void move(int currentPos, int targetPos);
+    Node* getNode(const int& i) const;
+    void addLast(Order* const element);
+    Order* remove(Node* const node);
+    void move(const int& currentPos, const int& targetPos);
     void getContents() const;
 };
 

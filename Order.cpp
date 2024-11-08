@@ -43,32 +43,32 @@ bool Order::getExecutionStatus() const {
 }
 
 //SETTERS
-void Order::setOrderType(string orderType) {
-    this->orderType = orderType;
-}
-
-void Order::setExecutionStatus(bool hasExecuted) {
-    this->hasExecuted = hasExecuted;
-}
-
-void Order::setArmyUnits(int armyUnits) {
+void Order::setArmyUnits(const int& armyUnits) {
     this->armyUnits = armyUnits;
 }
 
-void Order::setSourceTerritory(Territory* sourceTerritory) {
+void Order::setSourceTerritory(Territory* const sourceTerritory) {
     this->sourceTerritory = sourceTerritory;
 }
 
-void Order::setTargetTerritory(Territory* targetTerritory) {
+void Order::setTargetTerritory(Territory* const targetTerritory) {
     this->targetTerritory = targetTerritory;
 }
 
-void Order::setSourcePlayer(Player* sourcePlayer) {
+void Order::setSourcePlayer(Player* const sourcePlayer) {
     this->sourcePlayer = sourcePlayer;
 }
 
-void Order::setTargetPlayer(Player* targetPlayer) {
+void Order::setTargetPlayer(Player* const targetPlayer) {
     this->targetPlayer = targetPlayer;
+}
+
+void Order::setOrderType(const string& orderType) {
+    this->orderType = orderType;
+}
+
+void Order::setExecutionStatus(const bool hasExecuted) {
+    this->hasExecuted = hasExecuted;
 }
 
 ostream& operator<<(ostream& os, const Order& order) {
@@ -81,7 +81,7 @@ ostream& operator<<(ostream& os, const Order& order) {
 
 //DEFINING CLASS MEMBERS FOR DEPLOY
 //CONSTRUCTORS
-Deploy::Deploy(Player* sourcePlayer, int armyUnits, Territory* targetTerritory) {
+Deploy::Deploy(Player* const sourcePlayer, const int armyUnits, Territory* const targetTerritory) {
     this->setSourcePlayer(sourcePlayer);
     this->setArmyUnits(armyUnits);
     this->setTargetTerritory(targetTerritory);
@@ -150,7 +150,7 @@ void Deploy::execute() {
 //====================================================DEFINING CLASS MEMBERS FOR ADVANCE====================================================
 
 //DEFINING CLASS MEMBERS FOR ADVANCE
-Advance::Advance(Player* sourcePlayer, int armyUnits, Territory* sourceTerritory, Territory* targetTerritory) {
+Advance::Advance(Player* const sourcePlayer, const int armyUnits, Territory* const sourceTerritory, Territory* const targetTerritory) {
     this->setSourcePlayer(sourcePlayer);
     this->setArmyUnits(armyUnits);
     this->setSourceTerritory(sourceTerritory);
@@ -289,7 +289,7 @@ void Advance::execute() {
 
 //====================================================DEFINING CLASS MEMBERS FOR BOMB====================================================
 
-Bomb::Bomb(Player* sourcePlayer, Territory* targetTerritory) {
+Bomb::Bomb(Player* const sourcePlayer, Territory* const targetTerritory) {
     this->setSourcePlayer(sourcePlayer);
     this->setTargetTerritory(targetTerritory);
     this->setOrderType("Bomb");
@@ -375,7 +375,7 @@ void Bomb::execute() {
 
 //====================================================DEFINING CLASS MEMBERS FOR BLOCKADE====================================================
 
-Blockade::Blockade(Player* sourcePlayer, Territory* targetTerritory) {
+Blockade::Blockade(Player* const sourcePlayer, Territory* const targetTerritory) {
     this->setSourcePlayer(sourcePlayer);
     this->setTargetTerritory(targetTerritory);
     this->setOrderType("Blockade");
@@ -438,7 +438,7 @@ void Blockade::execute() {
 
 //====================================================DEFINING CLASS MEMBERS FOR AIRLIFT====================================================
 
-Airlift::Airlift(Player* sourcePlayer, int armyUnits, Territory* sourceTerritory, Territory* targetTerritory) {
+Airlift::Airlift(Player* const sourcePlayer, const int armyUnits, Territory* const sourceTerritory, Territory* const targetTerritory) {
     this->setSourcePlayer(sourcePlayer);
     this->setArmyUnits(armyUnits);
     this->setSourceTerritory(sourceTerritory);
@@ -505,7 +505,7 @@ void Airlift::execute() {
 
 //====================================================DEFINING CLASS MEMBERS FOR NEGOTIATE====================================================
 
-Negotiate::Negotiate(Player* sourcePlayer, Player* targetPlayer) {
+Negotiate::Negotiate(Player* const sourcePlayer, Player* const targetPlayer) {
     this->setSourcePlayer(sourcePlayer);
     this->setTargetPlayer(targetPlayer);
     this->setOrderType("Negotiate");
@@ -572,31 +572,31 @@ OrdersList::Node::Node() {
     this->next = NULL;
 }
 
-OrdersList::Node::Node(Order* element, Node* prev, Node* next) {
+OrdersList::Node::Node(Order* const element, Node* const prev, Node* const next) {
     this->element = element;
     this->prev = prev;
     this->next = next;
 }
 
 //GETTERS
-Order* OrdersList::Node::getElement() {
+Order* OrdersList::Node::getElement() const {
     return element;
 }
 
-OrdersList::Node* OrdersList::Node::getPrev() {
+OrdersList::Node* OrdersList::Node::getPrev() const {
     return prev;
 }
 
-OrdersList::Node* OrdersList::Node::getNext() {
+OrdersList::Node* OrdersList::Node::getNext() const {
     return next;
 }
 
 //SETTERS
-void OrdersList::Node::setPrev(Node* prev) {
+void OrdersList::Node::setPrev(Node* const prev) {
     this->prev = prev;
 }
 
-void OrdersList::Node::setNext(Node* next) {
+void OrdersList::Node::setNext(Node* const next) {
     this->next = next;
 }
 
@@ -638,7 +638,7 @@ OrdersList::Node* OrdersList::last() const {
     return trailer->getPrev();
 }
 
-OrdersList::Node* OrdersList::getNode(int nodeIndex) const {
+OrdersList::Node* OrdersList::getNode(const int& nodeIndex) const {
     Node* currentNode = header->getNext();
     for (int i = 0; i < getSize(); i++) {
         if (i == nodeIndex) {
@@ -651,11 +651,11 @@ OrdersList::Node* OrdersList::getNode(int nodeIndex) const {
     return NULL;
 }
 
-void OrdersList::addLast(Order* element) {
+void OrdersList::addLast(Order* const element) {
     addBetween(element, trailer->getPrev(), trailer);
 }
 
-Order* OrdersList::remove(Node* node) {
+Order* OrdersList::remove(Node* const node) {
     if (isEmpty() || node == NULL) {
         std::cout << "ERROR. Attempting to remove from empty list or include invalid node.\n\n";
         return NULL;
@@ -668,7 +668,10 @@ Order* OrdersList::remove(Node* node) {
     return node->getElement();
 }
 
-void OrdersList::move(int currentPos, int targetPos) {
+/**
+ * Does shit
+ */
+void OrdersList::move(const int& currentPos, const int& targetPos) {
     Node* currentNode = header->getNext();
     Node* targetNode = currentNode;
     bool currentNodeFound = false;
