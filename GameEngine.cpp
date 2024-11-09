@@ -70,7 +70,7 @@ void GameEngine::startupPhase() {
 
         while (true) {
             Command* command = processor->getCommand();
-            setState(command->getCommandText);
+            setState(command->getCommandText());
         }
         
     } while (GameEngine::state != GameEngine::states::FINISHED);
@@ -98,7 +98,14 @@ std::string GameEngine::intStateToStringState(int sta){
 }
 
 //will take in the user's input and check if it follows a valid command
-bool GameEngine::validCommandInput(const std::string command) {
+bool GameEngine::validCommandInput( std::string inputedString) {
+    //loadmap USA
+    std::string command = inputedString.substr(inputedString.find(" ")); //should get the loadmap section
+
+    std::size_t pos = inputedString.find(" ");      // position of " "
+    std::string argument = inputedString.substr (pos+1);        //should get the second argument, USA
+
+
     //make sure valid command
     if (!(command == "start" || command == "loadmap" || command == "play" ||
         command == "validatemap" || command == "addplayer" || command == "assigncountries" ||
@@ -110,12 +117,13 @@ bool GameEngine::validCommandInput(const std::string command) {
         return false;
     }
 
+    MapLoader loader(argument);
+
     switch (state) { //check if correct state for what was inputed
     case states::INITIALISED:   if (command == "start")
         return true; break;
     case states::START:
         //SEND FILE PATH, if it doesnt exist return false
-        MapLoader loader(argument);
         bool mapLoaded = loader.loadMap();
                                 if (command == "loadmap"&& mapLoaded) return true; 
                     break;
@@ -142,6 +150,6 @@ bool GameEngine::validCommandInput(const std::string command) {
 //should be replaced with testGameStates() to be called by main in Test.cpp
 void testGameStates() {
     GameEngine gameEngine;
-    gameEngine.startup();
+    gameEngine.startupPhase();
 
 }
