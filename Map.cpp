@@ -50,10 +50,6 @@ string Territory::getName() const {
     return name;
 }
 
-// string Territory::getParentContinent() const{
-//     return parentContinent;
-// }
-
 vector<Territory*> Territory::getNeighbors() const {
     return neighbors;
 }
@@ -112,7 +108,7 @@ string Territory::toString() const {
 
 //OVERLOADING OPERATOR<<
 ostream& operator<<(ostream& os, const Territory& territory) {
-    os << territory.toString();
+    os << territory.getName();
     return os;
 }
 

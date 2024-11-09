@@ -82,6 +82,7 @@
         "unordered_map": "cpp",
         "variant": "cpp",
         "xstddef": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "map": "cpp"
     }
 }

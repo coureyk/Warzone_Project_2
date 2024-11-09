@@ -9,7 +9,11 @@
 #include <sstream>
 #include "LoggingObserver.h" 
 #include "GameEngine.h"
+
+
+
 class Command: public Subject, public ILoggable{
+
     private:
     std::string* commandText;
     std::string* effect;
@@ -40,7 +44,6 @@ class CommandProcessor: public Subject, public ILoggable{
     CommandProcessor(const CommandProcessor& other);
     CommandProcessor& operator=(const CommandProcessor& other);
     virtual ~CommandProcessor();
-
     virtual Command* getCommand();
     bool validate(Command* command);
    // void saveEffect(Command* command, const std::string& effect);

@@ -1,24 +1,25 @@
-#ifndef GAME_ENGINE_H
-#define GAME_ENGINE_H
+#pragma once
 #include <string>
 #include <iostream>
 #include <cstdio>
 #include <vector>
 #include "Player.h"
 #include "Map.h"
+#include "CommandProcessing.h"
 
-class CommandProcessor;
+
+
 
 class GameEngine
 {
-
+    
 private:
 
     std::vector<Player*>* players;
 
-    friend class CommandProcessor;
 
 public:
+    
     // Method to display the available options based on the current state
     void displayNextPath(int currentState);
 
@@ -77,4 +78,4 @@ void testGameStates();
 
 
 
-#endif
+

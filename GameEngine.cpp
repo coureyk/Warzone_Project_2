@@ -26,14 +26,6 @@ void GameEngine::reinforcementPhase(Player& player){
     bool ownsContinent = false;
     int continentScore;
     
-
-    // for(const Continent* continent: Map::getContinents()){
-    //    if(continent->getTerritories() == player.getTerritories()){
-    //         ownsContinent = true;
-    //    }
-    // } NOT SURE IF THIS WOULD WORK.
-   
-
     for(const Continent* continent: Map::getContinents()){
 
         int continentSize = continent->getTerritories().size();
@@ -72,7 +64,106 @@ void GameEngine::reinforcementPhase(Player& player){
 }
 
 void GameEngine::issueOrderPhase(Player& player){
+    
+    std::vector<Territory*>& attackableTerritories = player.toAttack();
+    std::vector<Territory*>& defendableTerritories = player.toDefend();
+  
 
+    //Initial deployment phase when units are received at the beginning of every round
+    for(Territory* territory: defendableTerritories){
+        
+        if(player.getReinforcementPool() <= 0)
+            break;
+
+        std::cout<<"Deploying forces to " << territory->getName()<<std::endl<<std::endl;
+        player.issueOrder(true,false, player, player,*territory,*territory);
+    }
+
+    std::cout<<"Attackable Territories:";
+    for(Territory* territory: attackableTerritories){
+        std::cout<<territory<<"|";
+    }
+    
+    std::cout<<std::endl<<std::endl<<"Defendable Territories:";
+    for(Territory* territory: defendableTerritories){
+        std::cout<<territory<<"|";
+    }
+
+    CommandProcessor* processor = new CommandProcessor;
+
+    LogObserver* logObserver = new LogObserver(processor);
+    
+    //Loop to allow advancement of troops
+    while(true){
+
+        
+        try{
+            
+            //bool sourceError;
+            std::string sourceTerritory;
+            std::string targetTerritory;
+
+            std::cout<<"Please enter \"done\" if you do not want to advance any units."<<std::endl<<std::endl;
+
+            std::cout<<"Select a source territory to transfer units from"<<std::endl;
+             Command* command1 = processor->getCommand();
+             sourceTerritory = command1->getCommandText();
+            //std::cin>>sourceTerritory;
+            std::cout<<"Select a target territory to transfer units to"<<std::endl;
+             Command* command2 = processor->getCommand();
+             targetTerritory = command2->getCommandText();
+            //std::cin>>targetTerritory;
+
+            if(sourceTerritory == "done" || targetTerritory == "done"){
+                break;
+            }
+
+            bool notFoundSource = true;
+            bool notFoundTarget = true;
+
+            Territory* sourceTerritoryObj = nullptr;
+            Territory* targetTerritoryObj = nullptr;
+
+            for(Territory* territory: defendableTerritories){
+                if(sourceTerritory == territory->getName()){
+                    notFoundSource = false;
+                    sourceTerritoryObj = new Territory(*territory);
+                }else if(targetTerritory == territory->getName()){
+                    notFoundTarget == false;
+                    targetTerritoryObj = new Territory(*territory);
+                }
+            }
+            
+            //Don't have to loop through attackable territories if you advance in friendly territories.
+            if(notFoundTarget){
+                for(Territory* territory: attackableTerritories){
+                    if(targetTerritory == territory->getName()){
+                        notFoundTarget = false;
+                        targetTerritoryObj = new Territory(*territory);
+                    } 
+                }
+            }
+
+            if(notFoundSource){
+                throw sourceTerritory;
+            }else if(notFoundTarget){
+                throw targetTerritory;
+            }
+
+            player.issueOrder(false,true, player, player, *sourceTerritoryObj, *targetTerritoryObj);
+
+            
+
+
+        }catch(std::string territory){
+            
+            std::cout<<territory<<" is not a valid territory name";
+        }
+        
+
+    }
+    
+       
 
 }
 

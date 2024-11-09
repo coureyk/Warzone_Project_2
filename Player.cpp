@@ -29,8 +29,10 @@ Player::Player(const Player& otherPlayer) {
 }
 
 Player::~Player() {
+	delete territories;
 	delete ordersList;
 	delete hand;
+	territories = NULL;
 	ordersList = NULL;
 	hand = NULL;
 }
@@ -64,63 +66,117 @@ std::vector<Territory*>& Player::toAttack() {
 	return *attackableTerritories;
 }
 
-void Player::issueOrder() {
-std::cout << R"HERE(Which order would you like to issue?
-\nEnter 1 for Deploy
-\nEnter 2 for Advance
-\nEnter 3 for Bomb
-\nEnter 4 for Blockade
-\nEnter 5 for Airlift
-\nEnter 6 for Negotiate\n)HERE" << std::endl;
+void Player::issueOrder(bool toDeploy, bool toAdvance,Player& sourcePlayer, Player& targetPlayer,Territory& sourceTerritory, Territory& targetTerritory) {
 
-	Player* sourcePlayer = new Player();
-	Player* targetPlayer = new Player();
+	// Player* sourcePlayer = new Player();
+	// Player* targetPlayer = new Player();
 
-	Territory* sourceTerritory = new Territory();
-	Territory* targetTerritory = new Territory();
+	// Territory* sourceTerritory = new Territory();
+	// Territory* targetTerritory = new Territory();
+
+
+	if(toDeploy){
+		
+		int deployableUnits;
+		
+		while(true){
+			std::cout<<"How many units would you like to deploy?"<<std::endl;
+		
+			try{
+				std::cin>>deployableUnits;
+
+				if(deployableUnits>reinforcementPool){
+					throw deployableUnits;
+				}
+
+				break;
+
+			}catch(int deployableUnits){
+				std::cout<<"You only have " << reinforcementPool << " at your disposal. " << "You cannot deploy " << deployableUnits << " units."<<std::endl;
+			}
+		}
+
+
+		reinforcementPool -= deployableUnits;
+
+		Deploy* deploy = new Deploy(this,deployableUnits, &targetTerritory);
+		ordersList->addLast(deploy);
+		return;
+	}
+
+	if(toAdvance){
+		
+		while(true){
+			int advancingUnits;
+			std::cout<<"This territory has " << sourceTerritory.getArmies() << " units. How many would you like to move into " << targetTerritory << "?"<<std::endl;
+			try{
+				std::cin>>advancingUnits;
+				if(advancingUnits>sourceTerritory.getArmies())
+					throw advancingUnits;
+			}
+
+			catch(int advancingUnits){
+				std::cout<<advancingUnits<<" is too many units given that "<<sourceTerritory<< " only has "<<sourceTerritory.getArmies()<<" available units";
+			}
+			Advance* advance = new Advance(this,advancingUnits,&sourceTerritory,&targetTerritory);
+			ordersList->addLast(advance);
+			std::cout<<advancingUnits<<" units were move to " << targetTerritory << " from "<<sourceTerritory;
+			break;
+		}
+	}
+
+	std::cout << R"HERE(Which order would you like to issue?
+	\nEnter 1 for Deploy
+	\nEnter 2 for Advance
+	\nEnter 3 for Bomb
+	\nEnter 4 for Blockade
+	\nEnter 5 for Airlift
+	\nEnter 6 for Negotiate\n)HERE" << std::endl;
+
+	
 
 	int input = 0;
 	std::cin >> input;
-	Bomb* bomb = new Bomb(sourcePlayer, sourceTerritory);
+	Bomb* bomb = new Bomb(&sourcePlayer, &sourceTerritory);
 	switch (input) {
 	case 1:
 	{
-		Deploy* deploy = new Deploy(sourcePlayer, 0, targetTerritory);
+		Deploy* deploy = new Deploy(&sourcePlayer, 0, &targetTerritory);
 		ordersList->addLast(deploy);
 		std::cout << "Deploy added";
 	}
 	break;
 	case 2:
 	{
-		Advance* advance = new Advance(sourcePlayer, 0, sourceTerritory, targetTerritory);
+		Advance* advance = new Advance(&sourcePlayer, 0, &sourceTerritory, &targetTerritory);
 		ordersList->addLast(advance);
 		std::cout << "Advance added";
 	}
 	break;
 	case 3:
 	{
-		Bomb* bomb = new Bomb(sourcePlayer, 0);
+		Bomb* bomb = new Bomb(&sourcePlayer, 0);
 		ordersList->addLast(bomb);
 		std::cout << "Bomb added";
 	}
 	break;
 	case 4:
 	{
-		Blockade* blockade = new Blockade(sourcePlayer, targetTerritory);
+		Blockade* blockade = new Blockade(&sourcePlayer, &targetTerritory);
 		ordersList->addLast(blockade);
 		std::cout << "Blockade added";
 	}
 	break;
 	case 5:
 	{
-		Airlift* airlift = new Airlift(sourcePlayer, 0, sourceTerritory, targetTerritory);
+		Airlift* airlift = new Airlift(&sourcePlayer, 0, &sourceTerritory, &targetTerritory);
 		ordersList->addLast(airlift);
 		std::cout << "Airlift added";
 	}
 	break;
 	case 6:
 	{
-		Negotiate* negotiate = new Negotiate(sourcePlayer, targetPlayer);
+		Negotiate* negotiate = new Negotiate(&sourcePlayer, &targetPlayer);
 		ordersList->addLast(negotiate);
 		std::cout << "Negotiate added";
 	}
@@ -211,31 +267,31 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
 }
 
 void testPlayers() {
-	std::vector<Territory*> territories;
+	// std::vector<Territory*> territories;
 
-	Continent* continent1 = new Continent("America", 1);
+	// Continent* continent1 = new Continent("America", 1);
 
-	Territory* territory1 = new Territory("Montreal");
+	// Territory* territory1 = new Territory("Montreal");
 
-	territories.push_back(territory1);
+	// territories.push_back(territory1);
 
-	Card* card1 = new Card(BOMB);
+	// Card* card1 = new Card(BOMB);
 
-	Hand* hand1 = new Hand;
+	// Hand* hand1 = new Hand;
 
-	hand1->addCard(card1);
+	// hand1->addCard(card1);
 
-	OrdersList* list = new OrdersList;
+	// OrdersList* list = new OrdersList;
 
-	int reinforcementPool = 10;
+	// int reinforcementPool = 10;
 
-	Player* player1 = new Player("Liam", territories, *list, *hand1, reinforcementPool);
+	// Player* player1 = new Player("Liam", territories, *list, *hand1, reinforcementPool);
 
-	Deploy* order1 = new Deploy(player1, 1, territory1);
+	// Deploy* order1 = new Deploy(player1, 1, territory1);
 
-	list->addLast(order1);
+	// list->addLast(order1);
 
 
-	player1->issueOrder();
+	// player1->issueOrder();
 }
 

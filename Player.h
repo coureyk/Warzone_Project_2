@@ -15,6 +15,7 @@ class OrdersList;
 #include "Order.h"
 #include "Cards.h"
 
+
 class Player {
 
 protected:
@@ -44,7 +45,7 @@ public:
 
 	std::vector<Territory*>& toAttack();
 
-	void issueOrder();
+	void issueOrder(bool toDeploy, bool toAdvance,Player& sourcePlayer, Player& targetPlayer,Territory& sourceTerritory, Territory& targetTerritory);
 
 	Player& operator=(const Player& otherPlayer);
 
