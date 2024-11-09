@@ -10,7 +10,7 @@
 #include "LoggingObserver.h" 
 #include "GameEngine.h"
 
-
+class GameEngine;
 
 class Command: public Subject, public ILoggable{
 

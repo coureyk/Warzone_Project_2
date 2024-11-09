@@ -14,6 +14,7 @@ class OrdersList;
 #include "Map.h"
 #include "Order.h"
 #include "Cards.h"
+#include "CommandProcessing.h"
 
 
 class Player {
@@ -68,8 +69,11 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Player& player);
 
 	std::vector<Territory*>& getTerritories();
+
+	Territory& territoryFinder();
 };
 
 void testPlayers();
+
 
 

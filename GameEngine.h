@@ -8,7 +8,8 @@
 #include "CommandProcessing.h"
 
 
-
+class CommandProcessor;
+class Command;
 
 class GameEngine
 {
