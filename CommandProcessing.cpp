@@ -1,4 +1,5 @@
 #include "CommandProcessing.h"
+#include "GameEngine.h"
 
 Command::Command(const std::string& text) : commandText(new std::string(text)), effect(new std::string("Null")) {}
 

@@ -1,6 +1,5 @@
-#pragma once
 #include "GameEngine.h"
-
+#include "CommandProcessing.h"
 /* Implement a group of C++ classes that implements a game engine that controls the flow of
 the game by using the notion of state, transition, and command.
  */

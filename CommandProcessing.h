@@ -8,7 +8,8 @@
 #include <set>
 #include <sstream>
 #include "LoggingObserver.h" 
-#include "GameEngine.h"
+
+class GameEngine;
 class Command: public Subject, public ILoggable{
     private:
     std::string* commandText;
