@@ -114,8 +114,8 @@ Deploy& Deploy::operator=(const Deploy& other)
 
 //USER-DEFINED FUNCTIONS
 string Deploy::toString() const {
-    if (!this->getExecutionStatus()) {
-        return "Order Type: " + this->getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to put "+ std::to_string(getArmyUnits()) + " army units on " + getTargetTerritory()->getName() + "\n";
+    if (!getExecutionStatus()) {
+        return "Order Type: " + getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to put "+ std::to_string(getArmyUnits()) + " army units on " + getTargetTerritory()->getName() + "\n";
     }
     else {
         return "Deploy Execution Summary\n";
@@ -142,7 +142,7 @@ bool Deploy::validate() {
 void Deploy::execute() {
     if (validate() == true) {
         cout << "Deploy order executed.\n" << endl;
-        this->setExecutionStatus(true);
+        setExecutionStatus(true);
     }
 }
 
@@ -185,7 +185,7 @@ Advance& Advance::operator=(const Advance& other)
 
 string Advance::toString() const {
     if (!this->getExecutionStatus()) {
-        return "Order Type: " + this->getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to move " + std::to_string(getArmyUnits()) + " army units from " + getSourceTerritory()->getName() + " to " + getTargetTerritory()->getName() + "\n";    
+        return "Order Type: " + getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to move " + std::to_string(getArmyUnits()) + " army units from " + getSourceTerritory()->getName() + " to " + getTargetTerritory()->getName() + "\n";    
     }
     else {
         return "Advance Execution Summary\n";
@@ -282,7 +282,7 @@ bool Advance::validate() {
 void Advance::execute() {
     if (validate() == true) {
         cout << "Advance order executed.\n" << endl;
-        this->setExecutionStatus(true);
+        setExecutionStatus(true);
     }
 }
 
@@ -317,8 +317,8 @@ Bomb& Bomb::operator=(const Bomb& other)
 }
 
 string Bomb::toString() const {
-    if (!this->getExecutionStatus()) {
-        return "Order Type: " + this->getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to destroy half of the army units located on " + this->getTargetTerritory()->getName() + ". This order can only be issued if a player has the bomb card in their hand.\n";
+    if (!getExecutionStatus()) {
+        return "Order Type: " + getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to destroy half of the army units located on " + getTargetTerritory()->getName() + ". This order can only be issued if a player has the bomb card in their hand.\n";
     }
     else {
         return "Bomb Execution Summary\n";
@@ -368,7 +368,7 @@ bool Bomb::validate() {
 void Bomb::execute() {
     if (validate() == true) {
         cout << "Bomb order executed.\n" << endl;
-        this->setExecutionStatus(true);
+        setExecutionStatus(true);
     }
 }
 
@@ -403,8 +403,8 @@ Blockade& Blockade::operator=(const Blockade& other)
 }
 
 string Blockade::toString() const {
-    if (!this->getExecutionStatus()) {
-        return "Order Type: " + this->getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to double the number of army units on " + this->getTargetTerritory()->getName() + " and make it a neutral territory. This order can only be issued if a player has the blockade card in their hand.\n";
+    if (!getExecutionStatus()) {
+        return "Order Type: " + getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to double the number of army units on " + getTargetTerritory()->getName() + " and make it a neutral territory. This order can only be issued if a player has the blockade card in their hand.\n";
     }
     else {
         return "Blockade Execution Summary\n";
@@ -431,7 +431,7 @@ bool Blockade::validate() {
 void Blockade::execute() {
     if (validate() == true) {
         cout << "Blockade order executed.\n" << endl;
-        this->setExecutionStatus(true);
+        setExecutionStatus(true);
     }
 }
 
@@ -472,8 +472,8 @@ Airlift& Airlift::operator=(const Airlift& other)
 }
 
 string Airlift::toString() const {
-    if (!this->getExecutionStatus()) {
-        return "Order Type: " + this->getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + "is attempting to advance " + std::to_string(this->getArmyUnits()) + " army units from " + this->getSourceTerritory()->getName() + " to " + this->getTargetTerritory()->getName() + ". This order can only be issued if a player has the airlift card in their hand.\n";
+    if (!getExecutionStatus()) {
+        return "Order Type: " + getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + "is attempting to advance " + std::to_string(getArmyUnits()) + " army units from " + getSourceTerritory()->getName() + " to " + getTargetTerritory()->getName() + ". This order can only be issued if a player has the airlift card in their hand.\n";
     }
     else {
         return "Airlift Execution Summary\n";
@@ -498,7 +498,7 @@ bool Airlift::validate() {
 void Airlift::execute() {
     if (validate() == true) {
         cout << "Airlift order executed.\n" << endl;
-        this->setExecutionStatus(true);
+        setExecutionStatus(true);
     }
 }
 
@@ -533,8 +533,8 @@ Negotiate& Negotiate::operator=(const Negotiate& other)
 }
 
 string Negotiate::toString() const {
-    if (!this->getExecutionStatus()) {
-        return "Order Type: " + this->getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to prevent attacks between " + this->getSourcePlayer()->getName() + " and " + this->getTargetPlayer()->getName() + " until the end of the turn. This order can ony be issued if a player has the diplomacy card in their hand.\n";
+    if (!getExecutionStatus()) {
+        return "Order Type: " + getOrderType() + "\nSummary: " + getSourcePlayer()->getName() + " is attempting to prevent attacks between " + getSourcePlayer()->getName() + " and " + getTargetPlayer()->getName() + " until the end of the turn. This order can ony be issued if a player has the diplomacy card in their hand.\n";
     }
     else {
         return "Negotiate Execution Summary\n";
@@ -558,7 +558,7 @@ bool Negotiate::validate() {
 void Negotiate::execute() {
     if (validate() == true) {
         cout << "Negotiate order executed.\n" << endl;
-        this->setExecutionStatus(true);
+        setExecutionStatus(true);
     }
 }
 
@@ -668,9 +668,6 @@ Order* OrdersList::remove(Node* const node) {
     return node->getElement();
 }
 
-/**
- * Does shit
- */
 void OrdersList::move(const int& currentPos, const int& targetPos) {
     Node* currentNode = header->getNext();
     Node* targetNode = currentNode;

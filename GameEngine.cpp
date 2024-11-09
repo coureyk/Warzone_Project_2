@@ -1,3 +1,4 @@
+#pragma once
 #include "GameEngine.h"
 
 /* Implement a group of C++ classes that implements a game engine that controls the flow of
@@ -8,8 +9,9 @@ the game by using the notion of state, transition, and command.
 int GameEngine::state = GameEngine::START;
 
 /*sets the state to the corresponding command*/
-void GameEngine::setState(const std::string command) {
-    // std::cout << ("\nInput recieved") << std::endl;
+void GameEngine::setState(const std::string givenCom) {
+    std::string command;
+    command = givenCom.substr(givenCom.find(" "));
 
     if (command == "start" || command == "play") GameEngine::state = states::START;
     else if (command == "loadmap") GameEngine::state = states::MAP_LOADED;
@@ -20,6 +22,12 @@ void GameEngine::setState(const std::string command) {
     else if (command == "endissueorders" || command == "execorder") GameEngine::state = states::EXECUTE_ORDERS;
     else if (command == "win")GameEngine::state = states::WIN;
     else if (command == "end")GameEngine::state = states::FINISHED;
+
+    Notify();
+}
+
+std::string GameEngine::stringToLog() {
+    return "State: "+intStateToStringState(GameEngine::state);
 }
 
 /*Takes in the current command and displays the options the user has to proceed*/
@@ -37,23 +45,56 @@ void GameEngine::displayNextPath(int currentState) {
     default: std::cout << "INCORRECT ENTRY, PLEASE ENTER VALID STATE\n" << std::endl;
     }
 }
-/*
+/**
 * Runs throught a loop that prompts the user for commands and navigation
 */
-void GameEngine::startup() {
+void GameEngine::startupPhase() {
+    CommandProcessor* processor = new CommandProcessor();
+
+    LogObserver* logObserver = new LogObserver(processor);
     do {
         //prompt user to imput command to acess a state and show them what they can go to
         displayNextPath(GameEngine::state);
+        /*
+        std::string inputedString;
         std::string command;
+        std::string argument;
         do {
-            std::getline(std::cin, command);
-        } while (!validCommandInput(command)); //repeat while not a valid input
+            std::getline(std::cin, inputedString);
+            //split the argument off of the command if it exists
+            command = inputedString.substr(inputedString.find(" "));
+            argument = inputedString.erase(command.append(" "));
 
-        setState(command);
+        } while (!validCommandInput(command,argument)); //repeat while not a valid input
+        */
+
+        while (true) {
+            Command* command = processor->getCommand();
+            setState(command->getCommandText);
+        }
+        
     } while (GameEngine::state != GameEngine::states::FINISHED);
 
+    delete logObserver;
+    delete processor;
     //PROGRAM FINISHED
     std::cout << "Program and Game Finished... exiting...";
+}
+
+std::string GameEngine::intStateToStringState(int sta){
+    switch (sta)
+    {
+        case states::INITIALISED: return "INITIALISED";
+        case states::START: return "START" ;
+        case states::MAP_LOADED: return "MAP_LOADED" ;
+        case states::MAP_VALIDATED: return "MAP_VALIDATED";
+        case states::PLAYERS_ADDED: return "PLAYERS_ADDED" ;
+        case states::ASSIGN_REINFORCEMENTS: return "ASSIGN_REINFORCEMENTS";
+        case states::ISSUE_ORDERS: return "ISSUE_ORDERS";
+        case states::EXECUTE_ORDERS: return "EXECUTE_ORDERS";
+        case states::WIN: return "WIN";
+        case states::FINISHED: return "FINISHED";
+     }
 }
 
 //will take in the user's input and check if it follows a valid command
@@ -68,11 +109,16 @@ bool GameEngine::validCommandInput(const std::string command) {
         std::cerr << "WRONG! The command you inputed is written incorrectly.\n";
         return false;
     }
+
     switch (state) { //check if correct state for what was inputed
     case states::INITIALISED:   if (command == "start")
         return true; break;
-    case states::START:         if (command == "loadmap")
-        return true; break;
+    case states::START:
+        //SEND FILE PATH, if it doesnt exist return false
+        MapLoader loader(argument);
+        bool mapLoaded = loader.loadMap();
+                                if (command == "loadmap"&& mapLoaded) return true; 
+                    break;
     case states::MAP_LOADED:    if (command == "validatemap" || command == "loadmap")
         return true; break;
     case states::MAP_VALIDATED: if (command == "addplayer")

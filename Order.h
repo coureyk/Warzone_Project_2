@@ -5,6 +5,7 @@
 class Player;
 
 #include "Player.h"
+#include "LoggingObserver.h"
 #include <iostream>
 #include <string>
 
@@ -15,7 +16,7 @@ using std::string;
 //====================================================ORDER CLASS DECLARATIONS====================================================
 
 //Order is an abstract class which is extended by Deploy, Advance, Bomb, Blockade, Airlift and Negotiate
-class Order {
+class Order : public Subject, public ILoggable{
 private:
     int armyUnits;
     Territory* sourceTerritory;
@@ -29,8 +30,8 @@ public:
     //Default Constructor
     Order();
 
-    virtual bool validate() = 0; //To be defined by subclasses in Part 2 (according to Prof. Joey Paquet)
-    virtual void execute() = 0; //To be defined by subclasses in Part 2 (according to Prof. Joey Paquet)
+    virtual bool validate() = 0;
+    virtual void execute() = 0;
 
     //These must be constant functions so they may be invoked by a const Deploy, Advance, ... object
     int getArmyUnits() const;
