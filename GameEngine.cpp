@@ -94,6 +94,7 @@ std::string GameEngine::intStateToStringState(int sta){
         case states::WIN: return "WIN";
         case states::FINISHED: return "FINISHED";
      }
+     return "";
 }
 
 //will take in the user's input and check if it follows a valid command
@@ -123,9 +124,14 @@ bool GameEngine::validCommandInput( std::string inputedString) {
         return true; break;
     case states::START:
         //SEND FILE PATH, if it doesnt exist return false
-        bool mapLoaded = loader.loadMap();
+      /*  bool mapLoaded = loader.loadMap();
                                 if (command == "loadmap"&& mapLoaded) return true; 
-                    break;
+                    break;*/
+                     if (command == "loadmap") {
+                bool mapLoaded = loader.loadMap();  // Initialize within the case
+                if (mapLoaded) return true;
+            }
+            break;
     case states::MAP_LOADED:    if (command == "validatemap" || command == "loadmap")
         return true; break;
     case states::MAP_VALIDATED: if (command == "addplayer")
