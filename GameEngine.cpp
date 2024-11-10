@@ -1,6 +1,6 @@
 #include "GameEngine.h"
-
 #include "CommandProcessing.h"
+
 
 /* Implement a group of C++ classes that implements a game engine that controls the flow of
 the game by using the notion of state, transition, and command.
@@ -9,15 +9,22 @@ the game by using the notion of state, transition, and command.
 
 int GameEngine::state = GameEngine::START;
 
+
 /*sets the state to the corresponding command*/
-void GameEngine::setState(const std::string givenCom) {
-    std::string command;
-    command = givenCom.substr(givenCom.find(" "));
+void GameEngine::setState(const std::string command,const std::string arg) {
+    //addplayer <playername>
+    std::vector<Territory*> territories;
+    OrdersList ordersList= OrdersList();
+    Hand hand= Hand();
+    int reinforcementPool = 0;
 
     if (command == "start" || command == "play") GameEngine::state = states::START;
     else if (command == "loadmap") GameEngine::state = states::MAP_LOADED;
     else if (command == "validatemap") GameEngine::state = states::MAP_VALIDATED;
-    else if (command == "addplayer") GameEngine::state = states::PLAYERS_ADDED;
+    else if (command == "addplayer") {
+        players->push_back(new Player(arg,territories,ordersList,hand,reinforcementPool)); //EXCEPT FOR NAME, ALL OF THESE SHOULD BE CHANGED LATER
+        GameEngine::state = states::PLAYERS_ADDED;
+        }
     else if (command == "assigncountries" || command == "endexecorders") GameEngine::state = states::ASSIGN_REINFORCEMENTS;
     else if (command == "issueorder") GameEngine::state = states::ISSUE_ORDERS;
     else if (command == "endissueorders" || command == "execorder") GameEngine::state = states::EXECUTE_ORDERS;
@@ -51,8 +58,9 @@ void GameEngine::displayNextPath(int currentState) {
 */
 void GameEngine::startupPhase() {
     CommandProcessor* processor = new CommandProcessor();
-
     LogObserver* logObserver = new LogObserver(processor);
+    std::string arg1; //the first part of the command, usually the state
+    std::string arg2; //the second part of the command, usually the name or file
     do {
         //prompt user to imput command to acess a state and show them what they can go to
         displayNextPath(GameEngine::state);
@@ -63,16 +71,28 @@ void GameEngine::startupPhase() {
         do {
             std::getline(std::cin, inputedString);
             //split the argument off of the command if it exists
-            command = inputedString.substr(inputedString.find(" "));
-            argument = inputedString.erase(command.append(" "));
+            command = inputedString.substr(inputedString.find(" ")); substr(command->getCommandText().find(" ")); //should get the loadmap section
+            argument = inputedString.erase(command.append(" "));command->getCommandText().substr (pos+1);        //should get the second argument, USA
 
         } while (!validCommandInput(command,argument)); //repeat while not a valid input
         */
 
-        while (true) {
+
+        do {
             Command* command = processor->getCommand();
-            setState(command->getCommandText());
-        }
+
+            std::string token = "";
+            std::istringstream iss(command->getCommandText());
+                std::getline(iss, token, ' ');
+            arg1 = token;
+                std::getline(iss, token, ' ');
+            arg2 = token; 
+
+
+            setState(arg1,arg2);
+
+
+        }while (!validCommandInput(arg1,arg2)); //repeat while not a valid input
         
     } while (GameEngine::state != GameEngine::states::FINISHED);
 
@@ -100,13 +120,8 @@ std::string GameEngine::intStateToStringState(int sta){
 }
 
 //will take in the user's input and check if it follows a valid command
-bool GameEngine::validCommandInput( std::string inputedString) {
+bool GameEngine::validCommandInput( std::string command, std::string argument) {
     //loadmap USA
-    std::string command = inputedString.substr(inputedString.find(" ")); //should get the loadmap section
-
-    std::size_t pos = inputedString.find(" ");      // position of " "
-    std::string argument = inputedString.substr (pos+1);        //should get the second argument, USA
-
 
     //make sure valid command
     if (!(command == "start" || command == "loadmap" || command == "play" ||
@@ -125,10 +140,6 @@ bool GameEngine::validCommandInput( std::string inputedString) {
       case states::INITIALISED:   if (command == "start")
           return true; break;
       case states::START:
-          //SEND FILE PATH, if it doesnt exist return false
-        /*  bool mapLoaded = loader.loadMap();
-                                  if (command == "loadmap"&& mapLoaded) return true; 
-                      break;*/
                        if (command == "loadmap") {
                   bool mapLoaded = loader.loadMap();  // Initialize within the case
                   if (mapLoaded) return true;
