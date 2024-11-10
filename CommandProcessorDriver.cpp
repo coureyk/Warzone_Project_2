@@ -1,19 +1,14 @@
 #include "CommandProcessorDriver.h"
 #include "GameEngine.h"
 
-
 void CommandProcessorInteractiveDriver::testInteractiveConsole() {
     std::cout << "Interactive CommandProcessor Test" << std::endl;
     std::cout << "Enter commands manually (type 'exit' to quit):" << std::endl;
-
-    //CommandProcessor processor;
     GameEngine gameEngine;
     CommandProcessor *processor = new CommandProcessor(&gameEngine);
-   
     LogObserver *logObserver = new LogObserver(processor);
-     std::string arg1; //the first part of the command, usually the state
-    std::string arg2; //the second part of the command, usually the name or file
-  
+    std::string arg1; 
+    std::string arg2; 
     while (true) {
         Command* command = processor->getCommand();
         std::string token = "";
@@ -22,10 +17,7 @@ void CommandProcessorInteractiveDriver::testInteractiveConsole() {
             arg1 = token;
                 std::getline(iss, token, ' ');
             arg2 = token; 
-
-
             gameEngine.setState(arg1,arg2);
-
         if (command && command->getCommandText() == "exit") {
             std::cout << "Exiting interactive test." << std::endl;
             break;
@@ -33,7 +25,6 @@ void CommandProcessorInteractiveDriver::testInteractiveConsole() {
     }
     delete logObserver;
         delete processor;
-       
 }
 
 void CommandProcessorInteractiveDriver::testFileInput(const std::string& filename) {
@@ -41,21 +32,18 @@ void CommandProcessorInteractiveDriver::testFileInput(const std::string& filenam
     GameEngine gameEngine;
     FileCommandProcessorAdapter *fileProcessor = new FileCommandProcessorAdapter(filename, &gameEngine);
     LogObserver *logObserver = new LogObserver(fileProcessor);
-    std::string arg1; //the first part of the command, usually the state
-    std::string arg2; //the second part of the command, usually the name or file
-
+    std::string arg1;
+    std::string arg2;
     while (true) {
-        Command* command = fileProcessor->getCommand();  // Read command from file
+        Command* command = fileProcessor->getCommand();
         std::string token = "";
             std::istringstream iss(command->getCommandText());
                 std::getline(iss, token, ' ');
             arg1 = token;
                 std::getline(iss, token, ' ');
             arg2 = token; 
-
-
             gameEngine.setState(arg1,arg2);
-        if (!command) break;  // End of file or null command
+        if (!command) break;
     }
     delete logObserver;
     delete fileProcessor;
@@ -78,7 +66,6 @@ void testCommandProcessor() {
         std::string filename;
         std::cout << "Enter the file name: ";
         std::getline(std::cin, filename);
-
         CommandProcessorInteractiveDriver::testFileInput(filename);
     } 
     else {
