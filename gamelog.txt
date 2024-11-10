@@ -1,23 +1,35 @@
-Deploy
-Advance
-Bomb
-Blockade
-Airlift
-Negotiate
-Valid order. Kevindeployed 5 to Baja California. Current Baja California army units: 5.
-
-Valid order. Kevin moved 10 army units from Baja California to Eastern Mexico. Current Baja California army units: -5. Current Eastern Mexico army units: 10.
-
-Invalid order. Kevin cannot bomb territory "Washington" that is not adjacent to any domestic territories.
-
-Invalid order. Kevin cannot blockade foreign territory "Western Mexico".
-
-Valid Order. Kevin successfully executed an airlift from Baja California to Eastern Mexico. Current Baja Californiaarmy units: -15. Current Eastern Mexicoarmy units: 20.
-
-Valid Order. Kevin successfully negotiated with Liam
-Deploy
-Advance
-Bomb
-Blockade
-Airlift
-Negotiate
+validatemap
+Command executed successfully.
+addplayer 1
+Command executed successfully.
+¢
+Invalid command in the current state or syntax error.
+loadmap USA.map
+Command executed successfully.
+validatemap
+Invalid command in the current state or syntax error.
+addplayer Player1
+Invalid command in the current state or syntax error.
+addplayer Player2
+Invalid command in the current state or syntax error.
+addplayer Player1
+Invalid command in the current state or syntax error.
+gamestart
+Invalid command in the current state or syntax error.
+loadmap another.map
+Command executed successfully.
+replay 
+Invalid command in the current state or syntax error.
+quit 
+Invalid command in the current state or syntax error.
+loadmap a
+Command executed successfully.
+validate map
+Invalid command in the current state or syntax error.
+loadmap USA.map
+Command executed successfully.
+validatemap
+Command executed successfully.
+addplayer
+Invalid command: 'addplayer' requires a <playername> parameter.
+Invalid command in the current state or syntax error.
