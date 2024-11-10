@@ -41,9 +41,20 @@ void CommandProcessorInteractiveDriver::testFileInput(const std::string& filenam
     GameEngine gameEngine;
     FileCommandProcessorAdapter *fileProcessor = new FileCommandProcessorAdapter(filename, &gameEngine);
     LogObserver *logObserver = new LogObserver(fileProcessor);
+    std::string arg1; //the first part of the command, usually the state
+    std::string arg2; //the second part of the command, usually the name or file
 
     while (true) {
         Command* command = fileProcessor->getCommand();  // Read command from file
+        std::string token = "";
+            std::istringstream iss(command->getCommandText());
+                std::getline(iss, token, ' ');
+            arg1 = token;
+                std::getline(iss, token, ' ');
+            arg2 = token; 
+
+
+            gameEngine.setState(arg1,arg2);
         if (!command) break;  // End of file or null command
     }
     delete logObserver;
