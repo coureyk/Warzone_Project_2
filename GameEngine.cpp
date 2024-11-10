@@ -1,5 +1,5 @@
-#pragma once
 #include "GameEngine.h"
+
 
 /* Implement a group of C++ classes that implements a game engine that controls the flow of
 the game by using the notion of state, transition, and command.
@@ -120,27 +120,34 @@ bool GameEngine::validCommandInput( std::string inputedString) {
     MapLoader loader(argument);
 
     switch (state) { //check if correct state for what was inputed
-    case states::INITIALISED:   if (command == "start")
-        return true; break;
-    case states::START:
-        //SEND FILE PATH, if it doesnt exist return false
-        bool mapLoaded = loader.loadMap();
-                                if (command == "loadmap"&& mapLoaded) return true; 
-                    break;
-    case states::MAP_LOADED:    if (command == "validatemap" || command == "loadmap")
-        return true; break;
-    case states::MAP_VALIDATED: if (command == "addplayer")
-        return true; break;
-    case states::PLAYERS_ADDED: if (command == "assigncountries" || command == "addplayer")
-        return true; break;
-    case states::ASSIGN_REINFORCEMENTS: if (command == "issueorder")
-        return true; break;
-    case states::ISSUE_ORDERS:  if (command == "endissueorders" || command == "issueorder")
-        return true; break;
-    case states::EXECUTE_ORDERS:if (command == "execorder" || command == "endexecorders" || command == "win")
-        return true; break;
-    case states::WIN:           if (command == "play" || command == "end")
-        return true; break;
+        case (states::INITIALISED):   if (command == "start")
+            return true; break;
+        case states::START:
+            //SEND FILE PATH, if it doesnt exist return false
+            bool mapLoaded = loader.loadMap();
+            if (command == "loadmap"&& mapLoaded) 
+            return true; break;
+        case states::MAP_LOADED:    
+            if (command == "validatemap" || command == "loadmap")
+            return true; break;
+        case states::MAP_VALIDATED: 
+            if (command == "addplayer")
+            return true; break;
+        case states::PLAYERS_ADDED: 
+            if (command == "assigncountries" || command == "addplayer")
+            return true; break;
+        case states::ASSIGN_REINFORCEMENTS: 
+            if (command == "issueorder")
+            return true; break;
+        case states::ISSUE_ORDERS:  
+            if (command == "endissueorders" || command == "issueorder")
+            return true; break;
+        case states::EXECUTE_ORDERS:
+            if (command == "execorder" || command == "endexecorders" || command == "win")
+            return true; break;
+        case states::WIN:           
+            if (command == "play" || command == "end")
+            return true; break;
     }
     std::cerr << "The command you inputed does not fit the options of the current state of play.\n" << std::endl;
     return false;
