@@ -86,42 +86,42 @@ std::cout << R"HERE(Which order would you like to issue?
 	case 1:
 	{
 		Deploy* deploy = new Deploy(sourcePlayer, 0, targetTerritory);
-		ordersList->addLast(deploy);
+		ordersList->addOrder(deploy);
 		std::cout << "Deploy added";
 	}
 	break;
 	case 2:
 	{
 		Advance* advance = new Advance(sourcePlayer, 0, sourceTerritory, targetTerritory);
-		ordersList->addLast(advance);
+		ordersList->addOrder(advance);
 		std::cout << "Advance added";
 	}
 	break;
 	case 3:
 	{
 		Bomb* bomb = new Bomb(sourcePlayer, 0);
-		ordersList->addLast(bomb);
+		ordersList->addOrder(bomb);
 		std::cout << "Bomb added";
 	}
 	break;
 	case 4:
 	{
 		Blockade* blockade = new Blockade(sourcePlayer, targetTerritory);
-		ordersList->addLast(blockade);
+		ordersList->addOrder(blockade);
 		std::cout << "Blockade added";
 	}
 	break;
 	case 5:
 	{
 		Airlift* airlift = new Airlift(sourcePlayer, 0, sourceTerritory, targetTerritory);
-		ordersList->addLast(airlift);
+		ordersList->addOrder(airlift);
 		std::cout << "Airlift added";
 	}
 	break;
 	case 6:
 	{
 		Negotiate* negotiate = new Negotiate(sourcePlayer, targetPlayer);
-		ordersList->addLast(negotiate);
+		ordersList->addOrder(negotiate);
 		std::cout << "Negotiate added";
 	}
 	break;
@@ -234,7 +234,7 @@ void testPlayers() {
 
 	Deploy* order1 = new Deploy(player1, 1, territory1);
 
-	list->addLast(order1);
+	list->addOrder(order1);
 
 
 	player1->issueOrder();

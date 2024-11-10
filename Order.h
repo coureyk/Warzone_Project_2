@@ -16,15 +16,16 @@ using std::string;
 //====================================================ORDER CLASS DECLARATIONS====================================================
 
 //Order is an abstract class which is extended by Deploy, Advance, Bomb, Blockade, Airlift and Negotiate
-class Order : public Subject, public ILoggable{
+class Order : public Subject, public ILoggable {
 private:
+    string orderType;
     int armyUnits;
     Territory* sourceTerritory;
     Territory* targetTerritory;
     Player* sourcePlayer;
     Player* targetPlayer;
-    string orderType;
     bool hasExecuted;
+    string effect;
 
 public:
     //Default Constructor
@@ -34,23 +35,27 @@ public:
     virtual void execute() = 0;
 
     //These must be constant functions so they may be invoked by a const Deploy, Advance, ... object
+    string getOrderType() const;
     int getArmyUnits() const;
     Territory* getSourceTerritory() const;
     Territory* getTargetTerritory() const;
     Player* getSourcePlayer() const;
     Player* getTargetPlayer() const;
-    string getOrderType() const;
     bool getExecutionStatus() const;
+    string getEffect() const;
 
+    void setOrderType(const string& orderType);
     void setArmyUnits(const int& armyUnits);
     void setSourceTerritory(Territory* const sourceTerritory);
     void setTargetTerritory(Territory* const targetTerritory);
     void setSourcePlayer(Player* const sourcePlayer);
     void setTargetPlayer(Player* const targetPlayer);
-    void setOrderType(const string& orderType);
     void setExecutionStatus(const bool hasExecuted);
+    void setEffect(const string& effect);
 
     virtual string toString() const = 0; //This function returns a string representation of the Order that invokes it, and is meant to act as a helper function for overloaded operator "<<".
+
+    string stringToLog();
 
 };
 
@@ -169,7 +174,7 @@ public:
 //====================================================ORDERS_LIST CLASS DECLARATIONS====================================================
 
 //Implemented OrdersList as a Doubly-Linked List
-class OrdersList {
+class OrdersList : public Subject, public ILoggable {
 private:
     //Node is a helper class for OrdersList. Each node contains an element of type Order and a reference to the previous and next Node in the list.
     class Node {
@@ -206,10 +211,12 @@ public:
     Node* first() const;
     Node* last() const;
     Node* getNode(const int& i) const;
-    void addLast(Order* const element);
+    void addOrder(Order* const element);
     Order* remove(Node* const node);
     void move(const int& currentPos, const int& targetPos);
     void getContents() const;
+
+    string stringToLog();
 };
 
 //Overloading the operator "<<" so that std::cout << Order& displays relevant Order information to the user
