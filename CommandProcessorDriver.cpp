@@ -11,18 +11,10 @@ void CommandProcessorInteractiveDriver::testInteractiveConsole() {
     LogObserver *logObserver = new LogObserver(processor);
     while (true) {
         Command* command = processor->getCommand();
-       // Command* command = processor.getCommand();  // Get command from console input
-       //display whole processor
-        //std::cout << "Processor:" <<processor<< std::endl;
-        // Check if the user wants to exit
         if (command && command->getCommandText() == "exit") {
             std::cout << "Exiting interactive test." << std::endl;
             break;
         }
-        
-        
-
-        // Command processing and output handled by `getCommand()`
     }
     delete logObserver;
         delete processor;
@@ -38,7 +30,6 @@ void CommandProcessorInteractiveDriver::testFileInput(const std::string& filenam
     while (true) {
         Command* command = fileProcessor->getCommand();  // Read command from file
         if (!command) break;  // End of file or null command
-        // Command processing and output handled by `getCommand()`
     }
     delete logObserver;
     delete fileProcessor;
