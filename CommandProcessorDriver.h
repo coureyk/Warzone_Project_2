@@ -1,3 +1,5 @@
+#ifndef COMMANDPROCESSORDRIVER_H
+#define COMMANDPROCESSORDRIVER_H
 #include "CommandProcessing.h"
 #include <iostream>
 #include "LoggingObserver.h"
@@ -9,3 +11,4 @@ public:
 };
 
 void testCommandProcessor();
+#endif
