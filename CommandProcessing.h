@@ -30,7 +30,7 @@ class Command: public Subject, public ILoggable{
 };
 class CommandProcessor: public Subject, public ILoggable{
     private:
-    enum GameState { Start, MapLoaded, MapValidated, PlayersAdded, AssignReinforcement, Win, ExitProgram };
+    enum GameState { Start, MapLoaded, MapValidated, PlayersAdded, AssignReinforcement,Gaming, Win, ExitProgram };
     GameState currentState;  // Track the current state
     std::set<std::string> playerNames;
     std::vector<Command*>* commands;

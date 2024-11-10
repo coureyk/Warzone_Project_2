@@ -156,6 +156,10 @@ bool CommandProcessor::validate(Command* command) {
         isValid = true;
         currentState = ExitProgram;
         //gameEngine->setState("end");
+    } else if (gameEngine->state == GameEngine::ASSIGN_REINFORCEMENTS || gameEngine->state == GameEngine::ISSUE_ORDERS ||gameEngine->state == GameEngine::EXECUTE_ORDERS) {
+        isValid = true;
+        currentState = Gaming;
+        //gameEngine->setState("end");
     } 
 
     if (isValid) {
@@ -180,6 +184,7 @@ std::string CommandProcessor::getCurrentState() const {
         case AssignReinforcement: return "AssignReinforcement";
         case Win: return "Win";
         case ExitProgram: return "ExitProgram";
+        case Gaming:return "Gaming";
         default: return "Unknown";
     }
 }

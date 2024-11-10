@@ -33,3 +33,9 @@ Command executed successfully.
 addplayer
 Invalid command: 'addplayer' requires a <playername> parameter.
 Invalid command in the current state or syntax error.
+loadmap USA.map
+Command executed successfully.
+validate
+Invalid command in the current state or syntax error.
+validatemap
+Command executed successfully.
