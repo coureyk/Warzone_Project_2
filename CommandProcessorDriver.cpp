@@ -1,4 +1,5 @@
 #include "CommandProcessorDriver.h"
+#include "GameEngine.h"
 
 
 void CommandProcessorInteractiveDriver::testInteractiveConsole() {
@@ -6,11 +7,25 @@ void CommandProcessorInteractiveDriver::testInteractiveConsole() {
     std::cout << "Enter commands manually (type 'exit' to quit):" << std::endl;
 
     //CommandProcessor processor;
-    CommandProcessor *processor = new CommandProcessor();
+    GameEngine gameEngine;
+    CommandProcessor *processor = new CommandProcessor(&gameEngine);
    
     LogObserver *logObserver = new LogObserver(processor);
+     std::string arg1; //the first part of the command, usually the state
+    std::string arg2; //the second part of the command, usually the name or file
+  
     while (true) {
         Command* command = processor->getCommand();
+        std::string token = "";
+            std::istringstream iss(command->getCommandText());
+                std::getline(iss, token, ' ');
+            arg1 = token;
+                std::getline(iss, token, ' ');
+            arg2 = token; 
+
+
+            gameEngine.setState(arg1,arg2);
+
         if (command && command->getCommandText() == "exit") {
             std::cout << "Exiting interactive test." << std::endl;
             break;
@@ -23,12 +38,23 @@ void CommandProcessorInteractiveDriver::testInteractiveConsole() {
 
 void CommandProcessorInteractiveDriver::testFileInput(const std::string& filename) {
     std::cout << "Testing FileCommandProcessorAdapter with file input:" << std::endl;
-
-    FileCommandProcessorAdapter *fileProcessor = new FileCommandProcessorAdapter(filename);
+    GameEngine gameEngine;
+    FileCommandProcessorAdapter *fileProcessor = new FileCommandProcessorAdapter(filename, &gameEngine);
     LogObserver *logObserver = new LogObserver(fileProcessor);
+    std::string arg1; //the first part of the command, usually the state
+    std::string arg2; //the second part of the command, usually the name or file
 
     while (true) {
         Command* command = fileProcessor->getCommand();  // Read command from file
+        std::string token = "";
+            std::istringstream iss(command->getCommandText());
+                std::getline(iss, token, ' ');
+            arg1 = token;
+                std::getline(iss, token, ' ');
+            arg2 = token; 
+
+
+            gameEngine.setState(arg1,arg2);
         if (!command) break;  // End of file or null command
     }
     delete logObserver;

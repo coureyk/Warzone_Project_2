@@ -1,9 +1,10 @@
 // LoggingObserverDriver.cpp
 #include "LoggingObserverDriver.h"
-
+#include "GameEngine.h"
 void testLoggingObserver() {
     // Create LogObserver
-    CommandProcessor *processor = new CommandProcessor();
+    GameEngine gameEngine;
+    CommandProcessor *processor = new CommandProcessor(&gameEngine);
    
     LogObserver *logObserver = new LogObserver(processor);
        while (true) {

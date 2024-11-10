@@ -1,4 +1,4 @@
-loadmap example.map
+loadmap USA.map
 validatemap
 addplayer Player1
 addplayer Player2

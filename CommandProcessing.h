@@ -30,7 +30,7 @@ class Command: public Subject, public ILoggable{
 };
 class CommandProcessor: public Subject, public ILoggable{
     private:
-    enum GameState { Start, MapLoaded, MapValidated, PlayersAdded, AssignReinforcement, Win, ExitProgram };
+    enum GameState { Start, MapLoaded, MapValidated, PlayersAdded, AssignReinforcement,Gaming, Win, ExitProgram };
     GameState currentState;  // Track the current state
     std::set<std::string> playerNames;
     std::vector<Command*>* commands;
@@ -40,7 +40,8 @@ class CommandProcessor: public Subject, public ILoggable{
     void saveCommand(Command* command);
 
     public:
-    CommandProcessor();
+    //CommandProcessor();
+    CommandProcessor(GameEngine* engine);
     CommandProcessor(const CommandProcessor& other);
     CommandProcessor& operator=(const CommandProcessor& other);
     virtual ~CommandProcessor();
@@ -74,7 +75,7 @@ private:
     FileCommandReader* fileCommandReader;  // Raw pointer to FileCommandReader
 
 public:
-    FileCommandProcessorAdapter(const std::string& filename);
+    FileCommandProcessorAdapter(const std::string& filename, GameEngine* engine);
     FileCommandProcessorAdapter(const FileCommandProcessorAdapter& other) = delete;  // Disable copy constructor
     FileCommandProcessorAdapter& operator=(const FileCommandProcessorAdapter& other) = delete;  // Disable assignment operator
     ~FileCommandProcessorAdapter() override;
