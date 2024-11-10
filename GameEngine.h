@@ -3,20 +3,34 @@
 #include <string>
 #include <iostream>
 #include <cstdio>
+#include "Map.h"
+#include "LoggingObserver.h"
+#include <vector>
+#include "Player.h"
+#include "Cards.h"
+
+
+
+
 class CommandProcessor;
-class GameEngine
+class GameEngine: public Subject, public ILoggable
 {
+private:
+    vector<Player*>* players;
     friend class CommandProcessor; 
 public:
+    std::string stringToLog();
     // Method to display the available options based on the current state
     void displayNextPath(int currentState);
 
-    void startup();// Method to start the game
+    void startupPhase();// Method to start the game
 
-    bool validCommandInput(const std::string command);//makes sure the user inputed a valid phrase
+    bool validCommandInput(const std::string command,const std::string argument);//makes sure the user inputed a valid phrase
+
+    std::string intStateToStringState(int sta);
 
     // method to set the state based on the command
-    void setState(const std::string command);
+    void setState(const std::string command, const std::string argument);
     /*The state represents a certain phase of the game and dictates what are the valid actions
 or user commands that take place in this phase. Some actions or commands may eventually
 trigger a transition to another state, which is what controls the flow of the game.

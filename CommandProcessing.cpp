@@ -1,4 +1,5 @@
 #include "CommandProcessing.h"
+#include "GameEngine.h"
 
 Command::Command(const std::string& text) : commandText(new std::string(text)), effect(new std::string("Null")) {}
 
@@ -21,8 +22,14 @@ void Command::saveEffect(const std::string& effectText) {
     *effect = effectText;
     Notify();
 }
+void Command::setValid(const bool val){
+    *valid = val;
+};
 std::string Command::getCommandText() const {
     return *commandText;  // Return the dereferenced command text
+}
+bool Command::getValid() const{
+    return *valid;
 }
 std::ostream& operator<<(std::ostream& os, const Command& command) {
     os << "Command: " << *command.commandText << " | Effect: " << *command.effect;
@@ -103,6 +110,7 @@ bool CommandProcessor::validate(Command* command) {
             std::cout<< "Invalid command: 'loadmap' requires a <mapfile> parameter."<<std::endl;
             //saveEffect(command, "Invalid command: 'loadmap' requires a <mapfile> parameter.");
             command->saveEffect("Invalid command: 'loadmap' requires a <mapfile> parameter.");
+            command->setValid(false);
         }
     } 
     else if (commandType == "validatemap" && gameEngine->state == GameEngine::MAP_LOADED) {
@@ -120,10 +128,12 @@ bool CommandProcessor::validate(Command* command) {
             } else {
                 std::cout<< "Invalid command: Player name '" + parameter + "' is already added."<<std::endl;
                 command->saveEffect("Invalid command: Player name '" + parameter + "' is already added.");
+                command->setValid(false);
             }
         } else {
             std::cout<<"Invalid command: 'addplayer' requires a <playername> parameter."<<std::endl;
             command->saveEffect("Invalid command: 'addplayer' requires a <playername> parameter.");
+            command->setValid(false);
         }
     } 
     else if (commandType == "gamestart" && gameEngine->state == GameEngine::PLAYERS_ADDED) {
@@ -145,9 +155,11 @@ bool CommandProcessor::validate(Command* command) {
     if (isValid) {
         std::cout<<"Command executed successfully."<<std::endl;
         command->saveEffect("Command executed successfully.");
+        command->setValid(true);
     } else if (command->getCommandText() == cmdText) {  // Avoid overwriting specific error
     std::cout<<"Invalid command in the current state or syntax error."<<std::endl;
         command->saveEffect("Invalid command in the current state or syntax error.");
+        command->setValid(false);
     }
     
     return isValid;
