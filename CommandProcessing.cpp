@@ -28,6 +28,9 @@ void Command::setValid(const bool val){
 std::string Command::getCommandText() const {
     return *commandText;  // Return the dereferenced command text
 }
+bool Command::getValid() const{
+    return *valid;
+}
 std::ostream& operator<<(std::ostream& os, const Command& command) {
     os << "Command: " << *command.commandText << " | Effect: " << *command.effect;
     return os;

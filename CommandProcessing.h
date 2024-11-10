@@ -24,6 +24,7 @@ class Command: public Subject, public ILoggable{
     void saveEffect(const std::string& effect);
     void setValid(const bool val);
     std::string getCommandText() const;
+    bool getValid() const;
     friend std::ostream& operator<<(std::ostream& os, const Command& command); // Stream insertion operator
     std::string stringToLog();
 };
