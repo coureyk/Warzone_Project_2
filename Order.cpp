@@ -786,7 +786,7 @@ void OrdersList::getContents() const {
 }
 
 string OrdersList::stringToLog() {
-    return last()->getElement()->getOrderType();
+    return "Order type: " + last()->getElement()->getOrderType();
 }
 
 //Overloading the operator "<<" so that std::cout << Order& displays relevant Order information to the user
