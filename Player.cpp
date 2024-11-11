@@ -449,7 +449,7 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
 	return os;
 }
 
- Territory& Player::territoryFinder(bool){
+ Territory& Player::territoryFinder(bool attack){
 
 
 	if(true){
@@ -477,7 +477,7 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
                         	return *territory;
                     	} 
                 	}
-            	
+				
 
             	if(notFoundTerritory)
                 	throw territoryName;
@@ -551,4 +551,5 @@ void testPlayers() {
 
 	// player1->issueOrder();
 }
+
 
