@@ -24,7 +24,7 @@ private:
     int armies;
     bool wasVisited;
     string owner;
-
+    
 public:
     //Constructors
     Territory();
@@ -54,10 +54,12 @@ public:
     //Service Methods
     void addNeighbor(Territory* const territory);
     string toString() const;
+
+    //Overloading operator<<
+    friend ostream& operator<<(ostream& os, const Territory& territory);
 };
 
-//Overloading operator<<
-ostream& operator<<(ostream& os, const Territory& territory);
+
 
 
 //====================================================CONTINENT CLASS DECLARATIONS====================================================
@@ -106,6 +108,7 @@ ostream& operator<<(ostream& os, const Continent& continent);
 
 class Map {
 private:
+    
     static vector<Continent*> continents; //SHOULD EVENTUALLY MAKE THIS A * TO A VECTOR OF CONTINENT*
 
     //Helper Function

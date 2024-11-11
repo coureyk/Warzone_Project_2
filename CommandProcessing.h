@@ -13,6 +13,7 @@
 class GameEngine;
 //Command class is for storing command as an object inherite Observer pattern
 class Command: public Subject, public ILoggable{
+
     private:
     std::string* commandText; //Text that read from console or txt file
     std::string* effect; // Effect of the command

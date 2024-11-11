@@ -14,13 +14,17 @@ class OrdersList;
 #include "Map.h"
 #include "Order.h"
 #include "Cards.h"
+#include "CommandProcessing.h"
+#include "GameEngine.h"
+
+
 
 class Player {
 
 protected:
 	std::string name;
 
-	std::vector<Territory*> territories;
+	std::vector<Territory*>* territories;
 
 	OrdersList* ordersList;
 
@@ -40,11 +44,11 @@ public:
 
 	Player(const std::string name, const std::vector<Territory*>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinformentPool);
 
-	std::vector<Territory*> toDefend();
+	std::vector<Territory*>& toDefend();
 
-	std::vector<Territory*>* toAttack();
+	std::vector<Territory*>& toAttack();
 
-	void issueOrder();
+	void issueOrder(bool toDeploy, bool toAdvance);
 
 	Player& operator=(const Player& otherPlayer);
 
@@ -66,9 +70,14 @@ public:
 
 	friend std::ostream& operator<<(std::ostream& os, const Player& player);
 
+	std::vector<Territory*>& getTerritories();
 
+	OrdersList& getOrdersList();
+
+	Territory& territoryFinder(bool attack);
 };
 
 void testPlayers();
+
 
 

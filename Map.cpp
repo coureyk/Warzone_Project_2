@@ -108,7 +108,7 @@ string Territory::toString() const {
 
 //OVERLOADING OPERATOR<<
 ostream& operator<<(ostream& os, const Territory& territory) {
-    os << territory.toString();
+    os << territory.getName();
     return os;
 }
 
@@ -334,6 +334,7 @@ bool MapLoader::loadMap() {
         
         int numOfContinents = 0;
         const int MAX_CONTINENTS = 32;
+        string parentCompany;
         if (readingContinents) {
             //If the current number of Continents is less than 32, process the next Continent.
             if (numOfContinents < MAX_CONTINENTS) {
@@ -342,6 +343,7 @@ bool MapLoader::loadMap() {
 
                 if (std::regex_search(line, match, re) == true) {
                     Continent* c = new Continent(match.str(1), std::stoi(match.str(3)));
+                    //parentCompany = match.str(1); //ADDED this line so I can use parentCompany in the creation of a territory *****************************************
                     continents.push_back(c);
                     numOfContinents++;
                 } else {
@@ -363,7 +365,7 @@ bool MapLoader::loadMap() {
                 std::smatch match;
     
                 if (std::regex_search(line, match, re) == true) {
-                    Territory* t = new Territory(match.str(1));
+                    Territory* t = new Territory(match.str(1)); //I'M MODIFIYING THIS TO ADD A PARENT CONTINENT TO A TERRITORY **********************************
                     territories.push_back(t);
 
                     //Create and store neighboring Territories in seperate vector of vectors "neighbors" that will be processed later.

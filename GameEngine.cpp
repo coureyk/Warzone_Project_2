@@ -1,5 +1,4 @@
 #include "GameEngine.h"
-#include "CommandProcessing.h"
 
 
 /* Implement a group of C++ classes that implements a game engine that controls the flow of
@@ -10,13 +9,178 @@ the game by using the notion of state, transition, and command.
 int GameEngine::state = GameEngine::START;
 
 
+
+void GameEngine::mainGameLoop(){
+    
+    for(Player* player: *players){
+        reinforcementPhase(*player);
+        issueOrderPhase(*player);
+        executeOrdersPhase(*player);
+    }
+}
+
+void GameEngine::reinforcementPhase(Player& player){
+
+    int territoryCount = player.getTerritories().size();
+    bool ownsContinent = false;
+    int continentScore;
+    
+    for(const Continent* continent: Map::getContinents()){
+
+        int continentSize = continent->getTerritories().size();
+
+        int counter = 0;
+
+        if(continent->getTerritories().size() > territoryCount)
+            break;
+
+        for(Territory* territory: continent->getTerritories()){
+            for(Territory* playerTerritory: player.getTerritories()){
+                if(playerTerritory->getName() == territory->getName()){
+                    counter += 1;
+                    break;
+                }                
+            }
+        }
+
+        if(counter == continentSize){
+            ownsContinent = true;
+            continentScore = continent->getScore();
+            break;
+        }
+    }
+
+
+    if(ownsContinent){
+        player.setReinforcementPool(player.getReinforcementPool() + continentScore);
+    }
+    else if(territoryCount < 9){
+        player.setReinforcementPool(player.getReinforcementPool() + 3);
+    }else{
+        player.setReinforcementPool(player.getReinforcementPool() + territoryCount/3);
+    }
+
+}
+
+void GameEngine::issueOrderPhase(Player& player){
+    
+
+    player.issueOrder(true,false);
+    player.issueOrder(false,true);
+    player.issueOrder(false,false)
+    // std::vector<Territory*>& attackableTerritories = player.toAttack();
+    // std::vector<Territory*>& defendableTerritories = player.toDefend();
+  
+
+    //Initial deployment phase when units are received at the beginning of every round
+    // for(Territory* territory: defendableTerritories){
+        
+    //     if(player.getReinforcementPool() <= 0)
+    //         break;
+
+    //     std::cout<<"Deploying forces to " << territory->getName()<<std::endl<<std::endl;
+    //     player.issueOrder(true,false, player, player,*territory,*territory);
+    // }
+
+    // //Display attackable territories
+    // std::cout<<"Attackable Territories:";
+    // for(Territory* territory: attackableTerritories){
+    //     std::cout<<territory<<"|";
+    // }
+    
+    // //Display defendable territories
+    // std::cout<<std::endl<<std::endl<<"Defendable Territories:";
+    // for(Territory* territory: defendableTerritories){
+    //     std::cout<<territory<<"|";
+    // }
+
+    // CommandProcessor* processor = new CommandProcessor;
+
+    // LogObserver* logObserver = new LogObserver(processor);
+    
+    // //Loop to allow advancement of troops
+    // while(true){
+
+        
+    //     try{
+            
+    //         //bool sourceError;
+    //         std::string sourceTerritory;
+    //         std::string targetTerritory;
+
+    //         std::cout<<"Please enter \"done\" if you do not want to advance any units."<<std::endl<<std::endl;
+
+    //         std::cout<<"Select a source territory to transfer units from"<<std::endl;
+    //          Command* command1 = processor->getCommand();
+    //          sourceTerritory = command1->getCommandText();
+    //         //std::cin>>sourceTerritory;
+    //         std::cout<<"Select a target territory to transfer units to"<<std::endl;
+    //          Command* command2 = processor->getCommand();
+    //          targetTerritory = command2->getCommandText();
+    //         //std::cin>>targetTerritory;
+
+    //         if(sourceTerritory == "done" || targetTerritory == "done"){
+    //             break;
+    //         }
+
+    //         bool notFoundSource = true;
+    //         bool notFoundTarget = true;
+
+    //         Territory* sourceTerritoryObj = nullptr;
+    //         Territory* targetTerritoryObj = nullptr;
+
+    //         for(Territory* territory: defendableTerritories){
+    //             if(sourceTerritory == territory->getName()){
+    //                 notFoundSource = false;
+    //                 sourceTerritoryObj = new Territory(*territory);
+    //             }else if(targetTerritory == territory->getName()){
+    //                 notFoundTarget == false;
+    //                 targetTerritoryObj = new Territory(*territory);
+    //             }
+    //         }
+            
+    //         //Don't have to loop through attackable territories if you advance in friendly territories.
+    //         if(notFoundTarget){
+    //             for(Territory* territory: attackableTerritories){
+    //                 if(targetTerritory == territory->getName()){
+    //                     notFoundTarget = false;
+    //                     targetTerritoryObj = new Territory(*territory);
+    //                 } 
+    //             }
+    //         }
+
+    //         if(notFoundSource){
+    //             throw sourceTerritory;
+    //         }else if(notFoundTarget){
+    //             throw targetTerritory;
+    //         }
+
+    //         player.issueOrder(false,true, player, player, *sourceTerritoryObj, *targetTerritoryObj);
+
+
+    //     }catch(std::string territory){
+    //         std::cout<<territory<<" is not a valid territory name";
+    //     }
+        
+
+    // }
+    
+    //Issuing orders besides deploying or advancing
+      
+
+}
+
+void GameEngine::executeOrdersPhase(Player& player){
+
+    for(int i = 0;i<player.getOrdersList().getSize()-1;i++){
+        player.getOrdersList().getNode(i)->getElement()->execute();
+    }
+
+}
+
 /*sets the state to the corresponding command*/
-void GameEngine::setState(const std::string command,const std::string arg) {
-    //addplayer <playername>
-    std::vector<Territory*> territories;
-    OrdersList ordersList= OrdersList();
-    Hand hand= Hand();
-    int reinforcementPool = 0;
+void GameEngine::setState(const std::string command) {
+    // std::cout << ("\nInput recieved") << std::endl;
 
     if (command == "start" || command == "play") GameEngine::state = states::START;
     else if (command == "loadmap") GameEngine::state = states::MAP_LOADED;
@@ -52,7 +216,7 @@ void GameEngine::displayNextPath(int currentState) {
     default: std::cout << "INCORRECT ENTRY, PLEASE ENTER VALID STATE\n" << std::endl;
     }
 }
-/**
+/*
 * Runs throught a loop that prompts the user for commands and navigation
 */
 void GameEngine::startupPhase() {
@@ -65,65 +229,20 @@ void GameEngine::startupPhase() {
     do {
         //prompt user to imput command to acess a state and show them what they can go to
         displayNextPath(GameEngine::state);
-        /*
-        std::string inputedString;
         std::string command;
-        std::string argument;
         do {
-            std::getline(std::cin, inputedString);
-            //split the argument off of the command if it exists
-            command = inputedString.substr(inputedString.find(" ")); substr(command->getCommandText().find(" ")); //should get the loadmap section
-            argument = inputedString.erase(command.append(" "));command->getCommandText().substr (pos+1);        //should get the second argument, USA
+            std::getline(std::cin, command);
+        } while (!validCommandInput(command)); //repeat while not a valid input
 
-        } while (!validCommandInput(command,argument)); //repeat while not a valid input
-        */
-
-
-        do {
-            Command* command = processor->getCommand();
-
-            std::string token = "";
-            std::istringstream iss(command->getCommandText());
-                std::getline(iss, token, ' ');
-            arg1 = token;
-                std::getline(iss, token, ' ');
-            arg2 = token; 
-
-
-            setState(arg1,arg2);
-
-
-        }while (!validCommandInput(arg1,arg2)); //repeat while not a valid input
-        
+        setState(command);
     } while (GameEngine::state != GameEngine::states::FINISHED);
 
-    delete logObserver;
-    delete processor;
     //PROGRAM FINISHED
     std::cout << "Program and Game Finished... exiting...";
 }
 
-std::string GameEngine::intStateToStringState(int sta){
-    switch (sta)
-    {
-        case states::INITIALISED: return "INITIALISED";
-        case states::START: return "START" ;
-        case states::MAP_LOADED: return "MAP_LOADED" ;
-        case states::MAP_VALIDATED: return "MAP_VALIDATED";
-        case states::PLAYERS_ADDED: return "PLAYERS_ADDED" ;
-        case states::ASSIGN_REINFORCEMENTS: return "ASSIGN_REINFORCEMENTS";
-        case states::ISSUE_ORDERS: return "ISSUE_ORDERS";
-        case states::EXECUTE_ORDERS: return "EXECUTE_ORDERS";
-        case states::WIN: return "WIN";
-        case states::FINISHED: return "FINISHED";
-     }
-     return "";
-}
-
 //will take in the user's input and check if it follows a valid command
-bool GameEngine::validCommandInput( std::string command, std::string argument) {
-    //loadmap USA
-
+bool GameEngine::validCommandInput(const std::string command) {
     //make sure valid command
     if (!(command == "start" || command == "loadmap" || command == "play" ||
         command == "validatemap" || command == "addplayer" || command == "assigncountries" ||
@@ -134,33 +253,25 @@ bool GameEngine::validCommandInput( std::string command, std::string argument) {
         std::cerr << "WRONG! The command you inputed is written incorrectly.\n";
         return false;
     }
-
-    MapLoader loader(argument);
-
     switch (state) { //check if correct state for what was inputed
-      case states::INITIALISED:   if (command == "start")
-          return true; break;
-      case states::START:
-                       if (command == "loadmap") {
-                  bool mapLoaded = loader.loadMap();  // Initialize within the case
-                  if (mapLoaded) return true;
-              }
-              break;
-      case states::MAP_LOADED:    if (command == "validatemap" || command == "loadmap")
-          return true; break;
-      case states::MAP_VALIDATED: if (command == "addplayer")
-          return true; break;
-      case states::PLAYERS_ADDED: if (command == "assigncountries" || command == "addplayer")
-          return true; break;
-      case states::ASSIGN_REINFORCEMENTS: if (command == "issueorder")
-          return true; break;
-      case states::ISSUE_ORDERS:  if (command == "endissueorders" || command == "issueorder")
-          return true; break;
-      case states::EXECUTE_ORDERS:if (command == "execorder" || command == "endexecorders" || command == "win")
-          return true; break;
-      case states::WIN:           if (command == "play" || command == "end")
-          return true; break;
-
+    case states::INITIALISED:   if (command == "start")
+        return true; break;
+    case states::START:         if (command == "loadmap")
+        return true; break;
+    case states::MAP_LOADED:    if (command == "validatemap" || command == "loadmap")
+        return true; break;
+    case states::MAP_VALIDATED: if (command == "addplayer")
+        return true; break;
+    case states::PLAYERS_ADDED: if (command == "assigncountries" || command == "addplayer")
+        return true; break;
+    case states::ASSIGN_REINFORCEMENTS: if (command == "issueorder")
+        return true; break;
+    case states::ISSUE_ORDERS:  if (command == "endissueorders" || command == "issueorder")
+        return true; break;
+    case states::EXECUTE_ORDERS:if (command == "execorder" || command == "endexecorders" || command == "win")
+        return true; break;
+    case states::WIN:           if (command == "play" || command == "end")
+        return true; break;
     }
     std::cerr << "The command you inputed does not fit the options of the current state of play.\n" << std::endl;
     return false;
@@ -173,4 +284,8 @@ void testGameStates() {
     LogObserver *logObserver = new LogObserver(&gameEngine);
     gameEngine.startupPhase();
 
+}
+
+vector<Player*>& GameEngine::getPlayers(){
+    return *players;
 }
