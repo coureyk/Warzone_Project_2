@@ -10,6 +10,7 @@ int GameEngine::state = GameEngine::START;
 
 
 std::vector<Player*>* GameEngine::players = new std::vector<Player*>;
+//THEO, I ADDED THE CONSTRUCTOR YOU WANTED FOR PLAYER. YOU CAN NOW INITIALIZE THE PLAYERS BY NAME
 
 void GameEngine::mainGameLoop(){
     

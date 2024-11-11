@@ -10,7 +10,7 @@
 #include "Cards.h"
 
 
-
+//THEO, I ADDED THE CONSTRUCTOR YOU WANTED FOR PLAYER. YOU CAN NOW INITIALIZE THE PLAYERS BY NAME
 
 class CommandProcessor;
 class Command;
