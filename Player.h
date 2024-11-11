@@ -44,6 +44,8 @@ public:
 
 	Player(const std::string name, const std::vector<Territory*>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinformentPool);
 
+	Player(const std::string name);
+
 	std::vector<Territory*>& toDefend();
 
 	std::vector<Territory*>& toAttack();

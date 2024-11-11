@@ -9,6 +9,7 @@ the game by using the notion of state, transition, and command.
 int GameEngine::state = GameEngine::START;
 
 
+std::vector<Player*>* GameEngine::players = new std::vector<Player*>;
 
 void GameEngine::mainGameLoop(){
     
@@ -240,6 +241,7 @@ void GameEngine::displayNextPath(int currentState) {
 * Runs throught a loop that prompts the user for commands and navigation
 */
 void GameEngine::startupPhase() {
+
     CommandProcessor* processor = new CommandProcessor(this);
     LogObserver* logObserver = new LogObserver(processor);
     std::string arg1; //the first part of the command, usually the state

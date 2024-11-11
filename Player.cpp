@@ -29,6 +29,14 @@ Player::Player(const Player& otherPlayer) {
 	reinforcementPool = otherPlayer.reinforcementPool;
 }
 
+Player::Player(std::string name){
+	this->name = name;
+	territories = new std::vector<Territory*>();
+	ordersList = new OrdersList;
+	hand = new Hand;
+	reinforcementPool = 0;
+}
+
 Player::~Player() {
 	delete territories;
 	delete ordersList;
@@ -162,7 +170,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
                     	notFoundSource = false;
                     	sourceTerritoryObj = new Territory(*territory);
                 	}else if(targetTerritory == territory->getName()){
-                    	notFoundTarget == false;
+                    	notFoundTarget = false;
                     	targetTerritoryObj = new Territory(*territory);
                 	}
             	}	
@@ -449,10 +457,12 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
 	return os;
 }
 
- Territory& Player::territoryFinder(bool attack){
+Territory& Player::territoryFinder(bool attack){
+		
+		Territory* targetTerritory = nullptr;
 
-
-	if(true){
+	if(attack){
+		
 		//Display attackable territories
 		std::cout<<"Attackable Territories:";
     	for(Territory* territory: toAttack()){
@@ -464,9 +474,9 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
 				std::cout<<"Enter one of the territory names.";
 				std::cin>>territoryName;
 
-				if(territoryName == "done"){
-             		break;
-            	}
+				// if(territoryName == "done"){
+             	// 	break;
+            	// }
 
             	bool notFoundTerritory = true;
 
@@ -474,7 +484,8 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
             	
                 	for(Territory* territory: toAttack()){
                     	if(territoryName == territory->getName()){
-                        	return *territory;
+                        	targetTerritory = new Territory(*territory);
+							notFoundTerritory = false;
                     	} 
                 	}
 				
@@ -485,7 +496,10 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
 			}catch(std::string territory){
             	std::cout<<territory<<" is not a valid territory name";
         	}
+
+			return *targetTerritory;
 		}
+		
 	}else{
 		//Display Defendable territories
 		std::cout<<"Defendable Territories:";
@@ -498,9 +512,6 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
 				std::cout<<"Enter one of the territory names.";
 				std::cin>>territoryName;
 
-				if(territoryName == "done"){
-             		break;
-            	}
 
             	bool notFoundTerritory = true;
 
@@ -508,20 +519,24 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
             	
                 	for(Territory* territory: *territories){
                     	if(territoryName == territory->getName()){
-                        	return *territory;
+                        	targetTerritory = new Territory(*territory);
+							notFoundTerritory = false;
                     	} 
                 	}
             	
-
             	if(notFoundTerritory)
                 	throw territoryName;
             	         
 			}catch(std::string territory){
             	std::cout<<territory<<" is not a valid territory name";
         	}
+
+
+			return *targetTerritory;
 		}
 	}
 }
+
 
 void testPlayers() {
 	// std::vector<Territory*> territories;
@@ -547,7 +562,6 @@ void testPlayers() {
 	// Deploy* order1 = new Deploy(player1, 1, territory1);
 
 	//list->addOrder(order1);
-
 
 	// player1->issueOrder();
 }
