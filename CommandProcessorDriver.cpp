@@ -26,7 +26,7 @@ void CommandProcessorInteractiveDriver::testInteractiveConsole() {
     }
     delete logObserver;
     delete logObserver2;
-        delete processor;
+    delete processor;
 }
 
 void CommandProcessorInteractiveDriver::testFileInput(const std::string& filename) {
@@ -39,14 +39,14 @@ void CommandProcessorInteractiveDriver::testFileInput(const std::string& filenam
     std::string arg2;
     while (true) {
         Command* command = fileProcessor->getCommand();
-        std::string token = "";
+        if (!command) break;
+           std::string token = "";
             std::istringstream iss(command->getCommandText());
                 std::getline(iss, token, ' ');
             arg1 = token;
                 std::getline(iss, token, ' ');
             arg2 = token; 
             gameEngine.setState(arg1,arg2);
-        if (!command) break;
     }
     delete logObserver;
     delete logObserver2;

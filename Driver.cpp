@@ -4,7 +4,6 @@
 #include "OrdersDriver.h"
 #include "CardsDriver.h"
 #include "GameEngine.h"
-#include "LoggingObserver.h"
 #include "LoggingObserverDriver.h"
 
 void waitForEnter() {
@@ -18,13 +17,13 @@ int main(int argc, char* argv[]) {
     testCommandProcessor();
     std::cout << "testCommandProcessor() is finished" << std::endl;
 
-    /*
+    
     std::cout << "LoggingObserver() is invoked" << std::endl;
     waitForEnter();
-    testLoggingObserver();
+    testObserver();
     std::cout << "LoggingObserver() is finished" << std::endl;
 
-    */
+    
     
     std::cout << "testLoadMaps() is invoked" << std::endl;
     waitForEnter();
