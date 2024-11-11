@@ -22,7 +22,7 @@ void GameEngine::setState(const std::string command,const std::string arg) {
     else if (command == "loadmap") GameEngine::state = states::MAP_LOADED;
     else if (command == "validatemap") GameEngine::state = states::MAP_VALIDATED;
     else if (command == "addplayer") {
-        players->push_back(new Player(arg,territories,ordersList,hand,reinforcementPool)); //EXCEPT FOR NAME, ALL OF THESE SHOULD BE CHANGED LATER
+        //players->push_back(new Player(arg,territories,ordersList,hand,reinforcementPool)); //EXCEPT FOR NAME, ALL OF THESE SHOULD BE CHANGED LATER
         GameEngine::state = states::PLAYERS_ADDED;
         }
     else if (command == "assigncountries" || command == "endexecorders") GameEngine::state = states::ASSIGN_REINFORCEMENTS;
@@ -30,7 +30,6 @@ void GameEngine::setState(const std::string command,const std::string arg) {
     else if (command == "endissueorders" || command == "execorder") GameEngine::state = states::EXECUTE_ORDERS;
     else if (command == "win")GameEngine::state = states::WIN;
     else if (command == "end")GameEngine::state = states::FINISHED;
-
     Notify();
 }
 
@@ -169,6 +168,7 @@ bool GameEngine::validCommandInput( std::string command, std::string argument) {
 //should be replaced with testGameStates() to be called by main in Test.cpp
 void testGameStates() {
     GameEngine gameEngine;
+    LogObserver *logObserver = new LogObserver(&gameEngine);
     gameEngine.startupPhase();
 
 }

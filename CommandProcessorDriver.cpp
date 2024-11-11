@@ -5,6 +5,7 @@ void CommandProcessorInteractiveDriver::testInteractiveConsole() {
     std::cout << "Interactive CommandProcessor Test" << std::endl;
     std::cout << "Enter commands manually (type 'exit' to quit):" << std::endl;
     GameEngine gameEngine;
+    LogObserver *logObserver2 = new LogObserver(&gameEngine);
     CommandProcessor *processor = new CommandProcessor(&gameEngine);
     LogObserver *logObserver = new LogObserver(processor);
     std::string arg1; 
@@ -24,12 +25,14 @@ void CommandProcessorInteractiveDriver::testInteractiveConsole() {
         }
     }
     delete logObserver;
+    delete logObserver2;
         delete processor;
 }
 
 void CommandProcessorInteractiveDriver::testFileInput(const std::string& filename) {
     std::cout << "Testing FileCommandProcessorAdapter with file input:" << std::endl;
     GameEngine gameEngine;
+    LogObserver *logObserver2 = new LogObserver(&gameEngine);
     FileCommandProcessorAdapter *fileProcessor = new FileCommandProcessorAdapter(filename, &gameEngine);
     LogObserver *logObserver = new LogObserver(fileProcessor);
     std::string arg1;
@@ -46,6 +49,7 @@ void CommandProcessorInteractiveDriver::testFileInput(const std::string& filenam
         if (!command) break;
     }
     delete logObserver;
+    delete logObserver2;
     delete fileProcessor;
 }
 

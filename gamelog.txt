@@ -1,0 +1,67 @@
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer Player1
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer Player2
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer Player1
+Invalid command: Player name 'Player1' is already added.
+Invalid command in the current state or syntax error.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+State: PLAYERS_ADDED
+loadmap another.map
+Invalid command in the current state or syntax error.
+State: MAP_LOADED
+replay 
+Invalid command in the current state or syntax error.
+State: MAP_LOADED
+quit 
+Invalid command in the current state or syntax error.
+State: MAP_LOADED
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer 1
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+State: PLAYERS_ADDED
+quit
+Invalid command in the current state or syntax error.
+State: PLAYERS_ADDED
+exit
+Invalid command in the current state or syntax error.
+State: PLAYERS_ADDED
+Valid order. Kevin deployed 5 to Baja California. Current Baja California army units: 5.
+
+Valid order. Kevin moved 10 army units from Baja California to Eastern Mexico. Current Baja California army units: -5. Current Eastern Mexico army units: 10.
+
+Invalid order. Kevin cannot bomb territory "Washington" that is not adjacent to any domestic territories.
+
+Invalid order. Kevin cannot blockade foreign territory "Western Mexico".
+
+Valid Order. Kevin successfully executed an airlift from Baja California to Eastern Mexico. Current Baja Californiaarmy units: -15. Current Eastern Mexicoarmy units: 20.
+
+Valid Order. Kevin successfully negotiated with Liam
+Order type: Deploy
+Order type: Advance
+Order type: Bomb
+Order type: Blockade
+Order type: Airlift
+Order type: Negotiate
+addplayer
+Invalid command: 'addplayer' requires a <playername> parameter.
+Invalid command in the current state or syntax error.
+State: PLAYERS_ADDED
