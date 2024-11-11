@@ -12,6 +12,7 @@ void waitForEnter() {
 }
 
 int main(int argc, char* argv[]) {
+    
     std::cout << "testCommandProcessor() is invoked" << std::endl;
     waitForEnter();
     testCommandProcessor();

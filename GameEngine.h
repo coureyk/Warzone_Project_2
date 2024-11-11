@@ -15,8 +15,7 @@
 class CommandProcessor;
 class Command;
 
-class GameEngine: public Subject, public ILoggable
-{
+class GameEngine: public Subject, public ILoggable{
 private:
     static std::vector<Player*>* players;
     friend class CommandProcessor;
@@ -67,6 +66,7 @@ public:
         EXECUTE_ORDERS = 60,
         WIN = 70,
         FINISHED = 80
+    
     };
 
     // Static variable to hold the current game state

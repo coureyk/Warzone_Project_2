@@ -205,7 +205,22 @@ void GameEngine::setState(const std::string command,const std::string arg) {
 std::string GameEngine::stringToLog() {
     return "State: "+intStateToStringState(GameEngine::state);
 }
-
+std::string GameEngine::intStateToStringState(int sta){
+    switch (sta)
+    {
+        case states::INITIALISED: return "INITIALISED";
+        case states::START: return "START" ;
+        case states::MAP_LOADED: return "MAP_LOADED" ;
+        case states::MAP_VALIDATED: return "MAP_VALIDATED";
+        case states::PLAYERS_ADDED: return "PLAYERS_ADDED" ;
+        case states::ASSIGN_REINFORCEMENTS: return "ASSIGN_REINFORCEMENTS";
+        case states::ISSUE_ORDERS: return "ISSUE_ORDERS";
+        case states::EXECUTE_ORDERS: return "EXECUTE_ORDERS";
+        case states::WIN: return "WIN";
+        case states::FINISHED: return "FINISHED";
+     }
+     return "";
+}
 /*Takes in the current command and displays the options the user has to proceed*/
 void GameEngine::displayNextPath(int currentState) {
     switch (currentState) {

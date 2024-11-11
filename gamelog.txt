@@ -110,3 +110,31 @@ State: MAP_LOADED
 quit 
 Invalid command in the current state or syntax error.
 State: MAP_LOADED
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer Player1
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer Player2
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer Player1
+Invalid command: Player name 'Player1' is already added.
+Invalid command in the current state or syntax error.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+State: PLAYERS_ADDED
+loadmap another.map
+Invalid command in the current state or syntax error.
+State: MAP_LOADED
+replay 
+Invalid command in the current state or syntax error.
+State: MAP_LOADED
+quit 
+Invalid command in the current state or syntax error.
+State: MAP_LOADED
