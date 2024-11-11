@@ -1,14 +1,15 @@
 #include "CommandProcessing.h"
 #include "GameEngine.h"
 
-Command::Command(const std::string& text) : commandText(new std::string(text)), effect(new std::string("Null")) {}
+Command::Command(const std::string& text) : commandText(new std::string(text)), effect(new std::string("Null")), valid(new bool(false))  {}
 
-Command::Command(const Command& other) : commandText(new std::string(*other.commandText)), effect(new std::string(*other.effect)) {}
+Command::Command(const Command& other) : commandText(new std::string(*other.commandText)), effect(new std::string(*other.effect)), valid(new bool(*other.valid)) {}
 
 Command& Command::operator=(const Command& other) {
     if (this != &other) {
         *commandText = *other.commandText;
         *effect = *other.effect;
+        *valid = *other.valid;
     }
     return *this;
 }
@@ -16,14 +17,21 @@ Command& Command::operator=(const Command& other) {
 Command::~Command() {
     delete commandText;
     delete effect;
+    delete valid;
 }
 
 void Command::saveEffect(const std::string& effectText) {
     *effect = effectText;
     Notify();
 }
+void Command::setValid(const bool val){
+    *valid = val;
+};
 std::string Command::getCommandText() const {
     return *commandText;  // Return the dereferenced command text
+}
+bool Command::getValid() const{
+    return *valid;
 }
 std::ostream& operator<<(std::ostream& os, const Command& command) {
     os << "Command: " << *command.commandText << " | Effect: " << *command.effect;
@@ -33,11 +41,14 @@ std::string Command::stringToLog() {
     return *effect;
 
 }
-CommandProcessor::CommandProcessor() 
-    : commands(new std::vector<Command*>()), currentState(Start) {}
-
+/*CommandProcessor::CommandProcessor() 
+    :gameEngine(nullptr), commands(new std::vector<Command*>()), currentState(Start) {}*/
+CommandProcessor::CommandProcessor(GameEngine* engine)
+    : gameEngine(engine), commands(new std::vector<Command*>()), currentState(Start) {
+    // Initialize any other members if needed
+}
 CommandProcessor::CommandProcessor(const CommandProcessor& other) 
-    : commands(new std::vector<Command*>()) {
+    :gameEngine(other.gameEngine), commands(new std::vector<Command*>()) {
     for (auto cmd : *other.commands) {
         commands->push_back(new Command(*cmd));  // Deep copy each Command
     }
@@ -47,10 +58,11 @@ CommandProcessor& CommandProcessor::operator=(const CommandProcessor& other) {
     if (this != &other) {
         for (auto cmd : *commands) delete cmd;  // Clean up existing commands
         commands->clear();
-
+        gameEngine = other.gameEngine;
         for (auto cmd : *other.commands) {
             commands->push_back(new Command(*cmd));  // Deep copy each Command
         }
+        playerNames = other.playerNames;
     }
     return *this;
 }
@@ -98,18 +110,19 @@ bool CommandProcessor::validate(Command* command) {
         if (stream >> parameter) {  // Ensure parameter is provided
             isValid = true;
             currentState = MapLoaded;
-            gameEngine->setState("loadmap");
+            //gameEngine->setState("loadmap");
     
         } else {
             std::cout<< "Invalid command: 'loadmap' requires a <mapfile> parameter."<<std::endl;
             //saveEffect(command, "Invalid command: 'loadmap' requires a <mapfile> parameter.");
             command->saveEffect("Invalid command: 'loadmap' requires a <mapfile> parameter.");
+            command->setValid(false);
         }
     } 
     else if (commandType == "validatemap" && gameEngine->state == GameEngine::MAP_LOADED) {
         isValid = true;
         currentState = MapValidated;
-        gameEngine->setState("validatemap");
+        //gameEngine->setState("validatemap");
     } 
     else if (commandType == "addplayer" && (gameEngine->state == GameEngine::MAP_VALIDATED || gameEngine->state == GameEngine::PLAYERS_ADDED)) {
         if (stream >> parameter) {  // Ensure parameter is provided
@@ -117,38 +130,46 @@ bool CommandProcessor::validate(Command* command) {
                 playerNames.insert(parameter);
                 isValid = true;
                 currentState = PlayersAdded;
-                gameEngine->setState("addplayer");
+                //gameEngine->setState("addplayer");
             } else {
                 std::cout<< "Invalid command: Player name '" + parameter + "' is already added."<<std::endl;
                 command->saveEffect("Invalid command: Player name '" + parameter + "' is already added.");
+                command->setValid(false);
             }
         } else {
             std::cout<<"Invalid command: 'addplayer' requires a <playername> parameter."<<std::endl;
             command->saveEffect("Invalid command: 'addplayer' requires a <playername> parameter.");
+            command->setValid(false);
         }
     } 
     else if (commandType == "gamestart" && gameEngine->state == GameEngine::PLAYERS_ADDED) {
         isValid = true;
         currentState = AssignReinforcement;
-        gameEngine->setState("assigncountries");
+        //gameEngine->setState("assigncountries");
     } 
     else if (commandType == "replay" && gameEngine->state == GameEngine::WIN) {
         isValid = true;
         currentState = Start;
-        gameEngine->setState("start");
+        //gameEngine->setState("start");
     } 
     else if (commandType == "quit" && gameEngine->state == GameEngine::WIN) {
         isValid = true;
         currentState = ExitProgram;
-        gameEngine->setState("end");
+        //gameEngine->setState("end");
+    } else if (gameEngine->state == GameEngine::ASSIGN_REINFORCEMENTS || gameEngine->state == GameEngine::ISSUE_ORDERS ||gameEngine->state == GameEngine::EXECUTE_ORDERS) {
+        isValid = true;
+        currentState = Gaming;
+        //gameEngine->setState("end");
     } 
 
     if (isValid) {
         std::cout<<"Command executed successfully."<<std::endl;
         command->saveEffect("Command executed successfully.");
+        command->setValid(true);
     } else if (command->getCommandText() == cmdText) {  // Avoid overwriting specific error
     std::cout<<"Invalid command in the current state or syntax error."<<std::endl;
         command->saveEffect("Invalid command in the current state or syntax error.");
+        command->setValid(false);
     }
     
     return isValid;
@@ -163,6 +184,7 @@ std::string CommandProcessor::getCurrentState() const {
         case AssignReinforcement: return "AssignReinforcement";
         case Win: return "Win";
         case ExitProgram: return "ExitProgram";
+        case Gaming:return "Gaming";
         default: return "Unknown";
     }
 }
@@ -204,8 +226,8 @@ std::string FileCommandReader::readCommandFromFile() {
 bool FileCommandReader::eof() const {
     return !commandFile->is_open() || commandFile->eof();
 }
-FileCommandProcessorAdapter::FileCommandProcessorAdapter(const std::string& filename)
-    : fileCommandReader(new FileCommandReader(filename)) {}
+FileCommandProcessorAdapter::FileCommandProcessorAdapter(const std::string& filename, GameEngine* engine)
+    :CommandProcessor(engine), fileCommandReader(new FileCommandReader(filename)) {}
 
 // Destructor
 FileCommandProcessorAdapter::~FileCommandProcessorAdapter() {

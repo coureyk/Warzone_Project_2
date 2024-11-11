@@ -45,6 +45,9 @@ void testOrdersLists() {
     OrdersList srcOrdersList;
     OrdersList tarOrdersList;
 
+    LogObserver *logObserver1 = new LogObserver(&srcOrdersList);
+    LogObserver *logObserver2 = new LogObserver(&tarOrdersList);
+
     Hand srcHand;
     Hand tarHand;
 
@@ -62,6 +65,13 @@ void testOrdersLists() {
     Airlift *o5 = new Airlift(sourcePlayer, 10, srcTerritories[0], srcTerritories[1]);
     Negotiate *o6 = new Negotiate(sourcePlayer, targetPlayer);
 
+    LogObserver *logObserver3 = new LogObserver(o1);
+    LogObserver *logObserver4 = new LogObserver(o2);
+    LogObserver *logObserver5 = new LogObserver(o3);
+    LogObserver *logObserver6 = new LogObserver(o4);
+    LogObserver *logObserver7 = new LogObserver(o5);
+    LogObserver *logObserver8 = new LogObserver(o6);
+
     o1->execute(); //execute calls validate()
     o2->execute();
     o3->execute();
@@ -69,12 +79,12 @@ void testOrdersLists() {
     o5->execute();
     o6->execute();
 
-    srcOrdersList.addLast(o1);
-    srcOrdersList.addLast(o2);
-    srcOrdersList.addLast(o3);
-    srcOrdersList.addLast(o4);
-    srcOrdersList.addLast(o5);
-    srcOrdersList.addLast(o6);
+    srcOrdersList.addOrder(o1);
+    srcOrdersList.addOrder(o2);
+    srcOrdersList.addOrder(o3);
+    srcOrdersList.addOrder(o4);
+    srcOrdersList.addOrder(o5);
+    srcOrdersList.addOrder(o6);
 
     srcOrdersList.move(1, 3);
     srcOrdersList.move(3, 3);
@@ -87,5 +97,8 @@ void testOrdersLists() {
     srcOrdersList.remove(srcOrdersList.getNode(-1)); //returns error
 
     srcOrdersList.getContents(); //demonstrates overloaded operator<<
+
+    delete logObserver1;
+    delete logObserver2;
 }
 
