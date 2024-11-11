@@ -238,21 +238,21 @@ void Player::issueOrder(bool toDeploy, bool toAdvance, Player& sourcePlayer, Pla
 	break;
 	case 2:
 	{
-		Blockade* blockade = new Blockade(&sourcePlayer, &targetTerritory);
+		Blockade* blockade = new Blockade(sourcePlayer, targetTerritory);
 		ordersList->addLast(blockade);
 		std::cout << "Blockade added";
 	}
 	break;
 	case 3:
 	{
-		Airlift* airlift = new Airlift(&sourcePlayer, 0, &sourceTerritory, &targetTerritory);
+		Airlift* airlift = new Airlift(sourcePlayer, 0, sourceTerritory, targetTerritory);
 		ordersList->addLast(airlift);
 		std::cout << "Airlift added";
 	}
 	break;
 	case 4:
 	{
-		Negotiate* negotiate = new Negotiate(&sourcePlayer, &targetPlayer);
+		Negotiate* negotiate = new Negotiate(sourcePlayer, targetPlayer);
 		ordersList->addLast(negotiate);
 		std::cout << "Negotiate added";
 	}
@@ -447,7 +447,7 @@ void testPlayers() {
 
 	// Deploy* order1 = new Deploy(player1, 1, territory1);
 
-	// list->addLast(order1);
+	list->addLast(order1);
 
 
 	// player1->issueOrder();

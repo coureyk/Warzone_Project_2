@@ -6,30 +6,35 @@
 #include "Player.h"
 #include "Map.h"
 #include "CommandProcessing.h"
+#include "LoggingObserver.h"
+#include "Cards.h"
+
+
 
 
 class CommandProcessor;
 class Command;
 
-class GameEngine
+class GameEngine: public Subject, public ILoggable
 {
-    
 private:
-
-    std::vector<Player*>* players;
+    vector<Player*>* players;
+    friend class CommandProcessor;
 
 
 public:
-    
+    std::string stringToLog();
     // Method to display the available options based on the current state
     void displayNextPath(int currentState);
 
-    void startup();// Method to start the game
+    void startupPhase();// Method to start the game
 
-    bool validCommandInput(const std::string command);//makes sure the user inputed a valid phrase
+    bool validCommandInput(const std::string command,const std::string argument);//makes sure the user inputed a valid phrase
+
+    std::string intStateToStringState(int sta);
 
     // method to set the state based on the command
-    void setState(const std::string command);
+    void setState(const std::string command, const std::string argument);
 
     void mainGameLoop();
 
