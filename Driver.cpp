@@ -17,44 +17,27 @@ int main(int argc, char* argv[]) {
     testCommandProcessor();
     std::cout << "testCommandProcessor() is finished" << std::endl;
 
-    
-    std::cout << "LoggingObserver() is invoked" << std::endl;
+    std::cout << "testGameStates() is invoked" << std::endl;
     waitForEnter();
-    testObserver();
-    std::cout << "LoggingObserver() is finished" << std::endl;
-
-    
-    
-    std::cout << "testLoadMaps() is invoked" << std::endl;
-    waitForEnter();
-    testLoadMaps();
-    std::cout << "testLoadMaps() is finished" << std::endl;
-    
-    std::cout << "testPlayers() is invoked" << std::endl;
-    waitForEnter();
-    testPlayers();
-    std::cout << "testPlayers() is finished" << std::endl;
+    testGameStates();
+    std::cout << "testGameStates() is finished" << std::endl;
 
     std::cout << "testOrdersLists() is invoked" << std::endl;
     waitForEnter();
     testOrdersLists();
     std::cout << "testOrdersLists() is finished" << std::endl;
 
-    std::cout << "testCards() is invoked" << std::endl;
+    std::cout << "LoggingObserver() is invoked" << std::endl;
     waitForEnter();
-    testCards();
-    std::cout << "testCards() is finished" << std::endl;
-
-    std::cout << "testGameStates() is invoked" << std::endl;
-    waitForEnter();
-    testGameStates();
-    std::cout << "testGameStates() is finished" << std::endl;
+    testObserver();
+    std::cout << "LoggingObserver() is finished" << std::endl;
 
     //Deallocate memory for Map
+    /*
     for (Continent* c : Map::getContinents()) {
         for (Territory* t : c->getTerritories()) {
             delete t;
         }
         delete c;
-    }
+    }*/
 }
