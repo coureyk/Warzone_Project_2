@@ -67,7 +67,7 @@ void GameEngine::issueOrderPhase(Player& player){
 
     player.issueOrder(true,false);
     player.issueOrder(false,true);
-    player.issueOrder(false,false)
+    player.issueOrder(false,false);
     // std::vector<Territory*>& attackableTerritories = player.toAttack();
     // std::vector<Territory*>& defendableTerritories = player.toDefend();
   
@@ -179,14 +179,18 @@ void GameEngine::executeOrdersPhase(Player& player){
 }
 
 /*sets the state to the corresponding command*/
-void GameEngine::setState(const std::string command) {
-    // std::cout << ("\nInput recieved") << std::endl;
+void GameEngine::setState(const std::string command,const std::string arg) {
+    //addplayer <playername>
+    std::vector<Territory*> territories;
+    OrdersList ordersList= OrdersList();
+    Hand hand= Hand();
+    int reinforcementPool = 0;
 
     if (command == "start" || command == "play") GameEngine::state = states::START;
     else if (command == "loadmap") GameEngine::state = states::MAP_LOADED;
     else if (command == "validatemap") GameEngine::state = states::MAP_VALIDATED;
     else if (command == "addplayer") {
-        //players->push_back(new Player(arg,territories,ordersList,hand,reinforcementPool)); //EXCEPT FOR NAME, ALL OF THESE SHOULD BE CHANGED LATER
+        players->push_back(new Player(arg,territories,ordersList,hand,reinforcementPool)); //EXCEPT FOR NAME, ALL OF THESE SHOULD BE CHANGED LATER
         GameEngine::state = states::PLAYERS_ADDED;
         }
     else if (command == "assigncountries" || command == "endexecorders") GameEngine::state = states::ASSIGN_REINFORCEMENTS;
@@ -194,6 +198,7 @@ void GameEngine::setState(const std::string command) {
     else if (command == "endissueorders" || command == "execorder") GameEngine::state = states::EXECUTE_ORDERS;
     else if (command == "win")GameEngine::state = states::WIN;
     else if (command == "end")GameEngine::state = states::FINISHED;
+
     Notify();
 }
 
@@ -220,29 +225,40 @@ void GameEngine::displayNextPath(int currentState) {
 * Runs throught a loop that prompts the user for commands and navigation
 */
 void GameEngine::startupPhase() {
-
     CommandProcessor* processor = new CommandProcessor(this);
-
     LogObserver* logObserver = new LogObserver(processor);
     std::string arg1; //the first part of the command, usually the state
     std::string arg2; //the second part of the command, usually the name or file
     do {
         //prompt user to imput command to acess a state and show them what they can go to
         displayNextPath(GameEngine::state);
-        std::string command;
-        do {
-            std::getline(std::cin, command);
-        } while (!validCommandInput(command)); //repeat while not a valid input
 
-        setState(command);
+        do {
+            Command* command = processor->getCommand();
+
+            std::string token = "";
+            std::istringstream iss(command->getCommandText());
+                std::getline(iss, token, ' ');
+            arg1 = token;
+                std::getline(iss, token, ' ');
+            arg2 = token; 
+
+
+            setState(arg1,arg2);
+
+
+        }while (!validCommandInput(arg1,arg2)); //repeat while not a valid input
+
     } while (GameEngine::state != GameEngine::states::FINISHED);
 
+    delete logObserver;
+    delete processor;
     //PROGRAM FINISHED
     std::cout << "Program and Game Finished... exiting...";
 }
 
 //will take in the user's input and check if it follows a valid command
-bool GameEngine::validCommandInput(const std::string command) {
+bool GameEngine::validCommandInput(const std::string command,const std::string argument) {
     //make sure valid command
     if (!(command == "start" || command == "loadmap" || command == "play" ||
         command == "validatemap" || command == "addplayer" || command == "assigncountries" ||
@@ -253,11 +269,17 @@ bool GameEngine::validCommandInput(const std::string command) {
         std::cerr << "WRONG! The command you inputed is written incorrectly.\n";
         return false;
     }
+    MapLoader loader(argument);
+ 
     switch (state) { //check if correct state for what was inputed
-    case states::INITIALISED:   if (command == "start")
-        return true; break;
-    case states::START:         if (command == "loadmap")
-        return true; break;
+      case states::INITIALISED:   if (command == "start")
+          return true; break;
+      case states::START:
+                       if (command == "loadmap") {
+                  bool mapLoaded = loader.loadMap();  // Initialize within the case
+                  if (mapLoaded) return true;
+              }
+              break;
     case states::MAP_LOADED:    if (command == "validatemap" || command == "loadmap")
         return true; break;
     case states::MAP_VALIDATED: if (command == "addplayer")

@@ -33,7 +33,7 @@ public:
     std::string intStateToStringState(int sta);
 
     // method to set the state based on the command
-    void setState(const std::string command, const std::string argument);
+    void setState(const std::string command, const std::string arg);
 
     void mainGameLoop();
 
