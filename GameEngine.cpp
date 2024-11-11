@@ -14,11 +14,17 @@ std::vector<Player*>* GameEngine::players = new std::vector<Player*>;
 
 void GameEngine::mainGameLoop(){
     
+   while(players->size()>1){
     for(Player* player: *players){
+
+    players->erase(std::remove_if(players->begin(), players->end(), [](Player* player) { return player->getTerritories().size() == 0; }), players->end());
         reinforcementPhase(*player);
         issueOrderPhase(*player);
-        executeOrdersPhase(*player);
+        executeOrdersPhase(*player); 
+        
     }
+   }
+   cout<<"Win"<<endl;//go back to startup phase
 }
 
 void GameEngine::reinforcementPhase(Player& player){
