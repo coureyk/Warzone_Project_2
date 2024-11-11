@@ -57,7 +57,9 @@ void GameEngine::displayNextPath(int currentState) {
 * Runs throught a loop that prompts the user for commands and navigation
 */
 void GameEngine::startupPhase() {
+
     CommandProcessor* processor = new CommandProcessor(this);
+
     LogObserver* logObserver = new LogObserver(processor);
     std::string arg1; //the first part of the command, usually the state
     std::string arg2; //the second part of the command, usually the name or file
