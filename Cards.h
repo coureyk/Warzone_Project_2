@@ -64,5 +64,7 @@ public:
     int getCardCount() const;  // Get the number of cards in hand
     void showHand() const;  // Display the cards in the hand
     friend std::ostream& operator<<(std::ostream& os, const Hand& hand);
+    std::vector<Card*>& getHand();
+
 };
 #endif

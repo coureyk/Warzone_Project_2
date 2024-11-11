@@ -18,9 +18,8 @@ class Command;
 class GameEngine: public Subject, public ILoggable
 {
 private:
-    vector<Player*>* players;
+    static std::vector<Player*>* players;
     friend class CommandProcessor;
-
 
 public:
     std::string stringToLog();
@@ -73,7 +72,7 @@ public:
     // Static variable to hold the current game state
     static int state;
 
-
+    static std::vector<Player*>& getPlayers();
     
 };
 
@@ -81,7 +80,6 @@ public:
 to trigger some state transitions as depicted in the state transition diagram presented below. Any command string
 entered that does not correspond to an outgoing edge of the current state should be rejected.*/
 void testGameStates();
-
 
 
 

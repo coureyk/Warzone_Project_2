@@ -192,3 +192,7 @@ void Hand::showHand() const {
 int Hand::getCardCount() const {
     return handCards->size();
 }
+
+std::vector<Card*>& Hand::getHand(){
+    return *handCards;
+}

@@ -15,6 +15,8 @@ class OrdersList;
 #include "Order.h"
 #include "Cards.h"
 #include "CommandProcessing.h"
+#include "GameEngine.h"
+
 
 
 class Player {
@@ -46,7 +48,7 @@ public:
 
 	std::vector<Territory*>& toAttack();
 
-	void issueOrder(bool toDeploy, bool toAdvance,Player& sourcePlayer, Player& targetPlayer,Territory& sourceTerritory, Territory& targetTerritory);
+	void issueOrder(bool toDeploy, bool toAdvance);
 
 	Player& operator=(const Player& otherPlayer);
 
@@ -70,7 +72,9 @@ public:
 
 	std::vector<Territory*>& getTerritories();
 
-	Territory& territoryFinder();
+	OrdersList& getOrdersList();
+
+	Territory& territoryFinder(bool attack);
 };
 
 void testPlayers();
