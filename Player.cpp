@@ -426,8 +426,8 @@ std::vector<Territory*>& Player::getTerritories(){
 	return *territories;
 }
 
-void setTerritories(Territory* ter){
-	territories.push_back(ter);
+void Player::addTerritories(Territory* t){
+	territories->push_back(t);
 }
 
 std::ostream& operator<<(std::ostream& os, const Player& player)

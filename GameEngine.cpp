@@ -144,6 +144,7 @@ void GameEngine::issueOrderPhase(Player& player){
     player.issueOrder(true,false);
     player.issueOrder(false,true);
     player.issueOrder(false,false);
+}
     /*
     // std::vector<Territory*>& attackableTerritories = player.toAttack();
     // std::vector<Territory*>& defendableTerritories = player.toDefend();
@@ -369,7 +370,7 @@ void GameEngine::gamestart() {
     //loop through territorities adding them to players 
     for(Continent* c : Map::getContinents()){
         for(Territory* t: c->getTerritories()){
-            GameEngine::players[incrementer%GameEngine::players.length].
+            (*players)[incrementer % players->size()]->addTerritories(t);
             incrementer++;
         }
     }

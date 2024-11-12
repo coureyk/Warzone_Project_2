@@ -74,7 +74,7 @@ public:
 	std::vector<Territory*>& getTerritories();
 
 
-	void setTerritories(Territory* ter);
+	void addTerritories(Territory* ter);
 
 	OrdersList& getOrdersList();
 
