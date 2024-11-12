@@ -22,6 +22,8 @@ void GameEngine::mainGameLoop(){
     for(Player* player: *players){
 
     players->erase(std::remove_if(players->begin(), players->end(), [](Player* player) { return player->getTerritories().size() == 0; }), players->end());
+
+        std::cout<<"Player: "<<player->getName()<<std::endl;
         reinforcementPhase(*player);
         issueOrderPhase(*player);
         executeOrdersPhase(*player); 
@@ -33,6 +35,7 @@ void GameEngine::mainGameLoop(){
 }
 
 void GameEngine::testMainGameLoop() {
+    
     MapLoader loader("USA.map");
     bool mapLoaded = loader.loadMap();
 
@@ -52,6 +55,7 @@ void GameEngine::testMainGameLoop() {
     vector<Territory*> srcTerritories; //will contain Baja California and Eastern Mexico
     vector<Territory*> tarTerritories; // will contain Western Mexico and Washington
 
+    bool first = true;
     int counter = 0;
     const int NUM_OF_PLAYERS = 2;
     const int MAX_TERRITORIES = 2;
@@ -60,7 +64,8 @@ void GameEngine::testMainGameLoop() {
             if (counter % NUM_OF_PLAYERS == 0) {
                 srcTerritories.push_back(t);
                 counter++;
-            } else if (counter % NUM_OF_PLAYERS == 1) {
+            } else if (counter % NUM_OF_PLAYERS == 1 && first) {
+                first = false;
                 tarTerritories.push_back(t);
                 counter++;
             }
@@ -83,8 +88,10 @@ void GameEngine::testMainGameLoop() {
     Hand srcHand;
     Hand tarHand;
 
-    int srcReinforcementPool = 0;
-    int tarReinforcementPool = 0;
+    int srcReinforcementPool = 10;
+    int tarReinforcementPool = 1;
+
+    
 
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool);
@@ -253,6 +260,7 @@ void GameEngine::issueOrderPhase(Player& player){
 void GameEngine::executeOrdersPhase(Player& player){
 
     for(int i = 0;i<player.getOrdersList().getSize()-1;i++){
+        if(player.getOrdersList().getNode(i)->getElement()->validate())
         player.getOrdersList().getNode(i)->getElement()->execute();
     }
 
@@ -279,7 +287,11 @@ void GameEngine::setState(const std::string command,const std::string arg) {
     else if (command == "end") {
         GameEngine::state = states::FINISHED;
         exit(0);
+    }else if(command == "replay"){
+        GameEngine::state = states::START;
+        startupPhase();
     }
+    
 
     Notify();
 }

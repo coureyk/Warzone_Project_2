@@ -17,6 +17,7 @@ void waitForEnter() {
 
 int main(int argc, char* argv[]) {
     GameEngine gameEngine;
+
     cout << "testGameStates() is invoked" << endl;
     waitForEnter();
     testGameStates();
