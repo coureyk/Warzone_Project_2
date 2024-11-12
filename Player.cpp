@@ -128,13 +128,13 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 			//Display attackable territories
 			std::cout<<"Attackable Territories:";
     		for(Territory* territory: attackableTerritories){
-        		std::cout<<territory<<"|";
+        		std::cout<<*territory<<"|";
     		}
 
 			//Display defendable territories
     		std::cout<<std::endl<<std::endl<<"Defendable Territories:";
  			for(Territory* territory: defendableTerritories){
-        		std::cout<<territory<<"|";
+        		std::cout<<*territory<<"|";
     		}
 			
 
