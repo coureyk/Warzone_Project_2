@@ -12,6 +12,10 @@ int GameEngine::state = GameEngine::START;
 std::vector<Player*>* GameEngine::players = new std::vector<Player*>;
 //THEO, I ADDED THE CONSTRUCTOR YOU WANTED FOR PLAYER. YOU CAN NOW INITIALIZE THE PLAYERS BY NAME
 
+/**
+ * @brief The internal loop that goes through player actions
+ * 
+ */
 void GameEngine::mainGameLoop(){
     
    while(players->size()>1){
@@ -24,6 +28,7 @@ void GameEngine::mainGameLoop(){
         
     }
    }
+   GameEngine::state = states::WIN;
    cout<<"Win"<<endl;//go back to startup phase
 }
 
@@ -139,6 +144,7 @@ void GameEngine::issueOrderPhase(Player& player){
     player.issueOrder(true,false);
     player.issueOrder(false,true);
     player.issueOrder(false,false);
+    /*
     // std::vector<Territory*>& attackableTerritories = player.toAttack();
     // std::vector<Territory*>& defendableTerritories = player.toDefend();
   
@@ -248,23 +254,22 @@ void GameEngine::executeOrdersPhase(Player& player){
     }
 
 }
-
+*/
 /*sets the state to the corresponding command*/
 void GameEngine::setState(const std::string command,const std::string arg) {
     //addplayer <playername>
-    std::vector<Territory*> territories;
-    OrdersList ordersList= OrdersList();
-    Hand hand= Hand();
-    int reinforcementPool = 0;
 
     if (command == "start" || command == "play") GameEngine::state = states::START;
     else if (command == "loadmap") GameEngine::state = states::MAP_LOADED;
     else if (command == "validatemap") GameEngine::state = states::MAP_VALIDATED;
     else if (command == "addplayer") {
-        players->push_back(new Player(arg,territories,ordersList,hand,reinforcementPool)); //EXCEPT FOR NAME, ALL OF THESE SHOULD BE CHANGED LATER
+        players->push_back(new Player(arg)); //EXCEPT FOR NAME, ALL OF THESE SHOULD BE CHANGED LATER
         GameEngine::state = states::PLAYERS_ADDED;
         }
-    else if (command == "assigncountries" || command == "endexecorders") GameEngine::state = states::ASSIGN_REINFORCEMENTS;
+    else if (command == "gamestart" || command == "endexecorders"){
+        GameEngine::state = states::ASSIGN_REINFORCEMENTS;
+        mainGameLoop();
+    } 
     else if (command == "issueorder") GameEngine::state = states::ISSUE_ORDERS;
     else if (command == "endissueorders" || command == "execorder") GameEngine::state = states::EXECUTE_ORDERS;
     else if (command == "win")GameEngine::state = states::WIN;
@@ -272,10 +277,16 @@ void GameEngine::setState(const std::string command,const std::string arg) {
 
     Notify();
 }
-
+//returns the state as a string
 std::string GameEngine::stringToLog() {
     return "State: "+intStateToStringState(GameEngine::state);
 }
+/**
+ * @brief The state is stored internally as an int, this gives the string equivalent
+ * 
+ * @param sta current state as an int
+ * @return std::string current state as a string
+ */
 std::string GameEngine::intStateToStringState(int sta){
     switch (sta)
     {
@@ -295,11 +306,11 @@ std::string GameEngine::intStateToStringState(int sta){
 /*Takes in the current command and displays the options the user has to proceed*/
 void GameEngine::displayNextPath(int currentState) {
     switch (currentState) {
-    case states::INITIALISED:   std::cout << ("Welcome to the game, from here type the \"start\" command to enter the start state.\nFor reference, here is a list of all commands and the state they lead to : \ncommand->state it goes to\nstart or play->START\nloadmap->MAP_LOADED\nvalidatemap->MAP_VALIDATED\naddplayer->PLAYERS_ADDED\nassigncountries or endexecorders->ASSIGN_REINFORCEMENTS\nissueorder->ISSUE_ORDERS\nendissueorders or execorder->EXECUTE_ORDERS\nwin->WIN\n");break;
+    case states::INITIALISED:   std::cout << ("Welcome to the game, from here type the \"start\" command to enter the start state.\nFor reference, here is a list of all commands and the state they lead to : \ncommand->state it goes to\nstart or play->START\nloadmap->MAP_LOADED\nvalidatemap->MAP_VALIDATED\naddplayer->PLAYERS_ADDED\ngamestart or endexecorders->ASSIGN_REINFORCEMENTS\nissueorder->ISSUE_ORDERS\nendissueorders or execorder->EXECUTE_ORDERS\nwin->WIN\n");break;
     case states::START:  std::cout << ("From START, you may use the \"loadmap\" command\n") << std::endl; break;
     case states::MAP_LOADED: std::cout << ("From MAP_LOADED, you can use the \"loadmap\" or \"validatemap\" commands\n") << std::endl; break;
     case states::MAP_VALIDATED: std::cout << ("From MAP_VALIDATED, you can use the \"addplayer\" command\n") << std::endl; break;
-    case states::PLAYERS_ADDED: std::cout << ("From PLAYERS_ADDED, you can use the \"addplayer\" or \"assigncountries\" commands\n") << std::endl;break;
+    case states::PLAYERS_ADDED: std::cout << ("From PLAYERS_ADDED, you can use the \"addplayer\" or \"gamestart\" commands\n") << std::endl;break;
     case states::ASSIGN_REINFORCEMENTS: std::cout << ("From ASSIGN_REINFORCEMENTS, you can use the \"issueorder\" command\n") << std::endl;break;
     case states::ISSUE_ORDERS: std::cout << ("From ISSUE_ORDERS, you can use the \"issueorder\" or \"endissueorders\" commands\n") << std::endl;break;
     case states::EXECUTE_ORDERS: std::cout << ("From EXECUTE_ORDERS, you can use the \"execorder\" or \"endexecorders\" or \"win\" commands\n") << std::endl; break;\
@@ -309,6 +320,7 @@ void GameEngine::displayNextPath(int currentState) {
 }
 /*
 * Runs throught a loop that prompts the user for commands and navigation
+    This is just the first phase
 */
 void GameEngine::startupPhase() {
 
@@ -344,11 +356,34 @@ void GameEngine::startupPhase() {
     std::cout << "Program and Game Finished... exiting...";
 }
 
+/**
+ * @brief 
+a) fairly distribute all the territories to the players
+b) determine randomly the order of play of the players in the game
+c) give 50 initial army units to the players, which are placed in their respective reinforcement pool
+d) let each player draw 2 initial cards from the deck using the deck’s draw() method
+e) switch the game to the play phase
+ */
+void GameEngine::gamestart() {
+    int incrementer =0;
+    //loop through territorities adding them to players 
+    for(Continent* c : Map::getContinents()){
+        for(Territory* t: c->getTerritories()){
+            GameEngine::players[incrementer%GameEngine::players.length].
+            incrementer++;
+        }
+    }
+
+
+    mainGameLoop();
+}
+
+
 //will take in the user's input and check if it follows a valid command
 bool GameEngine::validCommandInput(const std::string command,const std::string argument) {
     //make sure valid command
     if (!(command == "start" || command == "loadmap" || command == "play" ||
-        command == "validatemap" || command == "addplayer" || command == "assigncountries" ||
+        command == "validatemap" || command == "addplayer" || command == "gamestart" ||
         command == "endexecorders" || command == "issueorder" || command == "endissueorders" ||
         command == "win" || command == "execorder" || command == "end"))
     { //make sure command fits current state's options
@@ -371,7 +406,7 @@ bool GameEngine::validCommandInput(const std::string command,const std::string a
         return true; break;
     case states::MAP_VALIDATED: if (command == "addplayer")
         return true; break;
-    case states::PLAYERS_ADDED: if (command == "assigncountries" || command == "addplayer")
+    case states::PLAYERS_ADDED: if (command == "gamestart" || command == "addplayer")
         return true; break;
     case states::ASSIGN_REINFORCEMENTS: if (command == "issueorder")
         return true; break;

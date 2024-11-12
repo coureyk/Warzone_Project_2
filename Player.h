@@ -24,8 +24,6 @@ class Player {
 protected:
 	std::string name;
 
-	std::vector<Territory*>* territories;
-
 	OrdersList* ordersList;
 
 	Hand* hand;
@@ -35,6 +33,7 @@ protected:
 	std::vector<std::string> negotiatedPlayers;
 
 public:
+	std::vector<Territory*>* territories;
 
 	Player();
 
@@ -73,6 +72,9 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Player& player);
 
 	std::vector<Territory*>& getTerritories();
+
+
+	void setTerritories(Territory* ter);
 
 	OrdersList& getOrdersList();
 
