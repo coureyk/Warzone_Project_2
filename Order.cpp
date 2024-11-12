@@ -143,7 +143,7 @@ bool Deploy::validate() {
     int currentArmyUnits = getTargetTerritory()->getArmies();
     int currentReinforcementPool = getSourcePlayer()->getReinforcementPool();
     string effect;
-
+    
     if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
         getTargetTerritory()->setArmies(currentArmyUnits + getArmyUnits()); //increase number of armyUnits on targetTerritory
         getSourcePlayer()->setReinforcementPool(currentReinforcementPool - getArmyUnits()); //decrease number of armyUnits in reinforcementPool
@@ -376,6 +376,23 @@ bool Bomb::validate() {
         effect = "Invalid order. " + sourcePlayer + " cannot bomb domestic territory \"" + targetTerritory + "\".\n";
         setEffect(effect);
         cout << "Invalid order. " << sourcePlayer << " cannot bomb domestic territory: " << targetTerritory << ".\n" << endl; //to be deleted
+        return false;
+    }
+
+    int index = 0;
+    bool cardFound = false;
+    for (Card* c : getSourcePlayer()->getHand()->getHand()) {
+        if (getOrderType().compare(c->getType())) {
+            getSourcePlayer()->getHand()->playCard(index);
+            cardFound = true;
+        }
+        index++;
+    }
+
+    if (!cardFound) {
+        effect = "Invalid order. " + sourcePlayer + " does not have " + getOrderType() + " card in hand.";
+        setEffect(effect);
+        cout << "Invalid order. " << sourcePlayer << " does not have " << getOrderType() << "card in hand.\n" << endl; //to be deleted
         return false;
     }
 
