@@ -464,9 +464,9 @@ Territory& Player::territoryFinder(bool attack){
 	if(attack){
 		
 		//Display attackable territories
-		std::cout<<"Attackable Territories:";
+		std::cout<<"Attackable Territories: ";
     	for(Territory* territory: toAttack()){
-        	std::cout<<territory<<"|";
+        	std::cout<<*territory<<"|";
     	}
 		while(true){
 			try{

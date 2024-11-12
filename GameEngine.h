@@ -36,6 +36,8 @@ public:
 
     void mainGameLoop();
 
+    void testMainGameLoop();
+
     void reinforcementPhase(Player& player);
 
     void issueOrderPhase(Player& player);

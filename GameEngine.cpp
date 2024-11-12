@@ -27,6 +27,69 @@ void GameEngine::mainGameLoop(){
    cout<<"Win"<<endl;//go back to startup phase
 }
 
+void GameEngine::testMainGameLoop() {
+    MapLoader loader("USA.map");
+    bool mapLoaded = loader.loadMap();
+
+    if (mapLoaded) {
+        cout << "Map Loaded Successfully. Now validating..." << endl;
+    } else {
+        cout << "Map could not be loaded successfully." << endl;
+    }
+
+    if (Map::validate()) {
+        cout << "Map is valid!" << endl;
+    }
+
+    Continent* c1 = Map::getContinents()[0];
+    Continent* c2 = Map::getContinents()[1];
+
+    vector<Territory*> srcTerritories; //will contain Baja California and Eastern Mexico
+    vector<Territory*> tarTerritories; // will contain Western Mexico and Washington
+
+    int counter = 0;
+    const int NUM_OF_PLAYERS = 2;
+    const int MAX_TERRITORIES = 2;
+    for (Continent* c : Map::getContinents()) {
+        for (Territory* t : c->getTerritories()) {
+            if (counter % NUM_OF_PLAYERS == 0) {
+                srcTerritories.push_back(t);
+                counter++;
+            } else if (counter % NUM_OF_PLAYERS == 1) {
+                tarTerritories.push_back(t);
+                counter++;
+            }
+
+            if (counter == MAX_TERRITORIES * NUM_OF_PLAYERS) {
+                break;
+            }
+        }
+        if (counter == MAX_TERRITORIES * NUM_OF_PLAYERS) {
+            break;
+        }
+    }
+
+    OrdersList srcOrdersList;
+    OrdersList tarOrdersList;
+
+    LogObserver *logObserver1 = new LogObserver(&srcOrdersList);
+    LogObserver *logObserver2 = new LogObserver(&tarOrdersList);
+
+    Hand srcHand;
+    Hand tarHand;
+
+    int srcReinforcementPool = 5;
+    int tarReinforcementPool = 5;
+
+    Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool);
+    Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool);
+
+    players->push_back(sourcePlayer);
+    players->push_back(targetPlayer);
+    
+    mainGameLoop();
+}
+
 void GameEngine::reinforcementPhase(Player& player){
 
     int territoryCount = player.getTerritories().size();

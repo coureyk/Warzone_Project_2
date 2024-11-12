@@ -6,32 +6,41 @@
 #include "GameEngine.h"
 #include "LoggingObserverDriver.h"
 
+using std::cout;
+using std::cin;
+using std::endl;
+
 void waitForEnter() {
-    std::cout << "Press Enter to continue..." << std::endl;
-    std::cin.get();     // Waits for the user to press Enter
+    cout << "Press Enter to continue..." << endl;
+    cin.get();     // Waits for the user to press Enter
 }
 
 int main(int argc, char* argv[]) {
     
-    std::cout << "testCommandProcessor() is invoked" << std::endl;
+    GameEngine gameEngine;
+    cout << "testMainGameLoop() is invoked" << endl;
+    gameEngine.testMainGameLoop();
+    cout << "testMainGameLoop() is finished" << endl;
+    
+    cout << "testCommandProcessor() is invoked" << endl;
     waitForEnter();
     testCommandProcessor();
-    std::cout << "testCommandProcessor() is finished" << std::endl;
+    cout << "testCommandProcessor() is finished" << endl;
 
-    std::cout << "testGameStates() is invoked" << std::endl;
+    cout << "testGameStates() is invoked" << endl;
     waitForEnter();
     testGameStates();
-    std::cout << "testGameStates() is finished" << std::endl;
+    cout << "testGameStates() is finished" << endl;
 
-    std::cout << "testOrdersLists() is invoked" << std::endl;
+    cout << "testOrdersLists() is invoked" << endl;
     waitForEnter();
     testOrdersLists();
-    std::cout << "testOrdersLists() is finished" << std::endl;
+    cout << "testOrdersLists() is finished" << endl;
 
-    std::cout << "LoggingObserver() is invoked" << std::endl;
+    cout << "LoggingObserver() is invoked" << endl;
     waitForEnter();
     testObserver();
-    std::cout << "LoggingObserver() is finished" << std::endl;
+    cout << "LoggingObserver() is finished" << endl;
 
     //Deallocate memory for Map
     /*
