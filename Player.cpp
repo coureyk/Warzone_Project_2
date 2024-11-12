@@ -85,13 +85,13 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 		
 		for(Territory* territory: defendableTerritories){
 			
-			std::cout<<"You have " + std::to_string(reinforcementPool) + " reinforcements"<<std::endl<<std::endl;
+			std::cout<<"\nYou have " + std::to_string(reinforcementPool) + " reinforcements remaining in your reinforcement pool."<<std::endl;
         	if(reinforcementPool <= 0)
             	break;
 		
 			while(true){
 				int deployableUnits;
-				std::cout<<"How many units would you like to deploy?"<<std::endl;
+				std::cout<<"How many units would you like to deploy to " << *territory << " ?"<<std::endl;
 		
 				try{
 					std::cin>>deployableUnits;
