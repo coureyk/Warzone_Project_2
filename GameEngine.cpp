@@ -271,12 +271,15 @@ void GameEngine::setState(const std::string command,const std::string arg) {
         }
     else if (command == "gamestart" || command == "endexecorders"){
         GameEngine::state = states::ASSIGN_REINFORCEMENTS;
-        mainGameLoop();
+        gamestart();
     } 
     else if (command == "issueorder") GameEngine::state = states::ISSUE_ORDERS;
     else if (command == "endissueorders" || command == "execorder") GameEngine::state = states::EXECUTE_ORDERS;
     else if (command == "win")GameEngine::state = states::WIN;
-    else if (command == "end")GameEngine::state = states::FINISHED;
+    else if (command == "end") {
+        GameEngine::state = states::FINISHED;
+        exit(0);
+    }
 
     Notify();
 }
@@ -335,6 +338,22 @@ void GameEngine::startupPhase() {
         //prompt user to imput command to acess a state and show them what they can go to
         displayNextPath(GameEngine::state);
 
+        while (true) {
+            Command* command = processor->getCommand();
+
+            std::string token = "";
+            std::istringstream iss(command->getCommandText());
+                std::getline(iss, token, ' ');
+            arg1 = token;
+                std::getline(iss, token, ' ');
+            arg2 = token; 
+
+            if (validCommandInput(arg1,arg2)) {
+                setState(arg1,arg2);
+            }
+        }
+        
+        /*
         do {
             Command* command = processor->getCommand();
 
@@ -350,6 +369,8 @@ void GameEngine::startupPhase() {
 
 
         }while (!validCommandInput(arg1,arg2)); //repeat while not a valid input
+        */
+        
 
     } while (GameEngine::state != GameEngine::states::FINISHED);
 
@@ -419,8 +440,13 @@ bool GameEngine::validCommandInput(const std::string command,const std::string a
                   if (mapLoaded) return true;
               }
               break;
-    case states::MAP_LOADED:    if (command == "validatemap" || command == "loadmap")
-        return true; break;
+    case states::MAP_LOADED:
+        if (command == "validatemap" || command == "loadmap") {
+            return true;
+        } else {
+            std::cout << command << endl;
+        }
+        
     case states::MAP_VALIDATED: if (command == "addplayer")
         return true; break;
     case states::PLAYERS_ADDED: if (command == "gamestart" || command == "addplayer")

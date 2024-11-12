@@ -316,7 +316,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 			if(player == this){
 
 			}else{
-				std::cout<<player;
+				std::cout<<*player;
 			}
 		}
 		
