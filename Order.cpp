@@ -385,6 +385,7 @@ bool Bomb::validate() {
         if (getOrderType().compare(c->getType())) {
             getSourcePlayer()->getHand()->playCard(index);
             cardFound = true;
+            break;
         }
         index++;
     }
