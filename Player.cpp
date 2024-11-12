@@ -225,7 +225,8 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 	\nEnter 1 for Bomb
 	\nEnter 2 for Blockade
 	\nEnter 3 for Airlift
-	\nEnter 4 for Negotiate\n)HERE" << std::endl;
+	\nEnter 4 for Negotiate\n
+	\nEnter 5 to not play a card)HERE" << std::endl;
 
 	
 	int input = 0;
@@ -355,18 +356,23 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 		std::cout << "Negotiate added";
 	}
 	break;
+	case 5:
+	{
+		break;
+	}
 	default:
 		std::cout << "Not a valid input.";
 		break;
+	}
+
+	}catch(int input){
+		std::cout<<"You do not own a card of this type."<<std::endl<<std::endl;
 	}
 
 	std::string answer;
 	std::cout<<"Would you like to play another card (y/n)?";
 	if(answer == "n"){
 		break;
-	}
-	}catch(int input){
-		std::cout<<"You do not own a card of this type."<<std::endl<<std::endl;
 	}
 
 	}
