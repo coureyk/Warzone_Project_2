@@ -10,6 +10,7 @@
 #include "Cards.h"
 
 
+
 //THEO, I ADDED THE CONSTRUCTOR YOU WANTED FOR PLAYER. YOU CAN NOW INITIALIZE THE PLAYERS BY NAME
 
 class CommandProcessor;
@@ -35,6 +36,10 @@ public:
     void setState(const std::string command, const std::string arg);
 
     void mainGameLoop();
+
+    void gamestart();
+
+    void startupPhase();
 
     void testMainGameLoop();
 
