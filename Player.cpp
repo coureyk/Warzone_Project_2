@@ -58,6 +58,7 @@ std::vector<Territory*>& Player::toAttack() {
 
 	for (Territory* territory : *this->territories) {
 		for (Territory* neighbor : territory->getNeighbors()) {
+			std::cout << neighbor->getName() << endl;
 			if (neighbor->getOwner() != getName()) {
 				attackableSet.insert(neighbor);
 			}

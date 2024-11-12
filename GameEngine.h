@@ -39,8 +39,6 @@ public:
 
     void gamestart();
 
-    void startupPhase();
-
     void testMainGameLoop();
 
     void reinforcementPhase(Player& player);
