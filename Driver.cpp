@@ -17,6 +17,8 @@ void waitForEnter() {
 
 int main(int argc, char* argv[]) {
     
+    testLoadMaps();
+
     GameEngine gameEngine;
     cout << "testMainGameLoop() is invoked" << endl;
     gameEngine.testMainGameLoop();
@@ -41,6 +43,8 @@ int main(int argc, char* argv[]) {
     waitForEnter();
     testObserver();
     cout << "LoggingObserver() is finished" << endl;
+
+
 
     //Deallocate memory for Map
     /*

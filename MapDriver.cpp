@@ -22,6 +22,11 @@ void testLoadMaps() {
         for (Continent* c : Map::getContinents()) {
             for (Territory* t : c->getTerritories()) {
                 cout << *t << endl;
+                cout << "Neighbors: ";
+                for (Territory* n : t->getNeighbors()) {
+                    cout << *n << ", "; 
+                }
+                cout << endl;
             }
         }
     } else {

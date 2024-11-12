@@ -58,7 +58,6 @@ std::vector<Territory*>& Player::toAttack() {
 
 	for (Territory* territory : *this->territories) {
 		for (Territory* neighbor : territory->getNeighbors()) {
-			std::cout << neighbor->getName() << endl;
 			if (neighbor->getOwner() != getName()) {
 				attackableSet.insert(neighbor);
 			}
@@ -98,15 +97,15 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 						throw deployableUnits;
 					}
 
-
+					reinforcementPool -= deployableUnits;
+					Deploy* deploy = new Deploy(this,deployableUnits, territory);
+					ordersList->addOrder(deploy);
+					break;
 				}catch(int deployableUnits){
 					std::cout<<"You only have " << reinforcementPool << " at your disposal. " << "You cannot deploy " << deployableUnits << " units."<<std::endl;
 				}
 				
-				reinforcementPool -= deployableUnits;
-				Deploy* deploy = new Deploy(this,deployableUnits, territory);
-				ordersList->addOrder(deploy);
-				break;
+				
 			}
 
     	}
