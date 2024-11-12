@@ -1,5 +1,5 @@
 #include "GameEngine.h"
-
+#include <random>
 
 /* Implement a group of C++ classes that implements a game engine that controls the flow of
 the game by using the notion of state, transition, and command.
@@ -379,17 +379,17 @@ void GameEngine::gamestart() {
 
     //B) // Shuffle the vector
      // Initialize random number generator
-    auto rng = std::default_random_engine {};
+    auto rng = std::default_random_engine{};
     std::shuffle(std::begin(*players), std::end(*players), rng);
 
     Deck deck;
 
-    for(Player* p : (*players)){
+    for(Player* p : *players){
         p->setReinforcementPool(50); //c)
 
         //d)draw two cards
-        p->hand.addCard(drawnCard);
-        p->hand.addCard(drawnCard);
+        p->getHand()->addCard(Deck::draw());
+        p->getHand()->addCard(Deck::draw());
     }
 
     mainGameLoop();

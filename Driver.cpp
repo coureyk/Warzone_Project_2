@@ -16,9 +16,6 @@ void waitForEnter() {
 }
 
 int main(int argc, char* argv[]) {
-    
-    testLoadMaps();
-
     GameEngine gameEngine;
     cout << "testMainGameLoop() is invoked" << endl;
     gameEngine.testMainGameLoop();

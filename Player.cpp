@@ -116,11 +116,11 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 	//Advancing Phase
 	if(toAdvance){
 		
-		
+		Territory* sourceTerritoryObj = nullptr;
+    	Territory* targetTerritoryObj = nullptr;
 		while(true){
 
-			Territory* sourceTerritoryObj = nullptr;
-    		Territory* targetTerritoryObj = nullptr;
+			
 
 			//Display defendable territories
     		std::cout<<std::endl<<std::endl<<"Defendable Territories:";
@@ -193,8 +193,8 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 
         	}catch(std::string territory){
             	std::cout<<territory<<" is not a valid territory name";
-        	}
-
+        	}	
+    	}
 			while(true){
 				int advancingUnits;
 				std::cout<<"This territory has " << sourceTerritoryObj->getArmies() << " units. How many would you like to move into " << targetTerritoryObj << "?"<<std::endl;
@@ -215,7 +215,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 				std::cout<<advancingUnits<<" units were move to " << *targetTerritoryObj << " from "<< *sourceTerritoryObj;
 				break;
 			}
-    	}
+
 		return;	
 	}
 
