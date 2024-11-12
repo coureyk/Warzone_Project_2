@@ -1,9 +1,0 @@
-loadmap example.map
-validatemap
-addplayer Player1
-addplayer Player2
-addplayer Player1
-gamestart
-loadmap another.map
-replay 
-quit 
