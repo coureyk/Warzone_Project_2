@@ -53,22 +53,19 @@ std::vector<Territory*>& Player::toDefend() {
 std::vector<Territory*>& Player::toAttack() {
 	
 	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
-	
+	std::set <Territory*> attackableSet;
+
 
 	for (Territory* territory : *this->territories) {
 		for (Territory* neighbor : territory->getNeighbors()) {
-			bool isAlly = false;
-			for (Territory* allyTerritories : *this->territories) {
-				if (neighbor->getName() == allyTerritories->getName()) {
-					isAlly = true;
-					break;
-				}
+			if (neighbor->getOwner() != getName()) {
+				attackableSet.insert(neighbor);
 			}
-
-			if (!isAlly)
-				attackableTerritories->push_back(neighbor);
 		}
+	}
 
+	for (Territory* t : attackableSet) {
+		attackableTerritories->push_back(t);
 	}
 
 	return *attackableTerritories;
@@ -125,18 +122,21 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 			Territory* sourceTerritoryObj = nullptr;
     		Territory* targetTerritoryObj = nullptr;
 
+			//Display defendable territories
+    		std::cout<<std::endl<<std::endl<<"Defendable Territories:";
+ 			for(Territory* territory: defendableTerritories){
+        		std::cout<<*territory<<"|";
+    		}
+
+			std::cout << endl;
+			
 			//Display attackable territories
 			std::cout<<"Attackable Territories:";
     		for(Territory* territory: attackableTerritories){
         		std::cout<<*territory<<"|";
     		}
 
-			//Display defendable territories
-    		std::cout<<std::endl<<std::endl<<"Defendable Territories:";
- 			for(Territory* territory: defendableTerritories){
-        		std::cout<<*territory<<"|";
-    		}
-			
+			std::cout << endl;
 
         	try{
             
@@ -161,33 +161,33 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
              		break;
             	}
 
-            	bool notFoundSource = true;
-            	bool notFoundTarget = true;
+            	bool foundSource = false;
+            	bool foundTarget = false;
 
             
             	for(Territory* territory: defendableTerritories){
                 	if(sourceTerritory == territory->getName()){
-                    	notFoundSource = false;
+                    	foundSource = true;
                     	sourceTerritoryObj = new Territory(*territory);
                 	}else if(targetTerritory == territory->getName()){
-                    	notFoundTarget = false;
+                    	foundTarget = true;
                     	targetTerritoryObj = new Territory(*territory);
                 	}
             	}	
             
             	//Don't have to loop through attackable territories if you advance in friendly territories.
-            	if(notFoundTarget){
+            	if(!foundTarget){
                 	for(Territory* territory: attackableTerritories){
                     	if(targetTerritory == territory->getName()){
-                        	notFoundTarget = false;
+                        	foundTarget = true;
                         	targetTerritoryObj = new Territory(*territory);
                     	} 
                 	}
             	}
 
-            	if(notFoundSource){
+            	if(!foundSource){
                 	throw sourceTerritory;
-            	}else if(notFoundTarget){
+            	}else if(!foundTarget){
                 	throw targetTerritory;
             	}else{}           
 

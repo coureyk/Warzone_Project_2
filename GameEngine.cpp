@@ -78,8 +78,8 @@ void GameEngine::testMainGameLoop() {
     Hand srcHand;
     Hand tarHand;
 
-    int srcReinforcementPool = 5;
-    int tarReinforcementPool = 5;
+    int srcReinforcementPool = 0;
+    int tarReinforcementPool = 0;
 
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool);
