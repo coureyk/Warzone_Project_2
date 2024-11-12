@@ -158,7 +158,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
             	
 
             	if(sourceTerritory == "done" || targetTerritory == "done"){
-             		break;
+             		return;
             	}
 
             	bool foundSource = false;
