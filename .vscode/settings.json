@@ -83,6 +83,7 @@
         "variant": "cpp",
         "xstddef": "cpp",
         "xtree": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "random": "cpp"
     }
 }
