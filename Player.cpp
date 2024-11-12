@@ -149,12 +149,12 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
             	std::cout<<"Select a source territory to transfer units from"<<std::endl;
              	// Command* command1 = processor->getCommand();
              	// sourceTerritory = command1->getCommandText();
-				std::cin>>sourceTerritory;
+				std::getline(std::cin,sourceTerritory);
             	
             	std::cout<<"Select a target territory to transfer units to"<<std::endl;
              	// Command* command2 = processor->getCommand();
              	// targetTerritory = command2->getCommandText();
-				std::cin>>targetTerritory;
+				std::getline(std::cin,targetTerritory);
             	
 
             	if(sourceTerritory == "done" || targetTerritory == "done"){
@@ -330,7 +330,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 			try{
 			
 			std::cout<<"Select another player"<<std::endl;
-			std::cin>>playerSelection;
+			std::getline(std::cin,playerSelection);
 
 			for(Player* player: GameEngine::getPlayers()){
 				if(player->getName() == playerSelection){
@@ -476,7 +476,7 @@ Territory& Player::territoryFinder(bool attack){
 			try{
 				std::string territoryName;
 				std::cout<<"Enter one of the territory names.";
-				std::cin>>territoryName;
+				std::getline(std::cin,territoryName);
 
 				// if(territoryName == "done"){
              	// 	break;
@@ -514,7 +514,7 @@ Territory& Player::territoryFinder(bool attack){
 			try{
 				std::string territoryName;
 				std::cout<<"Enter one of the territory names.";
-				std::cin>>territoryName;
+				std::getline(std::cin,territoryName);
 
 
             	bool notFoundTerritory = true;
