@@ -222,6 +222,13 @@ bool Advance::validate() {
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
     string effect;
 
+    if (getArmyUnits() < 0 || getArmyUnits() > sourceTerritoryArmyUnits) {
+        effect = "Invalid order. " + sourcePlayer + " does not have specified army units: " + std::to_string(getArmyUnits()) + ".\n";
+        setEffect(effect);
+        cout << "Invalid order. " << sourcePlayer << " does not have specified army units: " << getArmyUnits() << "." << endl;
+        return false;
+    }
+
     if (sourcePlayer.compare(sourceTerritoryOwner) != 0) {
         effect = "Invalid order. " + sourcePlayer + " cannot advance from foreign territory \"" + sourceTerritory + "\".\n";
         setEffect(effect);
@@ -528,6 +535,14 @@ string Airlift::toString() const {
 
 bool Airlift::validate() {
     string effect;
+
+    if (getArmyUnits() < 0 || getArmyUnits() > getSourceTerritory()->getArmies()) {
+        effect = "Invalid order. " + getSourcePlayer()->getName() + " does not have specified army units: " + std::to_string(getArmyUnits()) + ".\n";
+        setEffect(effect);
+        cout << "Invalid order. " << getSourcePlayer()->getName() << " does not have specified army units: " << getArmyUnits() << "." << endl;
+        return false;
+    }
+
     //check if source or targetTerritory do not belong to sourcePlayer
     if (getSourceTerritory()->getOwner().compare(getSourcePlayer()->getName()) != 0) {
         effect = "Invalid Order. " + getSourcePlayer()->getName() + " cannot execute an airlift from foreign territory \"" + getSourceTerritory()->getName() + "\".\n";
