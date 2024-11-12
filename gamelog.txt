@@ -4,3 +4,21 @@ Order type: Deploy
 Order type: Deploy
 Order type: Deploy
 Order type: Deploy
+Order type: Deploy
+loadmao USA.map
+Invalid command in the current state or syntax error.
+State: START
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer li
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer xi
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
