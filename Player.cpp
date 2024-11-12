@@ -116,11 +116,12 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 	//Advancing Phase
 	if(toAdvance){
 		
-		Territory* sourceTerritoryObj = nullptr;
-    	Territory* targetTerritoryObj = nullptr;
+		Territory* sourceTerritoryObj;
+    	Territory* targetTerritoryObj;
 		while(true){
 
-			
+			sourceTerritoryObj = nullptr;
+			targetTerritoryObj = nullptr;
 
 			//Display defendable territories
     		std::cout<<std::endl<<std::endl<<"Defendable Territories:";
@@ -149,6 +150,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
             	std::cout<<"Select a source territory to transfer units from"<<std::endl;
              	// Command* command1 = processor->getCommand();
              	// sourceTerritory = command1->getCommandText();
+				std::cin.ignore();
 				std::getline(std::cin,sourceTerritory);
             	
             	std::cout<<"Select a target territory to transfer units to"<<std::endl;
@@ -158,7 +160,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
             	
 
             	if(sourceTerritory == "done" || targetTerritory == "done"){
-             		return;
+					return;
             	}
 
             	bool foundSource = false;
@@ -189,15 +191,17 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
                 	throw sourceTerritory;
             	}else if(!foundTarget){
                 	throw targetTerritory;
-            	}else{}           
+            	}    
+				break;      
 
         	}catch(std::string territory){
-            	std::cout<<territory<<" is not a valid territory name";
-        	}	
+            	std::cout<< territory <<" is not a valid territory name";
+        	}
     	}
+
 			while(true){
 				int advancingUnits;
-				std::cout<<"This territory has " << sourceTerritoryObj->getArmies() << " units. How many would you like to move into " << targetTerritoryObj << "?"<<std::endl;
+				std::cout<<"This territory has " << sourceTerritoryObj->getArmies() << " units. How many would you like to move into " << targetTerritoryObj->getName() << "?"<<std::endl;
 				try{
 					std::cin>>advancingUnits;
 					if(advancingUnits>sourceTerritoryObj->getArmies())
@@ -206,14 +210,15 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 					//To not add an empty advance order
 					if(advancingUnits==0)
 						break;
+
+					Advance* advance = new Advance(this,advancingUnits,sourceTerritoryObj,targetTerritoryObj);
+					ordersList->addOrder(advance);
+					std::cout<<advancingUnits<<" units were move to " << *targetTerritoryObj << " from "<< *sourceTerritoryObj;
+					break;
 				}
 				catch(int advancingUnits){
 					std::cout<<advancingUnits<<" is too many units given that "<<*sourceTerritoryObj<< " only has "<<targetTerritoryObj->getArmies()<<" available units";
 				}
-				Advance* advance = new Advance(this,advancingUnits,sourceTerritoryObj,targetTerritoryObj);
-				ordersList->addOrder(advance);
-				std::cout<<advancingUnits<<" units were move to " << *targetTerritoryObj << " from "<< *sourceTerritoryObj;
-				break;
 			}
 
 		return;	
@@ -222,16 +227,17 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 
 	while(!hand->getHand().empty()){
 	std::cout << R"HERE(Which order would you like to issue?
-	\nEnter 1 for Bomb
-	\nEnter 2 for Blockade
-	\nEnter 3 for Airlift
-	\nEnter 4 for Negotiate\n
-	\nEnter 5 to not play a card)HERE" << std::endl;
+	Enter 1 for Bomb
+	Enter 2 for Blockade
+	Enter 3 for Airlift
+	Enter 4 for Negotiate\n
+	Enter 5 to not play a card)HERE" << std::endl;
 
 	
 	int input = 0;
 
 	try{
+	std::cin.ignore();
 	std::cin >> input;
 
 	bool cardNotFound = true;
@@ -260,7 +266,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 		}
 	}
 
-	if(cardNotFound)
+	if(cardNotFound && input != 5)
 		throw input;
 
 
@@ -312,7 +318,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 	case 4:
 	{
 		Player* player = nullptr;
-		std::cout<<"Players";
+		//std::cout<<"Players";
 		for(Player* player: GameEngine::getPlayers()){
 			if(player == this){
 
@@ -370,7 +376,9 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 	}
 
 	std::string answer;
-	std::cout<<"Would you like to play another card (y/n)?";
+	std::cout<<"Would you like to play another card (y/n)?" << endl;
+	std::cin.ignore();
+	std::cin >> answer;
 	if(answer == "n"){
 		break;
 	}
@@ -438,10 +446,10 @@ void Player::addTerritories(Territory* t){
 
 std::ostream& operator<<(std::ostream& os, const Player& player)
 {
-	os << "Player Territories: ";
+	os << player.name << " Territories: ";
 	if (!player.territories->empty()) {
 		for (const Territory* territory : *player.territories) {
-			os << territory << " ";  //
+			os << *territory << " ";  //
 		}
 	}
 	else {
@@ -478,10 +486,13 @@ Territory& Player::territoryFinder(bool attack){
     	for(Territory* territory: toAttack()){
         	std::cout<<*territory<<"|";
     	}
+		cout << endl;
+
 		while(true){
 			try{
 				std::string territoryName;
-				std::cout<<"Enter one of the territory names.";
+				std::cout<<"Enter one of the territory names." << endl;
+				std::cin.ignore();
 				std::getline(std::cin,territoryName);
 
 				// if(territoryName == "done"){
@@ -514,12 +525,14 @@ Territory& Player::territoryFinder(bool attack){
 		//Display Defendable territories
 		std::cout<<"Defendable Territories:";
     	for(Territory* territory: *territories){
-        	std::cout<<territory<<"|";
+        	std::cout<<*territory<<"|";
     	}
+		cout << endl;
 		while(true){
 			try{
 				std::string territoryName;
 				std::cout<<"Enter one of the territory names.";
+				std::cin.ignore();
 				std::getline(std::cin,territoryName);
 
 
