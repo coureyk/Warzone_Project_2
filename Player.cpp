@@ -78,47 +78,48 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 	std::vector<Territory*>& attackableTerritories = toAttack();
     std::vector<Territory*>& defendableTerritories = *territories;
 
+	int tempReinforcementPool = reinforcementPool;
+	
 	//Deploying phase
 	if(toDeploy){
 		
 		for(Territory* territory: defendableTerritories){
 			
-			std::cout<<"\nYou have " + std::to_string(reinforcementPool) + " reinforcements remaining in your reinforcement pool."<<std::endl;
-        	if(reinforcementPool <= 0)
-            	break;
-		
+			std::cout<<"\nYou have " + std::to_string(tempReinforcementPool) + " reinforcements remaining in your reinforcement pool."<<std::endl;
+        	
 			while(true){
 				int deployableUnits;
-				std::cout<<"How many units would you like to deploy to " << *territory << " ?"<<std::endl;
+				std::cout<<"How many units would you like to deploy to " << *territory << " ? : ";
 				
 				try{
 					std::cin>>deployableUnits;
 					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-					if(deployableUnits>reinforcementPool){
+					if(deployableUnits>tempReinforcementPool){
 						throw deployableUnits;
 					}
 
-					reinforcementPool -= deployableUnits;
+					tempReinforcementPool -= deployableUnits;
 					Order* deploy = new Deploy(this,deployableUnits, territory);
 					ordersList->addOrder(deploy);
 					break;
 				}catch(int deployableUnits){
-					std::cout<<"You only have " << reinforcementPool << " at your disposal. " << "You cannot deploy " << deployableUnits << " units."<<std::endl;
+					std::cout<<"You only have " << tempReinforcementPool << " at your disposal. " << "You cannot deploy " << deployableUnits << " units."<<std::endl;
 				}
 								
 			}
 
+			if(tempReinforcementPool <= 0)
+            	break;
+
     	}
-		reinforcementPool = 0;
+		
 		return;
 	}
 
 	//Advancing Phase
 	if(toAdvance){
 		
-
-
 		Territory* sourceTerritoryObj;
     	Territory* targetTerritoryObj;
 
@@ -130,17 +131,17 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 			targetTerritoryObj = nullptr;
 
 			//Display defendable territories
-    		std::cout<<std::endl<<std::endl<<"Defendable Territories:";
+    		std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
  			for(Territory* territory: defendableTerritories){
-        		std::cout<<*territory<<"|";
+        		std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
     		}
 
 			std::cout << endl;
 			
 			//Display attackable territories
-			std::cout<<"Attackable Territories:";
+			std::cout<<"Attackable Territories: ";
     		for(Territory* territory: attackableTerritories){
-        		std::cout<<*territory<<"|";
+        		std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
     		}
 
 			std::cout << endl;
@@ -169,7 +170,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
             	if(sourceTerritory == "done" || targetTerritory == "done"){
 					return;
             	}
-
+				
             	bool foundSource = false;
             	bool foundTarget = false;
 
@@ -220,11 +221,11 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 
 					Advance* advance = new Advance(this,advancingUnits,sourceTerritoryObj,targetTerritoryObj);
 					ordersList->addOrder(advance);
-					std::cout<<advancingUnits<<" units were move to " << *targetTerritoryObj << " from "<< *sourceTerritoryObj;
+					std::cout<<advancingUnits<<" units were move to " << *targetTerritoryObj << " from "<< *sourceTerritoryObj<<std::endl;
 					break;
 				}
 				catch(int advancingUnits){
-					std::cout<<advancingUnits<<" is too many units given that "<<*sourceTerritoryObj<< " only has "<<targetTerritoryObj->getArmies()<<" available units";
+					std::cout<<advancingUnits<<" is too many units given that "<<*sourceTerritoryObj<< " only has "<<targetTerritoryObj->getArmies()<<" available units"<<std::endl;
 				}
 			}	
 
@@ -513,7 +514,7 @@ Territory& Player::territoryFinder(bool attack){
 		//Display attackable territories
 		std::cout<<"Attackable Territories: ";
     	for(Territory* territory: toAttack()){
-        	std::cout<<*territory<<"|";
+        	std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
     	}
 		cout << endl;
 
@@ -554,7 +555,7 @@ Territory& Player::territoryFinder(bool attack){
 		//Display Defendable territories
 		std::cout<<"Defendable Territories: ";
     	for(Territory* territory: *territories){
-        	std::cout<<*territory<<"|";
+        	std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
     	}
 		cout << endl;
 		while(true){

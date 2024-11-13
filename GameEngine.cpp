@@ -98,8 +98,6 @@ void GameEngine::testMainGameLoop() {
     int srcReinforcementPool = 10;
     int tarReinforcementPool = 1;
 
-    
-
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool);
 
@@ -110,6 +108,8 @@ void GameEngine::testMainGameLoop() {
 }
 
 void GameEngine::reinforcementPhase(Player& player){
+
+    //player.setReinforcementPool(0);
 
     int territoryCount = player.getTerritories().size();
     bool ownsContinent = false;
@@ -156,6 +156,7 @@ void GameEngine::issueOrderPhase(Player& player){
     
 
     player.issueOrder(true,false);
+    player.getOrdersList().getNode(0)->getElement()->execute(); //possible removal
     player.issueOrder(false,true);
     player.issueOrder(false,false);
 }
@@ -269,7 +270,7 @@ void GameEngine::executeOrdersPhase(Player& player){
     for(int i = 0;i<player.getOrdersList().getSize();i++){
         
         player.getOrdersList().getNode(i)->getElement()->execute();
-        
+        player.getOrdersList().remove(player.getOrdersList().getNode(i));
     }
 
 }
