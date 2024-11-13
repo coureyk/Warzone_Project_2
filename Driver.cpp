@@ -18,26 +18,26 @@ void waitForEnter() {
 int main(int argc, char* argv[]) {
     GameEngine gameEngine;
 
-    cout << "testGameStates() is invoked" << endl;
-    waitForEnter();
-    testGameStates();
-    cout << "testGameStates() is finished" << endl;
-
     cout << "testMainGameLoop() is invoked" << endl;
     gameEngine.testMainGameLoop();
     cout << "testMainGameLoop() is finished" << endl;
-    
-    cout << "testCommandProcessor() is invoked" << endl;
-    waitForEnter();
-    testCommandProcessor();
-    cout << "testCommandProcessor() is finished" << endl;
-
-
 
     cout << "testOrdersLists() is invoked" << endl;
     waitForEnter();
     testOrdersLists();
     cout << "testOrdersLists() is finished" << endl;
+
+    cout << "testGameStates() is invoked" << endl;
+    waitForEnter();
+    testGameStates();
+    cout << "testGameStates() is finished" << endl;
+
+    cout << "testCommandProcessor() is invoked" << endl;
+    waitForEnter();
+    testCommandProcessor();
+    cout << "testCommandProcessor() is finished" << endl;
+
+    //Was here
 
     cout << "LoggingObserver() is invoked" << endl;
     waitForEnter();

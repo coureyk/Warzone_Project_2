@@ -19,17 +19,24 @@ std::vector<Player*>* GameEngine::players = new std::vector<Player*>;
 void GameEngine::mainGameLoop(){
     
    while(players->size()>1){
-    for(Player* player: *players){
-
-    players->erase(std::remove_if(players->begin(), players->end(), [](Player* player) { return player->getTerritories().size() == 0; }), players->end());
-
-        std::cout<<"Player: "<<player->getName()<<std::endl;
+    for(Player* player: *players){    
         reinforcementPhase(*player);
-        issueOrderPhase(*player);
-        executeOrdersPhase(*player); 
-        
     }
+
+    for(Player* player: *players){
+        std::cout<<"Player: "<<player->getName()<<std::endl;
+        issueOrderPhase(*player);
+    }
+
+     for(Player* player: *players){
+        executeOrdersPhase(*player);
+        players->erase(std::remove_if(players->begin(), players->end(), [](Player* player) { return player->getTerritories().size() == 0; }), players->end());
+    }
+
+
+    
    }
+
    GameEngine::state = states::WIN;
    cout<<"Win"<<endl;//go back to startup phase
 }
@@ -258,10 +265,11 @@ void GameEngine::issueOrderPhase(Player& player){
 */
 
 void GameEngine::executeOrdersPhase(Player& player){
-
-    for(int i = 0;i<player.getOrdersList().getSize()-1;i++){
-        if(player.getOrdersList().getNode(i)->getElement()->validate())
+        
+    for(int i = 0;i<player.getOrdersList().getSize();i++){
+        
         player.getOrdersList().getNode(i)->getElement()->execute();
+        
     }
 
 }
