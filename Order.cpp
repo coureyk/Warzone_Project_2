@@ -144,7 +144,7 @@ bool Deploy::validate() {
     int currentArmyUnits = getTargetTerritory()->getArmies();
     int currentReinforcementPool = getSourcePlayer()->getReinforcementPool();
     string effect;
-
+    
     if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
         getTargetTerritory()->setArmies(currentArmyUnits + getArmyUnits()); //increase number of armyUnits on targetTerritory
         getSourcePlayer()->setReinforcementPool(currentReinforcementPool - getArmyUnits()); //decrease number of armyUnits in reinforcementPool
@@ -222,6 +222,13 @@ bool Advance::validate() {
     int sourceTerritoryArmyUnits = getSourceTerritory()->getArmies();
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
     string effect;
+
+    if (getArmyUnits() < 0 || getArmyUnits() > sourceTerritoryArmyUnits) {
+        effect = "Invalid order. " + sourcePlayer + " does not have specified army units: " + std::to_string(getArmyUnits()) + ".\n";
+        setEffect(effect);
+        cout << "Invalid order. " << sourcePlayer << " does not have specified army units: " << getArmyUnits() << "." << endl;
+        return false;
+    }
 
     if (sourcePlayer.compare(sourceTerritoryOwner) != 0) {
         effect = "Invalid order. " + sourcePlayer + " cannot advance from foreign territory \"" + sourceTerritory + "\".\n";
@@ -370,6 +377,24 @@ bool Bomb::validate() {
         effect = "Invalid order. " + sourcePlayer + " cannot bomb domestic territory \"" + targetTerritory + "\".\n";
         setEffect(effect);
         cout << "Invalid order. " << sourcePlayer << " cannot bomb domestic territory: " << targetTerritory << ".\n" << endl; //to be deleted
+        return false;
+    }
+
+    int index = 0;
+    bool cardFound = false;
+    for (Card* c : getSourcePlayer()->getHand()->getHand()) {
+        if (getOrderType().compare(c->getType())) {
+            getSourcePlayer()->getHand()->playCard(index);
+            cardFound = true;
+            break;
+        }
+        index++;
+    }
+
+    if (!cardFound) {
+        effect = "Invalid order. " + sourcePlayer + " does not have " + getOrderType() + " card in hand.";
+        setEffect(effect);
+        cout << "Invalid order. " << sourcePlayer << " does not have " << getOrderType() << "card in hand.\n" << endl; //to be deleted
         return false;
     }
 
@@ -529,6 +554,14 @@ string Airlift::toString() const {
 
 bool Airlift::validate() {
     string effect;
+
+    if (getArmyUnits() < 0 || getArmyUnits() > getSourceTerritory()->getArmies()) {
+        effect = "Invalid order. " + getSourcePlayer()->getName() + " does not have specified army units: " + std::to_string(getArmyUnits()) + ".\n";
+        setEffect(effect);
+        cout << "Invalid order. " << getSourcePlayer()->getName() << " does not have specified army units: " << getArmyUnits() << "." << endl;
+        return false;
+    }
+
     //check if source or targetTerritory do not belong to sourcePlayer
     if (getSourceTerritory()->getOwner().compare(getSourcePlayer()->getName()) != 0) {
         effect = "Invalid Order. " + getSourcePlayer()->getName() + " cannot execute an airlift from foreign territory \"" + getSourceTerritory()->getName() + "\".\n";
