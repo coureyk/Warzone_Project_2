@@ -356,11 +356,21 @@ bool Advance::validate() {
             getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits()); //update armies on attacker's land
             getTargetTerritory()->setArmies(remainingAttackers); //update armies on defender's land
             getTargetTerritory()->setOwner(sourcePlayer); //make attacker new owner of targetTerritory
-            getSourcePlayer()->getHand()->addCard(Deck::draw()); //sourcePlayer receives a card for conquering at least one territory during their turn.
+
+            string cardDetails;
             effect = validOrder + "\n- Army units advanced from " + sourceTerritory + " to " + targetTerritory + ": " + std::to_string(getArmyUnits())
-                                + "\n- OUTCOME: Successfully conquered " + targetTerritory + "(previously ruled by " + targetTerritoryOwner + ")"
-                                + "\n- BONUS: Card added to hand: " + getSourcePlayer()->getHand()->getCards().back()->getType()
-                                + orderDetails() + "\n";
+                                + "\n- OUTCOME: Successfully conquered " + targetTerritory + "(previously ruled by " + targetTerritoryOwner + ")";
+            
+            if (getSourcePlayer()->getHasEarnedCard() == true) {
+                cardDetails = "\n- Cannot add bonus card to hand. Only one can be added per turn.\n";
+            } else {
+                getSourcePlayer()->getHand()->addCard(Deck::draw()); //sourcePlayer receives a card for conquering at least one territory during their turn.
+                cardDetails = "\n- Bonus card added to hand: " + getSourcePlayer()->getHand()->getCards().back()->getType() + "\n";
+                getSourcePlayer()->setHasEarnedCard(true);
+            }
+            effect.append(cardDetails);
+                
+            effect.append(orderDetails() + "\n");
             setEffect(effect);
         } else {
             getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits() + remainingAttackers); //update armies on attacker's land (remaining attackers are assumed to return back home)

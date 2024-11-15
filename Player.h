@@ -32,6 +32,8 @@ protected:
 
 	std::vector<std::string> negotiatedPlayers;
 
+	bool hasEarnedCard;
+
 public:
 	std::vector<Territory*>* territories;
 
@@ -79,6 +81,10 @@ public:
 	OrdersList& getOrdersList();
 
 	Territory& territoryFinder(bool attack);
+
+	bool getHasEarnedCard() const;
+
+	void setHasEarnedCard(bool hasEarnedCard);
 };
 
 void testPlayers();

@@ -473,6 +473,14 @@ void Player::addTerritories(Territory* t){
 	territories->push_back(t);
 }
 
+bool Player::getHasEarnedCard() const {
+	return hasEarnedCard;
+}
+
+void Player::setHasEarnedCard(bool hasEarnedCard) {
+	this->hasEarnedCard = hasEarnedCard;
+}
+
 std::ostream& operator<<(std::ostream& os, const Player& player)
 {
 	os << player.name << " Territories: ";
