@@ -137,6 +137,7 @@ string Deploy::toString() const {
 }
 
 bool Deploy::validate() {
+    
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
     string targetTerritoryOwner = getTargetTerritory()->getOwner();

@@ -90,7 +90,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 			while(true){
 				int deployableUnits;
 				std::cout<<"How many units would you like to deploy to " << *territory << " ?"<<std::endl;
-		
+				
 				try{
 					std::cin>>deployableUnits;
 					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -100,18 +100,17 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 					}
 
 					reinforcementPool -= deployableUnits;
-					Deploy* deploy = new Deploy(this,deployableUnits, territory);
+					Order* deploy = new Deploy(this,deployableUnits, territory);
 					ordersList->addOrder(deploy);
 					break;
 				}catch(int deployableUnits){
 					std::cout<<"You only have " << reinforcementPool << " at your disposal. " << "You cannot deploy " << deployableUnits << " units."<<std::endl;
 				}
-				
-				
+								
 			}
 
     	}
-
+		reinforcementPool = 0;
 		return;
 	}
 

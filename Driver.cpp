@@ -22,6 +22,11 @@ int main(int argc, char* argv[]) {
     gameEngine.testMainGameLoop();
     cout << "testMainGameLoop() is finished" << endl;
 
+    cout << "testOrdersLists() is invoked" << endl;
+    waitForEnter();
+    testOrdersLists();
+    cout << "testOrdersLists() is finished" << endl;
+
     cout << "testGameStates() is invoked" << endl;
     waitForEnter();
     testGameStates();
@@ -32,18 +37,7 @@ int main(int argc, char* argv[]) {
     testCommandProcessor();
     cout << "testCommandProcessor() is finished" << endl;
 
-    
-
-    
-    
-    
-
-
-
-    cout << "testOrdersLists() is invoked" << endl;
-    waitForEnter();
-    testOrdersLists();
-    cout << "testOrdersLists() is finished" << endl;
+    //Was here
 
     cout << "LoggingObserver() is invoked" << endl;
     waitForEnter();
