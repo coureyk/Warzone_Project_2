@@ -130,6 +130,7 @@ Hand::Hand() {
 
 // Copy constructor: deep copies the hand
 Hand::Hand(const Hand& other) {
+    handCards = new std::vector<Card*>;
     for (Card* card : *other.handCards) {
         handCards->push_back(new Card(*card));  // Deep copy each card
     }
@@ -153,6 +154,7 @@ Hand& Hand::operator=(const Hand& other) {
         handCards = NULL;
 
         // Deep copy the new resources
+        handCards = new std::vector<Card*>;
         for (Card* card : *other.handCards) {
             handCards->push_back(new Card(*card));  // Deep copy each card
         }
