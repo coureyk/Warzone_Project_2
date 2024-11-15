@@ -81,6 +81,20 @@ void Order::setEffect(const string& effect) {
     Notify();
 }
 
+bool Order::hasOrderCard() {
+    int index = 0;
+    bool cardFound = false;
+    for (Card* c : getSourcePlayer()->getHand()->getCards()) {
+        if (getOrderType().compare(c->getType())) {
+            getSourcePlayer()->getHand()->playCard(index);
+            cardFound = true;
+            break;
+        }
+        index++;
+    }
+    return cardFound;
+}
+
 string Order::stringToLog() {
     return effect;
 }
@@ -136,6 +150,14 @@ string Deploy::toString() const {
     }
 }
 
+string Deploy::orderDetails() const {
+    string details = "\n- Remaining army units in reinforcement pool: " + std::to_string(getSourcePlayer()->getReinforcementPool())
+                   + "\n- Target Territory: " + getTargetTerritory()->getName() 
+                   + "\n\t Ruler: " + getTargetTerritory()->getOwner()
+                   + "\n\t Army Units: " + std::to_string(getTargetTerritory()->getArmies());
+    return details;
+}
+
 bool Deploy::validate() {    
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
@@ -148,18 +170,24 @@ bool Deploy::validate() {
     string effect;
 
     if (getArmyUnits() < 0 || getArmyUnits() > currentReinforcementPool) {
-        effect = invalidOrder + "\n- Requested invalid number of army units to deploy: " + std::to_string(getArmyUnits()) + "\n- Remaining army units in reinforcement pool: " + std::to_string(getSourcePlayer()->getReinforcementPool()) + "\n";
+        effect = invalidOrder + "\n- Requested invalid number of army units to deploy: " + std::to_string(getArmyUnits())
+                              + orderDetails()
+                              + "\n- Deploy order cancelled.\n";
         setEffect(effect);
+        return false;
     }
     
     if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
         getTargetTerritory()->setArmies(currentArmies + getArmyUnits()); //increase number of armyUnits on targetTerritory
         getSourcePlayer()->setReinforcementPool(currentReinforcementPool - getArmyUnits()); //decrease number of armyUnits in reinforcementPool
-        effect = validOrder + "\n- Army units deployed to " + targetTerritory + ": " + std::to_string(getArmyUnits()) + "\n- Remaining army units in reinforcement pool: " + std::to_string(getSourcePlayer()->getReinforcementPool()) + "\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n";
+        effect = validOrder + "\n- Army units deployed to " + targetTerritory + ": " + std::to_string(getArmyUnits())
+                            + orderDetails() + "\n";
         setEffect(effect);
         return true;
     } else {
-        effect = invalidOrder +"\n- Requested Deploy order to non-domestic territory.\n- Remaining army units in reinforcement pool: " + std::to_string(getSourcePlayer()->getReinforcementPool()) + "\n";
+        effect = invalidOrder + "\n- Requested Deploy order to non-domestic territory."
+                              + orderDetails()
+                              + "\n- Deploy order cancelled.\n";
         setEffect(effect);
         return false;
     }
@@ -167,7 +195,6 @@ bool Deploy::validate() {
 
 void Deploy::execute() {
     if (validate() == true) {
-        cout << "Deploy order executed.\n" << endl; //to be deleted
         setExecutionStatus(true);
     }
 }
@@ -218,6 +245,16 @@ string Advance::toString() const {
     }
 }
 
+string Advance::orderDetails() const {
+    string details = "\n- Source Territory: " + getSourceTerritory()->getName()
+                   + "\n\t Ruler: " + getSourceTerritory()->getOwner()
+                   + "\n\t Army Units: " + std::to_string(getSourceTerritory()->getArmies())
+                   + "\n- Target Territory: " + getTargetTerritory()->getName() 
+                   + "\n\t Ruler: " + getTargetTerritory()->getOwner()
+                   + "\n\t Army Units: " + std::to_string(getTargetTerritory()->getArmies());
+    return details;
+}
+
 bool Advance::validate() {
     string sourcePlayer = getSourcePlayer()->getName();
     string sourceTerritoryOwner = getSourceTerritory()->getOwner();
@@ -232,13 +269,17 @@ bool Advance::validate() {
     string effect;
 
     if (getArmyUnits() < 0 || getArmyUnits() > sourceTerritoryArmyUnits) {
-        effect = invalidOrder + "\n- Requested invalid number of army units to advance: " + std::to_string(getArmyUnits()) + "\n- Current army units in " + sourceTerritory + ": " + std::to_string(getSourceTerritory()->getArmies()) + "\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n";
+        effect = invalidOrder + "\n- Requested invalid number of army units to advance: " + std::to_string(getArmyUnits())
+                              + orderDetails()
+                              + "\n- Advance order cancelled.\n";
         setEffect(effect);
         return false;
     }
 
     if (sourcePlayer.compare(sourceTerritoryOwner) != 0) {
-        effect = invalidOrder + "\n- Requested Advance order from non-domestic territory: " + sourceTerritory + "\n- Current army units in " + sourceTerritory + ": " + std::to_string(getSourceTerritory()->getArmies()) + "\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n";
+        effect = invalidOrder + "\n- Requested Advance order from non-domestic territory: " + sourceTerritory
+                              + orderDetails()
+                              + "\n- Advance order cancelled.\n";
         setEffect(effect);
         return false;
     }
@@ -253,19 +294,23 @@ bool Advance::validate() {
     }
 
     if (!targetIsNeighbor) {
-        effect = invalidOrder + "\n- Requested Advance order to non-adjacent territory: " + targetTerritory + "\n- Current army units in " + sourceTerritory + ": " + std::to_string(getSourceTerritory()->getArmies()) + "\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n";
+        effect = invalidOrder + "\n- Requested Advance order to non-adjacent territory: " + targetTerritory
+                              + orderDetails()
+                              + "\n- Advance order cancelled.\n";
         setEffect(effect);
         return false;
     }
-
     //Continue if targetIsNeighbor
+
     //Check if territory owners have a truce
     for (string negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
         if (negotiatedPlayer.compare(targetTerritoryOwner) == 0) {
-            effect = invalidOrder + "\n- Requested Advance order to allied player's territory: " + targetTerritory + "(owned by " + targetTerritoryOwner + ")\n- Current army units in " + sourceTerritory + ": " + std::to_string(getSourceTerritory()->getArmies()) + "\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n";
+            effect = invalidOrder + "\n- Requested Advance order to allied player's territory: " + targetTerritory
+                                  + orderDetails()
+                                  + "\n- Advance order cancelled.\n";
             setEffect(effect);
+            return false;
         }
-        return false;
     }
 
     //Check if sourceTerritory and targetTerritory belong to same owner
@@ -276,7 +321,8 @@ bool Advance::validate() {
         getSourceTerritory()->setArmies(sourceTerritoryArmyUnits); 
         getTargetTerritory()->setArmies(targetTerritoryArmyUnits); 
 
-        effect = validOrder + "- Army units advanced from " + sourceTerritory + " to " + targetTerritory + ": " + std::to_string(getArmyUnits()) + "\n- Both territories ruled by: " + sourcePlayer + "\n- Current army units in " + sourceTerritory + ": " + std::to_string(getSourceTerritory()->getArmies()) + "\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n";
+        effect = validOrder + "\n- Army units advanced from " + sourceTerritory + " to " + targetTerritory + ": " + std::to_string(getArmyUnits()) 
+                            + orderDetails() + "\n";
         setEffect(effect);
     } else {
         //If sourceTerritory owner is not targetTerritory owner do the following:
@@ -311,12 +357,17 @@ bool Advance::validate() {
             getTargetTerritory()->setArmies(remainingAttackers); //update armies on defender's land
             getTargetTerritory()->setOwner(sourcePlayer); //make attacker new owner of targetTerritory
             getSourcePlayer()->getHand()->addCard(Deck::draw()); //sourcePlayer receives a card for conquering at least one territory during their turn.
-            effect = validOrder + "- Army units advanced from " + sourceTerritory + " to " + targetTerritory + ": " + std::to_string(getArmyUnits()) + "\n- Successfully conquered " + targetTerritory + "!\n- Previous ruler: " + targetTerritoryOwner + "\n- Current ruler: " + sourcePlayer + "\n- Current army units in " + sourceTerritory + ": " + std::to_string(getSourceTerritory()->getArmies()) + "\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n";
+            effect = validOrder + "\n- Army units advanced from " + sourceTerritory + " to " + targetTerritory + ": " + std::to_string(getArmyUnits())
+                                + "\n- OUTCOME: Successfully conquered " + targetTerritory + "(previously ruled by " + targetTerritoryOwner + ")"
+                                + "\n- BONUS: Card added to hand: " + getSourcePlayer()->getHand()->getCards().back()->getType()
+                                + orderDetails() + "\n";
             setEffect(effect);
         } else {
             getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits() + remainingAttackers); //update armies on attacker's land (remaining attackers are assumed to return back home)
             getTargetTerritory()->setArmies(remainingDefenders);
-            effect = validOrder + "- Army units advanced from " + sourceTerritory + " to " + targetTerritory + ": " + std::to_string(getArmyUnits()) + "\n- Failed to conquer " + targetTerritory + "!\n- Current ruler: " + targetTerritoryOwner + "\n- Current army units in " + sourceTerritory + ": " + std::to_string(getSourceTerritory()->getArmies()) + "\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n";
+            effect = validOrder + "\n- Army units advanced from " + sourceTerritory + " to " + targetTerritory + ": " + std::to_string(getArmyUnits())
+                                + "\n- OUTCOME: Failed to conquer " + targetTerritory
+                                + orderDetails() + "\n";
             setEffect(effect);
         }
     }
@@ -325,7 +376,6 @@ bool Advance::validate() {
 
 void Advance::execute() {
     if (validate() == true) {
-        cout << "Advance order executed.\n" << endl; //to be deleted
         setExecutionStatus(true);
     }
 }
@@ -369,6 +419,13 @@ string Bomb::toString() const {
     }
 }
 
+string Bomb::orderDetails() const {
+    string details = "\n- Target Territory: " + getTargetTerritory()->getName() 
+                   + "\n\t Ruler: " + getTargetTerritory()->getOwner()
+                   + "\n\t Army Units: " + std::to_string(getTargetTerritory()->getArmies());
+    return details;
+}
+
 bool Bomb::validate() {
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
@@ -379,37 +436,23 @@ bool Bomb::validate() {
     string invalidOrder = sourcePlayer + " issued an invalid bomb order.";
     string effect;
     
+    //Check if sourcePlayer has bomb card
+    if (!hasOrderCard()) {
+        effect = invalidOrder + "\n- Requested Bomb order without holding a Bomb card."
+                              + orderDetails()
+                              + "\n- Bomb order was cancelled.\n";
+        setEffect(effect);
+        return false;
+    }
+
     //check if sourcePlayer is attempting to bomb his own territory
     if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
-        effect = invalidOrder + "\n- Requested Bomb order on domestic territory: " + targetTerritory + "\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n- Current " + targetTerritory + " ruler: " + targetTerritoryOwner + "\n";
+        effect = invalidOrder + "\n- Requested Bomb order on domestic territory: " + targetTerritory 
+                              + orderDetails()
+                              + "\n- Bomb order was cancelled.\n";
         setEffect(effect);
         return false;
     }
-
-    cout << 1 << endl;
-
-    int index = 0;
-    bool cardFound = false;
-    for (Card* c : getSourcePlayer()->getHand()->getCards()) {
-        cout << getSourcePlayer()->getHand()->getCardCount();
-        cout << c->getType() << endl;
-        if (getOrderType().compare(c->getType())) {
-            getSourcePlayer()->getHand()->playCard(index);
-            cardFound = true;
-            break;
-        }
-        index++;
-    }
-
-    cout << 2 << endl;
-
-    if (!cardFound) {
-        effect = invalidOrder + "\n- Requested Bomb order without owning a Bomb card.\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n- Current " + targetTerritory + " ruler: " + targetTerritoryOwner + "\n";
-        setEffect(effect);
-        return false;
-    }
-
-    cout << 3 << endl;
 
     //check if targetTerritory is a neighbor of sourceTerritory
     bool targetIsNeighbor = false;
@@ -420,40 +463,38 @@ bool Bomb::validate() {
         }
     }
 
-    cout << 4 << endl;
-
     if (!targetIsNeighbor) {
-        effect = invalidOrder + "\n- Requested Bomb order on non-adjacent territory: " + targetTerritory + "\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n- Current " + targetTerritory + " ruler: " + targetTerritoryOwner + "\n";
+        effect = invalidOrder + "\n- Requested Bomb order on non-adjacent territory: " + targetTerritory
+                              + orderDetails()
+                              + "\n- Bomb order was cancelled.\n";
         setEffect(effect);
         return false;
     }
 
-    cout << 5 << endl;
-
     //check if territory owners have a truce
     for (string negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
         if (negotiatedPlayer.compare(targetTerritoryOwner) == 0) {
-            effect = invalidOrder + "\n- Requested Bomb order to allied player's territory: " + targetTerritory + "(owned by " + targetTerritoryOwner + ")\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n";
+            effect = invalidOrder + "\n- Requested Bomb order to allied player's territory: " + targetTerritory
+                                  + orderDetails()
+                                  + "\n- Bomb order was cancelled.\n";
             setEffect(effect);
         }
         return false;
     }
 
-    cout << 6 << endl;
-
     //if this point is reached, Bomb order is valid
     //half of the army units on targetTerritory are now annihilated
-    getTargetTerritory()->setArmies(targetTerritoryArmyUnits / 2);
-    effect = validOrder + "\n- Successfully bombed " + targetTerritory + "!\n- Current army units in " + targetTerritory + ": " + std::to_string(getTargetTerritory()->getArmies()) + "\n- Current " + targetTerritory + " ruler: " + targetTerritoryOwner + "\n";
+    targetTerritoryArmyUnits /= 2;
+    getTargetTerritory()->setArmies(targetTerritoryArmyUnits);
+    effect = validOrder + "\n- Successfully bombed " + targetTerritory + "!"
+                        + orderDetails() + "\n";
     setEffect(effect);
 
-    cout << 7 << endl;
     return true;
 }
 
 void Bomb::execute() {
     if (validate() == true) {
-        cout << "Bomb order executed.\n" << endl; //to be deleted
         setExecutionStatus(true);
     }
 }
@@ -497,31 +538,52 @@ string Blockade::toString() const {
     }
 }
 
+string Blockade::orderDetails() const {
+    string details = "\n- Target Territory: " + getTargetTerritory()->getName() 
+                   + "\n\t Ruler: " + getTargetTerritory()->getOwner()
+                   + "\n\t Army Units: " + std::to_string(getTargetTerritory()->getArmies());
+    return details;
+}
+
 bool Blockade::validate() {
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
     string targetTerritoryOwner = getTargetTerritory()->getOwner();
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
+    
+    string validOrder = sourcePlayer + " issued a valid Blockade order.";
+    string invalidOrder = sourcePlayer + " issued an invalid Blockade order.";
     string effect;
     
+    //Check if sourcePlayer has Blockade card
+    if (!hasOrderCard()) {
+        effect = invalidOrder + "\n- Requested Blockade order without holding a Blockade card."
+                              + orderDetails()
+                              + "\n- Blockade order was cancelled.\n";
+        setEffect(effect);
+        return false;
+    }
+
     //check if the targetTerritory belongs to sourcePlayer
     if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
-        getTargetTerritory()->setArmies(targetTerritoryArmyUnits * 2); //double the # of army units on targetTerritory
+        targetTerritoryArmyUnits *= 2;
+        getTargetTerritory()->setArmies(targetTerritoryArmyUnits); //double the # of army units on targetTerritory
         getTargetTerritory()->setOwner("None"); //make targetTerritory a neutral territory
-        effect = "Valid order. " + sourcePlayer + "successfully ordered a blockade on " + targetTerritory + ". Current " + targetTerritory + "owner: " + getTargetTerritory()->getOwner() + ". Current army units: " + std::to_string(getTargetTerritory()->getArmies()) + ".\n";
+        effect = validOrder + "\n- Successfully ordered a blockade on: " + targetTerritory
+                            + orderDetails() + "\n";
         setEffect(effect);
         return true;
     } else {
-        effect = "Invalid order. " + sourcePlayer + " cannot blockade foreign territory \"" + targetTerritory + "\".\n";
+        effect = invalidOrder + "\n- Requested Blockade order on non-domestic territory: " + targetTerritory
+                              + orderDetails() +
+                              + "\n- Blockade order was cancelled.\n";
         setEffect(effect);
-        cout << "Invalid order. " << sourcePlayer << " cannot blockade foreign territory: " << targetTerritory << ".\n" << endl; //to be deleted
         return false;
     }
 }
 
 void Blockade::execute() {
     if (validate() == true) {
-        cout << "Blockade order executed.\n" << endl; //to be deleted
         setExecutionStatus(true);
     }
 }
@@ -571,40 +633,76 @@ string Airlift::toString() const {
     }
 }
 
+string Airlift::orderDetails() const {
+    string details = "\n- Source Territory: " + getSourceTerritory()->getName()
+                   + "\n\t Ruler: " + getSourceTerritory()->getOwner()
+                   + "\n\t Army Units: " + std::to_string(getSourceTerritory()->getArmies())
+                   + "\n- Target Territory: " + getTargetTerritory()->getName() 
+                   + "\n\t Ruler: " + getTargetTerritory()->getOwner()
+                   + "\n\t Army Units: " + std::to_string(getTargetTerritory()->getArmies());
+    return details;
+}
+
 bool Airlift::validate() {
+    string sourcePlayer = getSourcePlayer()->getName();
+    string sourceTerritory = getSourceTerritory()->getName();
+    int sourceTerritoryArmyUnits = getSourceTerritory()->getArmies();
+    string targetPlayer = getTargetTerritory()->getOwner();
+    string targetTerritory = getTargetTerritory()->getName();
+    int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
+    
+    string validOrder = sourcePlayer + " issued a valid Airlift order.";
+    string invalidOrder = sourcePlayer + " issued an invalid Airlift order.";
     string effect;
 
-    if (getArmyUnits() < 0 || getArmyUnits() > getSourceTerritory()->getArmies()) {
-        effect = "Invalid order. " + getSourcePlayer()->getName() + " does not have specified army units: " + std::to_string(getArmyUnits()) + ".\n";
+
+    //check if sourcePlayer has Airlift card
+    if (!hasOrderCard()) {
+        effect = invalidOrder + "\n- Requested Airlift order without holding an Airlift card."
+                              + orderDetails()
+                              + "\n- Airlift order was cancelled.\n";
         setEffect(effect);
-        cout << "Invalid order. " << getSourcePlayer()->getName() << " does not have specified army units: " << getArmyUnits() << "." << endl;
+        return false;
+    }
+
+
+    //check if sourcePlayer has sufficient army units
+    if (getArmyUnits() < 0 || getArmyUnits() > sourceTerritoryArmyUnits) {
+        effect = invalidOrder + "\n- Requested invalid number of army units for Airlift: " + std::to_string(getArmyUnits())
+                              + orderDetails()
+                              + "\n- Airlift order was cancelled.\n";
+        setEffect(effect);
         return false;
     }
 
     //check if source or targetTerritory do not belong to sourcePlayer
     if (getSourceTerritory()->getOwner().compare(getSourcePlayer()->getName()) != 0) {
-        effect = "Invalid Order. " + getSourcePlayer()->getName() + " cannot execute an airlift from foreign territory \"" + getSourceTerritory()->getName() + "\".\n";
+        effect = invalidOrder + "\n- Requested Airlift order from non-domestic territory: " + sourceTerritory
+                              + orderDetails()
+                              + "\n- Airlift order was cancelled.\n";
         setEffect(effect);
-        cout << "Invalid Order. " << getSourcePlayer()->getName() << " cannot execute an airlift from foreign territory: " << getSourceTerritory()->getName() << ".\n" << endl; //to be deleted
         return false;    
     } else if (getTargetTerritory()->getOwner().compare(getSourcePlayer()->getName()) != 0 ) {
-        effect = "Invalid Order. " + getSourcePlayer()->getName() + " cannot execute an airlift to foreign territory \"" + getTargetTerritory()->getName() + "\".\n";
+        effect = invalidOrder + "\n- Requested Airlift order to non-domestic territory: " + targetTerritory
+                              + orderDetails()
+                              + "\n- Airlift order was cancelled.\n";
         setEffect(effect);
-        cout << "Invalid Order. " << getSourcePlayer()->getName() << " cannot execute an airlift to foreign territory: " << getTargetTerritory()->getName() << ".\n" << endl; //to be deleted
         return false;
     }
 
-    getSourceTerritory()->setArmies(getSourceTerritory()->getArmies() - getArmyUnits()); //remove army units from sourceTerritory
-    getTargetTerritory()->setArmies(getTargetTerritory()->getArmies() + getArmyUnits()); //add army units to targetTerritory
+    sourceTerritoryArmyUnits = sourceTerritoryArmyUnits - getArmyUnits();
+    targetTerritoryArmyUnits = targetTerritoryArmyUnits + getArmyUnits();
+    getSourceTerritory()->setArmies(sourceTerritoryArmyUnits); //remove army units from sourceTerritory
+    getTargetTerritory()->setArmies(targetTerritoryArmyUnits); //add army units to targetTerritory
     
-    effect = "Valid Order. " + getSourcePlayer()->getName() + " successfully executed an airlift from " + getSourceTerritory()->getName() + " to " + getTargetTerritory()->getName() + ". Current " + getSourceTerritory()->getName() + "army units: " + std::to_string(getSourceTerritory()->getArmies()) + ". Current " + getTargetTerritory()->getName() + "army units: " + std::to_string(getTargetTerritory()->getArmies()) + ".\n" ;
+    effect = validOrder + "\n- Successfully executed an airlift from " + sourceTerritory + " to " + targetTerritory
+                        + orderDetails() + "\n";
     setEffect(effect);
     return true;
 }
 
 void Airlift::execute() {
     if (validate() == true) {
-        cout << "Airlift order executed.\n" << endl; //to be deleted
         setExecutionStatus(true);
     }
 }
@@ -648,28 +746,47 @@ string Negotiate::toString() const {
     }
 }
 
+string Negotiate::orderDetails() const {
+    string details = "\n- Source Player: " + getSourcePlayer()->getName()
+                   + "\n- Target Player: " + getTargetPlayer()->getName();
+    return details;
+}
+
 bool Negotiate::validate() {
     string sourcePlayer = getSourcePlayer()->getName();
     string targetPlayer = getTargetPlayer()->getName();
+    
+    string validOrder = sourcePlayer + " issued a valid Negotiate order.";
+    string invalidOrder = sourcePlayer + " issued an invalid Negotiate order.";
     string effect;
+
+    //check if sourcePlayer has Negotiate card
+    if (!hasOrderCard()) {
+        effect = invalidOrder + "\n- Requested Negotiate order without holding a Negotiate card."
+                              + orderDetails()
+                              + "\n- Negotiation order was cancelled.\n";
+        setEffect(effect);
+        return false;
+    }
 
     //check if sourcePlayer is the same as targetPlayer
     if (sourcePlayer.compare(targetPlayer) != 0) {
         getSourcePlayer()->addNegotiatedPlayers(targetPlayer);
         getTargetPlayer()->addNegotiatedPlayers(sourcePlayer);
-        effect = "Valid Order. " + sourcePlayer + " successfully negotiated with " + targetPlayer;
+        effect = validOrder + "\n- Successfully negotiated with: " + targetPlayer
+                            + orderDetails() + "\n";
         setEffect(effect);
         return true;
     }
-    effect = "Invalid Order. " + sourcePlayer + " cannot negotiate with self or unknown player.\n";
+    effect = invalidOrder + "\n- Requested Negotiate order with invalid player: " + targetPlayer
+                          + orderDetails()
+                          + "\n- Negotiation order was cancelled.\n";
     setEffect(effect);
-    cout << "Invalid Order. " << sourcePlayer << " cannot negotiate with self.\n" << endl; //to be deleted
     return false;
 }
 
 void Negotiate::execute() {
     if (validate() == true) {
-        cout << "Negotiate order executed.\n" << endl; //to be deleted
         setExecutionStatus(true);
     }
 }
