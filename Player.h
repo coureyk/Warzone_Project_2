@@ -16,12 +16,13 @@ class OrdersList;
 #include "Cards.h"
 #include "CommandProcessing.h"
 #include "GameEngine.h"
+#include "PlayerStrategies.h"
 
 
 
 class Player {
 
-protected:
+private:
 	std::string name;
 
 	OrdersList* ordersList;
@@ -33,6 +34,8 @@ protected:
 	std::vector<std::string> negotiatedPlayers;
 
 	bool hasEarnedCard;
+
+	PlayerStrategy* ps;
 
 public:
 	std::vector<Territory*>* territories;
