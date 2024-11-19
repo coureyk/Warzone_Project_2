@@ -17,7 +17,7 @@ HumanPlayer::HumanPlayer(const Player& other) {
 }
 
 void HumanPlayer::issueOrder() {
-    //Deploy Phase
+    //Issue Deploy Order
     while (!getPlayer().getReinforcementPool() != 0) {
         cout << "\nYou have " + std::to_string(getPlayer().getReinforcementPool()) + " reinforcements remaining in your reinforcement pool." << endl;
         
@@ -30,7 +30,7 @@ void HumanPlayer::issueOrder() {
             //Check if player wants to deploy to specificied territory
             while (true) {
                 cout << "Would you like to deploy to " << t->getName() << "? (Enter y/n): ";
-                std::cin >> confirmDeploy;
+                std::getline(std::cin, confirmDeploy);
                 if (confirmDeploy.compare("y") == 0 || confirmDeploy.compare("Y") == 0) {
                     promptForUnits = true;
                     break;
@@ -47,7 +47,7 @@ void HumanPlayer::issueOrder() {
             //Check how many army units player wants to deploy to specific territory
             while (promptForUnits) {
                 cout << "Enter the number of army units would you like to deploy to " << t->getName() << ": ";
-                std::cin >> armyUnitsString;
+                std::getline(std::cin, armyUnitsString);
                 for (char c : armyUnitsString) {
                     if (!isdigit(c)) {
                         cout << "Invalid entry. ";
@@ -71,10 +71,24 @@ void HumanPlayer::issueOrder() {
             getPlayer().getOrdersList().addOrder(order);
         }
         //If player reinforcement pool size == 0, we break from Deploy Phase
+        break;
     }
 
-    //Advance Phase
-    
+    //Issue Advance Order
+    if (!getPlayer().getHasAdvanced()) {
+        //Display player's territories
+        cout << getPlayer().getName() << "'s territories:" << endl;
+        for (int i = 0; i < toDefend().size(); i++) {
+            if (i == toDefend().size() - 1) {
+                cout << toDefend()[i]->getName() << endl;
+            } else {
+                cout << toDefend()[i]->getName() << " || ";
+            }
+        }
+
+        cout << "Select a source territory to transfer units from: ";
+
+    }
 
 }
 
@@ -82,6 +96,6 @@ vector<Territory*>& HumanPlayer::toAttack() {
 
 }
 
-vector<Territory*>& HumanPlayer::toDeffend() {
+vector<Territory*>& HumanPlayer::toDefend() {
 
 }

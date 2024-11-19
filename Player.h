@@ -35,6 +35,8 @@ private:
 
 	bool hasEarnedCard;
 
+	bool hasAdvanced;
+
 	PlayerStrategy* ps;
 
 public:
@@ -86,8 +88,10 @@ public:
 	Territory& territoryFinder(bool attack);
 
 	bool getHasEarnedCard() const;
-
 	void setHasEarnedCard(bool hasEarnedCard);
+
+	bool getHasAdvanced() const;
+	void setHasAdvanced(bool hasAdvanced);
 };
 
 void testPlayers();
