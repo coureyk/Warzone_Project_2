@@ -37,6 +37,16 @@ class HumanPlayer : public PlayerStrategy {
         HumanPlayer(const Player& other);
 
         void issueOrder();
+
+        void issueDeploy();
+        void issueAdvance();
+        void issueBomb();
+        void issueBlockade();
+        void issueAirlift();
+        void issueNegotiate();
+        void openOrdersList();
+        bool commit();
+
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
 };
