@@ -268,7 +268,7 @@ bool Advance::validate() {
     if (sourceTerritoryOwner.compare(targetTerritoryOwner) == 0) {
         sourceTerritoryArmyUnits -= getArmyUnits(); //remove army units from source territory
         targetTerritoryArmyUnits += getArmyUnits(); //add army units to targetTerritory
-
+        
         getSourceTerritory()->setArmies(sourceTerritoryArmyUnits); 
         getTargetTerritory()->setArmies(targetTerritoryArmyUnits); 
 

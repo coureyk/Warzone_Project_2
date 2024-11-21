@@ -81,6 +81,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 	int tempReinforcementPool = reinforcementPool;
 	
 	//Deploying phase
+
 	if(toDeploy){
 		
 		for(Territory* territory: defendableTerritories){
@@ -125,87 +126,87 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 
 		while(true){
 		
-		while(true){
+			while(true){
 
-			sourceTerritoryObj = nullptr;
-			targetTerritoryObj = nullptr;
+				sourceTerritoryObj = nullptr;
+				targetTerritoryObj = nullptr;
 
-			//Display defendable territories
-    		std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
- 			for(Territory* territory: defendableTerritories){
-        		std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
-    		}
+				//Display defendable territories
+				std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
+				for(Territory* territory: defendableTerritories){
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
 
-			std::cout << endl;
-			
-			//Display attackable territories
-			std::cout<<"Attackable Territories: ";
-    		for(Territory* territory: attackableTerritories){
-        		std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
-    		}
-
-			std::cout << endl;
-			
-        	try{
-            
-            	//bool sourceError;
-            	std::string sourceTerritory;
-            	std::string targetTerritory;
-
-            	std::cout<<"Please enter \"done\" if you do not want to advance any units."<<std::endl<<std::endl;
-
-            	std::cout<<"Select a source territory to transfer units from"<<std::endl;
-             	// Command* command1 = processor->getCommand();
-             	// sourceTerritory = command1->getCommandText();
+				std::cout << endl;
 				
-				std::getline(std::cin,sourceTerritory);
-            	
-            	std::cout<<"Select a target territory to transfer units to"<<std::endl;
-             	// Command* command2 = processor->getCommand();
-             	// targetTerritory = command2->getCommandText();
+				//Display attackable territories
+				std::cout<<"Attackable Territories: ";
+				for(Territory* territory: attackableTerritories){
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
 
-				std::getline(std::cin,targetTerritory);
-            	
-
-            	if(sourceTerritory == "done" || targetTerritory == "done"){
-					return;
-            	}
+				std::cout << endl;
 				
-            	bool foundSource = false;
-            	bool foundTarget = false;
+				try{
+				
+					//bool sourceError;
+					std::string sourceTerritory;
+					std::string targetTerritory;
 
-            
-            	for(Territory* territory: defendableTerritories){
-                	if(sourceTerritory == territory->getName()){
-                    	foundSource = true;
-                    	sourceTerritoryObj = new Territory(*territory);
-                	}else if(targetTerritory == territory->getName()){
-                    	foundTarget = true;
-                    	targetTerritoryObj = new Territory(*territory);
-                	}
-            	}	
-            
-            	//Don't have to loop through attackable territories if you advance in friendly territories.
-            	if(!foundTarget){
-                	for(Territory* territory: attackableTerritories){
-                    	if(targetTerritory == territory->getName()){
-                        	foundTarget = true;
-                        	targetTerritoryObj = new Territory(*territory);
-                    	} 
-                	}
-            	}
+					std::cout<<"Please enter \"done\" if you do not want to advance any units."<<std::endl<<std::endl;
 
-            	if(!foundSource){
-                	throw sourceTerritory;
-            	}else if(!foundTarget){
-                	throw targetTerritory;
-            	}    
-				break;      
+					std::cout<<"Select a source territory to transfer units from"<<std::endl;
+					// Command* command1 = processor->getCommand();
+					// sourceTerritory = command1->getCommandText();
+					
+					std::getline(std::cin,sourceTerritory);
+					
+					std::cout<<"Select a target territory to transfer units to"<<std::endl;
+					// Command* command2 = processor->getCommand();
+					// targetTerritory = command2->getCommandText();
 
-        	}catch(std::string territory){
-            	std::cout<< territory <<" is not a valid territory name";
-        	}
-    	}
+					std::getline(std::cin,targetTerritory);
+					
+
+					if(sourceTerritory == "done" || targetTerritory == "done"){
+						return;
+					}
+					
+					bool foundSource = false;
+					bool foundTarget = false;
+
+				
+					for(Territory* territory: defendableTerritories){
+						if(sourceTerritory == territory->getName()){
+							foundSource = true;
+							sourceTerritoryObj = territory;
+						}else if(targetTerritory == territory->getName()){
+							foundTarget = true;
+							targetTerritoryObj = territory;
+						}
+					}	
+				
+					//Don't have to loop through attackable territories if you advance in friendly territories.
+					if(!foundTarget){
+						for(Territory* territory: attackableTerritories){
+							if(targetTerritory == territory->getName()){
+								foundTarget = true;
+								targetTerritoryObj = new Territory(*territory);
+							} 
+						}
+					}
+
+					if(!foundSource){
+						throw sourceTerritory;
+					}else if(!foundTarget){
+						throw targetTerritory;
+					}    
+					break;      
+
+				}catch(std::string territory){
+					std::cout<< territory <<" is not a valid territory name";
+				}
+			}
 
 			while(true){
 				int advancingUnits;
@@ -221,6 +222,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 
 					Advance* advance = new Advance(this,advancingUnits,sourceTerritoryObj,targetTerritoryObj);
 					ordersList->addOrder(advance);
+					std::cout<<"Order Added"<<std::endl;
 					std::cout<<advancingUnits<<" units were move to " << *targetTerritoryObj << " from "<< *sourceTerritoryObj<<std::endl;
 					break;
 				}
@@ -239,10 +241,6 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 
 		}
 	}
-
-
-
-	
 
 	while(!hand->getHand().empty()){
 
@@ -535,7 +533,7 @@ Territory& Player::territoryFinder(bool attack){
             	
                 	for(Territory* territory: toAttack()){
                     	if(territoryName == territory->getName()){
-                        	targetTerritory = new Territory(*territory);
+                        	targetTerritory = territory;
 							notFoundTerritory = false;
                     	} 
                 	}
@@ -572,7 +570,7 @@ Territory& Player::territoryFinder(bool attack){
             	
                 	for(Territory* territory: *territories){
                     	if(territoryName == territory->getName()){
-                        	targetTerritory = new Territory(*territory);
+                        	targetTerritory = territory;
 							notFoundTerritory = false;
                     	} 
                 	}

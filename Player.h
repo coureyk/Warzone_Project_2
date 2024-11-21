@@ -22,6 +22,7 @@ class OrdersList;
 class Player {
 
 protected:
+
 	std::string name;
 
 	OrdersList* ordersList;

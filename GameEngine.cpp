@@ -109,8 +109,6 @@ void GameEngine::testMainGameLoop() {
 
 void GameEngine::reinforcementPhase(Player& player){
 
-    //player.setReinforcementPool(0);
-
     int territoryCount = player.getTerritories().size();
     bool ownsContinent = false;
     int continentScore;
@@ -156,119 +154,22 @@ void GameEngine::issueOrderPhase(Player& player){
     
 
     player.issueOrder(true,false);
-    player.getOrdersList().getNode(0)->getElement()->execute(); //possible removal
+
+    
+
+    //For multiple deployments to different territories
+    while(player.getOrdersList().getNode(0)!= NULL){
+        player.getOrdersList().getNode(0)->getElement()->execute(); //possible removal
+        player.getOrdersList().remove(player.getOrdersList().getNode(0));
+    }
     player.issueOrder(false,true);
     player.issueOrder(false,false);
 }
-    /*
-    // std::vector<Territory*>& attackableTerritories = player.toAttack();
-    // std::vector<Territory*>& defendableTerritories = player.toDefend();
-  
-
-    //Initial deployment phase when units are received at the beginning of every round
-    // for(Territory* territory: defendableTerritories){
-        
-    //     if(player.getReinforcementPool() <= 0)
-    //         break;
-
-    //     std::cout<<"Deploying forces to " << territory->getName()<<std::endl<<std::endl;
-    //     player.issueOrder(true,false, player, player,*territory,*territory);
-    // }
-
-    // //Display attackable territories
-    // std::cout<<"Attackable Territories:";
-    // for(Territory* territory: attackableTerritories){
-    //     std::cout<<territory<<"|";
-    // }
     
-    // //Display defendable territories
-    // std::cout<<std::endl<<std::endl<<"Defendable Territories:";
-    // for(Territory* territory: defendableTerritories){
-    //     std::cout<<territory<<"|";
-    // }
-
-    // CommandProcessor* processor = new CommandProcessor;
-
-    // LogObserver* logObserver = new LogObserver(processor);
-    
-    // //Loop to allow advancement of troops
-    // while(true){
-
-        
-    //     try{
-            
-    //         //bool sourceError;
-    //         std::string sourceTerritory;
-    //         std::string targetTerritory;
-
-    //         std::cout<<"Please enter \"done\" if you do not want to advance any units."<<std::endl<<std::endl;
-
-    //         std::cout<<"Select a source territory to transfer units from"<<std::endl;
-    //          Command* command1 = processor->getCommand();
-    //          sourceTerritory = command1->getCommandText();
-    //         //std::cin>>sourceTerritory;
-    //         std::cout<<"Select a target territory to transfer units to"<<std::endl;
-    //          Command* command2 = processor->getCommand();
-    //          targetTerritory = command2->getCommandText();
-    //         //std::cin>>targetTerritory;
-
-    //         if(sourceTerritory == "done" || targetTerritory == "done"){
-    //             break;
-    //         }
-
-    //         bool notFoundSource = true;
-    //         bool notFoundTarget = true;
-
-    //         Territory* sourceTerritoryObj = nullptr;
-    //         Territory* targetTerritoryObj = nullptr;
-
-    //         for(Territory* territory: defendableTerritories){
-    //             if(sourceTerritory == territory->getName()){
-    //                 notFoundSource = false;
-    //                 sourceTerritoryObj = new Territory(*territory);
-    //             }else if(targetTerritory == territory->getName()){
-    //                 notFoundTarget == false;
-    //                 targetTerritoryObj = new Territory(*territory);
-    //             }
-    //         }
-            
-    //         //Don't have to loop through attackable territories if you advance in friendly territories.
-    //         if(notFoundTarget){
-    //             for(Territory* territory: attackableTerritories){
-    //                 if(targetTerritory == territory->getName()){
-    //                     notFoundTarget = false;
-    //                     targetTerritoryObj = new Territory(*territory);
-    //                 } 
-    //             }
-    //         }
-
-    //         if(notFoundSource){
-    //             throw sourceTerritory;
-    //         }else if(notFoundTarget){
-    //             throw targetTerritory;
-    //         }
-
-    //         player.issueOrder(false,true, player, player, *sourceTerritoryObj, *targetTerritoryObj);
-
-
-    //     }catch(std::string territory){
-    //         std::cout<<territory<<" is not a valid territory name";
-    //     }
-        
-
-    // }
-    
-    //Issuing orders besides deploying or advancing
-      
-
-}
-
-*/
 
 void GameEngine::executeOrdersPhase(Player& player){
         
     for(int i = 0;i<player.getOrdersList().getSize();i++){
-        
         player.getOrdersList().getNode(i)->getElement()->execute();
         player.getOrdersList().remove(player.getOrdersList().getNode(i));
     }
