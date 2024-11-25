@@ -274,12 +274,32 @@ void GameEngine::executeOrdersPhase(Player& player){
 
 }
 
+
 /*sets the state to the corresponding command*/
 void GameEngine::setState(const std::string command,const std::string arg) {
     //addplayer <playername>
 
     if (command == "start" || command == "play") GameEngine::state = states::START;
     else if(command == "tournament"){
+         std::istringstream stream(arg);
+         std::string flag, maps, strategies;
+        int numberOfGames, maxTurns;
+
+        while (stream >> flag) {
+            if (flag == "-M") stream >> maps;
+            else if (flag == "-P") stream >> strategies;
+            else if (flag == "-G") stream >> numberOfGames;
+            else if (flag == "-D") stream >> maxTurns;
+        }
+
+        std::vector<std::string> mapList = split(maps, ',');
+        std::vector<std::string> strategyList = split(strategies, ',');
+        // Validate the ranges
+       
+        Tournament tournament(mapList, strategyList, numberOfGames, maxTurns);
+        tournament.start();
+        
+        
          std::cout<<arg<<std::endl;
     }
     else if (command == "loadmap") GameEngine::state = states::MAP_LOADED;
