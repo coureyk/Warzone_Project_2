@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstdio>
 #include <vector>
+#include <map>
 #include "Player.h"
 #include "Map.h"
 #include "CommandProcessing.h"
@@ -79,6 +80,22 @@ public:
 
     static std::vector<Player*>& getPlayers();
     
+};
+class Tournament: public Subject, public ILoggable {
+private:
+    std::vector<std::string> maps;  // List of map file names
+    std::vector<std::string> strategies;  // List of player strategies
+    int numberOfGames;  // Number of games per map
+    int maxTurns;  // Max turns per game
+    std::map<std::string, std::vector<std::string>> results;  // Results for each map
+
+public:
+    Tournament(const std::vector<std::string>& maps, const std::vector<std::string>& strategies, int numberOfGames, int maxTurns);
+
+    void start();
+    void playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber);
+    void displayResults() const;
+    std::string stringToLog();
 };
 
 /*Free function named testGameStates() that allows the user to type command strings on the console, whose result is

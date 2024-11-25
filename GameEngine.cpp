@@ -279,6 +279,9 @@ void GameEngine::setState(const std::string command,const std::string arg) {
     //addplayer <playername>
 
     if (command == "start" || command == "play") GameEngine::state = states::START;
+    else if(command == "tournament"){
+         std::cout<<arg<<std::endl;
+    }
     else if (command == "loadmap") GameEngine::state = states::MAP_LOADED;
     else if (command == "validatemap") GameEngine::state = states::MAP_VALIDATED;
     else if (command == "addplayer") {
@@ -359,18 +362,27 @@ void GameEngine::startupPhase() {
         displayNextPath(GameEngine::state);
 
         while (true) {
+            std::cout<<GameEngine::state<<std::endl;
             Command* command = processor->getCommand();
-
-            std::string token = "";
+            if (command->getValid()){
+                std::string token = "";
             std::istringstream iss(command->getCommandText());
                 std::getline(iss, token, ' ');
             arg1 = token;
+            if (arg1 == "tournament" ){
+                std::getline(iss, token);
+                arg2 = token; 
+            }else{
                 std::getline(iss, token, ' ');
-            arg2 = token; 
+                arg2 = token; 
+            }
+                
 
             if (validCommandInput(arg1,arg2)) {
                 setState(arg1,arg2);
             }
+            }
+            
         }
         
         /*
@@ -440,7 +452,7 @@ void GameEngine::gamestart() {
 //will take in the user's input and check if it follows a valid command
 bool GameEngine::validCommandInput(const std::string command,const std::string argument) {
     //make sure valid command
-    if (!(command == "start" || command == "loadmap" || command == "play" ||
+    if (!(command == "start" ||command == "tournament"|| command == "loadmap" || command == "play" ||
         command == "validatemap" || command == "addplayer" || command == "gamestart" ||
         command == "endexecorders" || command == "issueorder" || command == "endissueorders" ||
         command == "win" || command == "execorder" || command == "end"))
@@ -454,10 +466,13 @@ bool GameEngine::validCommandInput(const std::string command,const std::string a
     switch (state) { //check if correct state for what was inputed
       case states::INITIALISED:   if (command == "start")
           return true; break;
+
       case states::START:
                        if (command == "loadmap") {
                   bool mapLoaded = loader.loadMap();  // Initialize within the case
                   if (mapLoaded) return true;
+              }else if(command == "tournament"){
+                return true;
               }
               break;
     case states::MAP_LOADED:
@@ -497,3 +512,47 @@ vector<Player*>& GameEngine::getPlayers(){
     return *players;
 }
 
+Tournament::Tournament(const std::vector<std::string>& maps, const std::vector<std::string>& strategies, int numberOfGames, int maxTurns)
+    : maps(maps), strategies(strategies), numberOfGames(numberOfGames), maxTurns(maxTurns) {}
+
+void Tournament::start() {
+    for (const auto& map : maps) {
+        std::vector<std::string> mapResults;
+        for (int i = 1; i <= numberOfGames; ++i) {
+            playGame(map, strategies, i);
+            mapResults.push_back("Winner or Draw");  // Replace with actual result
+        }
+        results[map] = mapResults;
+    }
+    displayResults();
+}
+
+void Tournament::playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber) {
+    std::cout << "Playing game " << gameNumber << " on map: " << map << std::endl;
+
+    // Simulate the game logic here
+    // Example: Load the map, assign players with strategies, and simulate turns up to maxTurns
+}
+
+void Tournament::displayResults() const {
+    std::cout << "\nTournament Results:\n";
+    for (const auto& [map, result] : results) {
+        std::cout << "Map: " << map << "\n";
+        for (const auto& gameResult : result) {
+            std::cout << gameResult << " ";
+        }
+        std::cout << "\n";
+    }
+}
+
+std::string Tournament::stringToLog() {
+    std::string log = "Tournament Results:\n";
+    for (const auto& [map, result] : results) {
+        log += "Map: " + map + "\n";
+        for (const auto& gameResult : result) {
+            log += gameResult + " ";
+        }
+        log += "\n";
+    }
+    return log;
+}
