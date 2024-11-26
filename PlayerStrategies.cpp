@@ -188,7 +188,7 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 		}
 	}
 
-	while(!getPlayer().getHand()->getHand().empty()){
+	while(!getPlayer().getHand()->getCards().empty()){
 
 	getPlayer().getHand()->showHand();
 
@@ -210,7 +210,7 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 
 	int counter = 0;
 
-	for(Card* card: getPlayer().getHand()->getHand()){
+	for(Card* card: getPlayer().getHand()->getCards()){
 		if(input == 1){
 			if("Bomb" == card->getType()){
 			getPlayer().getHand()->playCard(counter);
