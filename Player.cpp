@@ -77,7 +77,7 @@ std::vector<Territory*>& Player::toAttack() {
 }
 
 void Player::issueOrder(bool toDeploy, bool toAdvance) {
-	getPS()->issueOrder(toDeploy, toAttack);
+	getPS()->issueOrder(toDeploy, toAdvance);
 }
 
 Player& Player::operator=(const Player& otherPlayer) {

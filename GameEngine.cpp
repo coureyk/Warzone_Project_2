@@ -102,11 +102,17 @@ void GameEngine::testMainGameLoop() {
     Hand tarHand;
 
     int srcReinforcementPool = 10;
-    int tarReinforcementPool = 1;
+    int tarReinforcementPool = 10;
 
-    Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool);
-    Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool);
+    PlayerStrategy* strat1 = new HumanPlayer; 
+    PlayerStrategy* strat2 = new HumanPlayer;
 
+    Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
+    Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool,strat2);
+
+    strat1->setPlayer(*sourcePlayer);
+    strat2->setPlayer(*targetPlayer);
+    
     players->push_back(sourcePlayer);
     players->push_back(targetPlayer);
     
@@ -161,8 +167,6 @@ void GameEngine::issueOrderPhase(Player& player){
     
 
     player.issueOrder(true,false);
-
-    
 
     //For multiple deployments to different territories
     while(player.getOrdersList().getNode(0)!= NULL){

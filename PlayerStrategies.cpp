@@ -1,4 +1,5 @@
 #include "PlayerStrategies.h"
+#include <limits>
 
 PlayerStrategy::PlayerStrategy() {
     player = NULL;
@@ -89,6 +90,12 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 				std::cout<<"Attackable Territories: ";
 				for(Territory* territory: attackableTerritories){
 					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout<<std::endl<<"Neutral Territories: ";
+				for(Territory* territory: attackableTerritories){
+					if(territory->getOwner() == "None")
+						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
 				}
 
 				std::cout << endl;
