@@ -9,15 +9,15 @@ Player& PlayerStrategy::getPlayer() const {
     return *player;
 }
 
-void PlayerStrategy::setPlayer(const Player& other) {
-    this->player = new Player(other);
+void PlayerStrategy::setPlayer(Player& other) {
+    this->player = &other;
 }
 
 HumanPlayer::HumanPlayer() {
 
 }
 
-HumanPlayer::HumanPlayer(const Player& other) {
+HumanPlayer::HumanPlayer(Player& other) {
     setPlayer(other);
 }
 
@@ -40,20 +40,27 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 				std::cout<<"How many units would you like to deploy to " << *territory << " ? : ";
 				
 				try{
-					std::cin>>deployableUnits;
-					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-					if(deployableUnits>tempReinforcementPool){
-						throw deployableUnits;
-					}
+                    if(!(std::cin>>deployableUnits)){
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        throw std::runtime_error("Not an integer");
+                    }
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-					tempReinforcementPool -= deployableUnits;
-					Order* deploy = new Deploy(&getPlayer(),deployableUnits, territory);
-					getPlayer().getOrdersList().addOrder(deploy);
-					break;
-				}catch(int deployableUnits){
-					std::cout<<"You only have " << tempReinforcementPool << " at your disposal. " << "You cannot deploy " << deployableUnits << " units."<<std::endl;
-				}
+                    if(deployableUnits>tempReinforcementPool){
+                        throw deployableUnits;
+                    }
+
+                    tempReinforcementPool -= deployableUnits;
+                    Order* deploy = new Deploy(&getPlayer(),deployableUnits, territory);
+                    getPlayer().getOrdersList().addOrder(deploy);
+                    break;
+                }catch(int deployableUnits){
+                    std::cout<<"You only have " << tempReinforcementPool << " at your disposal. " << "You cannot deploy " << deployableUnits << " units."<<std::endl;
+                }catch(std::runtime_error err){
+                    cout << "Not an integer" << endl;
+                }
 								
 			}
 
@@ -165,23 +172,30 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 				int advancingUnits;
 				std::cout<<"This territory has " << sourceTerritoryObj->getArmies() << " units. How many would you like to move into " << targetTerritoryObj->getName() << "?"<<std::endl;
 				try{
-					std::cin>>advancingUnits;
-					if(advancingUnits>sourceTerritoryObj->getArmies())
-						throw advancingUnits;
 
-					//To not add an empty advance order
-					if(advancingUnits==0)
-						break;
+                    if(!(std::cin>>advancingUnits)){
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        throw std::runtime_error("Not an integer");
+                    }
+                    if(advancingUnits>sourceTerritoryObj->getArmies())
+                        throw advancingUnits;
 
-					Advance* advance = new Advance(&getPlayer(),advancingUnits,sourceTerritoryObj,targetTerritoryObj);
-					getPlayer().getOrdersList().addOrder(advance);
-					std::cout<<"Order Added"<<std::endl;
-					std::cout<<advancingUnits<<" units were move to " << *targetTerritoryObj << " from "<< *sourceTerritoryObj<<std::endl;
-					break;
-				}
-				catch(int advancingUnits){
-					std::cout<<advancingUnits<<" is too many units given that "<<*sourceTerritoryObj<< " only has "<<targetTerritoryObj->getArmies()<<" available units"<<std::endl;
-				}
+                    //To not add an empty advance order
+                    if(advancingUnits==0)
+                        break;
+
+                    Advance* advance = new Advance(&getPlayer(),advancingUnits,sourceTerritoryObj,targetTerritoryObj);
+                    getPlayer().getOrdersList().addOrder(advance);
+                    std::cout<<"Order Added"<<std::endl;
+                    std::cout<<advancingUnits<<" units were moved to " << *targetTerritoryObj << " from "<<*sourceTerritoryObj<<std::endl;
+                    break;
+                }
+                catch(int advancingUnits){
+                    std::cout<<advancingUnits<<" is too many units given that "<<*sourceTerritoryObj<< " only has "<<targetTerritoryObj->getArmies()<<" available units"<<std::endl;
+                }catch(std::runtime_error err){
+                    std::cout<<"Not an integer"<<endl;
+                }
 			}	
 
 		std::string answer;
