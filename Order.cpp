@@ -140,7 +140,7 @@ bool Deploy::validate() {
     
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
-    string targetTerritoryOwner = getTargetTerritory()->getOwner();
+    string targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
     int currentArmyUnits = getTargetTerritory()->getArmies();
     int currentReinforcementPool = getSourcePlayer()->getReinforcementPool();
     string effect;
@@ -215,8 +215,8 @@ string Advance::toString() const {
 
 bool Advance::validate() {
     string sourcePlayer = getSourcePlayer()->getName();
-    string sourceTerritoryOwner = getSourceTerritory()->getOwner();
-    string targetTerritoryOwner = getTargetTerritory()->getOwner();
+    string sourceTerritoryOwner = getSourceTerritory()->getOwner()->getName();
+    string targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
     string sourceTerritory = getSourceTerritory()->getName();
     string targetTerritory = getTargetTerritory()->getName();
     int sourceTerritoryArmyUnits = getSourceTerritory()->getArmies();
@@ -279,14 +279,9 @@ bool Advance::validate() {
     } else {
 
         //need to check if targetTerritoryOwner is a NeutralPlayer
-        for (Player* p : GameEngine::getPlayers()) {
-            if (p->getName() == getTargetTerritory()->getOwner()) {
-                if (p->getPS()->getPSType() == "NeutralPlayer") {
-                    PlayerStrategy* newStrat = new AggressivePlayer;
-                    p->setPS(newStrat);
-                }
-                break;
-            }
+        if (getTargetTerritory()->getOwner()->getPS()->getPSType() == "Neutral") {
+            PlayerStrategy* newStrat = new AggressivePlayer;
+            getTargetTerritory()->getOwner()->setPS(newStrat);
         }
         
         //If sourceTerritory owner is not targetTerritory owner do the following:
@@ -319,7 +314,7 @@ bool Advance::validate() {
         if (remainingDefenders ==  0) {
             getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits()); //update armies on attacker's land
             getTargetTerritory()->setArmies(remainingAttackers); //update armies on defender's land
-            getTargetTerritory()->setOwner(sourcePlayer); //make attacker new owner of targetTerritory       
+            getTargetTerritory()->setOwner(getSourcePlayer()); //make attacker new owner of targetTerritory       
             getSourcePlayer()->getHand()->addCard(Deck::draw()); //sourcePlayer receives a card for conquering at least one territory during their turn.
             effect = "Valid order. " + sourcePlayer + " successfully conquered " + targetTerritory + ". Current " + sourceTerritory + " army units: " + std::to_string(getSourceTerritory()->getArmies()) + ". Current " + targetTerritory + " army units: " + std::to_string(getTargetTerritory()->getArmies()) + ". Card added to " + sourcePlayer + "\'s hand.\n";
             setEffect(effect);
@@ -382,7 +377,7 @@ string Bomb::toString() const {
 bool Bomb::validate() {
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
-    string targetTerritoryOwner = getTargetTerritory()->getOwner();
+    string targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
     string effect;
     
@@ -441,14 +436,9 @@ bool Bomb::validate() {
     //if this point is reached, Bomb order is valid
 
     //need to check if targetTerritoryOwner is a NeutralPlayer
-    for (Player* p : GameEngine::getPlayers()) {
-        if (p->getName() == getTargetTerritory()->getOwner()) {
-            if (p->getPS()->getPSType() == "NeutralPlayer") {
-                PlayerStrategy* newStrat = new AggressivePlayer;
-                p->setPS(newStrat);
-            }
-            break;
-        }
+    if (getTargetTerritory()->getOwner()->getPS()->getPSType() == "Neutral") {
+        PlayerStrategy* newStrat = new AggressivePlayer;
+        getTargetTerritory()->getOwner()->setPS(newStrat);
     }
 
     //half of the army units on targetTerritory are now annihilated
@@ -507,15 +497,15 @@ string Blockade::toString() const {
 bool Blockade::validate() {
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
-    string targetTerritoryOwner = getTargetTerritory()->getOwner();
+    string targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
     string effect;
     
     //check if the targetTerritory belongs to sourcePlayer
     if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
         getTargetTerritory()->setArmies(targetTerritoryArmyUnits * 2); //double the # of army units on targetTerritory
-        getTargetTerritory()->setOwner("None"); //make targetTerritory a neutral territory
-        effect = "Valid order. " + sourcePlayer + "successfully ordered a blockade on " + targetTerritory + ". Current " + targetTerritory + "owner: " + getTargetTerritory()->getOwner() + ". Current army units: " + std::to_string(getTargetTerritory()->getArmies()) + ".\n";
+        getTargetTerritory()->setOwner(NULL); //make targetTerritory a neutral territory
+        effect = "Valid order. " + sourcePlayer + "successfully ordered a blockade on " + targetTerritory + ". Current " + targetTerritory + "owner: None.\nCurrent army units: " + std::to_string(getTargetTerritory()->getArmies()) + ".\n";
         setEffect(effect);
         return true;
     } else {
@@ -589,12 +579,12 @@ bool Airlift::validate() {
     }
 
     //check if source or targetTerritory do not belong to sourcePlayer
-    if (getSourceTerritory()->getOwner().compare(getSourcePlayer()->getName()) != 0) {
+    if (getSourceTerritory()->getOwner()->getName().compare(getSourcePlayer()->getName()) != 0) {
         effect = "Invalid Order. " + getSourcePlayer()->getName() + " cannot execute an airlift from foreign territory \"" + getSourceTerritory()->getName() + "\".\n";
         setEffect(effect);
         cout << "Invalid Order. " << getSourcePlayer()->getName() << " cannot execute an airlift from foreign territory: " << getSourceTerritory()->getName() << ".\n" << endl; //to be deleted
         return false;    
-    } else if (getTargetTerritory()->getOwner().compare(getSourcePlayer()->getName()) != 0 ) {
+    } else if (getTargetTerritory()->getOwner()->getName().compare(getSourcePlayer()->getName()) != 0 ) {
         effect = "Invalid Order. " + getSourcePlayer()->getName() + " cannot execute an airlift to foreign territory \"" + getTargetTerritory()->getName() + "\".\n";
         setEffect(effect);
         cout << "Invalid Order. " << getSourcePlayer()->getName() << " cannot execute an airlift to foreign territory: " << getTargetTerritory()->getName() << ".\n" << endl; //to be deleted
@@ -710,7 +700,7 @@ Cheat& Cheat::operator=(const Cheat& other) {
 }
 
 void Cheat::execute() {
-    getTargetTerritory()->setOwner(getSourcePlayer()->getName());
+    getTargetTerritory()->setOwner(getSourcePlayer());
 }
 
 bool Cheat::validate() {

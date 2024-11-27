@@ -107,13 +107,13 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 				//Display attackable territories
 				std::cout<<"Attackable Territories: ";
 				for(Territory* territory: attackableTerritories){
-					if(territory->getOwner() != "None")
+					if(territory->getOwner()->getName() != "None")
 					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
 				}
 
 				std::cout<<std::endl<<"Neutral Territories: ";
 				for(Territory* territory: attackableTerritories){
-					if(territory->getOwner() == "None")
+					if(territory->getOwner()->getName() == "None")
 						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
 				}
 
@@ -589,7 +589,7 @@ void CheaterPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 	if (!toDeploy && !toAdvance) {
 		for (Territory* t : toDefend()) {
 			for (Territory* neighbor : t->getNeighbors()) {
-				if (neighbor->getOwner() != getPlayer().getName()) {
+				if (neighbor->getOwner()->getName() != getPlayer().getName()) {
 					Order* cheat = new Cheat(&getPlayer(), neighbor);
 					getPlayer().getOrdersList().addOrder(cheat);
 				}
