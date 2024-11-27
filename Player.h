@@ -9,6 +9,12 @@ class Blockade;
 class Airlift;
 class Negotiate;
 class OrdersList;
+class PlayerStrategy;
+class NeutralPlayer;
+class CheaterPlayer;
+class HumanPlayer;
+class AggressivePlayer;
+class BenevolentPlayer;
 
 #include <vector>
 #include "Map.h"
@@ -16,6 +22,7 @@ class OrdersList;
 #include "Cards.h"
 #include "CommandProcessing.h"
 #include "GameEngine.h"
+#include "PlayerStrategies.h"
 
 
 
@@ -33,6 +40,8 @@ protected:
 
 	std::vector<std::string> negotiatedPlayers;
 
+	PlayerStrategy* ps;
+
 public:
 	std::vector<Territory*>* territories;
 
@@ -42,7 +51,7 @@ public:
 
 	Player(const Player& player);
 
-	Player(const std::string name, const std::vector<Territory*>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinformentPool);
+	Player(const std::string name, const std::vector<Territory*>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinformentPool, PlayerStrategy* const ps);
 
 	Player(const std::string name);
 
@@ -80,6 +89,10 @@ public:
 	OrdersList& getOrdersList();
 
 	Territory& territoryFinder(bool attack);
+
+	void setPS(PlayerStrategy* const ps);
+
+	PlayerStrategy* getPS();
 };
 
 void testPlayers();

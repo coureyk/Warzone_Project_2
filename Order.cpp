@@ -387,7 +387,7 @@ bool Bomb::validate() {
 
     int index = 0;
     bool cardFound = false;
-    for (Card* c : getSourcePlayer()->getHand()->getHand()) {
+    for (Card* c : getSourcePlayer()->getHand()->getCards()) {
         if (getOrderType().compare(c->getType())) {
             getSourcePlayer()->getHand()->playCard(index);
             cardFound = true;
