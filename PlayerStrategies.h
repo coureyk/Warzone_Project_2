@@ -12,7 +12,7 @@ class PlayerStrategy {
     public:
         PlayerStrategy();
         Player& getPlayer() const;
-        void setPlayer(const Player& other);
+        void setPlayer(Player& other);
         virtual void openOrdersList();
 
         virtual void issueOrder(bool toDeploy, bool toAttack) = 0;
@@ -41,7 +41,7 @@ class CheaterPlayer : public PlayerStrategy {
 class HumanPlayer : public PlayerStrategy {
     public:
         HumanPlayer();
-        HumanPlayer(const Player& other);
+        HumanPlayer(Player& other);
 
         void issueOrder(bool toDeploy, bool toAttack);
         bool commit();

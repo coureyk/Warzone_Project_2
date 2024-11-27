@@ -9,15 +9,15 @@ Player& PlayerStrategy::getPlayer() const {
     return *player;
 }
 
-void PlayerStrategy::setPlayer(const Player& other) {
-    this->player = new Player(other);
+void PlayerStrategy::setPlayer(Player& other){
+    this->player = &other;
 }
 
 HumanPlayer::HumanPlayer() {
 
 }
 
-HumanPlayer::HumanPlayer(const Player& other) {
+HumanPlayer::HumanPlayer(Player& other) {
     setPlayer(other);
 }
 
