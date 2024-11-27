@@ -19,24 +19,30 @@ std::vector<Player*>* GameEngine::players = new std::vector<Player*>;
 void GameEngine::mainGameLoop(){
     
    while(players->size()>1){
-    for(Player* player: *players){    
-        reinforcementPhase(*player);
-    }
+        for(Player* player: *players){    
+            reinforcementPhase(*player);
+        }
 
-    for(Player* player: *players){
-        std::cout<<"Player: "<<player->getName()<<std::endl;
-        issueOrderPhase(*player);
-    }
+        for(Player* player: *players){
+            std::cout<<"Player: "<<player->getName()<<std::endl;
+            issueOrderPhase(*player);
+        }
 
-     for(Player* player: *players){
-        executeOrdersPhase(*player);
-        players->erase(std::remove_if(players->begin(), players->end(), [](Player* player) { return player->getTerritories().size() == 0; }), players->end());
-    }
+        for(Player* player: *players){
+            executeOrdersPhase(*player);
+            //players->erase(std::remove_if(players->begin(), players->end(), [](Player* player) { return player->getTerritories().size() == 0; }), players->end());
+        }
 
-
-    
+        int counter = 0;
+        for(Player* player: *players){
+            if(player->getTerritories().size() == 0)
+                players->erase(players->begin() + counter);
+            counter++;
+        }
    }
 
+    
+   std::cout<<(*players)[0]<< " has won the game!";
    GameEngine::state = states::WIN;
    cout<<"Win"<<endl;//go back to startup phase
 }
@@ -104,6 +110,7 @@ void GameEngine::testMainGameLoop() {
     players->push_back(sourcePlayer);
     players->push_back(targetPlayer);
     
+    Deck deck;
     mainGameLoop();
 }
 
@@ -168,12 +175,17 @@ void GameEngine::issueOrderPhase(Player& player){
     
 
 void GameEngine::executeOrdersPhase(Player& player){
-        
+    
+    //Add ability to modify ordersList before execution
+
+    
+
     for(int i = 0;i<player.getOrdersList().getSize();i++){
         player.getOrdersList().getNode(i)->getElement()->execute();
+        
         player.getOrdersList().remove(player.getOrdersList().getNode(i));
     }
-
+    
 }
 
 /*sets the state to the corresponding command*/

@@ -142,7 +142,14 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 				//Display attackable territories
 				std::cout<<"Attackable Territories: ";
 				for(Territory* territory: attackableTerritories){
-					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+					if(territory->getOwner() != "None")
+						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout<<std::endl<<"Neutral Territories: ";
+				for(Territory* territory: attackableTerritories){
+					if(territory->getOwner() == "None")
+						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
 				}
 
 				std::cout << endl;
@@ -512,7 +519,8 @@ Territory& Player::territoryFinder(bool attack){
 		//Display attackable territories
 		std::cout<<"Attackable Territories: ";
     	for(Territory* territory: toAttack()){
-        	std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+			if(territory->getOwner() != "None")
+        		std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
     	}
 		cout << endl;
 

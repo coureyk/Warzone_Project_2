@@ -275,6 +275,7 @@ bool Advance::validate() {
         effect = "Valid order. " + sourcePlayer + " moved " + std::to_string(getArmyUnits()) + " army units from " + sourceTerritory + " to " + targetTerritory + ". Current " + sourceTerritory + " army units: " + std::to_string(getSourceTerritory()->getArmies()) + ". Current " + targetTerritory + " army units: " + std::to_string(getTargetTerritory()->getArmies()) + ".\n";
         setEffect(effect);
     } else {
+        
         //If sourceTerritory owner is not targetTerritory owner do the following:
         std::srand(static_cast<unsigned int>(std::time(0))); // seed the random number generator
         int randomValue{};
@@ -303,17 +304,21 @@ bool Advance::validate() {
         }
 
         if (remainingDefenders ==  0) {
+            std::cout<<"COCK1";
             getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits()); //update armies on attacker's land
             getTargetTerritory()->setArmies(remainingAttackers); //update armies on defender's land
-            getTargetTerritory()->setOwner(sourcePlayer); //make attacker new owner of targetTerritory
+            getTargetTerritory()->setOwner(sourcePlayer); //make attacker new owner of targetTerritory       
             getSourcePlayer()->getHand()->addCard(Deck::draw()); //sourcePlayer receives a card for conquering at least one territory during their turn.
             effect = "Valid order. " + sourcePlayer + " successfully conquered " + targetTerritory + ". Current " + sourceTerritory + " army units: " + std::to_string(getSourceTerritory()->getArmies()) + ". Current " + targetTerritory + " army units: " + std::to_string(getTargetTerritory()->getArmies()) + ". Card added to " + sourcePlayer + "\'s hand.\n";
             setEffect(effect);
+            std::cout<<"COCK2";
         } else {
+            std::cout<<"COCK3";
             getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits() + remainingAttackers); //update armies on attacker's land (remaining attackers are assumed to return back home)
             getTargetTerritory()->setArmies(remainingDefenders);
             effect = "Valid order. " + sourcePlayer + " failed to conquer " + targetTerritory + ". Current " + sourceTerritory + " army units: " + std::to_string(getSourceTerritory()->getArmies()) + ". Current " + targetTerritory + " army units: " + std::to_string(getTargetTerritory()->getArmies()) + ".\n";
             setEffect(effect);
+            std::cout<<"COCK4";
         }
     }
     return true;
