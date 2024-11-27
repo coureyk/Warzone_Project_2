@@ -9,7 +9,7 @@ Player& PlayerStrategy::getPlayer() const {
     return *player;
 }
 
-void PlayerStrategy::setPlayer(Player& other) {
+void PlayerStrategy::setPlayer(Player& other){
     this->player = &other;
 }
 
