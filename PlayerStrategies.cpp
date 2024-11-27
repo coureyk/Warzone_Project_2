@@ -13,11 +13,22 @@ void PlayerStrategy::setPlayer(Player& other){
     this->player = &other;
 }
 
+string PlayerStrategy::getPSType() const {
+	return psType;
+}
+
+void PlayerStrategy::setPSType(string& psType) {
+	this->psType = psType;
+}
+
+
 HumanPlayer::HumanPlayer() {
 
 }
 
 HumanPlayer::HumanPlayer(Player& other) {
+	string psType = "HumanPlayer";
+	setPSType(psType);
     setPlayer(other);
 }
 
@@ -538,4 +549,60 @@ vector<Territory*>& HumanPlayer::toAttack() {
 
 vector<Territory*>& HumanPlayer::toDefend() {
     return getPlayer().toDefend();
+}
+
+
+
+NeutralPlayer::NeutralPlayer() {
+
+}
+
+NeutralPlayer::NeutralPlayer(Player& other) {
+	string psType = "NeutralPlayer";
+	setPSType(psType);
+    setPlayer(other);
+}
+
+void NeutralPlayer::issueOrder(bool toDeploy, bool toAdvance) {
+	return; // do nothing
+}
+
+vector<Territory*>& NeutralPlayer::toAttack() {
+	return getPlayer().toAttack(); 
+}
+
+vector<Territory*>& NeutralPlayer::toDefend() {
+	return getPlayer().toDefend();
+}
+
+
+
+CheaterPlayer::CheaterPlayer() {
+
+}
+
+CheaterPlayer::CheaterPlayer(Player& other) {
+	setPlayer(other);
+}
+
+void CheaterPlayer::issueOrder(bool toDeploy, bool toAdvance) {
+	if (!toDeploy && !toAdvance) {
+		for (Territory* t : toDefend()) {
+			for (Territory* neighbor : t->getNeighbors()) {
+				if (neighbor->getOwner() != getPlayer().getName()) {
+					Order* cheat = new Cheat(&getPlayer(), neighbor);
+					getPlayer().getOrdersList().addOrder(cheat);
+				}
+			}
+		}
+	}
+	return;
+}
+
+vector<Territory*>& CheaterPlayer::toAttack() {
+	return getPlayer().toAttack(); 
+}
+
+vector<Territory*>& CheaterPlayer::toDefend() {
+	return getPlayer().toDefend();
 }
