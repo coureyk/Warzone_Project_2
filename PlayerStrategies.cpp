@@ -151,7 +151,7 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 						for(Territory* territory: attackableTerritories){
 							if(targetTerritory == territory->getName()){
 								foundTarget = true;
-								targetTerritoryObj = new Territory(*territory);
+								targetTerritoryObj = territory;
 							} 
 						}
 					}

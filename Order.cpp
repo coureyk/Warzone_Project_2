@@ -274,6 +274,8 @@ bool Advance::validate() {
 
         effect = "Valid order. " + sourcePlayer + " moved " + std::to_string(getArmyUnits()) + " army units from " + sourceTerritory + " to " + targetTerritory + ". Current " + sourceTerritory + " army units: " + std::to_string(getSourceTerritory()->getArmies()) + ". Current " + targetTerritory + " army units: " + std::to_string(getTargetTerritory()->getArmies()) + ".\n";
         setEffect(effect);
+
+        cout << effect << endl;
     } else {
         
         //If sourceTerritory owner is not targetTerritory owner do the following:
@@ -281,7 +283,7 @@ bool Advance::validate() {
         int randomValue{};
 
         int remainingDefenders = targetTerritoryArmyUnits;
-        for (int i = 0; i < getArmyUnits(); i++) {
+        for (int i = 0; i < targetTerritoryArmyUnits; i++) {
             randomValue = std::rand() % 100 + 1; //stores a value between 1 and 100
             if (randomValue <= 60) { //ensures an attacker has a 60% chance of killing a defendent.
                 remainingDefenders--;
@@ -289,7 +291,7 @@ bool Advance::validate() {
         }
 
         int remainingAttackers = getArmyUnits();
-        for (int i = 0; i < targetTerritoryArmyUnits; i++) {
+        for (int i = 0; i < getArmyUnits(); i++) {
             randomValue = std::rand() % 100 + 1; //stores a value between 1 and 100
             if (randomValue <= 70) { //ensures a defender has a 70% chance of killing an attacker.
                 remainingAttackers--;
@@ -304,21 +306,17 @@ bool Advance::validate() {
         }
 
         if (remainingDefenders ==  0) {
-            std::cout<<"COCK1";
             getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits()); //update armies on attacker's land
             getTargetTerritory()->setArmies(remainingAttackers); //update armies on defender's land
             getTargetTerritory()->setOwner(sourcePlayer); //make attacker new owner of targetTerritory       
             getSourcePlayer()->getHand()->addCard(Deck::draw()); //sourcePlayer receives a card for conquering at least one territory during their turn.
             effect = "Valid order. " + sourcePlayer + " successfully conquered " + targetTerritory + ". Current " + sourceTerritory + " army units: " + std::to_string(getSourceTerritory()->getArmies()) + ". Current " + targetTerritory + " army units: " + std::to_string(getTargetTerritory()->getArmies()) + ". Card added to " + sourcePlayer + "\'s hand.\n";
             setEffect(effect);
-            std::cout<<"COCK2";
         } else {
-            std::cout<<"COCK3";
             getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits() + remainingAttackers); //update armies on attacker's land (remaining attackers are assumed to return back home)
             getTargetTerritory()->setArmies(remainingDefenders);
             effect = "Valid order. " + sourcePlayer + " failed to conquer " + targetTerritory + ". Current " + sourceTerritory + " army units: " + std::to_string(getSourceTerritory()->getArmies()) + ". Current " + targetTerritory + " army units: " + std::to_string(getTargetTerritory()->getArmies()) + ".\n";
             setEffect(effect);
-            std::cout<<"COCK4";
         }
     }
     return true;
