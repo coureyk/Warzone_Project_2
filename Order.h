@@ -171,6 +171,24 @@ public:
 };
 
 
+//====================================================CHEAT CLASS DECLARATIONS====================================================
+
+class Cheat : public Order {
+public:
+    //Constructors
+    Cheat(Player* const sourcePlayer, Territory* const targetTerritory);
+    Cheat(const Cheat& other);
+
+    //Overloading operator "="
+    Cheat& operator=(const Cheat& other);
+
+    void execute();
+
+    bool validate();
+    string toString() const;
+};
+
+
 //====================================================ORDERS_LIST CLASS DECLARATIONS====================================================
 
 //Implemented OrdersList as a Doubly-Linked List

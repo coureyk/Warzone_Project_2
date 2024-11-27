@@ -277,6 +277,17 @@ bool Advance::validate() {
 
         cout << effect << endl;
     } else {
+
+        //need to check if targetTerritoryOwner is a NeutralPlayer
+        for (Player* p : GameEngine::getPlayers()) {
+            if (p->getName() == getTargetTerritory()->getOwner()) {
+                if (p->getPS()->getPSType() == "NeutralPlayer") {
+                    PlayerStrategy* newStrat = new AggressivePlayer;
+                    p->setPS(newStrat);
+                }
+                break;
+            }
+        }
         
         //If sourceTerritory owner is not targetTerritory owner do the following:
         std::srand(static_cast<unsigned int>(std::time(0))); // seed the random number generator
@@ -428,6 +439,18 @@ bool Bomb::validate() {
     }
 
     //if this point is reached, Bomb order is valid
+
+    //need to check if targetTerritoryOwner is a NeutralPlayer
+    for (Player* p : GameEngine::getPlayers()) {
+        if (p->getName() == getTargetTerritory()->getOwner()) {
+            if (p->getPS()->getPSType() == "NeutralPlayer") {
+                PlayerStrategy* newStrat = new AggressivePlayer;
+                p->setPS(newStrat);
+            }
+            break;
+        }
+    }
+
     //half of the army units on targetTerritory are now annihilated
     getTargetTerritory()->setArmies(targetTerritoryArmyUnits / 2);
     effect = "Valid order. " + sourcePlayer + " successfully bombed " + targetTerritory +". Current " + targetTerritory + " army units: " + std::to_string(getTargetTerritory()->getArmies()) + ".\n";
@@ -656,6 +679,46 @@ void Negotiate::execute() {
         cout << "Negotiate order executed.\n" << endl; //to be deleted
         setExecutionStatus(true);
     }
+}
+
+
+//====================================================DEFINING CLASS MEMBERS FOR CHEAT====================================================
+
+Cheat::Cheat(Player* const sourcePlayer, Territory* const targetTerritory) {
+    this->setOrderType("Cheat");
+    this->setSourcePlayer(sourcePlayer);
+    this->setTargetTerritory(targetTerritory);
+    this->setExecutionStatus(false);
+}
+
+Cheat::Cheat(const Cheat& other) {
+    this->setOrderType(other.getOrderType());
+    this->setSourcePlayer(other.getSourcePlayer());
+    this->setTargetTerritory(other.getTargetTerritory());
+    this->setExecutionStatus(other.getExecutionStatus());
+}
+
+Cheat& Cheat::operator=(const Cheat& other) {
+    // Check for self-assignment
+    if (this != &other) {
+        this->setOrderType(other.getOrderType());
+        this->setSourcePlayer(other.getSourcePlayer());
+        this->setTargetTerritory(other.getTargetTerritory());
+        this->setExecutionStatus(other.getExecutionStatus());
+    }
+    return *this;
+}
+
+void Cheat::execute() {
+    getTargetTerritory()->setOwner(getSourcePlayer()->getName());
+}
+
+bool Cheat::validate() {
+    return true;
+}
+
+string Cheat::toString() const {
+    return "Cheat Order executed.";
 }
 
 

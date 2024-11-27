@@ -8,11 +8,15 @@ class Player;
 class PlayerStrategy {
     private:
         Player* player;
+        string psType;
     
     public:
         PlayerStrategy();
         Player& getPlayer() const;
         void setPlayer(Player& other);
+        string getPSType() const;
+        void setPSType(string& psType);
+
         virtual void openOrdersList();
 
         virtual void issueOrder(bool toDeploy, bool toAttack) = 0;
@@ -20,20 +24,22 @@ class PlayerStrategy {
         virtual vector<Territory*>& toDefend() = 0;
 };
 
-class NeutralPlayer : public PlayerStrategy {
+class NeutralPlayer : public PlayerStrategy {    
     public:
-        NeutralPlayer(const Player& other);
+        NeutralPlayer();
+        NeutralPlayer(Player& other);
 
-        void issueOrder();
+        void issueOrder(bool toDeploy, bool toAdvance);
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
 };
 
 class CheaterPlayer : public PlayerStrategy {
     public:
-        CheaterPlayer(const Player& other);
+        CheaterPlayer();
+        CheaterPlayer(Player& other);
 
-        void issueOrder();
+        void issueOrder(bool toDeploy, bool toAdvance);
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
 };
@@ -44,7 +50,6 @@ class HumanPlayer : public PlayerStrategy {
         HumanPlayer(Player& other);
 
         void issueOrder(bool toDeploy, bool toAttack);
-        bool commit();
 
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
