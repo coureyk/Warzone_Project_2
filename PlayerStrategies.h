@@ -57,7 +57,8 @@ class HumanPlayer : public PlayerStrategy {
 
 class AggressivePlayer : public PlayerStrategy {
     public:
-        AggressivePlayer(const Player& other);
+        AggressivePlayer();
+        AggressivePlayer(Player& other);
 
         void issueOrder();
         vector<Territory*>& toAttack();
@@ -66,7 +67,8 @@ class AggressivePlayer : public PlayerStrategy {
 
 class BenevolentPlayer : public PlayerStrategy {
     public:
-        BenevolentPlayer(const Player& other);
+        BenevolentPlayer();
+        BenevolentPlayer(Player& other);
 
         void issueOrder();
         vector<Territory*>& toAttack();
