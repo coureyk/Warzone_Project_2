@@ -552,16 +552,15 @@ vector<Territory*>& HumanPlayer::toDefend() {
 }
 
 
-
 NeutralPlayer::NeutralPlayer() {
-
+	setPSType(std::string("Neutral"));
 }
 
-NeutralPlayer::NeutralPlayer(Player& other) {
-	string psType = "NeutralPlayer";
-	setPSType(psType);
-    setPlayer(other);
-}
+// NeutralPlayer::NeutralPlayer(Player& other) {
+// 	string psType = "Neutral";
+// 	setPSType(psType);
+//     setPlayer(other);
+// }
 
 void NeutralPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 	return; // do nothing
@@ -578,12 +577,12 @@ vector<Territory*>& NeutralPlayer::toDefend() {
 
 
 CheaterPlayer::CheaterPlayer() {
-
+	setPSType(std::string("Cheater"));
 }
 
-CheaterPlayer::CheaterPlayer(Player& other) {
-	setPlayer(other);
-}
+// CheaterPlayer::CheaterPlayer(Player& other) {
+// 	setPlayer(other);
+// }
 
 void CheaterPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 	if (!toDeploy && !toAdvance) {
@@ -606,3 +605,42 @@ vector<Territory*>& CheaterPlayer::toAttack() {
 vector<Territory*>& CheaterPlayer::toDefend() {
 	return getPlayer().toDefend();
 }
+
+AggressivePlayer::AggressivePlayer(){
+	setPSType(std::string("Aggressive"));
+}
+
+void AggressivePlayer::issueOrder(){
+
+}
+
+std::vector<Territory*>& AggressivePlayer::toAttack(){
+	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+
+	for(Territory* attackableTerritory:getPlayer().getTerritories()){
+		for(Territory* neighbor: attackableTerritory->getNeighbors()){
+			if(neighbor->getOwner() != getPlayer())
+		}
+	}
+}
+
+std::vector<Territory*>& AggressivePlayer::toDefend(){
+
+}
+
+BenevolentPlayer::BenevolentPlayer(){
+	setPSType(std::string("Benevolent"));
+}
+
+void BenevolentPlayer::issueOrder(){
+
+}
+
+std::vector<Territory*>& BenevolentPlayer::toAttack(){
+
+}
+
+std::vector<Territory*>& BenevolentPlayer::toDefend(){
+
+}
+

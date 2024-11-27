@@ -711,6 +711,7 @@ Cheat& Cheat::operator=(const Cheat& other) {
 
 void Cheat::execute() {
     getTargetTerritory()->setOwner(getSourcePlayer()->getName());
+    
 }
 
 bool Cheat::validate() {
