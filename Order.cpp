@@ -504,7 +504,11 @@ bool Blockade::validate() {
     //check if the targetTerritory belongs to sourcePlayer
     if (sourcePlayer.compare(targetTerritoryOwner) == 0) {
         getTargetTerritory()->setArmies(targetTerritoryArmyUnits * 2); //double the # of army units on targetTerritory
-        getTargetTerritory()->setOwner(NULL); //make targetTerritory a neutral territory
+        for (Player* p : GameEngine::getPlayers()) {
+            if (p->getPS()->getPSType() == "Neutral") {
+                getTargetTerritory()->setOwner(p); // make targetTerritory a Neutral Player territory
+            }
+        }
         effect = "Valid order. " + sourcePlayer + "successfully ordered a blockade on " + targetTerritory + ". Current " + targetTerritory + "owner: None.\nCurrent army units: " + std::to_string(getTargetTerritory()->getArmies()) + ".\n";
         setEffect(effect);
         return true;
