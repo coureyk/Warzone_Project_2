@@ -225,7 +225,11 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 
 	try{
 	
-	std::cin >> input;
+	if(!(std::cin >> input)){
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		throw std::runtime_error("Not an integer");
+	}
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	bool cardNotFound = true;
 
@@ -292,7 +296,11 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 		while(true){
 			try{
 			std::cout<<"Enter an amount of units."<<std::endl<<std::endl;
-			std::cin>>liftedUnits;
+			if(!(std::cin>>liftedUnits)){
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				throw std::runtime_error("Not an integer");
+			}
 
 			if(liftedUnits>sourceTerritory->getArmies()||liftedUnits<0)
 				throw liftedUnits;
@@ -301,6 +309,8 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 		
 			}catch(int liftedUnits){
 				std::cout<<liftedUnits<<" is an invalid amount of units"<<std::endl;
+			}catch(std::runtime_error err){
+				std::cout<<"Not an integer"<<endl;
 			}
 		}
 
@@ -368,6 +378,8 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 
 	}catch(int input){
 		std::cout<<"You do not own a card of this type."<<std::endl<<std::endl;
+	}catch(std::runtime_error err){
+		std::cout<<"Not an integer"<<endl;
 	}
 
 	std::string answer;
