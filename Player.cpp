@@ -6,9 +6,9 @@ class GameEngine;
 Player::Player(const std::string name, const std::vector<Territory*>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinforcementPool, PlayerStrategy* const ps) {
 	this->name = name;
 	//Assign this player as owner of the given territories
-	for (Territory* t : territories) {
-		t->setOwner(name);
-	}
+	// for (Territory* t : territories) {
+	// 	t->setOwner(name);
+	// }
 	this->territories = new std::vector<Territory*>(territories);
 	this->ordersList = new OrdersList(ordersList);
 	this->hand = new Hand(hand);
@@ -63,7 +63,7 @@ std::vector<Territory*>& Player::toAttack() {
 
 	for (Territory* territory : *this->territories) {
 		for (Territory* neighbor : territory->getNeighbors()) {
-			if (neighbor->getOwner() != getName()) {
+			if (neighbor->getOwner()->getName() != getName()) {
 				attackableSet.insert(neighbor);
 			}
 		}
@@ -185,7 +185,7 @@ Territory& Player::territoryFinder(bool attack){
 		//Display attackable territories
 		std::cout<<"Attackable Territories: ";
     	for(Territory* territory: toAttack()){
-			if(territory->getOwner() != "None")
+			if(territory->getOwner()->getName() != "None")
         		std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
     	}
 		cout << endl;

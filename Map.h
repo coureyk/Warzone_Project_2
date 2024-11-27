@@ -1,6 +1,11 @@
 #ifndef MAP_H
 #define MAP_H
 
+//Forward declaration
+class Player;
+
+#include "Player.h"
+
 #include <fstream>
 #include <iostream>
 #include <regex>
@@ -23,7 +28,7 @@ private:
     vector<Territory*> neighbors; //SHOULD EVENTUALLY MAKE THIS A * TO A VECTOR OF TERRITORY*
     int armies;
     bool wasVisited;
-    string owner;
+    Player* owner;
     
 public:
     //Constructors
@@ -42,14 +47,14 @@ public:
     vector<Territory*> getNeighbors() const;
     int getArmies() const;
     bool getVisitedStatus() const;
-    string getOwner() const;
+    Player* getOwner() const;
 
     //Setters
     void setName(const string& name);
     void setNeighbors(vector<Territory*> neighbors);
     void setArmies(const int& armies);
     void setVisitedStatus(const bool& visitedStatus);
-    void setOwner(const string& owner);
+    void setOwner(Player* const owner);
 
     //Service Methods
     void addNeighbor(Territory* const territory);
