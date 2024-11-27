@@ -54,8 +54,14 @@ void testOrdersLists() {
     int srcReinforcementPool = 5;
     int tarReinforcementPool = 5;
 
-    Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool);
-    Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool);
+    PlayerStrategy* strat1 = new HumanPlayer;
+    PlayerStrategy* strat2 = new HumanPlayer;
+
+    Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool, strat1);
+    Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool, strat2);
+
+    strat1->setPlayer(*sourcePlayer);
+    strat2->setPlayer(*targetPlayer);
 
 
     Deploy *o1 = new Deploy(sourcePlayer, 5, srcTerritories[0]);
