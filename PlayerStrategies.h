@@ -4,6 +4,8 @@
 class Player;
 
 #include "Player.h"
+#include <queue>
+#include <unordered_set>
 
 class PlayerStrategy {
     private:
@@ -56,13 +58,16 @@ class HumanPlayer : public PlayerStrategy {
 };
 
 class AggressivePlayer : public PlayerStrategy {
+    private:
+        Territory* strongestTerritory;
     public:
         AggressivePlayer();
         AggressivePlayer(Player& other);
 
-        void issueOrder();
+        void issueOrder(bool toDeploy, bool toAdvance);
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
+        Territory& optimalPath(Territory& territory);
 };
 
 class BenevolentPlayer : public PlayerStrategy {
@@ -70,7 +75,7 @@ class BenevolentPlayer : public PlayerStrategy {
         BenevolentPlayer();
         BenevolentPlayer(Player& other);
 
-        void issueOrder();
+        void issueOrder(bool toDeploy, bool toAdvance);
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
 };

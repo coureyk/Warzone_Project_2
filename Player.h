@@ -41,9 +41,10 @@ protected:
 	std::vector<std::string> negotiatedPlayers;
 
 	PlayerStrategy* ps;
+	
+	std::vector<Territory*>* territories;
 
 public:
-	std::vector<Territory*>* territories;
 
 	Player();
 
