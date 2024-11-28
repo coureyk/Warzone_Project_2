@@ -289,7 +289,7 @@ bool Advance::validate() {
         int randomValue{};
 
         int remainingDefenders = targetTerritoryArmyUnits;
-        for (int i = 0; i < targetTerritoryArmyUnits; i++) {
+        for (int i = 0; i < getArmyUnits(); i++) {
             randomValue = std::rand() % 100 + 1; //stores a value between 1 and 100
             if (randomValue <= 60) { //ensures an attacker has a 60% chance of killing a defendent.
                 remainingDefenders--;
@@ -297,7 +297,7 @@ bool Advance::validate() {
         }
 
         int remainingAttackers = getArmyUnits();
-        for (int i = 0; i < getArmyUnits(); i++) {
+        for (int i = 0; i < targetTerritoryArmyUnits; i++) {
             randomValue = std::rand() % 100 + 1; //stores a value between 1 and 100
             if (randomValue <= 70) { //ensures a defender has a 70% chance of killing an attacker.
                 remainingAttackers--;
