@@ -82,7 +82,7 @@ void Order::setEffect(const string& effect) {
 }
 
 string Order::stringToLog() {
-    return effect;
+    return this->toString();
 }
 
 ostream& operator<<(ostream& os, const Order& order) {
@@ -749,7 +749,7 @@ bool Cheat::validate() {
 }
 
 string Cheat::toString() const {
-    return "Cheat Order executed.";
+    return getSourcePlayer()->getName() + " cheated and aquired " + getTargetTerritory()->getName();
 }
 
 
@@ -917,7 +917,7 @@ void OrdersList::getContents() const {
 }
 
 string OrdersList::stringToLog() {
-    return "Order type: " + last()->getElement()->getOrderType();
+    return "Order type: " + last()->getElement()->toString();
 }
 
 //Overloading the operator "<<" so that std::cout << Order& displays relevant Order information to the user

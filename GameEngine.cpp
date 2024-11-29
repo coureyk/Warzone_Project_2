@@ -57,7 +57,7 @@ void GameEngine::mainGameLoop(){
    }
 
     
-   std::cout<<(*players)[0]<< " has won the game!";
+   std::cout<<*((*players)[0])<< " has won the game!";
    GameEngine::state = states::WIN;
    cout<<"Win"<<endl;//go back to startup phase
 }
@@ -95,8 +95,8 @@ void GameEngine::testMainGameLoop() {
     int srcReinforcementPool = 10;
     int tarReinforcementPool = 10;
 
-    PlayerStrategy* strat1 = new HumanPlayer; 
-    PlayerStrategy* strat2 = new HumanPlayer;
+    PlayerStrategy* strat1 = new NeutralPlayer; 
+    PlayerStrategy* strat2 = new CheaterPlayer;
     
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool,strat2);
