@@ -18,22 +18,23 @@ string PlayerStrategy::getPSType() const {
 	return psType;
 }
 
-void PlayerStrategy::setPSType(string& psType) {
+void PlayerStrategy::setPSType(string psType) {
 	this->psType = psType;
 }
 
 
 HumanPlayer::HumanPlayer() {
-
+	setPSType("Human");
 }
 
 HumanPlayer::HumanPlayer(Player& other) {
-	string psType = "HumanPlayer";
+	string psType = "Human";
 	setPSType(psType);
     setPlayer(other);
 }
 
 void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
+	
     std::vector<Territory*>& attackableTerritories = toAttack();
     std::vector<Territory*>& defendableTerritories = getPlayer().getTerritories();
 
@@ -59,14 +60,15 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 						throw std::runtime_error("Not an integer");
 					}
 					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
+					
 					if(deployableUnits>tempReinforcementPool){
 						throw deployableUnits;
 					}
-
+					
 					tempReinforcementPool -= deployableUnits;
 					Order* deploy = new Deploy(&getPlayer(),deployableUnits, territory);
 					getPlayer().getOrdersList().addOrder(deploy);
+					
 					break;
 				}catch(int deployableUnits){
 					std::cout<<"You only have " << tempReinforcementPool << " at your disposal. " << "You cannot deploy " << deployableUnits << " units."<<std::endl;
@@ -108,13 +110,13 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 				//Display attackable territories
 				std::cout<<"Attackable Territories: ";
 				for(Territory* territory: attackableTerritories){
-					if(territory->getOwner()->getName() != "None")
+					if(territory->getOwner() != nullptr)	
 					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
 				}
 
 				std::cout<<std::endl<<"Neutral Territories: ";
 				for(Territory* territory: attackableTerritories){
-					if(territory->getOwner()->getName() == "None")
+					if(territory->getOwner() == nullptr)
 						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
 				}
 
@@ -545,11 +547,31 @@ void PlayerStrategy::openOrdersList() {
 }
 
 vector<Territory*>& HumanPlayer::toAttack() {
-    return getPlayer().toAttack();
+    
+	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+	std::set <Territory*> attackableSet;
+
+	
+	for (Territory* territory : getPlayer().getTerritories()) {
+		for (Territory* neighbor : territory->getNeighbors()) {
+			
+			if (neighbor->getOwner() == nullptr || neighbor->getOwner()->getName() != getPlayer().getName() ) {
+				attackableSet.insert(neighbor);
+			}
+		}
+	}
+
+	
+	for (Territory* t : attackableSet) {
+		attackableTerritories->push_back(t);
+	}
+
+	
+	return *attackableTerritories;
 }
 
 vector<Territory*>& HumanPlayer::toDefend() {
-    return getPlayer().toDefend();
+    return getPlayer().getTerritories();
 }
 
 
@@ -564,15 +586,32 @@ NeutralPlayer::NeutralPlayer() {
 // }
 
 void NeutralPlayer::issueOrder(bool toDeploy, bool toAdvance) {
+	
 	return; // do nothing
 }
 
 vector<Territory*>& NeutralPlayer::toAttack() {
-	return getPlayer().toAttack(); 
+	 std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+	std::set <Territory*> attackableSet;
+
+
+	for (Territory* territory : getPlayer().getTerritories()) {
+		for (Territory* neighbor : territory->getNeighbors()) {
+			if (neighbor->getOwner() == nullptr ||neighbor->getOwner()->getName() != getPlayer().getName() ) {
+				attackableSet.insert(neighbor);
+			}
+		}
+	}
+
+	for (Territory* t : attackableSet) {
+		attackableTerritories->push_back(t);
+	}
+
+	return *attackableTerritories;
 }
 
 vector<Territory*>& NeutralPlayer::toDefend() {
-	return getPlayer().toDefend();
+	return getPlayer().getTerritories();
 }
 
 
@@ -589,7 +628,8 @@ void CheaterPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 	if (!toDeploy && !toAdvance) {
 		for (Territory* t : toDefend()) {
 			for (Territory* neighbor : t->getNeighbors()) {
-				if (neighbor->getOwner()->getName() != getPlayer().getName()) {
+
+				if (neighbor->getOwner() == nullptr || neighbor->getOwner()->getName() != getPlayer().getName()) {
 					Cheat* cheat = new Cheat(&getPlayer(), neighbor);
 					getPlayer().getOrdersList().addOrder(cheat);
 				}
@@ -600,11 +640,27 @@ void CheaterPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 }
 
 vector<Territory*>& CheaterPlayer::toAttack() {
-	return getPlayer().toAttack(); 
+	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+	std::set <Territory*> attackableSet;
+
+
+	for (Territory* territory : getPlayer().getTerritories()) {
+		for (Territory* neighbor : territory->getNeighbors()) {
+			if (neighbor->getOwner() == nullptr ||neighbor->getOwner()->getName() != getPlayer().getName() ) {
+				attackableSet.insert(neighbor);
+			}
+		}
+	}
+
+	for (Territory* t : attackableSet) {
+		attackableTerritories->push_back(t);
+	}
+
+	return *attackableTerritories;
 }
 
 vector<Territory*>& CheaterPlayer::toDefend() {
-	return getPlayer().toDefend();
+	return getPlayer().getTerritories();
 }
 
 AggressivePlayer::AggressivePlayer(){
@@ -612,6 +668,7 @@ AggressivePlayer::AggressivePlayer(){
 }
 
 void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
+	
 	std::vector<Territory*>* attackableTerritories = &toAttack();
 	std::vector<Territory*>* defendableTerritories = &toDefend();
 	
@@ -670,11 +727,11 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 
 	do{
 		bombableTerritory = &optimalPath(*bombableTerritory);
-
-		if(optimalPath(*bombableTerritory).getOwner()->getName() == "None" || optimalPath(*bombableTerritory).getOwner()->getName() == getPlayer().getName())
+		if(optimalPath(*bombableTerritory).getOwner() != nullptr || optimalPath(*bombableTerritory).getOwner()->getName() == getPlayer().getName())
 		enemyAdjacentTerritory = bombableTerritory;
+
 	}
-	while(bombableTerritory->getOwner()->getName() == "None" || bombableTerritory->getOwner()->getName() == getPlayer().getName());
+	while(bombableTerritory->getOwner() == nullptr || bombableTerritory->getOwner()->getName() == getPlayer().getName());
 
 	int counter = 0;
 	for(Card* card: hand){
@@ -772,7 +829,22 @@ void BenevolentPlayer::issueOrder(bool toDeploy, bool toAdvance){
 }
 
 std::vector<Territory*>& BenevolentPlayer::toAttack(){
-//Does nothing
+	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+	std::set<Territory*> attackableSet;
+
+	for(Territory* territory:getPlayer().getTerritories()){
+		for(Territory* neighbor: territory->getNeighbors()){
+			if(neighbor->getOwner() == nullptr ||neighbor->getOwner()->getName() != getPlayer().getName() ){
+				attackableSet.insert(neighbor);
+			}
+		}
+	}
+
+	for (Territory* territory : attackableSet) {
+		attackableTerritories->push_back(territory);
+	}
+
+	return *attackableTerritories;
 }
 
 std::vector<Territory*>& BenevolentPlayer::toDefend(){
@@ -801,8 +873,7 @@ Territory& AggressivePlayer::optimalPath(Territory& startTerritory) {
             }
 
             // Check if the neighbor is neutral or hostile
-            if (neighbor->getOwner()->getName() == "None" || 
-                neighbor->getOwner()->getName() != getPlayer().getName()) {
+            if (neighbor->getOwner() == nullptr ||neighbor->getOwner()->getName() != getPlayer().getName() ) {
                 return *neighbor; // Found the target territory
             }
 
@@ -841,4 +912,84 @@ Player& BenevolentPlayer::giveMeARandomPlayer(){
 		}
 
 	}
+}
+
+	void testPlayerStrategies(){
+	MapLoader loader("USA.map");
+    bool mapLoaded = loader.loadMap();
+
+    if (mapLoaded) {
+        cout << "Map Loaded Successfully. Now validating..." << endl;
+    } else {
+        cout << "Map could not be loaded successfully." << endl;
+    }
+
+    if (Map::validate()) {
+        cout << "Map is valid!" << endl;
+    }
+
+    Continent* c1 = Map::getContinents()[0];
+    Continent* c2 = Map::getContinents()[1];
+
+    vector<Territory*> srcTerritories; //will contain Baja California and Eastern Mexico
+    vector<Territory*> tarTerritories; // will contain Western Mexico and Washington
+
+    bool first = true;
+    int counter = 0;
+    const int NUM_OF_PLAYERS = 2;
+    const int MAX_TERRITORIES = 2;
+    for (Continent* c : Map::getContinents()) {
+        for (Territory* t : c->getTerritories()) {
+            if (counter % NUM_OF_PLAYERS == 0) {
+                srcTerritories.push_back(t);
+                counter++;
+            } else if (counter % NUM_OF_PLAYERS == 1 && first) {
+                first = false;
+                tarTerritories.push_back(t);
+                counter++;
+            }
+
+            if (counter == MAX_TERRITORIES * NUM_OF_PLAYERS) {
+                break;
+            }
+        }
+        if (counter == MAX_TERRITORIES * NUM_OF_PLAYERS) {
+            break;
+        }
+    }
+
+    OrdersList srcOrdersList;
+    OrdersList tarOrdersList;
+
+    LogObserver *logObserver1 = new LogObserver(&srcOrdersList);
+    LogObserver *logObserver2 = new LogObserver(&tarOrdersList);
+
+    Hand srcHand;
+    Hand tarHand;
+
+    int srcReinforcementPool = 10;
+    int tarReinforcementPool = 10;
+
+    PlayerStrategy* strat1 = new NeutralPlayer; 
+    PlayerStrategy* strat2 = new AggressivePlayer;
+
+    Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
+    Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool,strat2);
+
+	for(Territory* t:srcTerritories){
+        t->setOwner(sourcePlayer);
+    }
+
+    for(Territory* t:tarTerritories){
+        t->setOwner(targetPlayer);
+    }
+
+    strat1->setPlayer(*sourcePlayer);
+    strat2->setPlayer(*targetPlayer);
+    
+    GameEngine::getPlayers().push_back(sourcePlayer);
+    GameEngine::getPlayers().push_back(targetPlayer);
+    
+    Deck deck;
+    GameEngine::mainGameLoop();
 }

@@ -52,12 +52,12 @@ Player::~Player() {
 }
 
 std::vector<Territory*>& Player::toDefend() {
-	ps->toDefend();
+	 return ps->toDefend();
 }
 
 std::vector<Territory*>& Player::toAttack() {
 	
-	ps->toAttack();
+	return ps->toAttack();
 
 	// std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
 	// std::set <Territory*> attackableSet;
@@ -79,6 +79,7 @@ std::vector<Territory*>& Player::toAttack() {
 }
 
 void Player::issueOrder(bool toDeploy, bool toAdvance) {
+
 	getPS()->issueOrder(toDeploy, toAdvance);
 }
 
@@ -186,7 +187,7 @@ Territory& Player::territoryFinder(bool attack){
 		
 		//Display attackable territories
 		std::cout<<"Attackable Territories: ";
-    	for(Territory* territory: toAttack()){
+    	for(Territory* territory: ps->toAttack()){
 			if(territory->getOwner()->getName() != "None")
         		std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
     	}
@@ -207,7 +208,7 @@ Territory& Player::territoryFinder(bool attack){
 
             	//Don't have to loop through attackable territories if you advance in friendly territories.
             	
-                	for(Territory* territory: toAttack()){
+                	for(Territory* territory: ps->toAttack()){
                     	if(territoryName == territory->getName()){
                         	targetTerritory = territory;
 							notFoundTerritory = false;

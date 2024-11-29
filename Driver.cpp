@@ -18,6 +18,10 @@ void waitForEnter() {
 int main(int argc, char* argv[]) {
     GameEngine gameEngine;
 
+    // cout<< "testPlayerStrategies" << endl;
+    // testPlayerStrategies();
+    // return 0;
+
     cout << "testMainGameLoop() is invoked" << endl;
     gameEngine.testMainGameLoop();
     cout << "testMainGameLoop() is finished" << endl;

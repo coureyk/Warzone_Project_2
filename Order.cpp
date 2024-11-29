@@ -140,7 +140,15 @@ bool Deploy::validate() {
     
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
-    string targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
+    string targetTerritoryOwner;
+    
+
+    if(getTargetTerritory()->getOwner() == nullptr){
+        targetTerritoryOwner = "None";
+    }else{
+        targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
+    }
+    
     int currentArmyUnits = getTargetTerritory()->getArmies();
     int currentReinforcementPool = getSourcePlayer()->getReinforcementPool();
     string effect;
@@ -216,7 +224,12 @@ string Advance::toString() const {
 bool Advance::validate() {
     string sourcePlayer = getSourcePlayer()->getName();
     string sourceTerritoryOwner = getSourceTerritory()->getOwner()->getName();
-    string targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
+    string targetTerritoryOwner;
+    if(getTargetTerritory()->getOwner() == nullptr){
+        targetTerritoryOwner = "None";
+    }else{
+        targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
+    }
     string sourceTerritory = getSourceTerritory()->getName();
     string targetTerritory = getTargetTerritory()->getName();
     int sourceTerritoryArmyUnits = getSourceTerritory()->getArmies();
@@ -377,7 +390,12 @@ string Bomb::toString() const {
 bool Bomb::validate() {
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
-    string targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
+    string targetTerritoryOwner;
+    if(getTargetTerritory()->getOwner() == nullptr){
+        targetTerritoryOwner = "None";
+    }else{
+        targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
+    }
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
     string effect;
     
@@ -399,7 +417,7 @@ bool Bomb::validate() {
         }
         index++;
     }
-
+    
     if (!cardFound) {
         effect = "Invalid order. " + sourcePlayer + " does not have " + getOrderType() + " card in hand.";
         setEffect(effect);
@@ -436,7 +454,7 @@ bool Bomb::validate() {
     //if this point is reached, Bomb order is valid
 
     //need to check if targetTerritoryOwner is a NeutralPlayer
-    if (getTargetTerritory()->getOwner()->getPS()->getPSType() == "Neutral") {
+    if (getTargetTerritory()->getOwner() != nullptr && getTargetTerritory()->getOwner()->getPS()->getPSType() == "Neutral") {
         PlayerStrategy* newStrat = new AggressivePlayer;
         getTargetTerritory()->getOwner()->setPS(newStrat);
     }
@@ -497,7 +515,12 @@ string Blockade::toString() const {
 bool Blockade::validate() {
     string sourcePlayer = getSourcePlayer()->getName();
     string targetTerritory = getTargetTerritory()->getName();
-    string targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
+    string targetTerritoryOwner;
+    if(getTargetTerritory()->getOwner() == nullptr){
+        targetTerritoryOwner = "None";
+    }else{
+        targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
+    }
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
     string effect;
     
@@ -574,6 +597,20 @@ string Airlift::toString() const {
 
 bool Airlift::validate() {
     string effect;
+    string sourceTerritoryOwner;
+    string targetTerritoryOwner;
+
+    if(getSourceTerritory()->getOwner() == nullptr){
+        sourceTerritoryOwner = "None";
+    }else{
+        sourceTerritoryOwner = getSourceTerritory()->getOwner()->getName();
+    }
+
+     if(getTargetTerritory()->getOwner() == nullptr){
+        targetTerritoryOwner = "None";
+    }else{
+        targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
+    }
 
     if (getArmyUnits() < 0 || getArmyUnits() > getSourceTerritory()->getArmies()) {
         effect = "Invalid order. " + getSourcePlayer()->getName() + " does not have specified army units: " + std::to_string(getArmyUnits()) + ".\n";
@@ -583,12 +620,12 @@ bool Airlift::validate() {
     }
 
     //check if source or targetTerritory do not belong to sourcePlayer
-    if (getSourceTerritory()->getOwner()->getName().compare(getSourcePlayer()->getName()) != 0) {
+    if (sourceTerritoryOwner.compare(getSourcePlayer()->getName()) != 0) {
         effect = "Invalid Order. " + getSourcePlayer()->getName() + " cannot execute an airlift from foreign territory \"" + getSourceTerritory()->getName() + "\".\n";
         setEffect(effect);
         cout << "Invalid Order. " << getSourcePlayer()->getName() << " cannot execute an airlift from foreign territory: " << getSourceTerritory()->getName() << ".\n" << endl; //to be deleted
         return false;    
-    } else if (getTargetTerritory()->getOwner()->getName().compare(getSourcePlayer()->getName()) != 0 ) {
+    } else if (targetTerritoryOwner.compare(getSourcePlayer()->getName()) != 0 ) {
         effect = "Invalid Order. " + getSourcePlayer()->getName() + " cannot execute an airlift to foreign territory \"" + getTargetTerritory()->getName() + "\".\n";
         setEffect(effect);
         cout << "Invalid Order. " << getSourcePlayer()->getName() << " cannot execute an airlift to foreign territory: " << getTargetTerritory()->getName() << ".\n" << endl; //to be deleted
@@ -889,7 +926,3 @@ std::ostream& operator<<(std::ostream& os, const OrdersList& ordersList) {
     return os;
 }
 
-void testPlayerStrategies(){
-
-
-}

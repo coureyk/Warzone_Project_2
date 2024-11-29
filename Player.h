@@ -15,6 +15,7 @@ class CheaterPlayer;
 class HumanPlayer;
 class AggressivePlayer;
 class BenevolentPlayer;
+class Territory;
 
 #include <vector>
 #include "Map.h"

@@ -18,14 +18,26 @@ std::vector<Player*>* GameEngine::players = new std::vector<Player*>;
  */
 void GameEngine::mainGameLoop(){
     
+    bool onlyBots = true;
+    for(Player* player: *players){
+        if(player->getPS()->getPSType() == "HumanPlayer")
+            onlyBots = false;
+    }
+
    while(players->size()>1){
         for(Player* player: *players){    
             reinforcementPhase(*player);
         }
 
         for(Player* player: *players){
+            
             std::cout<<"Player: "<<player->getName()<<std::endl;
             issueOrderPhase(*player);
+            
+            if(onlyBots){
+            
+            Tools::waitForSeconds(1);
+            }
         }
 
         for(Player* player: *players){
@@ -39,6 +51,9 @@ void GameEngine::mainGameLoop(){
                 players->erase(players->begin() + counter);
             counter++;
         }
+
+   
+        
    }
 
     
@@ -106,10 +121,19 @@ void GameEngine::testMainGameLoop() {
 
     PlayerStrategy* strat1 = new HumanPlayer; 
     PlayerStrategy* strat2 = new HumanPlayer;
-
+    
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool,strat2);
+    
+    
+    for(Territory* t:srcTerritories){
+        t->setOwner(sourcePlayer);
+    }
 
+    for(Territory* t:tarTerritories){
+        t->setOwner(targetPlayer);
+    }
+    
     strat1->setPlayer(*sourcePlayer);
     strat2->setPlayer(*targetPlayer);
     
@@ -165,14 +189,20 @@ void GameEngine::reinforcementPhase(Player& player){
 
 void GameEngine::issueOrderPhase(Player& player){
     
-
+    
     player.issueOrder(true,false);
-
     //For multiple deployments to different territories
     while(player.getOrdersList().getNode(0)!= NULL){
+        
+        Order* currentOrder = player.getOrdersList().getNode(0)->getElement();
+        
         player.getOrdersList().getNode(0)->getElement()->execute(); //possible removal
         player.getOrdersList().remove(player.getOrdersList().getNode(0));
+        delete currentOrder;
+        currentOrder = NULL;
+        
     }
+    
     player.issueOrder(false,true);
     player.issueOrder(false,false);
 }

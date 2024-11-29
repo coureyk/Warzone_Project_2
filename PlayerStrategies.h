@@ -1,12 +1,23 @@
 #pragma once
 
 //Forward declarations due to circular dependency with Player.h
-class Player;
+//class Player;
+class Order;
+class Deploy;
+class Advance;
+class Bomb;
+class Blockade;
+class Airlift;
+class Negotiate;
+class OrdersList;
+class Territory;
 
 #include "Player.h"
 #include <queue>
 #include <unordered_set>
 #include <algorithm>
+using std::vector;
+
 
 class PlayerStrategy {
     private:
@@ -14,18 +25,23 @@ class PlayerStrategy {
         string psType;
     
     public:
+        
         PlayerStrategy();
         Player& getPlayer() const;
         void setPlayer(Player& other);
         string getPSType() const;
-        void setPSType(string& psType);
+        void setPSType(string psType);
 
         virtual void openOrdersList();
 
         virtual void issueOrder(bool toDeploy, bool toAttack) = 0;
         virtual vector<Territory*>& toAttack() = 0;
         virtual vector<Territory*>& toDefend() = 0;
+        
+        
 };
+
+void testPlayerStrategies();
 
 class NeutralPlayer : public PlayerStrategy {    
     public:
@@ -83,3 +99,4 @@ class BenevolentPlayer : public PlayerStrategy {
         vector<Territory*>& toDefend();
         Player& giveMeARandomPlayer();
 };
+
