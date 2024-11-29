@@ -185,9 +185,11 @@ void GameEngine::executeOrdersPhase(Player& player){
     
 
     for(int i = 0;i<player.getOrdersList().getSize();i++){
+        Order* currentOrder = player.getOrdersList().getNode(i)->getElement();
         player.getOrdersList().getNode(i)->getElement()->execute();
-        
         player.getOrdersList().remove(player.getOrdersList().getNode(i));
+        delete currentOrder;
+        currentOrder = NULL;
     }
     
 }

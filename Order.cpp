@@ -255,8 +255,8 @@ bool Advance::validate() {
 
     //Continue if targetIsNeighbor
     //Check if territory owners have a truce
-    for (string negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
-        if (negotiatedPlayer.compare(targetTerritoryOwner) == 0) {
+    for (Player* negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
+        if (negotiatedPlayer->getName().compare(targetTerritoryOwner) == 0) {
             effect = "Invalid order. Negotiations between " + sourcePlayer + " and " + targetTerritoryOwner + " have prevented the advancement from " + sourceTerritory + " to " + targetTerritory + ".\n";
             setEffect(effect);
             cout << "Invalid order. " << "Negotiations between " << sourcePlayer << " and " << targetTerritoryOwner << " have prevented the advancement from " << sourceTerritory << " to " << targetTerritory << ".\n" << endl; //to be deleted
@@ -424,8 +424,8 @@ bool Bomb::validate() {
     }
 
     //check if territory owners have a truce
-    for (string negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
-        if (negotiatedPlayer.compare(targetTerritoryOwner) == 0) {
+    for (Player* negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
+        if (negotiatedPlayer->getName().compare(targetTerritoryOwner) == 0) {
             effect = "Invalid order. Negotiations between " + sourcePlayer + " and " + targetTerritoryOwner + " have prevented the bombing of " + targetTerritory + ".\n";
             setEffect(effect);
             cout << "Invalid order. " << "Negotiations between " << sourcePlayer << " and " << targetTerritoryOwner << " have prevented the bombing of " << targetTerritoryOwner << ".\n" << endl;
@@ -650,19 +650,19 @@ string Negotiate::toString() const {
 }
 
 bool Negotiate::validate() {
-    string sourcePlayer = getSourcePlayer()->getName();
-    string targetPlayer = getTargetPlayer()->getName();
+    Player* sourcePlayer = getSourcePlayer();
+    Player* targetPlayer = getTargetPlayer();
     string effect;
 
     //check if sourcePlayer is the same as targetPlayer
-    if (sourcePlayer.compare(targetPlayer) != 0) {
-        getSourcePlayer()->addNegotiatedPlayers(targetPlayer);
-        getTargetPlayer()->addNegotiatedPlayers(sourcePlayer);
-        effect = "Valid Order. " + sourcePlayer + " successfully negotiated with " + targetPlayer;
+    if (sourcePlayer->getName().compare(targetPlayer->getName()) != 0) {
+        getSourcePlayer()->addNegotiatedPlayers(*targetPlayer);
+        getTargetPlayer()->addNegotiatedPlayers(*sourcePlayer);
+        effect = "Valid Order. " + sourcePlayer->getName() + " successfully negotiated with " + targetPlayer->getName();
         setEffect(effect);
         return true;
     }
-    effect = "Invalid Order. " + sourcePlayer + " cannot negotiate with self or unknown player.\n";
+    effect = "Invalid Order. " + sourcePlayer->getName() + " cannot negotiate with self or unknown player.\n";
     setEffect(effect);
     cout << "Invalid Order. " << sourcePlayer << " cannot negotiate with self.\n" << endl; //to be deleted
     return false;

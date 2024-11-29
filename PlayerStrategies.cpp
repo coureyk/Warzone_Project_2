@@ -336,7 +336,7 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 	break;
 	case 4:
 	{
-		Player* player = nullptr;
+		Player* negotiatedPlayer = nullptr;
 		std::cout<<"Players"<<std::endl;
 		for(Player* player: GameEngine::getPlayers()){
 			if(player == &getPlayer()){
@@ -358,7 +358,7 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 
 			for(Player* player: GameEngine::getPlayers()){
 				if(player->getName() == playerSelection){
-					player = new Player(*player);
+					negotiatedPlayer = player;
 					playerNotFound = false;
 				}
 			}
@@ -374,7 +374,7 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 			}	
 		}
 
-		Negotiate* negotiate = new Negotiate(&getPlayer(), player);
+		Negotiate* negotiate = new Negotiate(&getPlayer(), negotiatedPlayer);
 		getPlayer().getOrdersList().addOrder(negotiate);
 		std::cout << "Negotiate added"<<std::endl;
 	}
@@ -590,7 +590,7 @@ void CheaterPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 		for (Territory* t : toDefend()) {
 			for (Territory* neighbor : t->getNeighbors()) {
 				if (neighbor->getOwner()->getName() != getPlayer().getName()) {
-					Order* cheat = new Cheat(&getPlayer(), neighbor);
+					Cheat* cheat = new Cheat(&getPlayer(), neighbor);
 					getPlayer().getOrdersList().addOrder(cheat);
 				}
 			}
@@ -624,7 +624,7 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 				strongestTerritory = territory;
 		}
 
-		Order* deploy = new Deploy(&getPlayer(),getPlayer().getReinforcementPool(),strongestTerritory); //not sure if this might fuck up
+		Deploy* deploy = new Deploy(&getPlayer(),getPlayer().getReinforcementPool(),strongestTerritory); //not sure if this might fuck up
 		getPlayer().getOrdersList().addOrder(deploy);
 		return;
 	}
@@ -656,8 +656,7 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 				strongestTerritory = territory;
 		}
 
-
-		Order* advance = new Advance(&getPlayer(),strongestTerritory->getArmies(),strongestTerritory,&optimalPath(*strongestTerritory));
+		Advance* advance = new Advance(&getPlayer(),strongestTerritory->getArmies(),strongestTerritory,&optimalPath(*strongestTerritory));
 		strongestTerritory = &optimalPath(*strongestTerritory);
 		getPlayer().getOrdersList().addOrder(advance);
 		return;
@@ -681,10 +680,12 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 	for(Card* card: hand){
 		if(card->getType() == "Bomb"){
 			getPlayer().getHand()->playCard(counter);
-			Order* bomb = new Bomb(&getPlayer(),bombableTerritory);
+			Bomb* bomb = new Bomb(&getPlayer(),bombableTerritory);
+			getPlayer().getOrdersList().addOrder(bomb);
 		}else if(card->getType() == "Airlift"){
 			getPlayer().getHand()->playCard(counter);
-			Order* airlift = new Airlift(&getPlayer(),strongestTerritory->getArmies(),strongestTerritory,enemyAdjacentTerritory);
+			Airlift* airlift = new Airlift(&getPlayer(),strongestTerritory->getArmies(),strongestTerritory,enemyAdjacentTerritory);
+			getPlayer().getOrdersList().addOrder(airlift);
 		}
 		counter++;
 	}
@@ -711,14 +712,6 @@ std::vector<Territory*>& AggressivePlayer::toAttack(){
 }
 
 std::vector<Territory*>& AggressivePlayer::toDefend(){
-	//std::vector<Territory*>* prioritizedTerritories = new std::vector<Territory*>;
-
-	// for(Territory* territory: getPlayer().getTerritories()){
-	// 	prioritizedTerritories->push_back(territory);
-	// }
-
-	// std::sort(prioritizedTerritories->begin(),prioritizedTerritories->end(),std::greater<int>());
-	// return *prioritizedTerritories;
 
 	return getPlayer().getTerritories();
 }
@@ -728,6 +721,53 @@ BenevolentPlayer::BenevolentPlayer(){
 }
 
 void BenevolentPlayer::issueOrder(bool toDeploy, bool toAdvance){
+
+	if(toDeploy){
+
+		Territory* weakestTerritory = toDefend()[0];
+
+		for(Territory* territory: toDefend()){
+			if(territory->getArmies() < weakestTerritory->getArmies())
+				weakestTerritory = territory;
+		}
+
+		Deploy* deploy = new Deploy(&getPlayer(),getPlayer().getReinforcementPool(),weakestTerritory);
+		getPlayer().getOrdersList().addOrder(deploy);
+		strongestTerritory = weakestTerritory;
+		return;	
+	}
+
+	if(toAdvance){
+
+		int counter = 1;
+		std::vector<Territory*> neighbors;
+
+		for(Territory* neighbor: strongestTerritory->getNeighbors()){
+			if(neighbor->getOwner()->getName() == getPlayer().getName()){
+			counter++;
+			neighbors.push_back(neighbor);
+			}
+		}
+
+		for(Territory* neighbor:neighbors){
+			Advance* advance = new Advance(&getPlayer(),strongestTerritory->getArmies()/counter,strongestTerritory,neighbor);
+			getPlayer().getOrdersList().addOrder(advance);
+		}
+
+		return;
+	}
+
+	std::vector<Card*> cards = getPlayer().getHand()->getCards();
+
+	int counter = 0;
+	for(Card* card: cards){
+		if(card->getType() == "Negotiate"){
+			getPlayer().getHand()->playCard(counter);
+			Negotiate* negotiate = new Negotiate(&getPlayer(),&giveMeARandomPlayer());
+			getPlayer().getOrdersList().addOrder(negotiate);
+		}
+		counter++;
+	}
 
 }
 
@@ -774,4 +814,31 @@ Territory& AggressivePlayer::optimalPath(Territory& startTerritory) {
 
     // If no target territory is found, return the start territory (or handle differently)
     return startTerritory; // No neutral or hostile territories found
+}
+
+Player& BenevolentPlayer::giveMeARandomPlayer(){
+	
+	std::vector<Player*> negotiatedPlayers = getPlayer().getNegotiatedPlayers();
+
+	while(true){
+
+		int randomPlayerIndex = std::rand()%GameEngine::getPlayers().size();
+		Player* negotiatedPlayer = GameEngine::getPlayers()[randomPlayerIndex];
+		
+		bool alreadyPresent = false;
+
+		for(Player* player: negotiatedPlayers){
+			if(player->getName() == negotiatedPlayer->getName()){
+				alreadyPresent = true;
+				break;
+			}
+		}
+		
+		if(alreadyPresent){
+
+		}else{
+			return *negotiatedPlayer;
+		}
+
+	}
 }

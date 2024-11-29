@@ -38,7 +38,7 @@ protected:
 	
 	int reinforcementPool;
 
-	std::vector<std::string> negotiatedPlayers;
+	std::vector<Player*> negotiatedPlayers;
 
 	PlayerStrategy* ps;
 	
@@ -68,7 +68,7 @@ public:
 	//FOR NOW
 	std::string getName() const;
 
-	std::vector<std::string> getNegotiatedPlayers() const;
+	std::vector<Player*> getNegotiatedPlayers() const;
 
 	int getReinforcementPool();
 
@@ -76,7 +76,7 @@ public:
 
 	void setReinforcementPool(int reinforcementPool);
 
-	void addNegotiatedPlayers(std::string);
+	void addNegotiatedPlayers(Player& player);
 
 	void toString();
 

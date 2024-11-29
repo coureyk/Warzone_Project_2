@@ -105,7 +105,7 @@ std::string Player::getName() const {
 	return name;
 }
 
-std::vector<std::string> Player::getNegotiatedPlayers() const {
+std::vector<Player*> Player::getNegotiatedPlayers() const {
 	return negotiatedPlayers;
 }
 
@@ -125,8 +125,8 @@ void Player::setReinforcementPool(int reinforcementPool) {
 	this->reinforcementPool = reinforcementPool;
 }
 
-void Player::addNegotiatedPlayers(std::string negotiatedPlayer) {
-	negotiatedPlayers.push_back(negotiatedPlayer);
+void Player::addNegotiatedPlayers(Player& negotiatedPlayer) {
+	negotiatedPlayers.push_back(&negotiatedPlayer);
 }
 
 std::vector<Territory*>& Player::getTerritories(){
