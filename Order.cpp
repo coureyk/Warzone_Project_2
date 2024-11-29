@@ -888,3 +888,8 @@ std::ostream& operator<<(std::ostream& os, const OrdersList& ordersList) {
     ordersList.getContents();
     return os;
 }
+
+void testPlayerStrategies(){
+
+
+}

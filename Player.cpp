@@ -52,28 +52,30 @@ Player::~Player() {
 }
 
 std::vector<Territory*>& Player::toDefend() {
-	return *territories;
+	ps->toDefend();
 }
 
 std::vector<Territory*>& Player::toAttack() {
 	
-	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
-	std::set <Territory*> attackableSet;
+	ps->toAttack();
+
+	// std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+	// std::set <Territory*> attackableSet;
 
 
-	for (Territory* territory : *this->territories) {
-		for (Territory* neighbor : territory->getNeighbors()) {
-			if (neighbor->getOwner()->getName() != getName()) {
-				attackableSet.insert(neighbor);
-			}
-		}
-	}
+	// for (Territory* territory : *this->territories) {
+	// 	for (Territory* neighbor : territory->getNeighbors()) {
+	// 		if (neighbor->getOwner()->getName() != getName()) {
+	// 			attackableSet.insert(neighbor);
+	// 		}
+	// 	}
+	// }
 
-	for (Territory* t : attackableSet) {
-		attackableTerritories->push_back(t);
-	}
+	// for (Territory* t : attackableSet) {
+	// 	attackableTerritories->push_back(t);
+	// }
 
-	return *attackableTerritories;
+	// return *attackableTerritories;
 }
 
 void Player::issueOrder(bool toDeploy, bool toAdvance) {
