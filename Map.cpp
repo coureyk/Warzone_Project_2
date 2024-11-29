@@ -85,10 +85,8 @@ void Territory::setVisitedStatus(const bool& visitedStatus) {
 
 void Territory::setOwner(Player* const newOwner) {
     
-    if(owner == nullptr){
-        owner = newOwner;
-    }else{
-        //If newOwner is different from the current owner, modify both players' "territories" vectors
+    if (owner != NULL) {
+        //If newOwner is different from the current owner, modify the previous owners' "territories" vectors
         if (this->getOwner()->getName() != newOwner->getName()) {
             vector<Territory*>* territories = &(getOwner()->getTerritories()); 
             for (int i = 0; i < territories->size(); i++) {
@@ -98,11 +96,10 @@ void Territory::setOwner(Player* const newOwner) {
                 break;
             }
         }
-       
-        owner = newOwner;
-        owner->getTerritories().push_back(this); // add territory to newOwner's territories vector
     }
-
+       
+    owner = newOwner;
+    owner->getTerritories().push_back(this); // add territory to newOwner's territories vector
 }
 
 //SERVICE METHODS

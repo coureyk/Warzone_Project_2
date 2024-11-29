@@ -83,30 +83,6 @@ void GameEngine::testMainGameLoop() {
     vector<Territory*> srcTerritories; //will contain Baja California and Eastern Mexico
     vector<Territory*> tarTerritories; // will contain Western Mexico and Washington
 
-    bool first = true;
-    int counter = 0;
-    const int NUM_OF_PLAYERS = 2;
-    const int MAX_TERRITORIES = 2;
-    for (Continent* c : Map::getContinents()) {
-        for (Territory* t : c->getTerritories()) {
-            if (counter % NUM_OF_PLAYERS == 0) {
-                srcTerritories.push_back(t);
-                counter++;
-            } else if (counter % NUM_OF_PLAYERS == 1 && first) {
-                first = false;
-                tarTerritories.push_back(t);
-                counter++;
-            }
-
-            if (counter == MAX_TERRITORIES * NUM_OF_PLAYERS) {
-                break;
-            }
-        }
-        if (counter == MAX_TERRITORIES * NUM_OF_PLAYERS) {
-            break;
-        }
-    }
-
     OrdersList srcOrdersList;
     OrdersList tarOrdersList;
 
@@ -124,13 +100,38 @@ void GameEngine::testMainGameLoop() {
     
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool,strat2);
+
+    bool first = true;
+    int counter = 0;
+    const int NUM_OF_PLAYERS = 2;
+    const int MAX_TERRITORIES = 2;
+    vector<Territory*> srcTerritoriesTemp;
+    vector<Territory*> tarTerritoriesTemp;
+    for (Continent* c : Map::getContinents()) {
+        for (Territory* t : c->getTerritories()) {
+            if (counter % NUM_OF_PLAYERS == 0) {
+                srcTerritoriesTemp.push_back(t);
+                counter++;
+            } else if (counter % NUM_OF_PLAYERS == 1 && first) {
+                first = false;
+                tarTerritoriesTemp.push_back(t);
+                counter++;
+            }
+
+            if (counter == MAX_TERRITORIES * NUM_OF_PLAYERS) {
+                break;
+            }
+        }
+        if (counter == MAX_TERRITORIES * NUM_OF_PLAYERS) {
+            break;
+        }
+    }
     
-    
-    for(Territory* t:srcTerritories){
+    for(Territory* t:srcTerritoriesTemp){
         t->setOwner(sourcePlayer);
     }
 
-    for(Territory* t:tarTerritories){
+    for(Territory* t:tarTerritoriesTemp){
         t->setOwner(targetPlayer);
     }
     
