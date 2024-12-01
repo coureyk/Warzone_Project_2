@@ -108,7 +108,7 @@ Command* CommandProcessor::getCommand() {
 }
 
 bool CommandProcessor::validate(Command* command) {
-     std::string cmdText = command->getCommandText();
+    std::string cmdText = command->getCommandText();
     std::istringstream stream(cmdText);
     std::string commandType, parameter;
     stream >> commandType;
@@ -154,7 +154,7 @@ bool CommandProcessor::validate(Command* command) {
         }
 
 
-     //tournament -M map1,map2 -P Aggressive,Benevolent -G 1 -D 30
+     //tournament -M USA.map,USA.map -P Aggressive,Benevolent -G 1 -D 30
        
     }
     else if (commandType == "validatemap" && gameEngine->state == GameEngine::MAP_LOADED) {

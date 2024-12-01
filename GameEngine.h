@@ -11,7 +11,6 @@
 #include "Cards.h"
 
 
-
 //THEO, I ADDED THE CONSTRUCTOR YOU WANTED FOR PLAYER. YOU CAN NOW INITIALIZE THE PLAYERS BY NAME
 
 class CommandProcessor;
@@ -21,6 +20,11 @@ class GameEngine: public Subject, public ILoggable{
 private:
     static std::vector<Player*>* players;
     friend class CommandProcessor;
+    std::vector<std::string> maps;  // List of map file names
+    std::vector<std::string> strategies;  // List of player strategies
+    int numberOfGames;  // Number of games per map
+    int maxTurns;  // Max turns per game
+    std::map<std::string, std::vector<std::string>> results;  // Results for each map
 
 public:
     std::string stringToLog();
@@ -47,6 +51,11 @@ public:
     void issueOrderPhase(Player& player);
 
     void executeOrdersPhase(Player& player);
+
+    void start();
+    string playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber);
+    void displayResults() const;
+
 
     /*The state represents a certain phase of the game and dictates what are the valid actions
     or user commands that take place in this phase. Some actions or commands may eventually
@@ -80,22 +89,6 @@ public:
 
     static std::vector<Player*>& getPlayers();
     
-};
-class Tournament: public Subject, public ILoggable {
-private:
-    std::vector<std::string> maps;  // List of map file names
-    std::vector<std::string> strategies;  // List of player strategies
-    int numberOfGames;  // Number of games per map
-    int maxTurns;  // Max turns per game
-    std::map<std::string, std::vector<std::string>> results;  // Results for each map
-
-public:
-    Tournament(const std::vector<std::string>& maps, const std::vector<std::string>& strategies, int numberOfGames, int maxTurns);
-
-    void start();
-    void playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber);
-    void displayResults() const;
-    std::string stringToLog();
 };
 
 /*Free function named testGameStates() that allows the user to type command strings on the console, whose result is

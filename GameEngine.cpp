@@ -282,22 +282,25 @@ void GameEngine::setState(const std::string command,const std::string arg) {
     if (command == "start" || command == "play") GameEngine::state = states::START;
     else if(command == "tournament"){
          std::istringstream stream(arg);
-         std::string flag, maps, strategies;
-        int numberOfGames, maxTurns;
+         std::string flag, mapList, strategiesList;
+        //int numberOfGames, maxTurns;
 
         while (stream >> flag) {
-            if (flag == "-M") stream >> maps;
-            else if (flag == "-P") stream >> strategies;
+            if (flag == "-M") stream >> mapList;
+            else if (flag == "-P") stream >> strategiesList;
             else if (flag == "-G") stream >> numberOfGames;
             else if (flag == "-D") stream >> maxTurns;
         }
 
-        std::vector<std::string> mapList = split(maps, ',');
-        std::vector<std::string> strategyList = split(strategies, ',');
+       // std::vector<std::string> mapList = split(maps, ',');
+        maps = split(mapList, ',');
+        strategies = split(strategiesList, ',');
+        start();
+        //std::vector<std::string> strategyList = split(strategies, ',');
         // Validate the ranges
-       
-        Tournament tournament(mapList, strategyList, numberOfGames, maxTurns);
-        tournament.start();
+
+       // Tournament tournament(mapList, strategyList, numberOfGames, maxTurns);
+       // tournament.start();
         
         
          std::cout<<arg<<std::endl;
@@ -328,7 +331,16 @@ void GameEngine::setState(const std::string command,const std::string arg) {
 }
 //returns the state as a string
 std::string GameEngine::stringToLog() {
-    return "State: "+intStateToStringState(GameEngine::state);
+    std::string log = "State: "+intStateToStringState(GameEngine::state)+"\n";
+     log += "Tournament Results:\n";
+    for (const auto& [map, result] : results) {
+        log += "Map: " + map + "\n";
+        for (const auto& gameResult : result) {
+            log += gameResult + " ";
+        }
+        log += "\n";
+    }
+    return log;
 }
 /**
  * @brief The state is stored internally as an int, this gives the string equivalent
@@ -532,29 +544,94 @@ vector<Player*>& GameEngine::getPlayers(){
     return *players;
 }
 
-Tournament::Tournament(const std::vector<std::string>& maps, const std::vector<std::string>& strategies, int numberOfGames, int maxTurns)
-    : maps(maps), strategies(strategies), numberOfGames(numberOfGames), maxTurns(maxTurns) {}
 
-void Tournament::start() {
+void GameEngine::start() {
+    string winner="";
     for (const auto& map : maps) {
         std::vector<std::string> mapResults;
         for (int i = 1; i <= numberOfGames; ++i) {
-            playGame(map, strategies, i);
-            mapResults.push_back("Winner or Draw");  // Replace with actual result
+            winner = playGame(map, strategies, i);
+            mapResults.push_back(winner);  // Replace with actual result
         }
         results[map] = mapResults;
     }
     displayResults();
 }
-
-void Tournament::playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber) {
+std::vector<LogObserver*> observers;
+std::vector<OrdersList*> orderLists;
+string GameEngine::playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber) {
     std::cout << "Playing game " << gameNumber << " on map: " << map << std::endl;
 
-    // Simulate the game logic here
-    // Example: Load the map, assign players with strategies, and simulate turns up to maxTurns
+    MapLoader loader(map);
+    bool mapLoaded = loader.loadMap();
+    if (mapLoaded) {
+        cout << "Map Loaded Successfully. Now validating..." << endl;
+    } else {
+        cout << "Map could not be loaded successfully." << endl;
+    }
+
+    if (Map::validate()) {
+        cout << "Map is valid!" << endl;
+    }
+    vector<Territory*> srcTerritories; //will contain Baja California and Eastern Mexico
+
+    int counter = 0;
+    int NUM_OF_PLAYERS = strategies.size();
+    
+    for (Continent* c : Map::getContinents()) {
+            for (Territory* t : c->getTerritories()) {
+                counter++;
+            }
+        }
+    int MAX_TERRITORIES = counter/NUM_OF_PLAYERS;
+    int initial=0;
+    Deck deck;
+   for (string player : strategies) {
+    srcTerritories.clear();
+    cout << player<<endl;
+    counter = 0;
+   for (Continent* c : Map::getContinents()) {
+        for (Territory* t : c->getTerritories()) {
+                if (counter >= initial && counter < initial+MAX_TERRITORIES){
+                srcTerritories.push_back(t);
+                }
+                counter++;
+            }
+    }
+    initial += MAX_TERRITORIES;
+   // OrdersList srcOrdersList;
+         
+    Hand srcHand;
+    int srcReinforcementPool = 50;
+        OrdersList* srcOrdersList = new OrdersList();
+
+        // Attach a LogObserver to the dynamically allocated OrdersList
+        LogObserver* logObserver = new LogObserver(srcOrdersList);
+        cout<<logObserver<<endl;
+        observers.push_back(logObserver); // Store the observer to manage lifecycle
+
+    Player* sourcePlayer =  new Player(player, srcTerritories, *srcOrdersList, srcHand, srcReinforcementPool);
+ 
+    sourcePlayer->getHand()->addCard(Deck::draw());
+    sourcePlayer->getHand()->addCard(Deck::draw());
+
+
+    players->push_back(sourcePlayer);
+    
+   }
+   for (LogObserver* observer : observers) {
+        delete observer;
+    }
+    observers.clear();
+    for (OrdersList* ordersList : orderLists) {
+        delete ordersList;
+    }
+    orderLists.clear();
+    mainGameLoop();
+return "winner";
 }
 
-void Tournament::displayResults() const {
+void GameEngine::displayResults() const {
     std::cout << "\nTournament Results:\n";
     for (const auto& [map, result] : results) {
         std::cout << "Map: " << map << "\n";
@@ -565,14 +642,7 @@ void Tournament::displayResults() const {
     }
 }
 
-std::string Tournament::stringToLog() {
-    std::string log = "Tournament Results:\n";
-    for (const auto& [map, result] : results) {
-        log += "Map: " + map + "\n";
-        for (const auto& gameResult : result) {
-            log += gameResult + " ";
-        }
-        log += "\n";
-    }
-    return log;
-}
+
+
+
+
