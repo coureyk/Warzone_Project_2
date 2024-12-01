@@ -9,6 +9,7 @@
 #include <sstream>
 #include "LoggingObserver.h" 
 
+std::vector<std::string> split(const std::string& str, char delimiter);
 //forward declaration of GameEngine
 class GameEngine;
 //Command class is for storing command as an object inherite Observer pattern

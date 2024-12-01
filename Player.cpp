@@ -244,7 +244,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 
 	
 
-	while(!hand->getHand().empty()){
+	while(!hand->getCards().empty()){
 
 	hand->showHand();
 
@@ -266,7 +266,7 @@ void Player::issueOrder(bool toDeploy, bool toAdvance) {
 
 	int counter = 0;
 
-	for(Card* card: hand->getHand()){
+	for(Card* card: hand->getCards()){
 		if(input == 1){
 			if("Bomb" == card->getType()){
 			hand->playCard(counter);
@@ -472,6 +472,14 @@ std::vector<Territory*>& Player::getTerritories(){
 
 void Player::addTerritories(Territory* t){
 	territories->push_back(t);
+}
+
+bool Player::getHasEarnedCard() const {
+	return hasEarnedCard;
+}
+
+void Player::setHasEarnedCard(bool hasEarnedCard) {
+	this->hasEarnedCard = hasEarnedCard;
 }
 
 std::ostream& operator<<(std::ostream& os, const Player& player)

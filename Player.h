@@ -16,12 +16,13 @@ class OrdersList;
 #include "Cards.h"
 #include "CommandProcessing.h"
 #include "GameEngine.h"
+#include "PlayerStrategies.h"
 
 
 
 class Player {
 
-protected:
+private:
 	std::string name;
 
 	OrdersList* ordersList;
@@ -31,6 +32,10 @@ protected:
 	int reinforcementPool;
 
 	std::vector<std::string> negotiatedPlayers;
+
+	bool hasEarnedCard;
+
+	PlayerStrategy* ps;
 
 public:
 	std::vector<Territory*>* territories;
@@ -79,6 +84,9 @@ public:
 	OrdersList& getOrdersList();
 
 	Territory& territoryFinder(bool attack);
+
+	bool getHasEarnedCard() const;
+	void setHasEarnedCard(bool hasEarnedCard);
 };
 
 void testPlayers();

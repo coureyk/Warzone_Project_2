@@ -7,6 +7,12 @@
 #include <cstdlib>
 #include <ctime>
 
+using std::cout;
+using std::endl;
+using std::ostream;
+using std::string;
+using std::vector;
+
 //Define all card type
 enum CardType {
     BOMB,
@@ -22,12 +28,12 @@ private:
     bool* isAvailable;  // Pointer to availability status (true: available, false: taken)
 
 public:
-    Card(CardType type);  // Use CardType instead of string
+    Card(const CardType& type);  // Use CardType instead of string
     Card(const Card& other);  // Copy constructor
     ~Card();  // Destructor
     Card& operator=(const Card& other);  // Assignment operator
 
-    std::string getType() const;  // Convert enum type to string for display
+    string getType() const;  // Convert enum type to string for display
     void play();  // Play the card and mark as available
     void markTaken();  // Mark card as taken
     void markAvailable();  // Mark card as available
@@ -36,7 +42,7 @@ public:
 
 class Deck {
 private:
-    static std::vector<Card*>* cards;  // Pointer to a collection of cards
+    static vector<Card*>* cards;  // Pointer to a collection of cards
 
 public:
     Deck();
@@ -51,7 +57,7 @@ public:
 
 class Hand {
 private:
-    std::vector<Card*>* handCards;  // Pointers to cards in deck
+    vector<Card*>* handCards;  // Pointers to cards in deck
 
 public:
     Hand();
@@ -59,14 +65,12 @@ public:
     ~Hand();  // Destructor
     Hand& operator=(const Hand& other);  // Assignment operator
 
-    void addCard(Card* card);  // Add a card pointer to the hand
+    void addCard(Card* const card);  // Add a card pointer to the hand
     void playCard(int index);  // Call play on a specific card from the hand
     int getCardCount() const;  // Get the number of cards in hand
     void showHand() const;  // Display the cards in the hand
-    friend std::ostream& operator<<(std::ostream& os, const Hand& hand);
-    std::vector<Card*>& getHand() const;
-
-    Card* getCard(const int i) const;
+    vector<Card*>& getCards() const;
+    friend ostream& operator<<(ostream& os, const Hand& hand);
 
 };
 #endif

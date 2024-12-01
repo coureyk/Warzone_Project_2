@@ -275,11 +275,37 @@ void GameEngine::executeOrdersPhase(Player& player){
 
 }
 
+
 /*sets the state to the corresponding command*/
 void GameEngine::setState(const std::string command,const std::string arg) {
     //addplayer <playername>
 
     if (command == "start" || command == "play") GameEngine::state = states::START;
+    else if(command == "tournament"){
+         std::istringstream stream(arg);
+         std::string flag, mapList, strategiesList;
+        //int numberOfGames, maxTurns;
+
+        while (stream >> flag) {
+            if (flag == "-M") stream >> mapList;
+            else if (flag == "-P") stream >> strategiesList;
+            else if (flag == "-G") stream >> numberOfGames;
+            else if (flag == "-D") stream >> maxTurns;
+        }
+
+       // std::vector<std::string> mapList = split(maps, ',');
+        maps = split(mapList, ',');
+        strategies = split(strategiesList, ',');
+        start();
+        //std::vector<std::string> strategyList = split(strategies, ',');
+        // Validate the ranges
+
+       // Tournament tournament(mapList, strategyList, numberOfGames, maxTurns);
+       // tournament.start();
+        
+        
+         std::cout<<arg<<std::endl;
+    }
     else if (command == "loadmap") GameEngine::state = states::MAP_LOADED;
     else if (command == "validatemap") GameEngine::state = states::MAP_VALIDATED;
     else if (command == "addplayer") {
@@ -306,7 +332,16 @@ void GameEngine::setState(const std::string command,const std::string arg) {
 }
 //returns the state as a string
 std::string GameEngine::stringToLog() {
-    return "State: "+intStateToStringState(GameEngine::state);
+    std::string log = "State: "+intStateToStringState(GameEngine::state)+"\n";
+     log += "Tournament Results:\n";
+    for (const auto& [map, result] : results) {
+        log += "Map: " + map + "\n";
+        for (const auto& gameResult : result) {
+            log += gameResult + " ";
+        }
+        log += "\n";
+    }
+    return log;
 }
 /**
  * @brief The state is stored internally as an int, this gives the string equivalent
@@ -360,18 +395,27 @@ void GameEngine::startupPhase() {
         displayNextPath(GameEngine::state);
 
         while (true) {
+            std::cout<<GameEngine::state<<std::endl;
             Command* command = processor->getCommand();
-
-            std::string token = "";
+            if (command->getValid()){
+                std::string token = "";
             std::istringstream iss(command->getCommandText());
                 std::getline(iss, token, ' ');
             arg1 = token;
+            if (arg1 == "tournament" ){
+                std::getline(iss, token);
+                arg2 = token; 
+            }else{
                 std::getline(iss, token, ' ');
-            arg2 = token; 
+                arg2 = token; 
+            }
+                
 
             if (validCommandInput(arg1,arg2)) {
                 setState(arg1,arg2);
             }
+            }
+            
         }
         
         /*
@@ -441,7 +485,7 @@ void GameEngine::gamestart() {
 //will take in the user's input and check if it follows a valid command
 bool GameEngine::validCommandInput(const std::string command,const std::string argument) {
     //make sure valid command
-    if (!(command == "start" || command == "loadmap" || command == "play" ||
+    if (!(command == "start" ||command == "tournament"|| command == "loadmap" || command == "play" ||
         command == "validatemap" || command == "addplayer" || command == "gamestart" ||
         command == "endexecorders" || command == "issueorder" || command == "endissueorders" ||
         command == "win" || command == "execorder" || command == "end"))
@@ -455,10 +499,13 @@ bool GameEngine::validCommandInput(const std::string command,const std::string a
     switch (state) { //check if correct state for what was inputed
       case states::INITIALISED:   if (command == "start")
           return true; break;
+
       case states::START:
                        if (command == "loadmap") {
                   bool mapLoaded = loader.loadMap();  // Initialize within the case
                   if (mapLoaded) return true;
+              }else if(command == "tournament"){
+                return true;
               }
               break;
     case states::MAP_LOADED:
@@ -497,4 +544,106 @@ void testGameStates() {
 vector<Player*>& GameEngine::getPlayers(){
     return *players;
 }
+
+
+void GameEngine::start() {
+    string winner="";
+    for (const auto& map : maps) {
+        std::vector<std::string> mapResults;
+        for (int i = 1; i <= numberOfGames; ++i) {
+            winner = playGame(map, strategies, i);
+            mapResults.push_back(winner);  // Replace with actual result
+        }
+        results[map] = mapResults;
+    }
+    displayResults();
+}
+std::vector<LogObserver*> observers;
+std::vector<OrdersList*> orderLists;
+string GameEngine::playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber) {
+    std::cout << "Playing game " << gameNumber << " on map: " << map << std::endl;
+
+    MapLoader loader(map);
+    bool mapLoaded = loader.loadMap();
+    if (mapLoaded) {
+        cout << "Map Loaded Successfully. Now validating..." << endl;
+    } else {
+        cout << "Map could not be loaded successfully." << endl;
+    }
+
+    if (Map::validate()) {
+        cout << "Map is valid!" << endl;
+    }
+    vector<Territory*> srcTerritories; //will contain Baja California and Eastern Mexico
+
+    int counter = 0;
+    int NUM_OF_PLAYERS = strategies.size();
+    
+    for (Continent* c : Map::getContinents()) {
+            for (Territory* t : c->getTerritories()) {
+                counter++;
+            }
+        }
+    int MAX_TERRITORIES = counter/NUM_OF_PLAYERS;
+    int initial=0;
+    Deck deck;
+   for (string player : strategies) {
+    srcTerritories.clear();
+    cout << player<<endl;
+    counter = 0;
+   for (Continent* c : Map::getContinents()) {
+        for (Territory* t : c->getTerritories()) {
+                if (counter >= initial && counter < initial+MAX_TERRITORIES){
+                srcTerritories.push_back(t);
+                }
+                counter++;
+            }
+    }
+    initial += MAX_TERRITORIES;
+   // OrdersList srcOrdersList;
+         
+    Hand srcHand;
+    int srcReinforcementPool = 50;
+        OrdersList* srcOrdersList = new OrdersList();
+
+        // Attach a LogObserver to the dynamically allocated OrdersList
+        LogObserver* logObserver = new LogObserver(srcOrdersList);
+        cout<<logObserver<<endl;
+        observers.push_back(logObserver); // Store the observer to manage lifecycle
+
+    Player* sourcePlayer =  new Player(player, srcTerritories, *srcOrdersList, srcHand, srcReinforcementPool);
+ 
+    sourcePlayer->getHand()->addCard(Deck::draw());
+    sourcePlayer->getHand()->addCard(Deck::draw());
+
+
+    players->push_back(sourcePlayer);
+    
+   }
+   for (LogObserver* observer : observers) {
+        delete observer;
+    }
+    observers.clear();
+    for (OrdersList* ordersList : orderLists) {
+        delete ordersList;
+    }
+    orderLists.clear();
+    mainGameLoop();
+return "winner";
+}
+
+void GameEngine::displayResults() const {
+    std::cout << "\nTournament Results:\n";
+    for (const auto& [map, result] : results) {
+        std::cout << "Map: " << map << "\n";
+        for (const auto& gameResult : result) {
+            std::cout << gameResult << " ";
+        }
+        std::cout << "\n";
+    }
+}
+
+
+
+
 

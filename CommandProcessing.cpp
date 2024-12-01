@@ -1,6 +1,15 @@
 #include "CommandProcessing.h"
 #include "GameEngine.h"
 
+std::vector<std::string> split(const std::string& str, char delimiter) {
+    std::vector<std::string> tokens;
+    std::istringstream tokenStream(str);
+    std::string token;
+    while (std::getline(tokenStream, token, delimiter)) {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
 Command::Command(const std::string& text) : commandText(new std::string(text)), effect(new std::string("Null")), valid(new bool(false))  {}
 
 Command::Command(const Command& other) : commandText(new std::string(*other.commandText)), effect(new std::string(*other.effect)), valid(new bool(*other.valid)) {}
@@ -99,7 +108,7 @@ Command* CommandProcessor::getCommand() {
 }
 
 bool CommandProcessor::validate(Command* command) {
-     std::string cmdText = command->getCommandText();
+    std::string cmdText = command->getCommandText();
     std::istringstream stream(cmdText);
     std::string commandType, parameter;
     stream >> commandType;
@@ -118,7 +127,36 @@ bool CommandProcessor::validate(Command* command) {
             command->saveEffect("Invalid command: 'loadmap' requires a <mapfile> parameter.");
             command->setValid(false);
         }
-    } 
+    } else if (commandType == "tournament" && gameEngine->state == GameEngine::START ){
+           std::string flag, maps, strategies;
+        int numberOfGames, maxTurns;
+
+        while (stream >> flag) {
+            if (flag == "-M") stream >> maps;
+            else if (flag == "-P") stream >> strategies;
+            else if (flag == "-G") stream >> numberOfGames;
+            else if (flag == "-D") stream >> maxTurns;
+        }
+        std::vector<std::string> mapList = split(maps, ',');
+        std::vector<std::string> strategyList = split(strategies, ',');
+        // Validate the ranges
+        if (maps.empty() || strategies.empty() || numberOfGames < 1 || numberOfGames > 5 || maxTurns < 10 || maxTurns > 50) {
+            command->saveEffect("Invalid tournament command parameters.");
+            command->setValid(false);
+        }else if (mapList.size() < 1 || mapList.size() > 5 || strategyList.size() < 2 || strategyList.size() > 4) {
+            command->saveEffect("Invalid number of maps or strategies.");
+            command->setValid(false);
+        } else {
+            command->saveEffect("Valid tournament command.");
+        //Tournament tournament(mapList, strategyList, numberOfGames, maxTurns);
+        //tournament.start();
+        isValid = true;
+        }
+
+
+     //tournament -M USA.map,USA.map -P Aggressive,Benevolent -G 1 -D 30
+       
+    }
     else if (commandType == "validatemap" && gameEngine->state == GameEngine::MAP_LOADED) {
         isValid = true;
         currentState = MapValidated;
