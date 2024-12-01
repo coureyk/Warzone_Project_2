@@ -9,6 +9,7 @@
 #include "CommandProcessing.h"
 #include "LoggingObserver.h"
 #include "Cards.h"
+#include "Tools.h"
 
 
 //THEO, I ADDED THE CONSTRUCTOR YOU WANTED FOR PLAYER. YOU CAN NOW INITIALIZE THE PLAYERS BY NAME
@@ -40,17 +41,17 @@ public:
     // method to set the state based on the command
     void setState(const std::string command, const std::string arg);
 
-    void mainGameLoop();
+    static void mainGameLoop();
 
     void gamestart();
 
     void testMainGameLoop();
 
-    void reinforcementPhase(Player& player);
+    static void reinforcementPhase(Player& player);
 
-    void issueOrderPhase(Player& player);
+    static void issueOrderPhase(Player& player);
 
-    void executeOrdersPhase(Player& player);
+    static void executeOrdersPhase(Player& player);
 
     void start();
     string playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber);

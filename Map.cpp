@@ -8,7 +8,7 @@ Territory::Territory() {
     neighbors = vector<Territory*>(); //initializing neighbors as empty vector
     armies = 0;
     wasVisited = false;
-    owner = "None";
+    owner = NULL;
 }
 
 Territory::Territory(const string& name) {
@@ -16,7 +16,7 @@ Territory::Territory(const string& name) {
     neighbors = vector<Territory*>(); //initializing neighbors as empty vector
     armies = 0;
     wasVisited = false;
-    owner = "None";
+    owner = NULL;
 }
 
 Territory::Territory(const Territory& other) {
@@ -62,7 +62,7 @@ bool Territory::getVisitedStatus() const {
     return wasVisited;
 }
 
-string Territory::getOwner() const {
+Player* Territory::getOwner() const {
     return owner;
 }
 
@@ -83,8 +83,23 @@ void Territory::setVisitedStatus(const bool& visitedStatus) {
     this->wasVisited = visitedStatus;
 }
 
-void Territory::setOwner(const string& owner) {
-    this->owner = owner;
+void Territory::setOwner(Player* const newOwner) {
+    
+    if (owner != NULL) {
+        //If newOwner is different from the current owner, modify the previous owners' "territories" vectors
+        if (this->getOwner()->getName() != newOwner->getName()) {
+            vector<Territory*>* territories = &(getOwner()->getTerritories()); 
+            for (int i = 0; i < territories->size(); i++) {
+                if ((*territories)[i]->getName() == this->getName()) {
+                    territories->erase(territories->begin() + i); // remove territory from previous owner's territories vector
+                }
+                break;
+            }
+        }
+    }
+       
+    owner = newOwner;
+    owner->getTerritories().push_back(this); // add territory to newOwner's territories vector
 }
 
 //SERVICE METHODS

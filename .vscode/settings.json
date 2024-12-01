@@ -84,6 +84,9 @@
         "xstddef": "cpp",
         "xtree": "cpp",
         "map": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "list": "cpp",
+        "unordered_set": "cpp",
+        "xhash": "cpp"
     }
 }

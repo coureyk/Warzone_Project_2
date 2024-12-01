@@ -1,26 +1,666 @@
-Kevin issued a valid Deploy order.
-- Army units deployed to Baja California: 5
-- Remaining army units in reinforcement pool: 0
-- Current army units in Baja California: 5
-
-Kevin issued an invalid Advance order.
-- Requested invalid number of army units to advance: 10
-- Current army units in Baja California: 5
-- Current army units in Eastern Mexico: 0
-
-Kevin issued an invalid bomb order.
-- Requested Bomb order without owning a Bomb card.
-- Current army units in Washington: 0
-- Current Washingtonruler: Liam
-
-Invalid order. Kevin cannot blockade foreign territory "Western Mexico".
-
-Invalid order. Kevin does not have specified army units: 10.
-
-Valid Order. Kevin successfully negotiated with Liam
 Order type: Deploy
-Order type: Advance
-Order type: Bomb
-Order type: Blockade
-Order type: Airlift
-Order type: Negotiate
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+loadmao USA.map
+Invalid command in the current state or syntax error.
+State: START
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer li
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer xi
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer Li
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer Liam
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer li
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer liam
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer li
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer li2
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap
+Invalid command: 'loadmap' requires a <mapfile> parameter.
+Invalid command in the current state or syntax error.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer liiiiiiiii
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer li:)
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap
+Invalid command: 'loadmap' requires a <mapfile> parameter.
+Invalid command in the current state or syntax error.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer li
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer li2
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap
+Invalid command: 'loadmap' requires a <mapfile> parameter.
+Invalid command in the current state or syntax error.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer li
+Command executed successfully.
+State: PLAYERS_ADDED
+li2
+Invalid command in the current state or syntax error.
+gamestart
+Command executed successfully.
+State: WIN
+win
+Invalid command in the current state or syntax error.
+addplayer li2
+Invalid command in the current state or syntax error.
+gamestart
+Invalid command in the current state or syntax error.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer li
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer mingh
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemao
+Invalid command in the current state or syntax error.
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer li
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer li
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer li2
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer li
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer bi
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap
+Invalid command: 'loadmap' requires a <mapfile> parameter.
+Invalid command in the current state or syntax error.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap
+Invalid command: 'loadmap' requires a <mapfile> parameter.
+Invalid command in the current state or syntax error.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+loadmap USA.map
+Command executed successfully.
+State: MAP_LOADED
+validatemap
+Command executed successfully.
+State: MAP_VALIDATED
+addplayer a
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer b
+Command executed successfully.
+State: PLAYERS_ADDED
+addplayer c
+Command executed successfully.
+State: PLAYERS_ADDED
+gamestart
+Command executed successfully.
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy
+Order type: Deploy

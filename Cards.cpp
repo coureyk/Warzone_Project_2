@@ -205,6 +205,10 @@ void Hand::showHand() const {
     }
 }
 
-vector<Card*>& Hand::getCards() const {
+std::vector<Card*>& Hand::getCards() const {
     return *handCards;
+}
+
+Card* Hand::getCard(const int i) const {
+    return getCards()[i];
 }

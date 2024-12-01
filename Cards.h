@@ -69,8 +69,10 @@ public:
     void playCard(int index);  // Call play on a specific card from the hand
     int getCardCount() const;  // Get the number of cards in hand
     void showHand() const;  // Display the cards in the hand
-    vector<Card*>& getCards() const;
-    friend ostream& operator<<(ostream& os, const Hand& hand);
+    friend std::ostream& operator<<(std::ostream& os, const Hand& hand);
+    std::vector<Card*>& getCards() const;
+
+    Card* getCard(const int i) const;
 
 };
 #endif

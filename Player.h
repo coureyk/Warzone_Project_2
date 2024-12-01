@@ -9,6 +9,13 @@ class Blockade;
 class Airlift;
 class Negotiate;
 class OrdersList;
+class PlayerStrategy;
+class NeutralPlayer;
+class CheaterPlayer;
+class HumanPlayer;
+class AggressivePlayer;
+class BenevolentPlayer;
+class Territory;
 
 #include <vector>
 #include "Map.h"
@@ -22,7 +29,8 @@ class OrdersList;
 
 class Player {
 
-private:
+protected:
+
 	std::string name;
 
 	OrdersList* ordersList;
@@ -31,14 +39,15 @@ private:
 	
 	int reinforcementPool;
 
-	std::vector<std::string> negotiatedPlayers;
-
-	bool hasEarnedCard;
+	std::vector<Player*> negotiatedPlayers;
 
 	PlayerStrategy* ps;
+	
+	bool hasEarnedCard;
+
+	std::vector<Territory*>* territories;
 
 public:
-	std::vector<Territory*>* territories;
 
 	Player();
 
@@ -46,7 +55,7 @@ public:
 
 	Player(const Player& player);
 
-	Player(const std::string name, const std::vector<Territory*>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinformentPool);
+	Player(const std::string name, const std::vector<Territory*>& territories, const OrdersList& ordersList, const Hand& hand, const int& reinformentPool, PlayerStrategy* const ps);
 
 	Player(const std::string name);
 
@@ -62,7 +71,7 @@ public:
 	//FOR NOW
 	std::string getName() const;
 
-	std::vector<std::string> getNegotiatedPlayers() const;
+	std::vector<Player*> getNegotiatedPlayers() const;
 
 	int getReinforcementPool();
 
@@ -70,7 +79,7 @@ public:
 
 	void setReinforcementPool(int reinforcementPool);
 
-	void addNegotiatedPlayers(std::string);
+	void addNegotiatedPlayers(Player& player);
 
 	void toString();
 
@@ -84,6 +93,10 @@ public:
 	OrdersList& getOrdersList();
 
 	Territory& territoryFinder(bool attack);
+
+	void setPS(PlayerStrategy* const ps);
+
+	PlayerStrategy* getPS();
 
 	bool getHasEarnedCard() const;
 	void setHasEarnedCard(bool hasEarnedCard);
