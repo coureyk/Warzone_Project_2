@@ -54,8 +54,6 @@ public:
     void setEffect(const string& effect);
 
     virtual string toString() const = 0; //This function returns a string representation of the Order that invokes it, and is meant to act as a helper function for overloaded operator "<<".
-    virtual string orderDetails() const = 0;
-    bool hasOrderCard();
 
     string stringToLog();
 
@@ -77,7 +75,6 @@ public:
     Deploy& operator=(const Deploy& other);
 
     string toString() const;
-    string orderDetails() const;
 
     bool validate();
     void execute();
@@ -96,7 +93,6 @@ public:
     Advance& operator=(const Advance& other);
 
     string toString() const;
-    string orderDetails() const;
 
     bool validate();
     void execute();
@@ -115,7 +111,6 @@ public:
     Bomb& operator=(const Bomb& other);
 
     string toString() const;
-    string orderDetails() const;
 
     bool validate();
     void execute();
@@ -134,7 +129,6 @@ public:
     Blockade& operator=(const Blockade& other);
 
     string toString() const;
-    string orderDetails() const;
 
     bool validate();
     void execute();
@@ -153,7 +147,6 @@ public:
     Airlift& operator=(const Airlift& other);
 
     string toString() const;
-    string orderDetails() const;
 
     bool validate();
     void execute();
@@ -172,7 +165,6 @@ public:
     Negotiate& operator=(const Negotiate& other);
 
     string toString() const;
-    string orderDetails() const;
 
     bool validate();
     void execute();
