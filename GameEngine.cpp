@@ -97,7 +97,7 @@ void GameEngine::testMainGameLoop() {
     int tarReinforcementPool = 10;
 
     PlayerStrategy* strat1 = new AggressivePlayer; 
-    PlayerStrategy* strat2 = new AggressivePlayer;
+    PlayerStrategy* strat2 = new BenevolentPlayer;
     
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool,strat2);

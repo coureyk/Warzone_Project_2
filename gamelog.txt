@@ -1281,3 +1281,21 @@ Summary: Kevin is attempting to put 40 army units on California
 Order type: Order Type: Advance
 Summary: Kevin is attempting to move 294 army units from California to Baja California
 
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 13 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 13 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 13 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 13 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+

@@ -308,6 +308,20 @@ MapLoader::MapLoader(const string& filePath) {
     this->filePath = filePath;
 }
 
+MapLoader::~MapLoader() {
+    for (Continent* c : Map::getContinents()) {
+        for (Territory* t : c->getTerritories()) {
+            delete t;
+            t = NULL;
+        }
+        
+        c->getTerritories().clear();
+        delete c;
+        c = NULL;
+    }
+    Map::getContinents().clear();
+}
+
 string MapLoader::getFilePath() const {
     return this->filePath;
 }
