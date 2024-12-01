@@ -423,7 +423,7 @@ void GameEngine::gamestart() {
     auto rng = std::default_random_engine{};
     std::shuffle(std::begin(*players), std::end(*players), rng);
 
-    Deck deck;
+    
 
     for(Player* p : *players){
         p->setReinforcementPool(50); //c)
@@ -491,6 +491,7 @@ bool GameEngine::validCommandInput(const std::string command,const std::string a
 //should be replaced with testGameStates() to be called by main in Test.cpp
 void testGameStates() {
     GameEngine gameEngine;
+    Deck deck;
     LogObserver *logObserver = new LogObserver(&gameEngine);
     gameEngine.startupPhase();
 
@@ -517,10 +518,10 @@ std::vector<LogObserver*> observers;
 std::vector<OrdersList*> orderLists;
 std::vector<PlayerStrategy*> strategyList;
 vector<Territory*> srcTerritories;
-Deck deck;
+
 string GameEngine::playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber) {
     std::cout << "Playing game " << gameNumber << " on map: " << map << std::endl;
-
+    
     MapLoader loader(map);
     bool mapLoaded = loader.loadMap();
     if (mapLoaded) {
@@ -615,6 +616,14 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
         delete ordersList;
     }
     orderLists.clear();
+    for (Continent* c : Map::getContinents()) {
+        for (Territory* t : c->getTerritories()) {
+            delete t;
+            t = NULL;
+        }
+        delete c;
+        c = NULL;
+    }
     /* for (PlayerStrategy* strategyList : strategyList) {
         delete strategyList;
     }
