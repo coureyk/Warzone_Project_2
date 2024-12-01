@@ -163,8 +163,10 @@ std::ostream& operator<<(std::ostream& os, const Hand& hand){
     return os;
 }
 void Hand::addCard(Card* card) {
-    handCards->push_back(card);
-    std::cout << "Added " << card->getType() << " card to hand." << std::endl;
+    if (card != NULL) {
+        handCards->push_back(card);
+        std::cout << "Added " << card->getType() << " card to hand." << std::endl;
+    }
 }
 
 void Hand::playCard(int index) {

@@ -292,8 +292,17 @@ bool Advance::validate() {
         setEffect(effect);
 
         cout << effect << endl;
-        cout<<"cockOrder4"<<endl;
     } else {
+        //if Territory is unowned, conquer it
+        if (getTargetTerritory()->getOwner() == NULL) {
+            getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits()); //update armies on attacker's land
+            getTargetTerritory()->setArmies(getArmyUnits()); //update armies on newly conquered land
+            getTargetTerritory()->setOwner(getSourcePlayer()); //make attacker new owner of targetTerritory       
+            getSourcePlayer()->getHand()->addCard(Deck::draw()); //sourcePlayer receives a card for conquering at least one territory during their turn.
+            effect = "Valid order. " + sourcePlayer + " successfully conquered " + targetTerritory + ". Current " + sourceTerritory + " army units: " + std::to_string(getSourceTerritory()->getArmies()) + ". Current " + targetTerritory + " army units: " + std::to_string(getTargetTerritory()->getArmies()) + ". Card added to " + sourcePlayer + "\'s hand.\n";
+            setEffect(effect);
+            return true;
+        }
 
         //need to check if targetTerritoryOwner is a NeutralPlayer
         if (getTargetTerritory()->getOwner()->getPS()->getPSType() == "Neutral") {
@@ -342,6 +351,7 @@ bool Advance::validate() {
             setEffect(effect);
         }
     }
+    cout << "COCK ORDER FINAL" << endl;
     return true;
 }
 
