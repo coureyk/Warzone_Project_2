@@ -991,5 +991,5 @@ Player& BenevolentPlayer::giveMeARandomPlayer(){
     GameEngine::getPlayers().push_back(targetPlayer);
     
     Deck deck;
-    GameEngine::mainGameLoop();
+    GameEngine::mainGameLoop(40);
 }

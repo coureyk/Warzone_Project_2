@@ -41,7 +41,7 @@ public:
     // method to set the state based on the command
     void setState(const std::string command, const std::string arg);
 
-    static void mainGameLoop();
+    static string mainGameLoop(int n);
 
     void gamestart();
 

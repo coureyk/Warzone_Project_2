@@ -16,15 +16,16 @@ std::vector<Player*>* GameEngine::players = new std::vector<Player*>;
  * @brief The internal loop that goes through player actions
  * 
  */
-void GameEngine::mainGameLoop(){
-    
+string GameEngine::mainGameLoop(int n){
+    int turncounter = 1;
     bool onlyBots = true;
     for(Player* player: *players){
         if(player->getPS()->getPSType() == "HumanPlayer")
             onlyBots = false;
     }
 
-   while(players->size()>1){
+   while(players->size()>1 &&turncounter<=n){
+        cout<<"This is the turn " <<turncounter<<endl;
         for(Player* player: *players){    
             reinforcementPhase(*player);
         }
@@ -52,14 +53,18 @@ void GameEngine::mainGameLoop(){
             counter++;
         }
 
-   
+      turncounter++;
         
    }
 
-    
+   if (turncounter == n+1){
+    cout<<"Draw"<<endl;
+    return "Draw";
+   }
    std::cout<<*((*players)[0])<< " has won the game!";
    GameEngine::state = states::WIN;
    cout<<"Win"<<endl;//go back to startup phase
+   return (*players)[0]->getName();
 }
 
 void GameEngine::testMainGameLoop() {
@@ -142,7 +147,7 @@ void GameEngine::testMainGameLoop() {
     players->push_back(targetPlayer);
     
     Deck deck;
-    mainGameLoop();
+    mainGameLoop(40);
 }
 
 void GameEngine::reinforcementPhase(Player& player){
@@ -199,8 +204,8 @@ void GameEngine::issueOrderPhase(Player& player){
         
         player.getOrdersList().getNode(0)->getElement()->execute(); //possible removal
         player.getOrdersList().remove(player.getOrdersList().getNode(0));
-        delete currentOrder;
-        currentOrder = NULL;
+        //delete currentOrder;
+       // currentOrder = NULL;
         
     }
     
@@ -219,8 +224,8 @@ void GameEngine::executeOrdersPhase(Player& player){
         Order* currentOrder = player.getOrdersList().getNode(i)->getElement();
         player.getOrdersList().getNode(i)->getElement()->execute();
         player.getOrdersList().remove(player.getOrdersList().getNode(i));
-        delete currentOrder;
-        currentOrder = NULL;
+       // delete currentOrder;
+       // currentOrder = NULL;
     }
     
 }
@@ -428,7 +433,7 @@ void GameEngine::gamestart() {
         p->getHand()->addCard(Deck::draw());
     }
 
-    mainGameLoop();
+    mainGameLoop(40);
 }
 
 
@@ -510,6 +515,9 @@ void GameEngine::start() {
 }
 std::vector<LogObserver*> observers;
 std::vector<OrdersList*> orderLists;
+std::vector<PlayerStrategy*> strategyList;
+vector<Territory*> srcTerritories;
+Deck deck;
 string GameEngine::playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber) {
     std::cout << "Playing game " << gameNumber << " on map: " << map << std::endl;
 
@@ -524,8 +532,8 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
     if (Map::validate()) {
         cout << "Map is valid!" << endl;
     }
-    vector<Territory*> srcTerritories; //will contain Baja California and Eastern Mexico
-
+     //will contain Baja California and Eastern Mexico
+   
     int counter = 0;
     int NUM_OF_PLAYERS = strategies.size();
     
@@ -534,13 +542,18 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
                 counter++;
             }
         }
+    
     int MAX_TERRITORIES = counter/NUM_OF_PLAYERS;
+   
     int initial=0;
-    Deck deck;
+
+    
+    cout<<"im here2"<<endl;
    for (string player : strategies) {
     srcTerritories.clear();
     cout << player<<endl;
     counter = 0;
+     cout<<"im here1"<<endl;
    for (Continent* c : Map::getContinents()) {
         for (Territory* t : c->getTerritories()) {
                 if (counter >= initial && counter < initial+MAX_TERRITORIES){
@@ -557,12 +570,34 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
         OrdersList* srcOrdersList = new OrdersList();
 
         // Attach a LogObserver to the dynamically allocated OrdersList
-        LogObserver* logObserver = new LogObserver(srcOrdersList);
-        cout<<logObserver<<endl;
-        observers.push_back(logObserver); // Store the observer to manage lifecycle
+    LogObserver* logObserver = new LogObserver(srcOrdersList);
+    observers.push_back(logObserver); // Store the observer to manage lifecycle
+    //
 
-    Player* sourcePlayer =  new Player(player, srcTerritories, *srcOrdersList, srcHand, srcReinforcementPool);
+    PlayerStrategy* strat = nullptr;
+
+    if(player == "Aggressive"){
+        cout<<"im in aggressive";
+      strat = new AggressivePlayer; 
+    } else if(player == "Benevolent"){
+         cout<<"im in benevolent";
+      strat = new BenevolentPlayer; 
+    } else if(player == "Neutral"){
+      strat = new NeutralPlayer; 
+    }else if(player == "Cheater"){
+      strat = new CheaterPlayer; 
+    } else {
+      strat = new CheaterPlayer; 
+    }
+    
+    Player* sourcePlayer =  new Player(player, srcTerritories, *srcOrdersList, srcHand, srcReinforcementPool,strat);
+    
+   for(Territory* t:srcTerritories){
+        t->setOwner(sourcePlayer);
+    }
  
+    strat->setPlayer(*sourcePlayer);
+    strategyList.push_back(strat);
     sourcePlayer->getHand()->addCard(Deck::draw());
     sourcePlayer->getHand()->addCard(Deck::draw());
 
@@ -570,7 +605,9 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
     players->push_back(sourcePlayer);
     
    }
-   for (LogObserver* observer : observers) {
+   string winner = "";
+    winner=mainGameLoop(maxTurns);
+    for (LogObserver* observer : observers) {
         delete observer;
     }
     observers.clear();
@@ -578,8 +615,11 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
         delete ordersList;
     }
     orderLists.clear();
-    mainGameLoop();
-return "winner";
+    /* for (PlayerStrategy* strategyList : strategyList) {
+        delete strategyList;
+    }
+    strategyList.clear();*/
+return winner;
 }
 
 void GameEngine::displayResults() const {
