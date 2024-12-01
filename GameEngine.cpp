@@ -41,6 +41,7 @@ void GameEngine::mainGameLoop(){
         }
 
         for(Player* player: *players){
+            
             executeOrdersPhase(*player);
             //players->erase(std::remove_if(players->begin(), players->end(), [](Player* player) { return player->getTerritories().size() == 0; }), players->end());
         }
@@ -217,14 +218,20 @@ void GameEngine::executeOrdersPhase(Player& player){
     
 
     for(int i = 0;i<player.getOrdersList().getSize();i++){
+
         Order* currentOrder = player.getOrdersList().getNode(i)->getElement();
+        cout<<"cock1"<<endl;
+        cout<<currentOrder->getOrderType()<<endl;
         player.getOrdersList().getNode(i)->getElement()->execute();
+        cout<<"cock2"<<endl;
         player.getOrdersList().remove(player.getOrdersList().getNode(i));
+        cout<<"cock3"<<endl;
         delete currentOrder;
         currentOrder = NULL;
+        cout<<"cock4"<<endl;
     }
 
-    std::
+    
     
 }
 

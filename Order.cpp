@@ -230,12 +230,13 @@ bool Advance::validate() {
     }else{
         targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
     }
+    
     string sourceTerritory = getSourceTerritory()->getName();
     string targetTerritory = getTargetTerritory()->getName();
     int sourceTerritoryArmyUnits = getSourceTerritory()->getArmies();
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
     string effect;
-
+    
     if (getArmyUnits() < 0 || getArmyUnits() > sourceTerritoryArmyUnits) {
         effect = "Invalid order. " + sourcePlayer + " does not have specified army units: " + std::to_string(getArmyUnits()) + ".\n";
         setEffect(effect);
@@ -249,6 +250,8 @@ bool Advance::validate() {
         cout << "Invalid order. " << sourcePlayer << " cannot advance from foreign territory: " << sourceTerritory << ".\n" << endl; //to be deleted
         return false;
     }
+
+    cout<<"cockOrder1"<<endl;
 
     //check if targetTerritory is adjacent to sourceTerritory
     bool targetIsNeighbor = false;
@@ -265,7 +268,7 @@ bool Advance::validate() {
         cout << "Invalid order. " << sourcePlayer << " cannot advance to non-adjacent territory: " << targetTerritory << ".\n" << endl; // to be deleted
         return false;
     }
-
+    cout<<"cockOrder2"<<endl;
     //Continue if targetIsNeighbor
     //Check if territory owners have a truce
     for (Player* negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
@@ -276,7 +279,7 @@ bool Advance::validate() {
         }
         return false;
     }
-
+    cout<<"cockOrder3"<<endl;
     //Check if sourceTerritory and targetTerritory belong to same owner
     if (sourceTerritoryOwner.compare(targetTerritoryOwner) == 0) {
         sourceTerritoryArmyUnits -= getArmyUnits(); //remove army units from source territory
@@ -289,6 +292,7 @@ bool Advance::validate() {
         setEffect(effect);
 
         cout << effect << endl;
+        cout<<"cockOrder4"<<endl;
     } else {
 
         //need to check if targetTerritoryOwner is a NeutralPlayer
