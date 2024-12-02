@@ -37,7 +37,7 @@ string GameEngine::mainGameLoop(int n){
             
             if(onlyBots){
             
-            Tools::waitForSeconds(1);
+            //Tools::waitForSeconds(1);
             }
         }
 
