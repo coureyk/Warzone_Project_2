@@ -46,9 +46,11 @@ Player::~Player() {
 	delete territories;
 	delete ordersList;
 	delete hand;
+	delete ps;
 	territories = NULL;
 	ordersList = NULL;
 	hand = NULL;
+	ps = NULL;
 }
 
 std::vector<Territory*>& Player::toDefend() {
