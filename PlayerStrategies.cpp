@@ -672,6 +672,8 @@ CheaterPlayer::CheaterPlayer() {
 // }
 
 void CheaterPlayer::issueOrder(bool toDeploy, bool toAdvance) {
+
+	printTerritories();
 	if (!toDeploy && !toAdvance) {
 		for (Territory* t : toDefend()) {
 			for (Territory* neighbor : t->getNeighbors()) {
@@ -749,13 +751,7 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 
 	if(toDeploy){
 		
-        //Display defendable territories
-				std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
-				for(Territory* territory: toDefend()){
-					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
-				}
-
-				std::cout << endl;
+        printTerritories();
 
 		strongestTerritory = (*defendableTerritories)[0];
 
@@ -899,6 +895,8 @@ BenevolentPlayer::BenevolentPlayer(){
 void BenevolentPlayer::issueOrder(bool toDeploy, bool toAdvance){
 
 	if(toDeploy){
+
+		printTerritories();
 
 		Territory* weakestTerritory = toDefend()[0];
 
