@@ -37,7 +37,7 @@ string GameEngine::mainGameLoop(int n){
             
             if(onlyBots){
             
-            Tools::waitForSeconds(1);
+            //Tools::waitForSeconds(1);
             }
         }
 
@@ -103,7 +103,7 @@ void GameEngine::testMainGameLoop() {
     int srcReinforcementPool = 10;
     int tarReinforcementPool = 10;
 
-    PlayerStrategy* strat1 = new NeutralPlayer; 
+    PlayerStrategy* strat1 = new BenevolentPlayer; 
     PlayerStrategy* strat2 = new CheaterPlayer;
     
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
@@ -150,7 +150,7 @@ void GameEngine::testMainGameLoop() {
     players->push_back(targetPlayer);
     
     Deck deck;
-    mainGameLoop(40);
+    mainGameLoop(80);
 }
 
 void GameEngine::reinforcementPhase(Player& player){
