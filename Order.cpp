@@ -307,6 +307,7 @@ bool Advance::validate() {
         //need to check if targetTerritoryOwner is a NeutralPlayer
         if (getTargetTerritory()->getOwner()->getPS()->getPSType() == "Neutral") {
             PlayerStrategy* newStrat = new AggressivePlayer;
+            newStrat->setPlayer(*(getTargetTerritory()->getOwner()));
             getTargetTerritory()->getOwner()->setPS(newStrat);
         }
         
@@ -470,6 +471,7 @@ bool Bomb::validate() {
     //need to check if targetTerritoryOwner is a NeutralPlayer
     if (getTargetTerritory()->getOwner() != nullptr && getTargetTerritory()->getOwner()->getPS()->getPSType() == "Neutral") {
         PlayerStrategy* newStrat = new AggressivePlayer;
+        newStrat->setPlayer(*(getTargetTerritory()->getOwner()));
         getTargetTerritory()->getOwner()->setPS(newStrat);
     }
 

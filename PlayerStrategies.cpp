@@ -771,7 +771,6 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 
 std::vector<Territory*>& AggressivePlayer::toAttack(){
 
-    
 	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
 	std::set <Territory*> attackableSet;
 
