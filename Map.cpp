@@ -396,7 +396,7 @@ bool MapLoader::loadMap() {
             if (numOfTerritories < MAX_TERRITORIES) {
                 std::regex re("([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1}),(\\d+),(\\d+),([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1}),([^\\n]+)");
                 std::smatch match;
-    
+      
                 if (std::regex_search(line, match, re) == true) {
                     Territory* t = new Territory(match.str(1)); //I'M MODIFIYING THIS TO ADD A PARENT CONTINENT TO A TERRITORY **********************************
                     territories.push_back(t);
@@ -433,6 +433,7 @@ bool MapLoader::loadMap() {
                         territoriesInContinent.back()++;
                     }
                 } else {
+                    cout<<line<<endl;
                     cout << "Map contains invalid Territory specifications" << endl;
                     return false;
                 }

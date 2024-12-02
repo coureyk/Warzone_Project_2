@@ -3,13 +3,13 @@
 #include <iostream>
 #include <cstdio>
 #include <vector>
+#include <map>
 #include "Player.h"
 #include "Map.h"
 #include "CommandProcessing.h"
 #include "LoggingObserver.h"
 #include "Cards.h"
 #include "Tools.h"
-
 
 
 //THEO, I ADDED THE CONSTRUCTOR YOU WANTED FOR PLAYER. YOU CAN NOW INITIALIZE THE PLAYERS BY NAME
@@ -21,6 +21,11 @@ class GameEngine: public Subject, public ILoggable{
 private:
     static std::vector<Player*>* players;
     friend class CommandProcessor;
+    std::vector<std::string> maps;  // List of map file names
+    std::vector<std::string> strategies;  // List of player strategies
+    int numberOfGames;  // Number of games per map
+    int maxTurns;  // Max turns per game
+    std::map<std::string, std::vector<std::string>> results;  // Results for each map
 
 public:
     std::string stringToLog();
@@ -36,7 +41,7 @@ public:
     // method to set the state based on the command
     void setState(const std::string command, const std::string arg);
 
-    static void mainGameLoop();
+    static string mainGameLoop(int n);
 
     void gamestart();
 
@@ -47,6 +52,11 @@ public:
     static void issueOrderPhase(Player& player);
 
     static void executeOrdersPhase(Player& player);
+
+    void start();
+    string playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber);
+    void displayResults() const;
+
 
     /*The state represents a certain phase of the game and dictates what are the valid actions
     or user commands that take place in this phase. Some actions or commands may eventually

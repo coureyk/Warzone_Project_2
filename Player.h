@@ -44,6 +44,8 @@ protected:
 
 	PlayerStrategy* ps;
 	
+	bool hasEarnedCard;
+
 	std::vector<Territory*>* territories;
 
 public:
@@ -96,6 +98,9 @@ public:
 	void setPS(PlayerStrategy* const ps);
 
 	PlayerStrategy* getPS();
+
+	bool getHasEarnedCard() const;
+	void setHasEarnedCard(bool hasEarnedCard);
 };
 
 void testPlayers();

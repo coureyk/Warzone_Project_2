@@ -148,6 +148,14 @@ void Player::setPS(PlayerStrategy* ps) {
 	this->ps = ps;
 }
 
+bool Player::getHasEarnedCard() const {
+	return hasEarnedCard;
+}
+
+void Player::setHasEarnedCard(bool hasEarnedCard) {
+	this->hasEarnedCard = hasEarnedCard;
+}
+
 std::ostream& operator<<(std::ostream& os, const Player& player)
 {
 	os << player.name << " Territories: ";

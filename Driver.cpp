@@ -22,19 +22,23 @@ int main(int argc, char* argv[]) {
     // testPlayerStrategies();
     // return 0;
 
-    cout << "testMainGameLoop() is invoked" << endl;
-    gameEngine.testMainGameLoop();
-    cout << "testMainGameLoop() is finished" << endl;
+    // cout<< "testPlayerStrategies" << endl;
+    // testPlayerStrategies();
+    // return 0;
 
-    cout << "testOrdersLists() is invoked" << endl;
-    waitForEnter();
-    testOrdersLists();
-    cout << "testOrdersLists() is finished" << endl;
-
+    //cout << "testMainGameLoop() is invoked" << endl;
+    //gameEngine.testMainGameLoop();
+    //cout << "testMainGameLoop() is finished" << endl;
     cout << "testGameStates() is invoked" << endl;
     waitForEnter();
     testGameStates();
     cout << "testGameStates() is finished" << endl;
+
+    cout << "testOrdersLists() is invoked" << endl;
+    testOrdersLists();
+    cout << "testOrdersLists() is finished" << endl;
+
+
 
     cout << "testCommandProcessor() is invoked" << endl;
     waitForEnter();
