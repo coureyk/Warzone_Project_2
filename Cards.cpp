@@ -77,6 +77,7 @@ void Deck::reset() {
     if (cards) {
         for (Card* card : *cards) {
             delete card;  // Delete dynamically allocated cards
+            card = NULL;
         }
         cards->clear();  // Clear the vector
     }
