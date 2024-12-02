@@ -5,16 +5,14 @@ wrap=yes
 scroll=horizontal
 warn=yes
 
-
 [Continents]
-North Asia=3
-Asia Minor=4
 Arabian Peninsula=2
-Indian Sub-Continent=2
+Asia Minor=4
+North Asia=3
+Persia=8
+Indian Sub Continent=2
 South East Asia=4
 Oceania=4
-Persia=8
-
 
 [Territories]
 Saudi Arabia,77,295,Arabian Peninsula,Yemen,Omen,United Arab Emigrants,Qatar,Buhrain,Kuwait,Iraq,Jordan
@@ -52,12 +50,12 @@ Tajikistan,278,216,Persia,Uzbekistan,Kyrgyzstan,Afghanistan
 Afghanistan,225,253,Persia,Iran,Turkmenistan,Uzbekistan,Tajikistan,Pakistan
 Pakistan,264,277,Persia,Iran,Afghanistan,India
 
-India,314,339,Indian Sub-Continent,Pakistan,China,Nepal,Bhuntan,Myanmar,Bangladesh,Maldives,Sri Lanka
-Nepal,347,293,Indian Sub-Continent,India
-Bhuntan,396,296,Indian Sub-Continent,India
-Bangladesh,394,332,Indian Sub-Continent,India,Myanmar
-Sri Lanka,330,457,Indian Sub-Continent,India
-Maldives,273,493,Indian Sub-Continent,India
+India,314,339,Indian Sub Continent,Pakistan,China,Nepal,Bhuntan,Myanmar,Bangladesh,Maldives,Sri Lanka
+Nepal,347,293,Indian Sub Continent,India
+Bhuntan,396,296,Indian Sub Continent,India
+Bangladesh,394,332,Indian Sub Continent,India,Myanmar
+Sri Lanka,330,457,Indian Sub Continent,India
+Maldives,273,493,Indian Sub Continent,India
 
 Myanmar,440,338,South East Asia,China,India,Bangladesh,Thailand,Laos
 Thailand,484,371,South East Asia,Myanmar,Laos,Cambodia,West Malaysia

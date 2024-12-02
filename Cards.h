@@ -49,7 +49,7 @@ public:
     Deck(const Deck& other);  // Copy constructor
     ~Deck();  // Destructor
     Deck& operator=(const Deck& other);  // Assignment operator
-
+    void reset();
     static Card* draw();  // Draw a card from the deck
     static void returnCard(Card* card);  // Return a played card to the deck
     static void showDeck();  // Display the cards in the deck

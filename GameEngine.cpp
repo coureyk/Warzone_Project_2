@@ -491,7 +491,7 @@ bool GameEngine::validCommandInput(const std::string command,const std::string a
 //should be replaced with testGameStates() to be called by main in Test.cpp
 void testGameStates() {
     GameEngine gameEngine;
-    Deck deck;
+   
     LogObserver *logObserver = new LogObserver(&gameEngine);
     gameEngine.startupPhase();
 
@@ -518,10 +518,10 @@ std::vector<LogObserver*> observers;
 std::vector<OrdersList*> orderLists;
 std::vector<PlayerStrategy*> strategyList;
 vector<Territory*> srcTerritories;
-
+ Deck deck;
 string GameEngine::playGame(const std::string& map, const std::vector<std::string>& strategies, int gameNumber) {
     std::cout << "Playing game " << gameNumber << " on map: " << map << std::endl;
-    
+    deck.reset();
     MapLoader loader(map);
     bool mapLoaded = loader.loadMap();
     if (mapLoaded) {
@@ -576,16 +576,19 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
     PlayerStrategy* strat = nullptr;
 
     if(player == "Aggressive"){
-        cout<<"im in aggressive";
+        cout<<"im in aggressive"<<endl;
       strat = new AggressivePlayer; 
     } else if(player == "Benevolent"){
-         cout<<"im in benevolent";
+         cout<<"im in benevolent"<<endl;
       strat = new BenevolentPlayer; 
     } else if(player == "Neutral"){
+        cout<<"im in Neutral"<<endl;
       strat = new NeutralPlayer; 
     }else if(player == "Cheater"){
+      cout<<"im in cheater"<<endl;
       strat = new CheaterPlayer; 
     } else {
+    cout<<"im nobody"<<endl;
       strat = new CheaterPlayer; 
     }
     
@@ -594,12 +597,14 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
    for(Territory* t:srcTerritories){
         t->setOwner(sourcePlayer);
     }
- 
+   
     strat->setPlayer(*sourcePlayer);
+   
     strategyList.push_back(strat);
+  
     sourcePlayer->getHand()->addCard(Deck::draw());
+ 
     sourcePlayer->getHand()->addCard(Deck::draw());
-
 
     players->push_back(sourcePlayer);
     
@@ -623,6 +628,7 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
         delete strategyList;
     }
     strategyList.clear();*/
+ 
 return winner;
 }
 

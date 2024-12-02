@@ -80,18 +80,38 @@ Deck::~Deck() {
     delete cards;
     cards = NULL;
 }
+void Deck::reset() {
 
+      if (cards) {
+        for (Card* card : *cards) {
+            delete card;  // Delete only dynamically allocated cards
+        }
+        cards->clear();  // Clear the vector
+    } else {
+        cards = new std::vector<Card*>;
+    }
+
+    // Reinitialize the deck
+    for (int i = 0; i < 10; ++i) {
+        cards->push_back(new Card(CardType::BOMB));
+        cards->push_back(new Card(CardType::REINFORCEMENT));
+        cards->push_back(new Card(CardType::BLOCKADE));
+        cards->push_back(new Card(CardType::AIRLIFT));
+        cards->push_back(new Card(CardType::DIPLOMACY));
+    }
+}
 Card* Deck::draw() {
+    
     // Create a vector to store all available cards
     std::vector<Card*> availableCards;
-
+    
     // Loop through the deck and gather all available cards
     for (Card* card : *cards) {
         if (card->isCardAvailable()) {
             availableCards.push_back(card);
         }
     }
-
+    
     // Check if there is any available cards
     if (availableCards.empty()) {
         cout << "No available cards to draw!" << endl;
