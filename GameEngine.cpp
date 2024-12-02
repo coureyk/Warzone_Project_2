@@ -205,7 +205,7 @@ void GameEngine::issueOrderPhase(Player& player){
         player.getOrdersList().getNode(0)->getElement()->execute(); //possible removal
         player.getOrdersList().remove(player.getOrdersList().getNode(0));
         //delete currentOrder;
-       // currentOrder = NULL;
+        //currentOrder = NULL;
         
     }
     

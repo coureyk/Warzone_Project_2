@@ -66,8 +66,8 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 					}
 					
 					tempReinforcementPool -= deployableUnits;
-					Order* deploy = new Deploy(&getPlayer(),deployableUnits, territory);
-					getPlayer().getOrdersList().addOrder(deploy);
+					Deploy deploy(&getPlayer(),deployableUnits, territory);
+					getPlayer().getOrdersList().addOrder(&deploy);
 					
 					break;
 				}catch(int deployableUnits){
@@ -200,8 +200,8 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 					if(advancingUnits==0)
 						break;
 
-					Advance* advance = new Advance(&getPlayer(),advancingUnits,sourceTerritoryObj,targetTerritoryObj);
-					getPlayer().getOrdersList().addOrder(advance);
+					Advance advance(&getPlayer(),advancingUnits,sourceTerritoryObj,targetTerritoryObj);
+					getPlayer().getOrdersList().addOrder(&advance);
 					std::cout<<"Order Added"<<std::endl;
 					std::cout<<advancingUnits<<" units were moved to " << *targetTerritoryObj << " from "<< *sourceTerritoryObj<<std::endl;
 					break;
@@ -285,15 +285,15 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 	switch (input) {
 	case 1:
 	{	
-		Bomb* bomb = new Bomb(&getPlayer(), &(getPlayer().territoryFinder(true)));
-		getPlayer().getOrdersList().addOrder(bomb);
+		Bomb bomb(&getPlayer(), &(getPlayer().territoryFinder(true)));
+		getPlayer().getOrdersList().addOrder(&bomb);
 		std::cout << "Bomb added"<<std::endl;
 	}
 	break;
 	case 2:
 	{
-		Blockade* blockade = new Blockade(&getPlayer(), &(getPlayer().territoryFinder(true)));
-		getPlayer().getOrdersList().addOrder(blockade);
+		Blockade blockade(&getPlayer(), &(getPlayer().territoryFinder(true)));
+		getPlayer().getOrdersList().addOrder(&blockade);
 		std::cout << "Blockade added"<<std::endl;
 	}
 	break;
@@ -331,8 +331,8 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 		if(liftedUnits == 0)
 			break;
 
-		Airlift* airlift = new Airlift(&getPlayer(), liftedUnits, sourceTerritory, targetTerritory);
-		getPlayer().getOrdersList().addOrder(airlift);
+		Airlift airlift(&getPlayer(), liftedUnits, sourceTerritory, targetTerritory);
+		getPlayer().getOrdersList().addOrder(&airlift);
 		std::cout << "Airlift added"<<std::endl;
 	}
 	break;
@@ -376,8 +376,8 @@ void HumanPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 			}	
 		}
 
-		Negotiate* negotiate = new Negotiate(&getPlayer(), negotiatedPlayer);
-		getPlayer().getOrdersList().addOrder(negotiate);
+		Negotiate negotiate(&getPlayer(), negotiatedPlayer);
+		getPlayer().getOrdersList().addOrder(&negotiate);
 		std::cout << "Negotiate added"<<std::endl;
 	}
 	break;
@@ -548,7 +548,7 @@ void PlayerStrategy::openOrdersList() {
 
 vector<Territory*>& HumanPlayer::toAttack() {
     
-	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>; // potential removal of heap allocation
 	std::set <Territory*> attackableSet;
 
 	
@@ -630,8 +630,8 @@ void CheaterPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 			for (Territory* neighbor : t->getNeighbors()) {
 
 				if (neighbor->getOwner() == nullptr || neighbor->getOwner()->getName() != getPlayer().getName()) {
-					Cheat* cheat = new Cheat(&getPlayer(), neighbor);
-					getPlayer().getOrdersList().addOrder(cheat);
+					Cheat cheat(&getPlayer(), neighbor);
+					getPlayer().getOrdersList().addOrder(&cheat);
 				}
 			}
 		}
@@ -674,7 +674,6 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 	std::vector<Territory*>* attackableTerritories = &toAttack();
 	std::vector<Territory*>* defendableTerritories = &toDefend();
 
-
 	if(toDeploy){
 		
         //Display defendable territories
@@ -692,8 +691,8 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 				strongestTerritory = territory;
 		}
 
-		Deploy* deploy = new Deploy(&getPlayer(),getPlayer().getReinforcementPool(),strongestTerritory); //not sure if this might fuck up
-		getPlayer().getOrdersList().addOrder(deploy);
+		Deploy deploy(&getPlayer(),getPlayer().getReinforcementPool(),strongestTerritory); //not sure if this might fuck up
+		getPlayer().getOrdersList().addOrder(&deploy);
 		return;
 	}
 
@@ -724,8 +723,8 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 				strongestTerritory = territory;
 		}
         //cout<<strongestTerritory->getName()<<"->"<<optimalPath(*strongestTerritory).getName()<<endl;
-		Advance* advance = new Advance(&getPlayer(),strongestTerritory->getArmies(),strongestTerritory,&optimalPath(*strongestTerritory));
-		getPlayer().getOrdersList().addOrder(advance);
+		Advance advance(&getPlayer(),strongestTerritory->getArmies(),strongestTerritory,&optimalPath(*strongestTerritory));
+		getPlayer().getOrdersList().addOrder(&advance);
 		return; 
 	}
 
@@ -756,13 +755,13 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 	for(Card* card: hand){
 		if(card->getType() == "Bomb" && bombableTerritory != nullptr){
 			getPlayer().getHand()->playCard(counter);
-			Bomb* bomb = new Bomb(&getPlayer(),bombableTerritory);
-			getPlayer().getOrdersList().addOrder(bomb);
+			Bomb bomb(&getPlayer(),bombableTerritory);
+			getPlayer().getOrdersList().addOrder(&bomb);
 		}else if(card->getType() == "Airlift" && strongestTerritory->getName() != enemyAdjacentTerritory->getName()){
 			getPlayer().getHand()->playCard(counter);
-			Airlift* airlift = new Airlift(&getPlayer(),strongestTerritory->getArmies(),strongestTerritory,enemyAdjacentTerritory);
+			Airlift airlift(&getPlayer(),strongestTerritory->getArmies(),strongestTerritory,enemyAdjacentTerritory);
             strongestTerritory = enemyAdjacentTerritory;
-			getPlayer().getOrdersList().addOrder(airlift);
+			getPlayer().getOrdersList().addOrder(&airlift);
 		}
 		counter++;
 	}
@@ -811,8 +810,8 @@ void BenevolentPlayer::issueOrder(bool toDeploy, bool toAdvance){
 				weakestTerritory = territory;
 		}
 
-		Deploy* deploy = new Deploy(&getPlayer(),getPlayer().getReinforcementPool(),weakestTerritory);
-		getPlayer().getOrdersList().addOrder(deploy);
+		Deploy deploy(&getPlayer(),getPlayer().getReinforcementPool(),weakestTerritory);
+		getPlayer().getOrdersList().addOrder(&deploy);
 		strongestTerritory = weakestTerritory;
 		return;	
 	}
@@ -831,8 +830,8 @@ void BenevolentPlayer::issueOrder(bool toDeploy, bool toAdvance){
 
         
 		for(Territory* neighbor:neighbors){
-			Advance* advance = new Advance(&getPlayer(),strongestTerritory->getArmies()/counter,strongestTerritory,neighbor);
-			getPlayer().getOrdersList().addOrder(advance);
+			Advance advance(&getPlayer(),strongestTerritory->getArmies()/counter,strongestTerritory,neighbor);
+			getPlayer().getOrdersList().addOrder(&advance);
 		}
         
 
@@ -845,8 +844,8 @@ void BenevolentPlayer::issueOrder(bool toDeploy, bool toAdvance){
 	for(Card* card: cards){
 		if(card->getType() == "Negotiate"){
 			getPlayer().getHand()->playCard(counter);
-			Negotiate* negotiate = new Negotiate(&getPlayer(),&giveMeARandomPlayer());
-			getPlayer().getOrdersList().addOrder(negotiate);
+			Negotiate negotiate(&getPlayer(),&giveMeARandomPlayer());
+			getPlayer().getOrdersList().addOrder(&negotiate);
 		}
 		counter++;
 	}
