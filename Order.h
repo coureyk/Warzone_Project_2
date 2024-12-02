@@ -31,7 +31,7 @@ public:
     //Default Constructor
     Order();
 
-    ~Order();
+    virtual ~Order();
 
     virtual bool validate() = 0;
     virtual void execute() = 0;

@@ -14,10 +14,6 @@ Order::Order() {
     effect = "";
 }
 
-Order::~Order() {
-
-}
-
 //GETTERS
 string Order::getOrderType() const {
     return this->orderType;
@@ -311,7 +307,6 @@ bool Advance::validate() {
         //need to check if targetTerritoryOwner is a NeutralPlayer
         if (getTargetTerritory()->getOwner()->getPS()->getPSType() == "Neutral") {
             PlayerStrategy* newStrat = new AggressivePlayer;
-            newStrat->setPlayer(*(getTargetTerritory()->getOwner()));
             getTargetTerritory()->getOwner()->setPS(newStrat);
         }
         
@@ -475,7 +470,6 @@ bool Bomb::validate() {
     //need to check if targetTerritoryOwner is a NeutralPlayer
     if (getTargetTerritory()->getOwner() != nullptr && getTargetTerritory()->getOwner()->getPS()->getPSType() == "Neutral") {
         PlayerStrategy* newStrat = new AggressivePlayer;
-        newStrat->setPlayer(*(getTargetTerritory()->getOwner()));
         getTargetTerritory()->getOwner()->setPS(newStrat);
     }
 
@@ -788,12 +782,6 @@ OrdersList::Node::Node(Order* const element, Node* const prev, Node* const next)
     this->next = next;
 }
 
-OrdersList::Node::~Node() {
-    delete element;
-    delete prev;
-    delete next;
-}
-
 //GETTERS
 Order* OrdersList::Node::getElement() const {
     return element;
@@ -823,11 +811,6 @@ OrdersList::OrdersList() {
     header = new Node();
     trailer = new Node(NULL, header, NULL);
     header->setNext(trailer);
-}
-
-OrdersList::~OrdersList() {
-    delete header;
-    delete trailer;
 }
 
 void OrdersList::addBetween(Order* element, Node* predecessor, Node* successor) {
