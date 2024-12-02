@@ -673,19 +673,30 @@ CheaterPlayer::CheaterPlayer() {
 
 void CheaterPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 
-	printTerritories();
-	if (!toDeploy && !toAdvance) {
-		for (Territory* t : toDefend()) {
-			for (Territory* neighbor : t->getNeighbors()) {
+	
+	// if (!toDeploy && !toAdvance) {
+	// 	for (Territory* t : toDefend()) {
+	// 		for (Territory* neighbor : t->getNeighbors()) {
 
-				if (neighbor->getOwner() == nullptr || neighbor->getOwner()->getName() != getPlayer().getName()) {
-					Cheat* cheat = new Cheat(&getPlayer(), neighbor);
+	// 			if (neighbor->getOwner() == nullptr || neighbor->getOwner()->getName() != getPlayer().getName()) {
+	// 				Cheat* cheat = new Cheat(&getPlayer(), neighbor);
+	// 				getPlayer().getOrdersList().addOrder(cheat);
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	if (!toDeploy && !toAdvance) {
+		printTerritories();
+		for (Territory* t : toAttack()) {
+				if (t->getOwner() == nullptr || t->getOwner()->getName() != getPlayer().getName()) {
+					Cheat* cheat = new Cheat(&getPlayer(), t);
 					getPlayer().getOrdersList().addOrder(cheat);
 				}
-			}
+			
 		}
 	}
-	return;
+
 }
 
 vector<Territory*>& CheaterPlayer::toAttack() {
@@ -885,7 +896,15 @@ void AggressivePlayer::printTerritories(){
 						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
 				}
 
-				std::cout << endl;
+				std::cout << endl<<endl;
+
+				// int counter = 0;
+				// for(Continent* continent:Map::getContinents()){
+				// 	for(Territory* territory: continent->getTerritories())
+				// 	counter++;
+				// }
+				// cout<<"Player territory count: "<<toDefend().size()<< " Total territories: "<< counter<<endl;
+
 }
 
 BenevolentPlayer::BenevolentPlayer(){

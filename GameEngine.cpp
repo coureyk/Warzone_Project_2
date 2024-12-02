@@ -51,7 +51,7 @@ string GameEngine::mainGameLoop(int n){
         for(Player* player: *players){
             if(player->getTerritories().size() == 0){
                 players->erase(players->begin() + counter);
-                cout<<player->getName()<< " has been removed from the game";
+                cout<<player->getName()<< " has been removed from the game"<<endl;
             }
             counter++;
         }
