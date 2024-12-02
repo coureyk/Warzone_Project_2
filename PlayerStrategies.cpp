@@ -800,27 +800,22 @@ BenevolentPlayer::BenevolentPlayer(){
 }
 
 void BenevolentPlayer::issueOrder(bool toDeploy, bool toAdvance){
-
+   
 	if(toDeploy){
-
 		Territory* weakestTerritory = toDefend()[0];
-
 		for(Territory* territory: toDefend()){
 			if(territory->getArmies() < weakestTerritory->getArmies())
 				weakestTerritory = territory;
 		}
-
 		Deploy deploy(&getPlayer(),getPlayer().getReinforcementPool(),weakestTerritory);
 		getPlayer().getOrdersList().addOrder(&deploy);
 		strongestTerritory = weakestTerritory;
 		return;	
 	}
-        
 	if(toAdvance){
         
 		int counter = 1;
 		std::vector<Territory*> neighbors;
-
 		for(Territory* neighbor: strongestTerritory->getNeighbors()){
 			if(neighbor->getOwner() != nullptr && neighbor->getOwner()->getName() == getPlayer().getName()){
 			counter++;

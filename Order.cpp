@@ -13,7 +13,9 @@ Order::Order() {
     hasExecuted = false;
     effect = "";
 }
+Order::~Order(){
 
+}
 //GETTERS
 string Order::getOrderType() const {
     return this->orderType;
@@ -812,7 +814,9 @@ OrdersList::OrdersList() {
     trailer = new Node(NULL, header, NULL);
     header->setNext(trailer);
 }
-
+OrdersList::~OrdersList(){
+    
+}
 void OrdersList::addBetween(Order* element, Node* predecessor, Node* successor) {
     Node* newest = new Node(element, predecessor, successor);
     predecessor->setNext(newest);
