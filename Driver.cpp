@@ -26,8 +26,8 @@ int main(int argc, char* argv[]) {
     // testPlayerStrategies();
     // return 0;
 
-    //cout << "testMainGameLoop() is invoked" << endl;
-    //gameEngine.testMainGameLoop();
+   // cout << "testMainGameLoop() is invoked" << endl;
+   // gameEngine.testMainGameLoop();
     //cout << "testMainGameLoop() is finished" << endl;
     cout << "testGameStates() is invoked" << endl;
     waitForEnter();

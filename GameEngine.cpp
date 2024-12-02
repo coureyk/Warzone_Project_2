@@ -103,8 +103,8 @@ void GameEngine::testMainGameLoop() {
     int srcReinforcementPool = 10;
     int tarReinforcementPool = 10;
 
-    PlayerStrategy* strat1 = new CheaterPlayer; 
-    PlayerStrategy* strat2 = new AggressivePlayer;
+    PlayerStrategy* strat1 = new BenevolentPlayer; 
+    PlayerStrategy* strat2 = new CheaterPlayer;
     
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool,strat2);
@@ -150,7 +150,7 @@ void GameEngine::testMainGameLoop() {
     players->push_back(targetPlayer);
     
     Deck deck;
-    mainGameLoop(40);
+    mainGameLoop(80);
 }
 
 void GameEngine::reinforcementPhase(Player& player){
