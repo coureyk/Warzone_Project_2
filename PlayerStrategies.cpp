@@ -878,9 +878,10 @@ std::vector<Territory*>& BenevolentPlayer::toDefend(){
 }
 
 Territory& AggressivePlayer::optimalPath(Territory& startTerritory) {
-    // A queue for BFS, storing pairs of the current territory and its immediate predecessor
+    // A queue for BFS
     std::queue<Territory*> queue;
     std::unordered_set<Territory*> visited; // To track visited territories
+	Territory* neutralTerritory = nullptr;
 
     // Start BFS from the given territory
     queue.push(&startTerritory);
@@ -898,19 +899,26 @@ Territory& AggressivePlayer::optimalPath(Territory& startTerritory) {
                 continue;
             }
 
-            // Check if the neighbor is neutral or hostile
-            if (neighbor->getOwner() == nullptr ||neighbor->getOwner()->getName() != getPlayer().getName() ) {
-                return *neighbor; // Found the target territory
+            // Check if the neighbor is hostile
+            if (neighbor->getOwner() != nullptr && neighbor->getOwner()->getName() != getPlayer().getName()) {
+                return *neighbor; // Immediately target hostile territory
+            }
+
+            // If not hostile, check if it's neutral
+            if (neighbor->getOwner() == nullptr) {
+                neutralTerritory = neighbor; // Immediately target neutral territory
             }
 
             // Mark the neighbor as visited and enqueue it
             visited.insert(neighbor);
             queue.push(neighbor);
         }
+		if(neutralTerritory != nullptr)
+			return *neutralTerritory;
     }
 
-    // If no target territory is found, return the start territory (or handle differently)
-    return startTerritory; // No neutral or hostile territories found
+    // If no suitable territories are found, return the start territory
+    return startTerritory;
 }
 
 Player& BenevolentPlayer::giveMeARandomPlayer(){

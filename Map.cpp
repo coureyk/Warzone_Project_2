@@ -85,7 +85,11 @@ void Territory::setVisitedStatus(const bool& visitedStatus) {
 
 void Territory::setOwner(Player* const newOwner) {
     
+
     if (owner != NULL) {
+        if(owner->getName() == newOwner->getName() ){
+            return;
+        }
         //If newOwner is different from the current owner, modify the previous owners' "territories" vectors
         if (this->getOwner()->getName() != newOwner->getName()) {
             vector<Territory*>* territories = &(getOwner()->getTerritories()); 
