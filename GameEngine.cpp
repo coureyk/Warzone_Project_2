@@ -32,17 +32,16 @@ string GameEngine::mainGameLoop(int n){
 
         for(Player* player: *players){
             
-            std::cout<<"("<<player->getPS()->getPSType()<<") "<<"Player: "<<player->getName()<<std::endl;
+            std::cout<<"Player: "<<player->getName()<<std::endl;
             issueOrderPhase(*player);
             
             if(onlyBots){
             
-            //Tools::waitForSeconds(3);
+            Tools::waitForSeconds(1);
             }
         }
 
         for(Player* player: *players){
-            
             executeOrdersPhase(*player);
             //players->erase(std::remove_if(players->begin(), players->end(), [](Player* player) { return player->getTerritories().size() == 0; }), players->end());
         }
@@ -102,7 +101,7 @@ void GameEngine::testMainGameLoop() {
     int tarReinforcementPool = 10;
 
     PlayerStrategy* strat1 = new NeutralPlayer; 
-    PlayerStrategy* strat2 = new AggressivePlayer;
+    PlayerStrategy* strat2 = new CheaterPlayer;
     
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool,strat2);
@@ -196,6 +195,7 @@ void GameEngine::reinforcementPhase(Player& player){
 
 void GameEngine::issueOrderPhase(Player& player){
     
+    
     player.issueOrder(true,false);
     //For multiple deployments to different territories
     while(player.getOrdersList().getNode(0)!= NULL){
@@ -221,17 +221,12 @@ void GameEngine::executeOrdersPhase(Player& player){
     
 
     for(int i = 0;i<player.getOrdersList().getSize();i++){
-
         Order* currentOrder = player.getOrdersList().getNode(i)->getElement();
-        
         player.getOrdersList().getNode(i)->getElement()->execute();
-        
         player.getOrdersList().remove(player.getOrdersList().getNode(i));
        // delete currentOrder;
        // currentOrder = NULL;
     }
-
-    
     
 }
 
@@ -554,12 +549,10 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
     int initial=0;
 
     
-    cout<<"im here2"<<endl;
    for (string player : strategies) {
     srcTerritories.clear();
     cout << player<<endl;
     counter = 0;
-     cout<<"im here1"<<endl;
    for (Continent* c : Map::getContinents()) {
         for (Territory* t : c->getTerritories()) {
                 if (counter >= initial && counter < initial+MAX_TERRITORIES){
@@ -617,18 +610,15 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
         delete observer;
     }
     observers.clear();
-    for (OrdersList* ordersList : orderLists) {
+   for (Player* ptr : *players) {
+        delete ptr;  // Free memory allocated for each object
+    }
+    players->clear();  // Clear the vector
+    /*for (OrdersList* ordersList : orderLists) {
         delete ordersList;
     }
-    orderLists.clear();
-    for (Continent* c : Map::getContinents()) {
-        for (Territory* t : c->getTerritories()) {
-            delete t;
-            t = NULL;
-        }
-        delete c;
-        c = NULL;
-    }
+    orderLists.clear();*/
+
     /* for (PlayerStrategy* strategyList : strategyList) {
         delete strategyList;
     }
@@ -645,6 +635,7 @@ void GameEngine::displayResults() const {
         }
         std::cout << "\n";
     }
+    GameEngine::state = states::START;
 }
 
 
