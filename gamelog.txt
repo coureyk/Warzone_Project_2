@@ -5272,3 +5272,3420 @@ Invalid command in the current state or syntax error.
 tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 2 -D 10
 Valid tournament command.
 Command executed successfully.
+tournament -M USA.map,Asia.map -P Aggressive,Cheater -G 2 -D 50
+Valid tournament command.
+Command executed successfully.
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 52 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
+
+Order type: Cheater cheated and aquired Eastern Mexico
+Order type: Cheater cheated and aquired Western Mexico
+Order type: Cheater cheated and aquired Wyoming
+Order type: Cheater cheated and aquired Montana
+Order type: Cheater cheated and aquired New Mexico
+Order type: Cheater cheated and aquired Colorado
+Order type: Cheater cheated and aquired Ontario
+Order type: Cheater cheated and aquired Manitoba
+Order type: Cheater cheated and aquired Saskatchewan
+Order type: Cheater cheated and aquired Maryland
+Order type: Cheater cheated and aquired West Virginia
+Order type: Cheater cheated and aquired Kentucky
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Cheater cheated and aquired Quebec
+Order type: Cheater cheated and aquired Mississippi
+Order type: Cheater cheated and aquired North Carolina
+Order type: Cheater cheated and aquired Tennessee
+Order type: Cheater cheated and aquired Delaware
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Texas
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Mexico. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Baja California
+Order type: Cheater cheated and aquired Idaho
+Order type: Cheater cheated and aquired Arizona
+Order type: Cheater cheated and aquired Utah
+Order type: Cheater cheated and aquired Alberta
+Order type: Cheater cheated and aquired British Columbia
+Order type: Cheater cheated and aquired Virginia
+Order type: Cheater cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Colorado. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Washington
+Order type: Cheater cheated and aquired California
+Order type: Cheater cheated and aquired Oregon
+Order type: Cheater cheated and aquired Nevada
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Kansas
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
+
+Order type: Cheater cheated and aquired Kansas
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Nebraska
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
+
+Order type: Cheater cheated and aquired Nebraska
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on South Dakota
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 62 army units from South Dakota to North Dakota
+
+Order type: Cheater cheated and aquired South Dakota
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on North Dakota
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 64 army units from North Dakota to Saskatchewan
+
+Order type: Cheater cheated and aquired North Dakota
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 66 army units from Saskatchewan to Manitoba
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Alberta. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Saskatchewan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Manitoba
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 68 army units from Manitoba to Ontario
+
+Order type: Cheater cheated and aquired Manitoba
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Ontario
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 70 army units from Ontario to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Manitoba. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Ontario
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 72 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 74 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 76 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 78 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 80 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 82 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 84 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 86 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 88 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 90 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 92 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 94 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 96 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 98 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 100 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 102 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 104 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 106 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 108 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 110 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 112 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 114 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 116 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 118 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 120 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 122 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 124 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 126 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 128 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 130 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 132 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 134 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 136 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 138 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 140 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 142 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 144 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 146 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 148 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 150 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 52 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
+
+Order type: Cheater cheated and aquired Eastern Mexico
+Order type: Cheater cheated and aquired Western Mexico
+Order type: Cheater cheated and aquired Wyoming
+Order type: Cheater cheated and aquired Montana
+Order type: Cheater cheated and aquired New Mexico
+Order type: Cheater cheated and aquired Colorado
+Order type: Cheater cheated and aquired Ontario
+Order type: Cheater cheated and aquired Manitoba
+Order type: Cheater cheated and aquired Saskatchewan
+Order type: Cheater cheated and aquired Maryland
+Order type: Cheater cheated and aquired West Virginia
+Order type: Cheater cheated and aquired Kentucky
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Cheater cheated and aquired Quebec
+Order type: Cheater cheated and aquired Mississippi
+Order type: Cheater cheated and aquired North Carolina
+Order type: Cheater cheated and aquired Tennessee
+Order type: Cheater cheated and aquired Delaware
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Texas
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Mexico. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Baja California
+Order type: Cheater cheated and aquired Idaho
+Order type: Cheater cheated and aquired Arizona
+Order type: Cheater cheated and aquired Utah
+Order type: Cheater cheated and aquired Alberta
+Order type: Cheater cheated and aquired British Columbia
+Order type: Cheater cheated and aquired Virginia
+Order type: Cheater cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
+
+Order type: Cheater cheated and aquired Washington
+Order type: Cheater cheated and aquired California
+Order type: Cheater cheated and aquired Oregon
+Order type: Cheater cheated and aquired Nevada
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Kansas
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
+
+Order type: Cheater cheated and aquired Kansas
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Nebraska
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
+
+Order type: Cheater cheated and aquired Nebraska
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on South Dakota
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 62 army units from South Dakota to North Dakota
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Montana. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired South Dakota
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on North Dakota
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 64 army units from North Dakota to Saskatchewan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Montana. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired North Dakota
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 66 army units from Saskatchewan to Manitoba
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Alberta. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Saskatchewan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Manitoba
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 68 army units from Manitoba to Ontario
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Saskatchewan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Manitoba
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Ontario
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 70 army units from Ontario to Quebec
+
+Order type: Cheater cheated and aquired Ontario
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 72 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 74 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 76 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 78 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 80 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 82 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 84 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 86 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 88 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 90 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 92 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 94 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 96 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 98 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 100 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 102 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 104 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 106 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 108 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 110 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 112 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 114 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 116 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 118 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 120 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 122 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 124 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 126 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 128 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 130 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 132 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 134 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 136 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 138 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 140 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 142 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 144 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 146 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 148 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 150 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 52 army units on Saudi Arabia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from Saudi Arabia to Iran
+
+Order type: Cheater cheated and aquired Kuwait
+Order type: Cheater cheated and aquired Turkey
+Order type: Cheater cheated and aquired Iraq
+Order type: Cheater cheated and aquired China
+Order type: Cheater cheated and aquired Azerbaijan
+Order type: Cheater cheated and aquired Armenia
+Order type: Cheater cheated and aquired Kazakhstan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Iran
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 54 army units from Iran to Azerbaijan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Pakistan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Saudi Arabia
+Order type: Cheater cheated and aquired Cyprus
+Order type: Cheater cheated and aquired Jordan
+Order type: Cheater cheated and aquired Syria
+Order type: Cheater cheated and aquired North Korea
+Order type: Cheater cheated and aquired Russia
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Mongolia
+Order type: Cheater cheated and aquired Iran
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Azerbaijan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 56 army units from Azerbaijan to Georgia
+
+Order type: Cheater cheated and aquired Qatar
+Order type: Cheater cheated and aquired Buhrain
+Order type: Cheater cheated and aquired Yemen
+Order type: Cheater cheated and aquired Omen
+Order type: Cheater cheated and aquired United Arab Emigrants
+Order type: Cheater cheated and aquired Israel
+Order type: Cheater cheated and aquired Lebanon
+Order type: Cheater cheated and aquired South Korea
+Order type: Cheater cheated and aquired Japan
+Order type: Cheater cheated and aquired Azerbaijan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 58 army units from Georgia to Russia
+
+Order type: Cheater cheated and aquired Georgia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 60 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 62 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 64 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 66 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 68 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 70 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 72 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 74 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 76 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 78 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 80 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 82 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 84 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 86 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 88 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 90 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 92 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 94 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 96 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 98 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 100 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 102 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 104 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 106 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 108 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 110 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 112 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 114 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 116 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 118 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 120 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 122 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 124 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 126 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 128 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 130 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 132 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 134 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 136 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 138 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 140 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 142 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 144 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 146 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 148 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 150 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 52 army units on Saudi Arabia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from Saudi Arabia to Iran
+
+Order type: Cheater cheated and aquired Kuwait
+Order type: Cheater cheated and aquired Turkey
+Order type: Cheater cheated and aquired Iraq
+Order type: Cheater cheated and aquired China
+Order type: Cheater cheated and aquired Azerbaijan
+Order type: Cheater cheated and aquired Armenia
+Order type: Cheater cheated and aquired Kazakhstan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Iran
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 54 army units from Iran to Azerbaijan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Pakistan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Saudi Arabia
+Order type: Cheater cheated and aquired Syria
+Order type: Cheater cheated and aquired Cyprus
+Order type: Cheater cheated and aquired Russia
+Order type: Cheater cheated and aquired Jordan
+Order type: Cheater cheated and aquired Mongolia
+Order type: Cheater cheated and aquired North Korea
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Georgia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Azerbaijan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 56 army units from Azerbaijan to Georgia
+
+Order type: Cheater cheated and aquired United Arab Emigrants
+Order type: Cheater cheated and aquired Qatar
+Order type: Cheater cheated and aquired Buhrain
+Order type: Cheater cheated and aquired Yemen
+Order type: Cheater cheated and aquired Omen
+Order type: Cheater cheated and aquired Israel
+Order type: Cheater cheated and aquired Lebanon
+Order type: Cheater cheated and aquired South Korea
+Order type: Cheater cheated and aquired Japan
+Order type: Cheater cheated and aquired Azerbaijan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 58 army units from Georgia to Russia
+
+Order type: Cheater cheated and aquired Georgia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 60 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 62 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 64 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 66 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 68 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 70 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 72 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 74 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 76 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 78 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 80 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 82 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 84 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 86 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 88 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 90 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 92 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 94 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 96 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 98 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 100 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 102 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 104 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 106 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 108 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 110 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 112 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 114 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 116 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 118 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 120 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 122 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 124 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 126 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 128 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 130 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 132 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 134 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 136 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 138 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 140 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 142 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 144 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 146 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 148 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 150 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+State: START
+Tournament Results:
+Map: Asia.map
+Draw Draw 
+Map: USA.map
+Draw Draw 
+
+tournament -M USA.map,Asia.map -P Aggressive,Cheater -G 2 -D 50
+Valid tournament command.
+Command executed successfully.
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 52 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
+
+Order type: Cheater cheated and aquired Eastern Mexico
+Order type: Cheater cheated and aquired Western Mexico
+Order type: Cheater cheated and aquired Wyoming
+Order type: Cheater cheated and aquired Montana
+Order type: Cheater cheated and aquired New Mexico
+Order type: Cheater cheated and aquired Colorado
+Order type: Cheater cheated and aquired Ontario
+Order type: Cheater cheated and aquired Manitoba
+Order type: Cheater cheated and aquired Saskatchewan
+Order type: Cheater cheated and aquired Maryland
+Order type: Cheater cheated and aquired West Virginia
+Order type: Cheater cheated and aquired Kentucky
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Cheater cheated and aquired Quebec
+Order type: Cheater cheated and aquired Mississippi
+Order type: Cheater cheated and aquired North Carolina
+Order type: Cheater cheated and aquired Tennessee
+Order type: Cheater cheated and aquired Delaware
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Texas
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Mexico. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Baja California
+Order type: Cheater cheated and aquired Idaho
+Order type: Cheater cheated and aquired Arizona
+Order type: Cheater cheated and aquired Utah
+Order type: Cheater cheated and aquired Alberta
+Order type: Cheater cheated and aquired British Columbia
+Order type: Cheater cheated and aquired Virginia
+Order type: Cheater cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
+
+Order type: Cheater cheated and aquired Washington
+Order type: Cheater cheated and aquired California
+Order type: Cheater cheated and aquired Oregon
+Order type: Cheater cheated and aquired Nevada
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Kansas
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
+
+Order type: Cheater cheated and aquired Kansas
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Nebraska
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
+
+Order type: Cheater cheated and aquired Nebraska
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on South Dakota
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 62 army units from South Dakota to North Dakota
+
+Order type: Cheater cheated and aquired South Dakota
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on North Dakota
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 64 army units from North Dakota to Saskatchewan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Montana. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired North Dakota
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 66 army units from Saskatchewan to Manitoba
+
+Order type: Cheater cheated and aquired Saskatchewan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Manitoba
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 68 army units from Manitoba to Ontario
+
+Order type: Cheater cheated and aquired Manitoba
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Ontario
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 70 army units from Ontario to Quebec
+
+Order type: Cheater cheated and aquired Ontario
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 72 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 74 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 76 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 78 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 80 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 82 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 84 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 86 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 88 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 90 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 92 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 94 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 96 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 98 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 100 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 102 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 104 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 106 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 108 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 110 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 112 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 114 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 116 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 118 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 120 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 122 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 124 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 126 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 128 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 130 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 132 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 134 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 136 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 138 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 140 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 142 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 144 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 146 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 148 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 150 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 52 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
+
+Order type: Cheater cheated and aquired Eastern Mexico
+Order type: Cheater cheated and aquired Western Mexico
+Order type: Cheater cheated and aquired Wyoming
+Order type: Cheater cheated and aquired Montana
+Order type: Cheater cheated and aquired New Mexico
+Order type: Cheater cheated and aquired Colorado
+Order type: Cheater cheated and aquired Ontario
+Order type: Cheater cheated and aquired Manitoba
+Order type: Cheater cheated and aquired Saskatchewan
+Order type: Cheater cheated and aquired Maryland
+Order type: Cheater cheated and aquired West Virginia
+Order type: Cheater cheated and aquired Kentucky
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Cheater cheated and aquired Quebec
+Order type: Cheater cheated and aquired Mississippi
+Order type: Cheater cheated and aquired North Carolina
+Order type: Cheater cheated and aquired Tennessee
+Order type: Cheater cheated and aquired Delaware
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Texas
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Mexico. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Baja California
+Order type: Cheater cheated and aquired Idaho
+Order type: Cheater cheated and aquired Arizona
+Order type: Cheater cheated and aquired Utah
+Order type: Cheater cheated and aquired Alberta
+Order type: Cheater cheated and aquired British Columbia
+Order type: Cheater cheated and aquired Virginia
+Order type: Cheater cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
+
+Order type: Cheater cheated and aquired Washington
+Order type: Cheater cheated and aquired California
+Order type: Cheater cheated and aquired Oregon
+Order type: Cheater cheated and aquired Nevada
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Kansas
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
+
+Order type: Cheater cheated and aquired Kansas
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Nebraska
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
+
+Order type: Cheater cheated and aquired Nebraska
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on South Dakota
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 62 army units from South Dakota to North Dakota
+
+Order type: Cheater cheated and aquired South Dakota
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on North Dakota
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 64 army units from North Dakota to Saskatchewan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Montana. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired North Dakota
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 66 army units from Saskatchewan to Manitoba
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Alberta. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Saskatchewan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Manitoba
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 68 army units from Manitoba to Ontario
+
+Order type: Cheater cheated and aquired Manitoba
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Ontario
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 70 army units from Ontario to Quebec
+
+Order type: Cheater cheated and aquired Ontario
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 72 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 74 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 76 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 78 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 80 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 82 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 84 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 86 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 88 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 90 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 92 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 94 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 96 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 98 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 100 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 102 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 104 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 106 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 108 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 110 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 112 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 114 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 116 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 118 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 120 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 122 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 124 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 126 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 128 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 130 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 132 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 134 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 136 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 138 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 140 army units from New Brunswick to Maine
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 142 army units from Maine to Quebec
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 144 army units from Quebec to New Brunswick
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 146 army units from New Brunswick to Maine
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired New Brunswick
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 148 army units from Maine to Quebec
+
+Order type: Cheater cheated and aquired Maine
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 150 army units from Quebec to New Brunswick
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Quebec
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 52 army units on Saudi Arabia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from Saudi Arabia to Iran
+
+Order type: Cheater cheated and aquired Kuwait
+Order type: Cheater cheated and aquired Turkey
+Order type: Cheater cheated and aquired Iraq
+Order type: Cheater cheated and aquired China
+Order type: Cheater cheated and aquired Azerbaijan
+Order type: Cheater cheated and aquired Armenia
+Order type: Cheater cheated and aquired Kazakhstan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Iran
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 54 army units from Iran to Azerbaijan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Pakistan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Saudi Arabia
+Order type: Cheater cheated and aquired Cyprus
+Order type: Cheater cheated and aquired Jordan
+Order type: Cheater cheated and aquired Syria
+Order type: Cheater cheated and aquired North Korea
+Order type: Cheater cheated and aquired Russia
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Mongolia
+Order type: Cheater cheated and aquired Iran
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Azerbaijan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 56 army units from Azerbaijan to Georgia
+
+Order type: Cheater cheated and aquired Qatar
+Order type: Cheater cheated and aquired Buhrain
+Order type: Cheater cheated and aquired Yemen
+Order type: Cheater cheated and aquired Omen
+Order type: Cheater cheated and aquired United Arab Emigrants
+Order type: Cheater cheated and aquired Israel
+Order type: Cheater cheated and aquired Lebanon
+Order type: Cheater cheated and aquired South Korea
+Order type: Cheater cheated and aquired Japan
+Order type: Cheater cheated and aquired Azerbaijan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 58 army units from Georgia to Russia
+
+Order type: Cheater cheated and aquired Georgia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 60 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 62 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 64 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 66 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 68 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 70 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 72 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 74 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 76 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 78 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 80 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 82 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 84 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 86 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 88 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 90 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 92 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 94 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 96 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 98 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 100 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 102 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 104 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 106 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 108 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 110 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 112 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 114 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 116 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 118 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 120 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 122 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 124 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 126 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 128 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 130 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 132 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 134 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 136 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 138 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 140 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 142 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 144 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 146 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 148 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 150 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 52 army units on Saudi Arabia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from Saudi Arabia to Iran
+
+Order type: Cheater cheated and aquired Kuwait
+Order type: Cheater cheated and aquired Turkey
+Order type: Cheater cheated and aquired Iraq
+Order type: Cheater cheated and aquired China
+Order type: Cheater cheated and aquired Azerbaijan
+Order type: Cheater cheated and aquired Armenia
+Order type: Cheater cheated and aquired Kazakhstan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Iran
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 54 army units from Iran to Azerbaijan
+
+Order type: Cheater cheated and aquired Saudi Arabia
+Order type: Cheater cheated and aquired Syria
+Order type: Cheater cheated and aquired Cyprus
+Order type: Cheater cheated and aquired Russia
+Order type: Cheater cheated and aquired Jordan
+Order type: Cheater cheated and aquired Mongolia
+Order type: Cheater cheated and aquired North Korea
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Georgia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Azerbaijan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 56 army units from Azerbaijan to Georgia
+
+Order type: Cheater cheated and aquired United Arab Emigrants
+Order type: Cheater cheated and aquired Qatar
+Order type: Cheater cheated and aquired Buhrain
+Order type: Cheater cheated and aquired Yemen
+Order type: Cheater cheated and aquired Omen
+Order type: Cheater cheated and aquired Israel
+Order type: Cheater cheated and aquired Lebanon
+Order type: Cheater cheated and aquired South Korea
+Order type: Cheater cheated and aquired Japan
+Order type: Cheater cheated and aquired Azerbaijan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 58 army units from Georgia to Russia
+
+Order type: Cheater cheated and aquired Georgia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 60 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 62 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 64 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 66 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 68 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 70 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 72 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 74 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 76 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 78 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 80 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 82 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 84 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 86 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 88 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 90 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 92 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 94 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 96 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 98 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 100 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 102 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 104 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 106 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 108 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 110 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 112 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 114 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 116 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 118 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 120 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 122 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 124 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 126 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 128 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 130 army units from Japan to Russia
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on South Korea. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 132 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 134 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 136 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 138 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 140 army units from Russia to Japan
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 142 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 144 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 146 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Russia
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 148 army units from Russia to Japan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Azerbaijan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Cheater cheated and aquired Russia
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Japan
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 150 army units from Japan to Russia
+
+Order type: Cheater cheated and aquired Japan
+State: START
+Tournament Results:
+Map: Asia.map
+Draw Draw 
+Map: USA.map
+Draw Draw 
+
