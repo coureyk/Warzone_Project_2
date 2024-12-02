@@ -99,7 +99,7 @@ void GameEngine::testMainGameLoop() {
     int srcReinforcementPool = 10;
     int tarReinforcementPool = 10;
 
-    PlayerStrategy* strat1 = new AggressivePlayer; 
+    PlayerStrategy* strat1 = new CheaterPlayer; 
     PlayerStrategy* strat2 = new AggressivePlayer;
     
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
