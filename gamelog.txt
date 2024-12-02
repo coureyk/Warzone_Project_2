@@ -1299,3 +1299,775 @@ Summary: Kevin is attempting to move 13 army units from Baja California to Calif
 Order type: Order Type: Deploy
 Summary: Liam is attempting to put 13 army units on Western Mexico
 
+Order type: Kevin cheated and aquired California
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Kevin cheated and aquired California
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Kevin cheated and aquired California
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Kevin cheated and aquired California
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Kevin cheated and aquired California
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Kevin cheated and aquired California
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 13 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 13 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 16 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Oregon
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 19 army units from Oregon to Washington
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Washington
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 22 army units from Washington to British Columbia
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on British Columbia
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 25 army units from British Columbia to Alberta
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Alberta
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 28 army units from Alberta to Saskatchewan
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 31 army units from Saskatchewan to Manitoba
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Manitoba
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 34 army units from Manitoba to Ontario
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Ontario
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 37 army units from Ontario to Quebec
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 40 army units from Quebec to New Brunswick
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 45 army units from New Brunswick to Maine
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 50 army units from Maine to New Hampshire
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on New Hampshire
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 55 army units from New Hampshire to Massachusetts
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 60 army units from Massachusetts to Vermont
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Vermont
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 65 army units from Vermont to New York
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on New York
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 70 army units from New York to Connecticut
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Connecticut
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 75 army units from Connecticut to Rhode Island
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Rhode Island
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 80 army units from Rhode Island to New Jersey
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on New Jersey
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 85 army units from New Jersey to Delaware
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Delaware
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 90 army units from Delaware to Pennsylvania
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Pennsylvania
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 95 army units from Pennsylvania to Maryland
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Maryland
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 100 army units from Maryland to Virginia
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Virginia
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 105 army units from Virginia to North Carolina
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on North Carolina
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 110 army units from North Carolina to South Carolina
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on South Carolina
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 115 army units from South Carolina to Georgia
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 120 army units from Georgia to Tennessee
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Tennessee
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 125 army units from Tennessee to Kentucky
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Kentucky
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 130 army units from Kentucky to Illinois
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Illinois
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 135 army units from Illinois to Wisconsin
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Wisconsin
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 140 army units from Wisconsin to Michigan
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Michigan
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 145 army units from Michigan to Ohio
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on Ohio
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 150 army units from Ohio to West Virginia
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 5 army units on West Virginia
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 155 army units from West Virginia to Indiana
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 13 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 13 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 16 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Oregon
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 19 army units from Oregon to Washington
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Washington
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 22 army units from Washington to British Columbia
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 13 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 13 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 16 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 16 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 16 army units from California to Nevada
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 19 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 6 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 5 army units from California to Nevada
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 8 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 9 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 4 army units from California to Nevada
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 7 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 12 army units on Oregon
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 7 army units from Oregon to Washington
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Oregon
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 10 army units from Oregon to Washington
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 15 army units on Eastern Mexico
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 15 army units from Eastern Mexico to Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Washington
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 13 army units from Washington to British Columbia
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 18 army units from Western Mexico to Baja California
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on British Columbia
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 16 army units from British Columbia to Alberta
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 13 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 13 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 16 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 16 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 16 army units from California to Nevada
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 19 army units from California to Oregon
+
+Order type: Order Type: Bomb
+Summary: Liam is attempting to destroy half of the army units located on Oregon. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 6 army units on Oregon
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 12 army units from Oregon to Washington
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 8 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Washington
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 15 army units from Washington to British Columbia
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Oregon
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 11 army units from Oregon to Washington
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on British Columbia
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 18 army units from British Columbia to Alberta
+
+Order type: Order Type: Bomb
+Summary: Kevin is attempting to destroy half of the army units located on Washington. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Washington
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 14 army units from Washington to British Columbia
+
+Order type: Order Type: Bomb
+Summary: Liam is attempting to destroy half of the army units located on British Columbia. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Alberta
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 21 army units from Alberta to Saskatchewan
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on British Columbia
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 17 army units from British Columbia to Alberta
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 24 army units from Saskatchewan to Manitoba
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Alberta
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 20 army units from Alberta to Saskatchewan
+
+Order type: Order Type: Bomb
+Summary: Liam is attempting to destroy half of the army units located on Saskatchewan. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Manitoba
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 27 army units from Manitoba to Ontario
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 23 army units from Saskatchewan to Manitoba
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 13 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 13 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 13 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 13 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 16 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 16 army units from Baja California to California
+
+Order type: Order Type: Bomb
+Summary: Liam is attempting to destroy half of the army units located on California. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 16 army units from California to Nevada
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 19 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 6 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 9 army units from California to Nevada
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on California
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 12 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 9 army units on Oregon
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 8 army units from Oregon to Washington
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Oregon
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 11 army units from Oregon to Washington
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 12 army units on Eastern Mexico
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 12 army units from Eastern Mexico to Western Mexico
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Washington
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 14 army units from Washington to British Columbia
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 3 army units on Western Mexico
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 15 army units from Western Mexico to Baja California
+
+Order type: Order Type: Bomb
+Summary: Kevin is attempting to destroy half of the army units located on Baja California. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on British Columbia
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 17 army units from British Columbia to Alberta
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 2 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 17 army units from Baja California to California
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Alberta
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 20 army units from Alberta to Saskatchewan
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 2 army units on California
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 19 army units from California to Oregon
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 23 army units from Saskatchewan to Manitoba
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 2 army units on Oregon
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 21 army units from Oregon to Washington
+
+Order type: Order Type: Bomb
+Summary: Kevin is attempting to destroy half of the army units located on Washington. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Manitoba
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 26 army units from Manitoba to Ontario
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 2 army units on Washington
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 23 army units from Washington to British Columbia
+
+Order type: Order Type: Bomb
+Summary: Kevin is attempting to destroy half of the army units located on British Columbia. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Ontario
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 29 army units from Ontario to Quebec
+
+Order type: Order Type: Deploy
+Summary: Kevin is attempting to put 2 army units on British Columbia
+
+Order type: Order Type: Advance
+Summary: Kevin is attempting to move 25 army units from British Columbia to Alberta
+
+Order type: Order Type: Bomb
+Summary: Kevin is attempting to destroy half of the army units located on Alberta. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 3 army units on Quebec
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 32 army units from Quebec to New Brunswick
+
+Order type: Kevin cheated and aquired California
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Western Mexico
+Order type: Kevin cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Liam is attempting to put 13 army units on Western Mexico
+
+Order type: Order Type: Advance
+Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+

@@ -251,7 +251,7 @@ bool Advance::validate() {
         return false;
     }
 
-    cout<<"cockOrder1"<<endl;
+    
 
     //check if targetTerritory is adjacent to sourceTerritory
     bool targetIsNeighbor = false;
@@ -268,7 +268,7 @@ bool Advance::validate() {
         cout << "Invalid order. " << sourcePlayer << " cannot advance to non-adjacent territory: " << targetTerritory << ".\n" << endl; // to be deleted
         return false;
     }
-    cout<<"cockOrder2"<<endl;
+    
     //Continue if targetIsNeighbor
     //Check if territory owners have a truce
     for (Player* negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
@@ -279,7 +279,7 @@ bool Advance::validate() {
         }
         return false;
     }
-    cout<<"cockOrder3"<<endl;
+    
     //Check if sourceTerritory and targetTerritory belong to same owner
     if (sourceTerritoryOwner.compare(targetTerritoryOwner) == 0) {
         sourceTerritoryArmyUnits -= getArmyUnits(); //remove army units from source territory
@@ -351,7 +351,7 @@ bool Advance::validate() {
             setEffect(effect);
         }
     }
-    cout << "COCK ORDER FINAL" << endl;
+    
     return true;
 }
 

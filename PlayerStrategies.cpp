@@ -674,8 +674,17 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 	std::vector<Territory*>* attackableTerritories = &toAttack();
 	std::vector<Territory*>* defendableTerritories = &toDefend();
 
+
 	if(toDeploy){
 		
+        //Display defendable territories
+				std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
+				for(Territory* territory: toDefend()){
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
+
 		strongestTerritory = (*defendableTerritories)[0];
 
 		for(Territory* territory: *defendableTerritories){
@@ -807,23 +816,25 @@ void BenevolentPlayer::issueOrder(bool toDeploy, bool toAdvance){
 		strongestTerritory = weakestTerritory;
 		return;	
 	}
-
+        
 	if(toAdvance){
-
+        
 		int counter = 1;
 		std::vector<Territory*> neighbors;
 
 		for(Territory* neighbor: strongestTerritory->getNeighbors()){
-			if(neighbor->getOwner()->getName() == getPlayer().getName()){
+			if(neighbor->getOwner() != nullptr && neighbor->getOwner()->getName() == getPlayer().getName()){
 			counter++;
 			neighbors.push_back(neighbor);
 			}
 		}
 
+        
 		for(Territory* neighbor:neighbors){
 			Advance* advance = new Advance(&getPlayer(),strongestTerritory->getArmies()/counter,strongestTerritory,neighbor);
 			getPlayer().getOrdersList().addOrder(advance);
 		}
+        
 
 		return;
 	}

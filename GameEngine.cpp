@@ -31,12 +31,12 @@ void GameEngine::mainGameLoop(){
 
         for(Player* player: *players){
             
-            std::cout<<"Player: "<<player->getName()<<std::endl;
+            std::cout<<"("<<player->getPS()->getPSType()<<") "<<"Player: "<<player->getName()<<std::endl;
             issueOrderPhase(*player);
             
             if(onlyBots){
             
-            Tools::waitForSeconds(1);
+            Tools::waitForSeconds(3);
             }
         }
 
@@ -58,9 +58,9 @@ void GameEngine::mainGameLoop(){
    }
 
     
-   std::cout<<*((*players)[0])<< " has won the game!";
+   std::cout<<(*players)[0]->getName()<< " has won the game!"<<endl;
    GameEngine::state = states::WIN;
-   cout<<"Win"<<endl;//go back to startup phase
+   //go back to startup phase
 }
 
 void GameEngine::testMainGameLoop() {
@@ -96,8 +96,8 @@ void GameEngine::testMainGameLoop() {
     int srcReinforcementPool = 10;
     int tarReinforcementPool = 10;
 
-    PlayerStrategy* strat1 = new AggressivePlayer; 
-    PlayerStrategy* strat2 = new BenevolentPlayer;
+    PlayerStrategy* strat1 = new CheaterPlayer; 
+    PlayerStrategy* strat2 = new AggressivePlayer;
     
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);
     Player* targetPlayer = new Player("Liam", tarTerritories, tarOrdersList, tarHand, tarReinforcementPool,strat2);
@@ -191,8 +191,6 @@ void GameEngine::reinforcementPhase(Player& player){
 
 void GameEngine::issueOrderPhase(Player& player){
     
-    cout<<player.getPS()->getPSType()<<endl;
-
     player.issueOrder(true,false);
     //For multiple deployments to different territories
     while(player.getOrdersList().getNode(0)!= NULL){
@@ -220,15 +218,14 @@ void GameEngine::executeOrdersPhase(Player& player){
     for(int i = 0;i<player.getOrdersList().getSize();i++){
 
         Order* currentOrder = player.getOrdersList().getNode(i)->getElement();
-        cout<<"cock1"<<endl;
-        cout<<currentOrder->getOrderType()<<endl;
+        
         player.getOrdersList().getNode(i)->getElement()->execute();
-        cout<<"cock2"<<endl;
+        
         player.getOrdersList().remove(player.getOrdersList().getNode(i));
-        cout<<"cock3"<<endl;
+        
         delete currentOrder;
         currentOrder = NULL;
-        cout<<"cock4"<<endl;
+        
     }
 
     
