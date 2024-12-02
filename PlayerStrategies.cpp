@@ -640,7 +640,8 @@ void CheaterPlayer::issueOrder(bool toDeploy, bool toAdvance) {
 }
 
 vector<Territory*>& CheaterPlayer::toAttack() {
-	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+	
+    std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
 	std::set <Territory*> attackableSet;
 
 
@@ -669,11 +670,21 @@ AggressivePlayer::AggressivePlayer(){
 
 void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 	
+
 	std::vector<Territory*>* attackableTerritories = &toAttack();
 	std::vector<Territory*>* defendableTerritories = &toDefend();
-	
+
+
 	if(toDeploy){
 		
+        //Display defendable territories
+				std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
+				for(Territory* territory: toDefend()){
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
+
 		strongestTerritory = (*defendableTerritories)[0];
 
 		for(Territory* territory: *defendableTerritories){
@@ -712,57 +723,69 @@ void AggressivePlayer::issueOrder(bool toDeploy, bool toAdvance){
 			if(territory->getArmies()>strongestTerritory->getArmies())
 				strongestTerritory = territory;
 		}
-
+        //cout<<strongestTerritory->getName()<<"->"<<optimalPath(*strongestTerritory).getName()<<endl;
 		Advance* advance = new Advance(&getPlayer(),strongestTerritory->getArmies(),strongestTerritory,&optimalPath(*strongestTerritory));
-		strongestTerritory = &optimalPath(*strongestTerritory);
 		getPlayer().getOrdersList().addOrder(advance);
-		return;
+		return; 
 	}
 
 	std::vector<Card*> hand = getPlayer().getHand()->getCards();
 	
-	Territory* bombableTerritory = strongestTerritory;
+	Territory* bombableTerritory = nullptr;
 
-	Territory* enemyAdjacentTerritory;
+	Territory* enemyAdjacentTerritory = strongestTerritory;
 
-	do{
-		bombableTerritory = &optimalPath(*bombableTerritory);
-		if(optimalPath(*bombableTerritory).getOwner() != nullptr || optimalPath(*bombableTerritory).getOwner()->getName() == getPlayer().getName())
-		enemyAdjacentTerritory = bombableTerritory;
+	for(Territory* territory:strongestTerritory->getNeighbors()){
+    if(territory->getOwner() != nullptr && territory->getOwner()->getName() != getPlayer().getName())
+        bombableTerritory = territory;
+    }
 
-	}
-	while(bombableTerritory->getOwner() == nullptr || bombableTerritory->getOwner()->getName() == getPlayer().getName());
-
+    while(true){
+        
+        if(optimalPath(*enemyAdjacentTerritory).getOwner() == nullptr || optimalPath(*enemyAdjacentTerritory).getOwner()->getName() != getPlayer().getName()){
+            // cout<<enemyAdjacentTerritory->getName()<<endl;
+            // cout<<optimalPath(*enemyAdjacentTerritory).getName()<<endl;
+            break;
+        }else if(optimalPath(*enemyAdjacentTerritory).getOwner() != nullptr && optimalPath(*enemyAdjacentTerritory).getOwner()->getName() == getPlayer().getName()){
+            enemyAdjacentTerritory = &optimalPath(*enemyAdjacentTerritory);
+        }
+        
+    }
+    
 	int counter = 0;
 	for(Card* card: hand){
-		if(card->getType() == "Bomb"){
+		if(card->getType() == "Bomb" && bombableTerritory != nullptr){
 			getPlayer().getHand()->playCard(counter);
 			Bomb* bomb = new Bomb(&getPlayer(),bombableTerritory);
 			getPlayer().getOrdersList().addOrder(bomb);
-		}else if(card->getType() == "Airlift"){
+		}else if(card->getType() == "Airlift" && strongestTerritory->getName() != enemyAdjacentTerritory->getName()){
 			getPlayer().getHand()->playCard(counter);
 			Airlift* airlift = new Airlift(&getPlayer(),strongestTerritory->getArmies(),strongestTerritory,enemyAdjacentTerritory);
+            strongestTerritory = enemyAdjacentTerritory;
 			getPlayer().getOrdersList().addOrder(airlift);
 		}
 		counter++;
 	}
-
+    
 }
 
 std::vector<Territory*>& AggressivePlayer::toAttack(){
-	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
-	std::set<Territory*> attackableSet;
 
-	for(Territory* territory:getPlayer().getTerritories()){
-		for(Territory* neighbor: territory->getNeighbors()){
-			if(neighbor->getOwner()->getName() != getPlayer().getName()){
+    
+	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+	std::set <Territory*> attackableSet;
+
+
+	for (Territory* territory : getPlayer().getTerritories()) {
+		for (Territory* neighbor : territory->getNeighbors()) {
+			if (neighbor->getOwner() == nullptr ||neighbor->getOwner()->getName() != getPlayer().getName() ) {
 				attackableSet.insert(neighbor);
 			}
 		}
 	}
 
-	for (Territory* territory : attackableSet) {
-		attackableTerritories->push_back(territory);
+	for (Territory* t : attackableSet) {
+		attackableTerritories->push_back(t);
 	}
 
 	return *attackableTerritories;
@@ -793,23 +816,25 @@ void BenevolentPlayer::issueOrder(bool toDeploy, bool toAdvance){
 		strongestTerritory = weakestTerritory;
 		return;	
 	}
-
+        
 	if(toAdvance){
-
+        
 		int counter = 1;
 		std::vector<Territory*> neighbors;
 
 		for(Territory* neighbor: strongestTerritory->getNeighbors()){
-			if(neighbor->getOwner()->getName() == getPlayer().getName()){
+			if(neighbor->getOwner() != nullptr && neighbor->getOwner()->getName() == getPlayer().getName()){
 			counter++;
 			neighbors.push_back(neighbor);
 			}
 		}
 
+        
 		for(Territory* neighbor:neighbors){
 			Advance* advance = new Advance(&getPlayer(),strongestTerritory->getArmies()/counter,strongestTerritory,neighbor);
 			getPlayer().getOrdersList().addOrder(advance);
 		}
+        
 
 		return;
 	}
@@ -829,19 +854,20 @@ void BenevolentPlayer::issueOrder(bool toDeploy, bool toAdvance){
 }
 
 std::vector<Territory*>& BenevolentPlayer::toAttack(){
-	std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
-	std::set<Territory*> attackableSet;
+	
+    std::vector<Territory*>* attackableTerritories = new std::vector<Territory*>;
+	std::set <Territory*> attackableSet;
 
-	for(Territory* territory:getPlayer().getTerritories()){
-		for(Territory* neighbor: territory->getNeighbors()){
-			if(neighbor->getOwner() == nullptr ||neighbor->getOwner()->getName() != getPlayer().getName() ){
+	for (Territory* territory : getPlayer().getTerritories()) {
+		for (Territory* neighbor : territory->getNeighbors()) {
+			if (neighbor->getOwner() == nullptr ||neighbor->getOwner()->getName() != getPlayer().getName() ) {
 				attackableSet.insert(neighbor);
 			}
 		}
 	}
 
-	for (Territory* territory : attackableSet) {
-		attackableTerritories->push_back(territory);
+	for (Territory* t : attackableSet) {
+		attackableTerritories->push_back(t);
 	}
 
 	return *attackableTerritories;

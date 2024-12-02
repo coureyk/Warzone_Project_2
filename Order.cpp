@@ -230,12 +230,13 @@ bool Advance::validate() {
     }else{
         targetTerritoryOwner = getTargetTerritory()->getOwner()->getName();
     }
+    
     string sourceTerritory = getSourceTerritory()->getName();
     string targetTerritory = getTargetTerritory()->getName();
     int sourceTerritoryArmyUnits = getSourceTerritory()->getArmies();
     int targetTerritoryArmyUnits = getTargetTerritory()->getArmies();
     string effect;
-
+    
     if (getArmyUnits() < 0 || getArmyUnits() > sourceTerritoryArmyUnits) {
         effect = "Invalid order. " + sourcePlayer + " does not have specified army units: " + std::to_string(getArmyUnits()) + ".\n";
         setEffect(effect);
@@ -249,6 +250,8 @@ bool Advance::validate() {
         cout << "Invalid order. " << sourcePlayer << " cannot advance from foreign territory: " << sourceTerritory << ".\n" << endl; //to be deleted
         return false;
     }
+
+    
 
     //check if targetTerritory is adjacent to sourceTerritory
     bool targetIsNeighbor = false;
@@ -265,7 +268,7 @@ bool Advance::validate() {
         cout << "Invalid order. " << sourcePlayer << " cannot advance to non-adjacent territory: " << targetTerritory << ".\n" << endl; // to be deleted
         return false;
     }
-
+    
     //Continue if targetIsNeighbor
     //Check if territory owners have a truce
     for (Player* negotiatedPlayer : getSourcePlayer()->getNegotiatedPlayers()) {
@@ -276,7 +279,7 @@ bool Advance::validate() {
         }
         return false;
     }
-
+    
     //Check if sourceTerritory and targetTerritory belong to same owner
     if (sourceTerritoryOwner.compare(targetTerritoryOwner) == 0) {
         sourceTerritoryArmyUnits -= getArmyUnits(); //remove army units from source territory
@@ -290,6 +293,16 @@ bool Advance::validate() {
 
         cout << effect << endl;
     } else {
+        //if Territory is unowned, conquer it
+        if (getTargetTerritory()->getOwner() == NULL) {
+            getSourceTerritory()->setArmies(sourceTerritoryArmyUnits - getArmyUnits()); //update armies on attacker's land
+            getTargetTerritory()->setArmies(getArmyUnits()); //update armies on newly conquered land
+            getTargetTerritory()->setOwner(getSourcePlayer()); //make attacker new owner of targetTerritory       
+            getSourcePlayer()->getHand()->addCard(Deck::draw()); //sourcePlayer receives a card for conquering at least one territory during their turn.
+            effect = "Valid order. " + sourcePlayer + " successfully conquered " + targetTerritory + ". Current " + sourceTerritory + " army units: " + std::to_string(getSourceTerritory()->getArmies()) + ". Current " + targetTerritory + " army units: " + std::to_string(getTargetTerritory()->getArmies()) + ". Card added to " + sourcePlayer + "\'s hand.\n";
+            setEffect(effect);
+            return true;
+        }
 
         //need to check if targetTerritoryOwner is a NeutralPlayer
         if (getTargetTerritory()->getOwner()->getPS()->getPSType() == "Neutral") {
@@ -338,6 +351,7 @@ bool Advance::validate() {
             setEffect(effect);
         }
     }
+    
     return true;
 }
 

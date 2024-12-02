@@ -153,6 +153,8 @@ private:
 
 public: 
     MapLoader(const string& filePath);
+    ~MapLoader();
+
     string getFilePath() const;
     bool loadMap(); // Loads a map from a file
 };
