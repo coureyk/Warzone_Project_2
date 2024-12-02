@@ -529,7 +529,7 @@ string GameEngine::playGame(const std::string& map, const std::vector<std::strin
     } else {
         cout << "Map could not be loaded successfully." << endl;
     }
-
+    cout<<"im here"<<endl;
     if (Map::validate()) {
         cout << "Map is valid!" << endl;
     }

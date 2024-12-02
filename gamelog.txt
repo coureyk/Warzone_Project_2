@@ -3298,3 +3298,1977 @@ Draw
 Map: USA.map
 Draw 
 
+tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 1 -D 10
+Valid tournament command.
+Command executed successfully.
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Connecticut
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 7 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Georgia to Florida
+
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 21 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 28 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 35 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 42 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 49 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 56 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 63 army units on Georgia
+
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Philippines
+Order type: Cheater cheated and aquired India
+Order type: Cheater cheated and aquired Myanmar
+Order type: Cheater cheated and aquired Vietnam
+Order type: Cheater cheated and aquired Uzbekistan
+Order type: Cheater cheated and aquired Kyrgyzstan
+Order type: Cheater cheated and aquired Turkmenistan
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Philippines
+Order type: Cheater cheated and aquired India
+Order type: Cheater cheated and aquired Myanmar
+Order type: Cheater cheated and aquired Vietnam
+Order type: Cheater cheated and aquired Uzbekistan
+Order type: Cheater cheated and aquired Kyrgyzstan
+Order type: Cheater cheated and aquired Turkmenistan
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 52 army units on Iran
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Turkmenistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Afghanistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Pakistan
+
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Cheater cheated and aquired Pakistan
+Order type: Cheater cheated and aquired Pakistan
+Order type: Cheater cheated and aquired Nepal
+Order type: Cheater cheated and aquired Bhuntan
+Order type: Cheater cheated and aquired Bangladesh
+Order type: Cheater cheated and aquired Maldives
+Order type: Cheater cheated and aquired Sri Lanka
+Order type: Cheater cheated and aquired Laos
+Order type: Cheater cheated and aquired Brunei
+Order type: Cheater cheated and aquired East Malaysia
+Order type: Cheater cheated and aquired Cambodia
+Order type: Cheater cheated and aquired Tajikistan
+Order type: Cheater cheated and aquired East Malaysia
+Order type: Cheater cheated and aquired Indonesia
+Order type: Cheater cheated and aquired Bangladesh
+Order type: Cheater cheated and aquired Thailand
+Order type: Cheater cheated and aquired Laos
+Order type: Cheater cheated and aquired Tajikistan
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 2 army units on Uzbekistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Uzbekistan to Tajikistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Uzbekistan to Afghanistan
+
+Order type: Cheater cheated and aquired West Malaysia
+Order type: Cheater cheated and aquired Singapore
+Order type: Cheater cheated and aquired West Malaysia
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 4 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 6 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 8 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 10 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 12 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 16 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 18 army units on Uzbekistan
+
+State: START
+Tournament Results:
+Map: Asia.map
+Draw 
+Map: USA.map
+Draw 
+
+tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 2 -D 10
+Valid tournament command.
+Command executed successfully.
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Connecticut
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 7 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Georgia to Florida
+
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 21 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 28 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 35 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 42 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 49 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 56 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 63 army units on Georgia
+
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 1 -D 10
+Valid tournament command.
+Command executed successfully.
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Connecticut
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 7 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Georgia to Florida
+
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 21 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 28 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 35 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 42 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 49 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 56 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 63 army units on Georgia
+
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Philippines
+Order type: Cheater cheated and aquired India
+Order type: Cheater cheated and aquired Myanmar
+Order type: Cheater cheated and aquired Vietnam
+Order type: Cheater cheated and aquired Uzbekistan
+Order type: Cheater cheated and aquired Kyrgyzstan
+Order type: Cheater cheated and aquired Turkmenistan
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Philippines
+Order type: Cheater cheated and aquired India
+Order type: Cheater cheated and aquired Myanmar
+Order type: Cheater cheated and aquired Vietnam
+Order type: Cheater cheated and aquired Uzbekistan
+Order type: Cheater cheated and aquired Kyrgyzstan
+Order type: Cheater cheated and aquired Turkmenistan
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 52 army units on Iran
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Turkmenistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Afghanistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Pakistan
+
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Cheater cheated and aquired Pakistan
+Order type: Cheater cheated and aquired Pakistan
+Order type: Cheater cheated and aquired Nepal
+Order type: Cheater cheated and aquired Bhuntan
+Order type: Cheater cheated and aquired Bangladesh
+Order type: Cheater cheated and aquired Maldives
+Order type: Cheater cheated and aquired Sri Lanka
+Order type: Cheater cheated and aquired Laos
+Order type: Cheater cheated and aquired Brunei
+Order type: Cheater cheated and aquired East Malaysia
+Order type: Cheater cheated and aquired Cambodia
+Order type: Cheater cheated and aquired Tajikistan
+Order type: Cheater cheated and aquired East Malaysia
+Order type: Cheater cheated and aquired Indonesia
+Order type: Cheater cheated and aquired Bangladesh
+Order type: Cheater cheated and aquired Thailand
+Order type: Cheater cheated and aquired Laos
+Order type: Cheater cheated and aquired Tajikistan
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 2 army units on Uzbekistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Uzbekistan to Tajikistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Uzbekistan to Afghanistan
+
+Order type: Cheater cheated and aquired West Malaysia
+Order type: Cheater cheated and aquired Singapore
+Order type: Cheater cheated and aquired West Malaysia
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 4 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 6 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 8 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 10 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 12 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 16 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 18 army units on Uzbekistan
+
+State: START
+Tournament Results:
+Map: Asia.map
+Draw 
+Map: USA.map
+Draw 
+
+tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 2 -D 10
+Valid tournament command.
+Command executed successfully.
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Connecticut
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 7 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Georgia to Florida
+
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 21 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 28 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 35 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 42 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 49 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 56 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 63 army units on Georgia
+
+tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 2 -D 10
+Valid tournament command.
+Command executed successfully.
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Connecticut
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 7 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Georgia to Florida
+
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 21 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 28 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 35 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 42 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 49 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 56 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 63 army units on Georgia
+
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Connecticut
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 7 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Georgia to Florida
+
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 21 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 28 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 35 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 42 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 49 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 56 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 63 army units on Georgia
+
+tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 2 -D 10
+Valid tournament command.
+Command executed successfully.
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Connecticut
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 7 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Georgia to Florida
+
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 21 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 28 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 35 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 42 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 49 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 56 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 63 army units on Georgia
+
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 2 -D 10
+Valid tournament command.
+Command executed successfully.
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Connecticut
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 7 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Georgia to Florida
+
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 21 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 28 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 35 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 42 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 49 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 56 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 63 army units on Georgia
+
+tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 2 -D 10
+Valid tournament command.
+Command executed successfully.
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Connecticut
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 7 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Georgia to Florida
+
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 21 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 28 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 35 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 42 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 49 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 56 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 63 army units on Georgia
+
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired South Dakota
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Nebraska
+Order type: Cheater cheated and aquired Kansas
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Oklahoma
+Order type: Cheater cheated and aquired Texas
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired North Dakota
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Michigan
+Order type: Cheater cheated and aquired Minnisota
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired New Hampshire
+Order type: Cheater cheated and aquired Vermont
+Order type: Cheater cheated and aquired New York
+Order type: Cheater cheated and aquired Maine
+Order type: Cheater cheated and aquired Illinois
+Order type: Cheater cheated and aquired Indiana
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired Ohio
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired Pennsylvania
+Order type: Cheater cheated and aquired New Jersey
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Arkansas
+Order type: Cheater cheated and aquired Missouri
+Order type: Cheater cheated and aquired South Carolina
+Order type: Cheater cheated and aquired Georgia
+Order type: Cheater cheated and aquired Alabama
+Order type: Cheater cheated and aquired Louisiana
+Order type: Cheater cheated and aquired Arkansas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 57 army units on Alabama
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Alabama to Florida
+
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Connecticut
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Iowa
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Florida
+Order type: Cheater cheated and aquired Massachusetts
+Order type: Cheater cheated and aquired Wisconsin
+Order type: Cheater cheated and aquired Iowa
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 7 army units on Georgia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Georgia to Florida
+
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Cheater cheated and aquired Rhode Island
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 21 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 28 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 35 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 42 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 49 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 56 army units on Georgia
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 63 army units on Georgia
+
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Philippines
+Order type: Cheater cheated and aquired India
+Order type: Cheater cheated and aquired Myanmar
+Order type: Cheater cheated and aquired Vietnam
+Order type: Cheater cheated and aquired Uzbekistan
+Order type: Cheater cheated and aquired Kyrgyzstan
+Order type: Cheater cheated and aquired Turkmenistan
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Philippines
+Order type: Cheater cheated and aquired India
+Order type: Cheater cheated and aquired Myanmar
+Order type: Cheater cheated and aquired Vietnam
+Order type: Cheater cheated and aquired Uzbekistan
+Order type: Cheater cheated and aquired Kyrgyzstan
+Order type: Cheater cheated and aquired Turkmenistan
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 52 army units on Iran
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Turkmenistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Afghanistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Pakistan
+
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Cheater cheated and aquired Pakistan
+Order type: Cheater cheated and aquired Pakistan
+Order type: Cheater cheated and aquired Nepal
+Order type: Cheater cheated and aquired Bhuntan
+Order type: Cheater cheated and aquired Bangladesh
+Order type: Cheater cheated and aquired Maldives
+Order type: Cheater cheated and aquired Sri Lanka
+Order type: Cheater cheated and aquired Laos
+Order type: Cheater cheated and aquired Brunei
+Order type: Cheater cheated and aquired East Malaysia
+Order type: Cheater cheated and aquired Cambodia
+Order type: Cheater cheated and aquired Tajikistan
+Order type: Cheater cheated and aquired East Malaysia
+Order type: Cheater cheated and aquired Indonesia
+Order type: Cheater cheated and aquired Bangladesh
+Order type: Cheater cheated and aquired Thailand
+Order type: Cheater cheated and aquired Laos
+Order type: Cheater cheated and aquired Tajikistan
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 2 army units on Uzbekistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Uzbekistan to Tajikistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Uzbekistan to Afghanistan
+
+Order type: Cheater cheated and aquired West Malaysia
+Order type: Cheater cheated and aquired Singapore
+Order type: Cheater cheated and aquired West Malaysia
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 4 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 6 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 8 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 10 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 12 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 16 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 18 army units on Uzbekistan
+
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Philippines
+Order type: Cheater cheated and aquired India
+Order type: Cheater cheated and aquired Myanmar
+Order type: Cheater cheated and aquired Vietnam
+Order type: Cheater cheated and aquired Uzbekistan
+Order type: Cheater cheated and aquired Kyrgyzstan
+Order type: Cheater cheated and aquired Turkmenistan
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Philippines
+Order type: Cheater cheated and aquired India
+Order type: Cheater cheated and aquired Myanmar
+Order type: Cheater cheated and aquired Vietnam
+Order type: Cheater cheated and aquired Uzbekistan
+Order type: Cheater cheated and aquired Kyrgyzstan
+Order type: Cheater cheated and aquired Turkmenistan
+Order type: Cheater cheated and aquired Iran
+Order type: Cheater cheated and aquired Iran
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 52 army units on Iran
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Turkmenistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Afghanistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 13 army units from Iran to Pakistan
+
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Cheater cheated and aquired Pakistan
+Order type: Cheater cheated and aquired Pakistan
+Order type: Cheater cheated and aquired Nepal
+Order type: Cheater cheated and aquired Bhuntan
+Order type: Cheater cheated and aquired Bangladesh
+Order type: Cheater cheated and aquired Maldives
+Order type: Cheater cheated and aquired Sri Lanka
+Order type: Cheater cheated and aquired Laos
+Order type: Cheater cheated and aquired Brunei
+Order type: Cheater cheated and aquired East Malaysia
+Order type: Cheater cheated and aquired Cambodia
+Order type: Cheater cheated and aquired Tajikistan
+Order type: Cheater cheated and aquired East Malaysia
+Order type: Cheater cheated and aquired Indonesia
+Order type: Cheater cheated and aquired Bangladesh
+Order type: Cheater cheated and aquired Thailand
+Order type: Cheater cheated and aquired Laos
+Order type: Cheater cheated and aquired Tajikistan
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Cheater cheated and aquired Afghanistan
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 2 army units on Uzbekistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Uzbekistan to Tajikistan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Uzbekistan to Afghanistan
+
+Order type: Cheater cheated and aquired West Malaysia
+Order type: Cheater cheated and aquired Singapore
+Order type: Cheater cheated and aquired West Malaysia
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 4 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 6 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 8 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 10 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 12 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 14 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 16 army units on Uzbekistan
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 18 army units on Uzbekistan
+
+State: START
+Tournament Results:
+Map: Asia.map
+Draw Draw 
+Map: USA.map
+Draw Draw 
+
+[A
+Invalid command in the current state or syntax error.
+tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 2 -D 10
+Valid tournament command.
+Command executed successfully.

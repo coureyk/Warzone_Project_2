@@ -6,8 +6,8 @@ Card::Card(const CardType& type) {
 }
 
 Card::Card(const Card& other) {
-    this->type = other.type;
-    this->isAvailable = other.isAvailable;
+    this->type = new CardType(*other.type);  // Deep copy
+    this->isAvailable = new bool(*other.isAvailable);  // Deep copy
 }
 
 Card::~Card() {
@@ -17,49 +17,41 @@ Card::~Card() {
 
 Card& Card::operator=(const Card& other) {
     if (this != &other) {
-        type = other.type;
-        isAvailable = other.isAvailable;
+        delete type;
+        delete isAvailable;
+        type = new CardType(*other.type);  // Deep copy
+        isAvailable = new bool(*other.isAvailable);  // Deep copy
     }
     return *this;
 }
 
-// Convert the enum to a string for display
 std::string Card::getType() const {
     switch (*type) {
-        case CardType::BOMB: 
-            return "Bomb";
-        case CardType::REINFORCEMENT: 
-            return "Reinforcement";
-        case CardType::BLOCKADE: 
-            return "Blockade";
-        case CardType::AIRLIFT: 
-            return "Airlift";
-        case CardType::DIPLOMACY: 
-            return "Diplomacy";
-        default: 
-            return "Unknown";
+        case CardType::BOMB: return "Bomb";
+        case CardType::REINFORCEMENT: return "Reinforcement";
+        case CardType::BLOCKADE: return "Blockade";
+        case CardType::AIRLIFT: return "Airlift";
+        case CardType::DIPLOMACY: return "Diplomacy";
+        default: return "Unknown";
     }
 }
 
 void Card::play() {
-    cout << "Playing " << getType() << " card." << endl;
-    *isAvailable = true;  // Mark card as available again
+    std::cout << "Playing " << getType() << " card." << std::endl;
+    *isAvailable = true;
 }
 
 void Card::markTaken() {
-    *isAvailable = false;  // Mark card as taken
+    *isAvailable = false;
 }
 
 void Card::markAvailable() {
-    *isAvailable = true;  // Mark card as available
+    *isAvailable = true;
 }
 
 bool Card::isCardAvailable() const {
-    return *isAvailable;  // Check if the card is available
+    return *isAvailable;
 }
-
-
-// Constructor: Initialize the deck with cards of all types
 std::vector<Card*>* Deck::cards = new std::vector<Card*>;
 
 Deck::Deck() {
@@ -78,17 +70,15 @@ Deck::~Deck() {
         delete card;
     }
     delete cards;
-    cards = NULL;
+    cards = nullptr;
 }
-void Deck::reset() {
 
-      if (cards) {
+void Deck::reset() {
+    if (cards) {
         for (Card* card : *cards) {
-            delete card;  // Delete only dynamically allocated cards
+            delete card;  // Delete dynamically allocated cards
         }
         cards->clear();  // Clear the vector
-    } else {
-        cards = new std::vector<Card*>;
     }
 
     // Reinitialize the deck
@@ -100,100 +90,68 @@ void Deck::reset() {
         cards->push_back(new Card(CardType::DIPLOMACY));
     }
 }
+
 Card* Deck::draw() {
-    
-    // Create a vector to store all available cards
     std::vector<Card*> availableCards;
-    
-    // Loop through the deck and gather all available cards
     for (Card* card : *cards) {
         if (card->isCardAvailable()) {
             availableCards.push_back(card);
         }
     }
-    
-    // Check if there is any available cards
+
     if (availableCards.empty()) {
-        cout << "No available cards to draw!" << endl;
-        return NULL;
+        std::cout << "No available cards to draw!" << std::endl;
+        return nullptr;
     }
 
-    // Randomly pick an available card
     int randomIndex = std::rand() % availableCards.size();
     Card* chosenCard = availableCards[randomIndex];
-
-    // Mark the chosen card as taken
     chosenCard->markTaken();
-    cout << "Drew a " << chosenCard->getType() << " card." << endl;
-
     return chosenCard;
 }
 
 void Deck::returnCard(Card* card) {
     card->markAvailable();
-    cout << "Returned " << card->getType() << " card to the deck." << endl;
+    std::cout << "Returned " << card->getType() << " card to the deck." << std::endl;
 }
 
 void Deck::showDeck() {
-    cout << "Deck contains the following cards:" << endl;
+    std::cout << "Deck contains the following cards:" << std::endl;
     for (Card* card : *cards) {
-        cout << "- " << card->getType()
-            << " (Status: " << (card->isCardAvailable() ? "Available" : "Taken") << ")"
-            << endl;
+        std::cout << "- " << card->getType()
+                  << " (Status: " << (card->isCardAvailable() ? "Available" : "Taken") << ")"
+                  << std::endl;
     }
 }
-
-// Constructor: Initialize the hands and create a vector to store all cards drawing from Deck
 Hand::Hand() {
     handCards = new std::vector<Card*>;
 }
 
-// Copy constructor: deep copies the hand
 Hand::Hand(const Hand& other) {
     handCards = new std::vector<Card*>;
     for (Card* card : *other.handCards) {
-        handCards->push_back(new Card(*card));  // Deep copy each card
+        handCards->push_back(card);  // Shallow copy, as Deck manages ownership
     }
 }
 
 Hand::~Hand() {
-    for (Card* card : *handCards) {
-        delete card;
-    }
+    handCards->clear();  // Do not delete cards as Deck manages them
     delete handCards;
-    handCards = NULL;
+    handCards = nullptr;
 }
 
 Hand& Hand::operator=(const Hand& other) {
-    if (this != &other) {  // Self-assignment check
-        // Clean up current resources
-        for (Card* card : *handCards) {
-            delete card;  // Delete the cards currently held
-        }
-        delete handCards;
-        handCards = NULL;
-
-        // Deep copy the new resources
-        handCards = new std::vector<Card*>;
+    if (this != &other) {
+        handCards->clear();  // Do not delete cards
         for (Card* card : *other.handCards) {
-            handCards->push_back(new Card(*card));  // Deep copy each card
+            handCards->push_back(card);  // Shallow copy
         }
     }
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& os, const Hand& hand){
-    if (hand.getCardCount() > 0){
-        for(Card* card: *hand.handCards){
-            os << card->getType();
-        }
-    } else {
-        os << "There are no cards present within this hand" << endl;
-    }
-    return os;
-}
 void Hand::addCard(Card* card) {
-    if (card != NULL) {
+    if (card) {
         handCards->push_back(card);
         std::cout << "Added " << card->getType() << " card to hand." << std::endl;
     }
@@ -202,11 +160,11 @@ void Hand::addCard(Card* card) {
 void Hand::playCard(int index) {
     if (index >= 0 && index < handCards->size()) {
         Card* card = (*handCards)[index];
-        if (card != NULL) {
-            card->play();  // Use the Card class's play method
-            handCards->erase(handCards->begin() + index);  // Remove card from hand
+        if (card) {
+            card->play();
+            handCards->erase(handCards->begin() + index);
         } else {
-            cout << "Error. You played a non-existing card." << endl;
+            std::cout << "Error. You played a non-existing card." << std::endl;
         }
     }
 }
@@ -216,14 +174,9 @@ int Hand::getCardCount() const {
 }
 
 void Hand::showHand() const {
-    cout << "Hand contains the following cards:" << endl;
-    if (handCards->empty()) {
-        cout << "Hand is empty!" << endl;
-    }
-    else {
-        for (Card* card : *handCards) {
-            cout << "- " << card->getType() << endl;
-        }
+    std::cout << "Hand contains the following cards:" << std::endl;
+    for (Card* card : *handCards) {
+        std::cout << "- " << card->getType() << std::endl;
     }
 }
 
@@ -233,4 +186,15 @@ std::vector<Card*>& Hand::getCards() const {
 
 Card* Hand::getCard(const int i) const {
     return getCards()[i];
+}
+std::ostream& operator<<(std::ostream& os, const Hand& hand) {
+    if (hand.getCardCount() > 0) {
+        os << "Hand contains the following cards:" << std::endl;
+        for (Card* card : hand.getCards()) {
+            os << "- " << card->getType() << std::endl;
+        }
+    } else {
+        os << "There are no cards present within this hand" << std::endl;
+    }
+    return os;
 }
