@@ -1,2073 +1,2499 @@
-Order type: Cheat
-Order type: Cheat
-Order type: Cheat
-Order type: Cheat
-Order type: Cheat
-Order type: Cheat Order executed.
-Order type: Cheat Order executed.
-Order type: Cheat Order executed.
-Order type: Cheat Order executed.
-Order type: Cheat Order executed.
-Order type: Liam cheated and aquired Baja California
-
-Order type: Liam cheated and aquired Arizona
+tournament -M USA.map -P Aggressive,Neutral,Benevolent,Benevolent -G 1 -D 50
+Valid tournament command.
+Command executed successfully.
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 52 army units on Baja California
 
-Order type: Liam cheated and aquired New Mexico
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
 
-Order type: Liam cheated and aquired Texas
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 59 army units on Mississippi
 
-Order type: Liam cheated and aquired Eastern Mexico
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 29 army units from Mississippi to Alabama
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Benevolent is attempting to put 59 army units on Rhode Island
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Rhode Island to Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Benevolent is attempting to move 19 army units from Rhode Island to Connecticut
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on Texas
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
 
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Oklahoma. This order can only be issued if a player has the bomb card in their hand.
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Benevolent is attempting to put 9 army units on Georgia
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Benevolent is attempting to move 2 army units from Georgia to South Carolina
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Georgia to Florida
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+Summary: Benevolent is attempting to move 2 army units from Georgia to Alabama
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Benevolent is attempting to put 9 army units on Vermont
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Benevolent is attempting to move 2 army units from Vermont to New Hampshire
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Vermont to Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+Summary: Benevolent is attempting to move 2 army units from Vermont to New York
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Oregon
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Baja California
+Summary: Benevolent is attempting to put 9 army units on Florida
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Florida to Alabama
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 16 army units from Baja California to California
+Summary: Benevolent is attempting to move 3 army units from Florida to Georgia
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Benevolent is attempting to put 9 army units on Maine
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Nevada
+Summary: Benevolent is attempting to move 4 army units from Maine to New Hampshire
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Summary: Aggressive is attempting to put 2 army units on Kansas
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 19 army units from California to Oregon
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 6 army units on California
+Summary: Benevolent is attempting to put 9 army units on Wisconsin
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 7 army units from California to Nevada
+Summary: Benevolent is attempting to move 1 army units from Wisconsin to Michigan
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Wisconsin to Illinois
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Wisconsin to Iowa
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 10 army units from California to Oregon
+Summary: Benevolent is attempting to move 1 army units from Wisconsin to Minnisota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 9 army units on Oregon
+Summary: Benevolent is attempting to put 9 army units on North Dakota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from North Dakota to Minnisota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 5 army units from Oregon to Washington
+Summary: Benevolent is attempting to move 3 army units from North Dakota to South Dakota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Oregon
+Summary: Aggressive is attempting to put 2 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 8 army units from Oregon to Washington
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Missouri. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 12 army units on Eastern Mexico
+Summary: Benevolent is attempting to put 9 army units on Illinois
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 12 army units from Eastern Mexico to Western Mexico
+Summary: Benevolent is attempting to move 2 army units from Illinois to Wisconsin
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Washington
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Illinois to Indiana
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Illinois to Missouri
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 11 army units from Washington to British Columbia
+Summary: Benevolent is attempting to move 2 army units from Illinois to Iowa
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 9 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 15 army units from Western Mexico to Baja California
+Summary: Benevolent is attempting to move 3 army units from South Dakota to North Dakota
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on British Columbia
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Minnisota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 14 army units from British Columbia to Alberta
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Iowa
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Baja California
+Summary: Aggressive is attempting to put 2 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 17 army units from Baja California to California
+Summary: Aggressive is attempting to move 56 army units from South Dakota to North Dakota
 
 Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on California. This order can only be issued if a player has the bomb card in their hand.
+Summary: Aggressive is attempting to destroy half of the army units located on Iowa. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Alberta
+Summary: Benevolent is attempting to put 9 army units on Indiana
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Michigan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Ohio
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 17 army units from Alberta to Saskatchewan
+Summary: Benevolent is attempting to move 2 army units from Indiana to Illinois
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on California
+Summary: Benevolent is attempting to put 9 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 19 army units from California to Oregon
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Iowa
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Oregon. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Missouri
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Saskatchewan
+Summary: Aggressive is attempting to put 2 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 20 army units from Saskatchewan to Manitoba
+Summary: Aggressive is attempting to move 56 army units from North Dakota to Saskatchewan
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Oregon
+Summary: Benevolent is attempting to put 9 army units on Ohio
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 21 army units from Oregon to Washington
+Summary: Benevolent is attempting to move 2 army units from Ohio to Michigan
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Manitoba
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Ohio to Pennsylvania
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 23 army units from Manitoba to Ontario
+Summary: Benevolent is attempting to move 2 army units from Ohio to Indiana
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Washington
+Summary: Benevolent is attempting to put 18 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 23 army units from Washington to British Columbia
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Minnisota
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on British Columbia. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Iowa
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Ontario
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 26 army units from Ontario to Quebec
+Summary: Aggressive is attempting to move 58 army units from Saskatchewan to Manitoba
 
+tournament -M USA.map -P Aggressive,Benevolent,Benevolent,Benevolent -G 1 -D 50
+Valid tournament command.
+Command executed successfully.
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on British Columbia
+Summary: Aggressive is attempting to put 52 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 25 army units from British Columbia to Alberta
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Quebec
+Summary: Benevolent is attempting to put 55 army units on British Columbia
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 29 army units from Quebec to New Brunswick
+Summary: Benevolent is attempting to move 27 army units from British Columbia to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Alberta
+Summary: Benevolent is attempting to put 59 army units on Mississippi
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 27 army units from Alberta to Saskatchewan
+Summary: Benevolent is attempting to move 19 army units from Mississippi to Tennessee
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Saskatchewan. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Mississippi to Alabama
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on New Brunswick
+Summary: Benevolent is attempting to put 59 army units on Rhode Island
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 32 army units from New Brunswick to Maine
+Summary: Benevolent is attempting to move 19 army units from Rhode Island to Massachusetts
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 19 army units from Rhode Island to Connecticut
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Saskatchewan
+Summary: Aggressive is attempting to put 2 army units on Texas
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 29 army units from Saskatchewan to Manitoba
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Maine
+Summary: Benevolent is attempting to put 5 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Saskatchewan to Manitoba
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 35 army units from Maine to New Hampshire
+Summary: Benevolent is attempting to move 1 army units from Saskatchewan to North Dakota
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Saskatchewan to Alberta
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Manitoba
+Summary: Benevolent is attempting to put 9 army units on Alabama
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 31 army units from Manitoba to Ontario
+Summary: Benevolent is attempting to move 5 army units from Alabama to Tennessee
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 5 army units from Alabama to Georgia
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on New Hampshire
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 5 army units from Alabama to Florida
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 38 army units from New Hampshire to Massachusetts
+Summary: Benevolent is attempting to move 5 army units from Alabama to Mississippi
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Benevolent is attempting to put 9 army units on Vermont
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Benevolent is attempting to move 1 army units from Vermont to Quebec
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Vermont to New Hampshire
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+Summary: Benevolent is attempting to move 1 army units from Vermont to Massachusetts
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Vermont to New York
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Oregon
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Baja California
+Summary: Benevolent is attempting to put 5 army units on Ontario
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 16 army units from Baja California to California
+Summary: Benevolent is attempting to move 0 army units from Ontario to Quebec
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Ontario to New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Nevada
+Summary: Benevolent is attempting to move 0 army units from Ontario to Ohio
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Ontario to Michigan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 19 army units from California to Oregon
+Summary: Benevolent is attempting to move 0 army units from Ontario to Minnisota
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Oregon. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Ontario to Manitoba
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 6 army units on California
+Summary: Benevolent is attempting to put 9 army units on Georgia
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 11 army units from California to Nevada
+Summary: Benevolent is attempting to move 2 army units from Georgia to Tennessee
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Georgia to North Carolina
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 14 army units from California to Oregon
+Summary: Benevolent is attempting to move 2 army units from Georgia to South Carolina
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 9 army units on Oregon
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Georgia to Florida
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 12 army units from Oregon to Washington
+Summary: Benevolent is attempting to move 2 army units from Georgia to Alabama
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Oregon
+Summary: Benevolent is attempting to put 9 army units on New Hampshire
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 15 army units from Oregon to Washington
+Summary: Benevolent is attempting to move 2 army units from New Hampshire to Quebec
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 12 army units on Eastern Mexico
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from New Hampshire to Maine
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from New Hampshire to Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 12 army units from Eastern Mexico to Western Mexico
+Summary: Benevolent is attempting to move 2 army units from New Hampshire to Vermont
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Washington
+Summary: Aggressive is attempting to put 2 army units on Kansas
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 18 army units from Washington to British Columbia
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 5 army units on New Brunswick
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from New Brunswick to Maine
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 15 army units from Western Mexico to Baja California
+Summary: Benevolent is attempting to move 1 army units from New Brunswick to Quebec
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on British Columbia
+Summary: Benevolent is attempting to put 9 army units on Wisconsin
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 21 army units from British Columbia to Alberta
+Summary: Benevolent is attempting to move 1 army units from Wisconsin to Michigan
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Baja California
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Wisconsin to Illinois
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Wisconsin to Iowa
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 17 army units from Baja California to California
+Summary: Benevolent is attempting to move 1 army units from Wisconsin to Minnisota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Alberta
+Summary: Benevolent is attempting to put 9 army units on Maine
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 24 army units from Alberta to Saskatchewan
+Summary: Benevolent is attempting to move 2 army units from Maine to Quebec
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on California
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Maine to New Brunswick
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 19 army units from California to Oregon
+Summary: Benevolent is attempting to move 2 army units from Maine to New Hampshire
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Saskatchewan
+Summary: Aggressive is attempting to put 2 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 27 army units from Saskatchewan to Manitoba
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Oregon
+Summary: Benevolent is attempting to put 5 army units on Kentucky
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 21 army units from Oregon to Washington
+Summary: Benevolent is attempting to move 0 army units from Kentucky to Illinois
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Manitoba
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Kentucky to Indiana
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 30 army units from Manitoba to Ontario
+Summary: Benevolent is attempting to move 0 army units from Kentucky to Ohio
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Washington
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Kentucky to West Virginia
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 23 army units from Washington to British Columbia
+Summary: Benevolent is attempting to move 0 army units from Kentucky to Virginia
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Ontario
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Kentucky to Tennessee
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 33 army units from Ontario to Quebec
+Summary: Benevolent is attempting to move 0 army units from Kentucky to Missouri
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on British Columbia
+Summary: Benevolent is attempting to put 9 army units on Illinois
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 25 army units from British Columbia to Alberta
+Summary: Benevolent is attempting to move 1 army units from Illinois to Wisconsin
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Quebec
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Illinois to Indiana
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 36 army units from Quebec to New Brunswick
+Summary: Benevolent is attempting to move 1 army units from Illinois to Kentucky
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Alberta
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Illinois to Missouri
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 27 army units from Alberta to Saskatchewan
+Summary: Benevolent is attempting to move 1 army units from Illinois to Iowa
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on New Brunswick
+Summary: Benevolent is attempting to put 9 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 39 army units from New Brunswick to Maine
+Summary: Benevolent is attempting to move 2 army units from South Dakota to North Dakota
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Saskatchewan
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from South Dakota to Minnisota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 29 army units from Saskatchewan to Manitoba
+Summary: Benevolent is attempting to move 2 army units from South Dakota to Iowa
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Maine
+Summary: Aggressive is attempting to put 2 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 42 army units from Maine to New Hampshire
+Summary: Aggressive is attempting to move 55 army units from South Dakota to North Dakota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Manitoba
+Summary: Benevolent is attempting to put 5 army units on West Virginia
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 31 army units from Manitoba to Ontario
+Summary: Benevolent is attempting to move 0 army units from West Virginia to Ohio
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on New Hampshire
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from West Virginia to Pennsylvania
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 45 army units from New Hampshire to Massachusetts
+Summary: Benevolent is attempting to move 0 army units from West Virginia to Maryland
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Ontario
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from West Virginia to Virginia
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 33 army units from Ontario to Quebec
+Summary: Benevolent is attempting to move 0 army units from West Virginia to Kentucky
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Massachusetts
+Summary: Benevolent is attempting to put 9 army units on Indiana
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 48 army units from Massachusetts to Vermont
+Summary: Benevolent is attempting to move 2 army units from Indiana to Michigan
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Quebec
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Ohio
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Kentucky
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 35 army units from Quebec to New Brunswick
+Summary: Benevolent is attempting to move 2 army units from Indiana to Illinois
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Vermont
+Summary: Benevolent is attempting to put 9 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 51 army units from Vermont to Quebec
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Iowa
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Missouri
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on North Dakota
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 57 army units from North Dakota to Saskatchewan
 
 Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Quebec. This order can only be issued if a player has the bomb card in their hand.
+Summary: Aggressive is attempting to destroy half of the army units located on Minnisota. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Quebec
+Summary: Benevolent is attempting to put 5 army units on Maryland
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 51 army units from Quebec to Maine
+Summary: Benevolent is attempting to move 1 army units from Maryland to Pennsylvania
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Vermont. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Maryland to Delaware
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Maryland to Virginia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Maryland to West Virginia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Quebec
+Summary: Benevolent is attempting to put 9 army units on Ohio
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 54 army units from Quebec to New Brunswick
+Summary: Benevolent is attempting to move 1 army units from Ohio to Michigan
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Ohio to Ontario
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Ohio to Pennsylvania
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 4 army units on Quebec
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Ohio to West Virginia
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Ohio to Kentucky
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 31 army units from Quebec to Maine
+Summary: Benevolent is attempting to move 1 army units from Ohio to Indiana
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Quebec
+Summary: Benevolent is attempting to put 18 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 34 army units from Quebec to New Brunswick
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Minnisota
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Iowa
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 6 army units on New Brunswick
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 32 army units from New Brunswick to Maine
+Summary: Aggressive is attempting to move 57 army units from Saskatchewan to Manitoba
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on New Brunswick
+Summary: Benevolent is attempting to put 5 army units on Delaware
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 35 army units from New Brunswick to New York
+Summary: Benevolent is attempting to move 1 army units from Delaware to Pennsylvania
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 8 army units on Eastern Mexico
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from Delaware to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 8 army units from Eastern Mexico to Texas
+Summary: Benevolent is attempting to move 1 army units from Delaware to Maryland
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on New York
+Summary: Benevolent is attempting to put 9 army units on New Jersey
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 38 army units from New York to Connecticut
+Summary: Benevolent is attempting to move 2 army units from New Jersey to New York
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from New Jersey to Delaware
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ontario. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from New Jersey to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Texas
+Summary: Benevolent is attempting to put 27 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 10 army units from Texas to Oklahoma
+Summary: Benevolent is attempting to move 0 army units from North Dakota to Manitoba
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from North Dakota to Minnisota
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Connecticut
+Summary: Aggressive is attempting to put 2 army units on Manitoba
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 41 army units from Connecticut to Rhode Island
+Summary: Aggressive is attempting to move 58 army units from Manitoba to Ontario
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Oklahoma
+Summary: Benevolent is attempting to put 5 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 12 army units from Oklahoma to Kansas
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Rhode Island
+Summary: Benevolent is attempting to put 9 army units on South Carolina
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Carolina to North Carolina
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 44 army units from Rhode Island to New Jersey
+Summary: Benevolent is attempting to move 3 army units from South Carolina to Georgia
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Kansas
+Summary: Benevolent is attempting to put 36 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 14 army units from Kansas to Nebraska
+Summary: Benevolent is attempting to move 0 army units from North Dakota to Minnisota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on New Jersey
+Summary: Aggressive is attempting to put 2 army units on Ontario
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 47 army units from New Jersey to Delaware
+Summary: Aggressive is attempting to move 54 army units from Ontario to Quebec
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Nebraska
+Summary: Benevolent is attempting to put 10 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from Nebraska to South Dakota
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Delaware
+Summary: Benevolent is attempting to put 9 army units on Indiana
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 50 army units from Delaware to Pennsylvania
+Summary: Benevolent is attempting to move 2 army units from Indiana to Michigan
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on South Dakota
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Ohio
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Kentucky
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 18 army units from South Dakota to North Dakota
+Summary: Benevolent is attempting to move 2 army units from Indiana to Illinois
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 4 army units on Pennsylvania
+Summary: Benevolent is attempting to put 45 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 54 army units from Pennsylvania to Maryland
+Summary: Benevolent is attempting to move 0 army units from North Dakota to Minnisota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on North Dakota
+Summary: Aggressive is attempting to put 2 army units on Quebec
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 20 army units from North Dakota to Minnisota
+Summary: Aggressive is attempting to move 53 army units from Quebec to New Brunswick
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 4 army units on Maryland
+Summary: Benevolent is attempting to put 15 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 58 army units from Maryland to Virginia
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Minnisota
+Summary: Benevolent is attempting to put 9 army units on New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 22 army units from Minnisota to Michigan
+Summary: Benevolent is attempting to move 2 army units from New York to Vermont
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 4 army units on Virginia
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from New York to Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 62 army units from Virginia to North Carolina
+Summary: Benevolent is attempting to move 2 army units from New York to Connecticut
 
-Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Michigan
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 24 army units from Michigan to Ohio
+Summary: Benevolent is attempting to move 2 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 5 army units on North Carolina
+Summary: Benevolent is attempting to put 54 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 67 army units from North Carolina to South Carolina
+Summary: Benevolent is attempting to move 0 army units from North Dakota to Minnisota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Ohio
+Summary: Aggressive is attempting to put 2 army units on New Brunswick
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 26 army units from Ohio to Pennsylvania
+Summary: Aggressive is attempting to move 52 army units from New Brunswick to Maine
 
 Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Pennsylvania. This order can only be issued if a player has the bomb card in their hand.
+Summary: Aggressive is attempting to destroy half of the army units located on Maine. This order can only be issued if a player has the bomb card in their hand.
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Pennsylvania. This order can only be issued if a player has the bomb card in their hand.
-
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 5 army units on South Carolina
+Summary: Benevolent is attempting to put 20 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 72 army units from South Carolina to Georgia
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Pennsylvania
+Summary: Benevolent is attempting to put 9 army units on Indiana
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 28 army units from Pennsylvania to New York
+Summary: Benevolent is attempting to move 2 army units from Indiana to Michigan
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Maryland. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Ohio
 
-Order type: Order Type: Deploy
-Summary: Liam is attempting to put 5 army units on Georgia
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Kentucky
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 77 army units from Georgia to Tennessee
+Summary: Benevolent is attempting to move 2 army units from Indiana to Illinois
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on New York
+Summary: Benevolent is attempting to put 63 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 30 army units from New York to Quebec
-
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on New Jersey. This order can only be issued if a player has the bomb card in their hand.
+Summary: Benevolent is attempting to move 0 army units from North Dakota to Minnisota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Tennessee
+Summary: Aggressive is attempting to put 2 army units on Maine
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 83 army units from Tennessee to Kentucky
+Summary: Aggressive is attempting to move 49 army units from Maine to New Hampshire
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on New Hampshire. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Quebec
+Summary: Benevolent is attempting to put 25 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 32 army units from Quebec to New Brunswick
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Kentucky
+Summary: Benevolent is attempting to put 9 army units on New York
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 89 army units from Kentucky to Illinois
+Summary: Benevolent is attempting to move 1 army units from New York to Vermont
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ohio. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from New York to Massachusetts
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ohio. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from New York to Connecticut
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ohio. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from New York to New Jersey
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ohio. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 1 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on New Brunswick
+Summary: Benevolent is attempting to put 72 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 34 army units from New Brunswick to Maine
+Summary: Benevolent is attempting to move 0 army units from North Dakota to Minnisota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Illinois
+Summary: Aggressive is attempting to put 2 army units on New Hampshire
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 95 army units from Illinois to Wisconsin
+Summary: Aggressive is attempting to move 49 army units from New Hampshire to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Maine
+Summary: Benevolent is attempting to put 30 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 36 army units from Maine to New Hampshire
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Wisconsin
+Summary: Benevolent is attempting to put 9 army units on South Carolina
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 101 army units from Wisconsin to Michigan
+Summary: Benevolent is attempting to move 4 army units from South Carolina to North Carolina
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Minnisota. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 4 army units from South Carolina to Georgia
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Minnisota. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 81 army units on Maine
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Minnisota. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 32 army units from Massachusetts to Vermont
 
 Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Minnisota. This order can only be issued if a player has the bomb card in their hand.
+Summary: Aggressive is attempting to destroy half of the army units located on New York. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Michigan
+Summary: Benevolent is attempting to put 35 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 101 army units from Michigan to Indiana
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Wisconsin. This order can only be issued if a player has the bomb card in their hand.
-
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Michigan
+Summary: Benevolent is attempting to put 9 army units on Indiana
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 107 army units from Michigan to Ontario
+Summary: Benevolent is attempting to move 2 army units from Indiana to Michigan
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Minnisota. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Ohio
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Minnisota. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Kentucky
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 2 army units from Indiana to Illinois
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 4 army units on Ontario
+Summary: Benevolent is attempting to put 90 army units on New Hampshire
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 107 army units from Ontario to Michigan
+Summary: Benevolent is attempting to move 0 army units from New Hampshire to Vermont
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 7 army units on Ontario
+Summary: Aggressive is attempting to put 2 army units on Vermont
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 114 army units from Ontario to Quebec
+Summary: Aggressive is attempting to move 28 army units from Vermont to New York
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Manitoba. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 40 army units on Saskatchewan
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Manitoba. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 6 army units on Quebec
+Summary: Benevolent is attempting to put 9 army units on South Carolina
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 114 army units from Quebec to Vermont
+Summary: Benevolent is attempting to move 5 army units from South Carolina to North Carolina
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 5 army units from South Carolina to Georgia
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 7 army units on Quebec
+Summary: Benevolent is attempting to put 99 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 121 army units from Quebec to New Brunswick
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on New York. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Connecticut
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on New York. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to New York
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 8 army units on New Brunswick
+Summary: Aggressive is attempting to put 2 army units on New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 121 army units from New Brunswick to Quebec
+Summary: Aggressive is attempting to move 25 army units from New York to Connecticut
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 7 army units on New Brunswick
+Summary: Benevolent is attempting to put 45 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 128 army units from New Brunswick to Maine
-
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Maine. This order can only be issued if a player has the bomb card in their hand.
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 10 army units on Maine
+Summary: Benevolent is attempting to put 9 army units on Wisconsin
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 128 army units from Maine to Quebec
+Summary: Benevolent is attempting to move 3 army units from Wisconsin to Michigan
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Wisconsin to Illinois
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Wisconsin to Iowa
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Wisconsin to Minnisota
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 8 army units on Maine
+Summary: Benevolent is attempting to put 108 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 136 army units from Maine to New Hampshire
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Connecticut
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 12 army units on New Hampshire
+Summary: Aggressive is attempting to put 2 army units on New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 106 army units from New Hampshire to Quebec
+Summary: Aggressive is attempting to move 11 army units from New York to Connecticut
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 8 army units on New Hampshire
+Summary: Benevolent is attempting to put 50 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 114 army units from New Hampshire to New York
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 14 army units on New York
+Summary: Benevolent is attempting to put 9 army units on South Carolina
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 4 army units from South Carolina to North Carolina
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 114 army units from New York to Quebec
+Summary: Benevolent is attempting to move 4 army units from South Carolina to Georgia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 8 army units on New York
+Summary: Benevolent is attempting to put 117 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 122 army units from New York to Pennsylvania
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Pennsylvania. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Connecticut
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 16 army units on Pennsylvania
+Summary: Aggressive is attempting to put 2 army units on Connecticut
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 122 army units from Pennsylvania to New York
+Summary: Aggressive is attempting to move 11 army units from Connecticut to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 9 army units on Pennsylvania
+Summary: Benevolent is attempting to put 55 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 131 army units from Pennsylvania to West Virginia
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ohio. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 9 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 18 army units on Eastern Mexico
+Summary: Benevolent is attempting to put 126 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 18 army units from Eastern Mexico to Arizona
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 9 army units on West Virginia
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 140 army units from West Virginia to Ohio
+Summary: Aggressive is attempting to move 2 army units from Baja California to Arkansas
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Ohio. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 60 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Ohio
+Summary: Benevolent is attempting to put 18 army units on New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 140 army units from Ohio to Michigan
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Kentucky. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 9 army units on Ohio
+Summary: Benevolent is attempting to put 135 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 149 army units from Ohio to Indiana
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 4 army units on Arizona
+Summary: Aggressive is attempting to put 2 army units on Arkansas
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 22 army units from Arizona to Nevada
+Summary: Aggressive is attempting to move 4 army units from Arkansas to Missouri
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 7 army units on Indiana
+Summary: Benevolent is attempting to put 65 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 156 army units from Indiana to Minnisota
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Minnisota
+Summary: Benevolent is attempting to put 27 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 156 army units from Minnisota to Ontario
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 7 army units on Minnisota
+Summary: Benevolent is attempting to put 144 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 163 army units from Minnisota to Iowa
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Manitoba. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Missouri
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 5 army units from Missouri to Iowa
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 4 army units on Nevada
+Summary: Benevolent is attempting to put 70 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 26 army units from Nevada to Idaho
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 7 army units on Iowa
+Summary: Benevolent is attempting to put 36 army units on New York
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 170 army units from Iowa to Missouri
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on South Dakota. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Idaho
+Summary: Benevolent is attempting to put 153 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 28 army units from Idaho to Montana
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 7 army units on Missouri
+Summary: Aggressive is attempting to put 2 army units on Missouri
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 177 army units from Missouri to Arkansas
-
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Nebraska. This order can only be issued if a player has the bomb card in their hand.
+Summary: Aggressive is attempting to move 3 army units from Missouri to Iowa
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Montana
+Summary: Benevolent is attempting to put 75 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 30 army units from Montana to Wyoming
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 7 army units on Arkansas
+Summary: Benevolent is attempting to put 45 army units on New York
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 184 army units from Arkansas to Mississippi
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Wyoming
+Summary: Benevolent is attempting to put 162 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 32 army units from Wyoming to Colorado
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 7 army units on Mississippi
+Summary: Aggressive is attempting to put 2 army units on Iowa
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 191 army units from Mississippi to Alabama
+Summary: Aggressive is attempting to move 4 army units from Iowa to Minnisota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Colorado
+Summary: Benevolent is attempting to put 80 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 34 army units from Colorado to New Mexico
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 7 army units on Alabama
+Summary: Benevolent is attempting to put 54 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 198 army units from Alabama to Florida
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on New Mexico
+Summary: Benevolent is attempting to put 171 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 36 army units from New Mexico to Utah
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Florida
+Summary: Aggressive is attempting to put 2 army units on Iowa
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 204 army units from Florida to Louisiana
+Summary: Aggressive is attempting to move 3 army units from Iowa to Minnisota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Utah
+Summary: Benevolent is attempting to put 85 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 38 army units from Utah to Minnisota
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Louisiana
+Summary: Benevolent is attempting to put 63 army units on New York
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 210 army units from Louisiana to Texas
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Texas. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Texas
+Summary: Benevolent is attempting to put 180 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 210 army units from Texas to Arkansas
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Louisiana. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Iowa
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Louisiana. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 5 army units from Iowa to Minnisota
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Louisiana. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 90 army units on Saskatchewan
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Louisiana. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Texas
+Summary: Benevolent is attempting to put 72 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 216 army units from Texas to Oklahoma
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 4 army units on Oklahoma
+Summary: Benevolent is attempting to put 189 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 216 army units from Oklahoma to Missouri
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Texas. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Minnisota
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Texas. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 6 army units from Minnisota to Michigan
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Oklahoma
+Summary: Benevolent is attempting to put 95 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 222 army units from Oklahoma to Kansas
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 6 army units on Kansas
+Summary: Benevolent is attempting to put 81 army units on New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 222 army units from Kansas to Missouri
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Oklahoma. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Kansas
+Summary: Benevolent is attempting to put 198 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 228 army units from Kansas to Nebraska
-
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Colorado. This order can only be issued if a player has the bomb card in their hand.
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 8 army units on Nebraska
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 228 army units from Nebraska to Iowa
+Summary: Aggressive is attempting to move 2 army units from Baja California to Louisiana
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Nebraska
+Summary: Benevolent is attempting to put 100 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 234 army units from Nebraska to South Dakota
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 10 army units on South Dakota
+Summary: Benevolent is attempting to put 90 army units on New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 234 army units from South Dakota to Iowa
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on South Dakota
+Summary: Benevolent is attempting to put 207 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 240 army units from South Dakota to North Dakota
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 12 army units on North Dakota
+Summary: Aggressive is attempting to put 2 army units on Louisiana
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 240 army units from North Dakota to South Dakota
+Summary: Aggressive is attempting to move 4 army units from Louisiana to Mississippi
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on North Dakota
+Summary: Benevolent is attempting to put 105 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 246 army units from North Dakota to Saskatchewan
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 14 army units on Saskatchewan
+Summary: Benevolent is attempting to put 99 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 246 army units from Saskatchewan to North Dakota
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Saskatchewan
+Summary: Benevolent is attempting to put 216 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 252 army units from Saskatchewan to Manitoba
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 16 army units on Manitoba
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 252 army units from Manitoba to Ontario
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Manitoba
+Summary: Benevolent is attempting to put 110 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 258 army units from Manitoba to Minnisota
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 18 army units on Minnisota
+Summary: Benevolent is attempting to put 108 army units on New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 235 army units from Minnisota to Ontario
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Minnisota
+Summary: Benevolent is attempting to put 225 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 241 army units from Minnisota to Wyoming
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 20 army units on Wyoming
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 241 army units from Wyoming to South Dakota
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Wyoming
+Summary: Benevolent is attempting to put 115 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 247 army units from Wyoming to Montana
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 22 army units on Montana
+Summary: Benevolent is attempting to put 117 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 247 army units from Montana to Saskatchewan
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on Montana
+Summary: Benevolent is attempting to put 234 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 253 army units from Montana to British Columbia
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Idaho. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 24 army units on British Columbia
+Summary: Benevolent is attempting to put 120 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 253 army units from British Columbia to Montana
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 6 army units on British Columbia
+Summary: Benevolent is attempting to put 126 army units on New York
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 259 army units from British Columbia to Alberta
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Washington. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 26 army units on Alberta
+Summary: Benevolent is attempting to put 243 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 259 army units from Alberta to Saskatchewan
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 5 army units on Alberta
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 264 army units from Alberta to Idaho
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 28 army units on Idaho
+Summary: Benevolent is attempting to put 125 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 264 army units from Idaho to British Columbia
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 5 army units on Idaho
+Summary: Benevolent is attempting to put 135 army units on New York
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 269 army units from Idaho to Utah
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Washington. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 30 army units on Utah
+Summary: Benevolent is attempting to put 252 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 269 army units from Utah to Idaho
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 5 army units on Utah
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 274 army units from Utah to Colorado
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 32 army units on Colorado
+Summary: Benevolent is attempting to put 130 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 274 army units from Colorado to Wyoming
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 5 army units on Colorado
+Summary: Benevolent is attempting to put 144 army units on New York
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 279 army units from Colorado to New Mexico
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on New Mexico. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 34 army units on New Mexico
+Summary: Benevolent is attempting to put 261 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 279 army units from New Mexico to Colorado
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 5 army units on New Mexico
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 284 army units from New Mexico to Western Mexico
-
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Arizona. This order can only be issued if a player has the bomb card in their hand.
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 36 army units on Western Mexico
+Summary: Benevolent is attempting to put 135 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 284 army units from Western Mexico to New Mexico
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 5 army units on Western Mexico
+Summary: Benevolent is attempting to put 153 army units on New York
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 289 army units from Western Mexico to Baja California
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Eastern Mexico. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 38 army units on Baja California
+Summary: Benevolent is attempting to put 270 army units on Massachusetts
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 289 army units from Baja California to Western Mexico
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 5 army units on Baja California
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 294 army units from Baja California to California
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
-Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on California. This order can only be issued if a player has the bomb card in their hand.
-
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 40 army units on California
+Summary: Benevolent is attempting to put 140 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 294 army units from California to Baja California
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Benevolent is attempting to put 162 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Benevolent is attempting to put 279 army units on Massachusetts
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Benevolent is attempting to put 145 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
-Order type: Kevin cheated and aquired California
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Texas
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Benevolent is attempting to put 171 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
-Order type: Kevin cheated and aquired California
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Texas
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Benevolent is attempting to put 288 army units on Massachusetts
 
-Order type: Kevin cheated and aquired California
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Texas
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
-Order type: Kevin cheated and aquired California
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Texas
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Benevolent is attempting to put 150 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
-Order type: Kevin cheated and aquired California
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Texas
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Benevolent is attempting to put 180 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
-Order type: Kevin cheated and aquired California
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Texas
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Benevolent is attempting to put 297 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Benevolent is attempting to put 155 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Benevolent is attempting to put 189 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Oregon
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 306 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Oregon
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 19 army units from Oregon to Washington
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 160 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Washington
+Summary: Benevolent is attempting to put 198 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 22 army units from Washington to British Columbia
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 315 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on British Columbia
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 25 army units from British Columbia to Alberta
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 165 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Alberta
+Summary: Benevolent is attempting to put 207 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 28 army units from Alberta to Saskatchewan
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 324 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Saskatchewan
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 31 army units from Saskatchewan to Manitoba
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 170 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Manitoba
+Summary: Benevolent is attempting to put 216 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 34 army units from Manitoba to Ontario
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 333 army units on Massachusetts
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Ontario
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 37 army units from Ontario to Quebec
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 175 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Quebec
+Summary: Benevolent is attempting to put 225 army units on New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 40 army units from Quebec to New Brunswick
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 342 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on New Brunswick
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 45 army units from New Brunswick to Maine
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 180 army units on Saskatchewan
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Maine
+Summary: Benevolent is attempting to put 234 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 50 army units from Maine to New Hampshire
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 351 army units on Massachusetts
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on New Hampshire
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 55 army units from New Hampshire to Massachusetts
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 185 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Massachusetts
+Summary: Benevolent is attempting to put 243 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 60 army units from Massachusetts to Vermont
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 360 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Vermont
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 65 army units from Vermont to New York
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 190 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on New York
+Summary: Benevolent is attempting to put 252 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 70 army units from New York to Connecticut
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 369 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Connecticut
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 75 army units from Connecticut to Rhode Island
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 195 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Rhode Island
+Summary: Benevolent is attempting to put 261 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 80 army units from Rhode Island to New Jersey
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 378 army units on Massachusetts
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on New Jersey
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 85 army units from New Jersey to Delaware
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 200 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Delaware
+Summary: Benevolent is attempting to put 270 army units on New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 90 army units from Delaware to Pennsylvania
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 387 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Pennsylvania
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 95 army units from Pennsylvania to Maryland
+Summary: Aggressive is attempting to move 2 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 205 army units on Saskatchewan
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Maryland
+Summary: Benevolent is attempting to put 279 army units on New York
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 100 army units from Maryland to Virginia
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 396 army units on Massachusetts
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Virginia
+Summary: Aggressive is attempting to put 2 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 105 army units from Virginia to North Carolina
+Summary: Aggressive is attempting to move 3 army units from Baja California to British Columbia
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 210 army units on Saskatchewan
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Saskatchewan to Alberta
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on North Carolina
+Summary: Benevolent is attempting to put 288 army units on New York
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 110 army units from North Carolina to South Carolina
+Summary: Benevolent is attempting to move 0 army units from New York to New Jersey
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from New York to Pennsylvania
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 405 army units on Massachusetts
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Massachusetts to Rhode Island
 
+State: START
+Tournament Results:
+Map: USA.map
+Draw 
+
+tournament -M USA.map -P Aggressive,Neutral,Neutral,Benevolent -G 1 -D 50
+Valid tournament command.
+Command executed successfully.
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on South Carolina
+Summary: Aggressive is attempting to put 52 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 115 army units from South Carolina to Georgia
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 59 army units on Rhode Island
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 29 army units from Rhode Island to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Georgia
+Summary: Aggressive is attempting to put 2 army units on Texas
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 120 army units from Georgia to Tennessee
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 9 army units on Vermont
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Vermont to New Hampshire
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Vermont to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Tennessee
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 125 army units from Tennessee to Kentucky
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 9 army units on Maine
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 4 army units from Maine to New Hampshire
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Kentucky
+Summary: Aggressive is attempting to put 2 army units on Kansas
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 130 army units from Kentucky to Illinois
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Missouri. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 9 army units on North Dakota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from North Dakota to Minnisota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from North Dakota to South Dakota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Illinois
+Summary: Aggressive is attempting to put 2 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 135 army units from Illinois to Wisconsin
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 9 army units on South Dakota
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to North Dakota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Minnisota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Iowa
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Wisconsin
+Summary: Aggressive is attempting to put 2 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 140 army units from Wisconsin to Michigan
+Summary: Aggressive is attempting to move 52 army units from South Dakota to North Dakota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 9 army units on Nebraska
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Iowa
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Missouri
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Michigan
+Summary: Aggressive is attempting to put 2 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 145 army units from Michigan to Ohio
+Summary: Aggressive is attempting to move 51 army units from North Dakota to Saskatchewan
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Benevolent is attempting to put 18 army units on South Dakota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Minnisota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Iowa
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on Ohio
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 150 army units from Ohio to West Virginia
+Summary: Aggressive is attempting to move 53 army units from Saskatchewan to Manitoba
 
+tournament -M USA.map -P Aggressive,Neutral,Neutral,Benevolent -G 1 -D 50
+Valid tournament command.
+Command executed successfully.
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Aggressive is attempting to put 52 army units on Baja California
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 5 army units on West Virginia
+Summary: Benevolent is attempting to put 59 army units on Rhode Island
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 155 army units from West Virginia to Indiana
+Summary: Benevolent is attempting to move 29 army units from Rhode Island to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on Texas
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Benevolent is attempting to put 9 army units on Vermont
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Vermont to New Hampshire
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Benevolent is attempting to move 3 army units from Vermont to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Benevolent is attempting to put 9 army units on Maine
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Oregon
+Summary: Benevolent is attempting to move 4 army units from Maine to New Hampshire
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on Kansas
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Missouri. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Oregon
+Summary: Benevolent is attempting to put 9 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 19 army units from Oregon to Washington
+Summary: Benevolent is attempting to move 3 army units from North Dakota to Minnisota
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from North Dakota to South Dakota
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on Nebraska
+
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Washington
+Summary: Benevolent is attempting to put 9 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 22 army units from Washington to British Columbia
+Summary: Benevolent is attempting to move 3 army units from South Dakota to North Dakota
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Minnisota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Iowa
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on South Dakota
 
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 52 army units from South Dakota to North Dakota
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Benevolent is attempting to put 9 army units on Nebraska
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Iowa
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Missouri
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+Summary: Aggressive is attempting to move 52 army units from North Dakota to Saskatchewan
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Benevolent is attempting to put 18 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Oregon
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Minnisota
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Iowa
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Baja California
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 16 army units from Baja California to California
+Summary: Aggressive is attempting to move 54 army units from Saskatchewan to Manitoba
 
+tournament -M USA.map -P Aggressive,Neutral,Neutral,Benevolent -G 1 -D 50
+Valid tournament command.
+Command executed successfully.
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Aggressive is attempting to put 52 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Nevada
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Summary: Benevolent is attempting to put 59 army units on Rhode Island
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 19 army units from California to Oregon
+Summary: Benevolent is attempting to move 29 army units from Rhode Island to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 6 army units on California
+Summary: Aggressive is attempting to put 2 army units on Texas
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 5 army units from California to Nevada
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Summary: Benevolent is attempting to put 9 army units on Vermont
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Vermont to New Hampshire
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 8 army units from California to Oregon
+Summary: Benevolent is attempting to move 3 army units from Vermont to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 9 army units on California
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 4 army units from California to Nevada
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Summary: Benevolent is attempting to put 9 army units on Maine
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 7 army units from California to Oregon
+Summary: Benevolent is attempting to move 4 army units from Maine to New Hampshire
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 12 army units on Oregon
+Summary: Aggressive is attempting to put 2 army units on Kansas
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 7 army units from Oregon to Washington
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Oregon
+Summary: Benevolent is attempting to put 9 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 10 army units from Oregon to Washington
+Summary: Benevolent is attempting to move 3 army units from North Dakota to Minnisota
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from North Dakota to South Dakota
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 15 army units on Eastern Mexico
+Summary: Aggressive is attempting to put 2 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 15 army units from Eastern Mexico to Western Mexico
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Missouri. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Washington
+Summary: Benevolent is attempting to put 9 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 13 army units from Washington to British Columbia
+Summary: Benevolent is attempting to move 3 army units from South Dakota to North Dakota
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Minnisota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Iowa
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 18 army units from Western Mexico to Baja California
+Summary: Aggressive is attempting to move 56 army units from South Dakota to North Dakota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on British Columbia
+Summary: Benevolent is attempting to put 9 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 16 army units from British Columbia to Alberta
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Iowa
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Missouri
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Aggressive is attempting to put 2 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Aggressive is attempting to move 55 army units from North Dakota to Saskatchewan
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Minnisota. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Benevolent is attempting to put 18 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Minnisota
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Iowa
+
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Oregon
+Summary: Aggressive is attempting to move 57 army units from Saskatchewan to Manitoba
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Alberta. This order can only be issued if a player has the bomb card in their hand.
 
+tournament -M USA.map -P Aggressive,Neutral,Neutral,Benevolent -G 1 -D 50
+Valid tournament command.
+Command executed successfully.
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Baja California
+Summary: Aggressive is attempting to put 52 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 16 army units from Baja California to California
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Benevolent is attempting to put 59 army units on Rhode Island
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Nevada
+Summary: Benevolent is attempting to move 29 army units from Rhode Island to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Summary: Aggressive is attempting to put 2 army units on Texas
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 19 army units from California to Oregon
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Oklahoma. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Oregon. This order can only be issued if a player has the bomb card in their hand.
+Summary: Aggressive is attempting to destroy half of the army units located on Oklahoma. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 6 army units on Oregon
+Summary: Benevolent is attempting to put 9 army units on Vermont
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Vermont to New Hampshire
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 12 army units from Oregon to Washington
+Summary: Benevolent is attempting to move 3 army units from Vermont to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 8 army units from California to Oregon
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Missouri. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Washington
+Summary: Benevolent is attempting to put 9 army units on Maine
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 15 army units from Washington to British Columbia
+Summary: Benevolent is attempting to move 4 army units from Maine to New Hampshire
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Oregon
+Summary: Aggressive is attempting to put 2 army units on Kansas
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 11 army units from Oregon to Washington
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Missouri. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on British Columbia
+Summary: Benevolent is attempting to put 9 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 18 army units from British Columbia to Alberta
+Summary: Benevolent is attempting to move 3 army units from North Dakota to Minnisota
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Washington. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from North Dakota to South Dakota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Washington
+Summary: Aggressive is attempting to put 2 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 14 army units from Washington to British Columbia
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
 
 Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on British Columbia. This order can only be issued if a player has the bomb card in their hand.
+Summary: Aggressive is attempting to destroy half of the army units located on Missouri. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Alberta
+Summary: Benevolent is attempting to put 9 army units on South Dakota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to North Dakota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Minnisota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 21 army units from Alberta to Saskatchewan
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Iowa
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on British Columbia
+Summary: Aggressive is attempting to put 2 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 17 army units from British Columbia to Alberta
+Summary: Aggressive is attempting to move 50 army units from South Dakota to North Dakota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Saskatchewan
+Summary: Benevolent is attempting to put 9 army units on Nebraska
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Iowa
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 24 army units from Saskatchewan to Manitoba
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Missouri
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Alberta
+Summary: Aggressive is attempting to put 2 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 20 army units from Alberta to Saskatchewan
+Summary: Aggressive is attempting to move 50 army units from North Dakota to Saskatchewan
 
 Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on Saskatchewan. This order can only be issued if a player has the bomb card in their hand.
+Summary: Aggressive is attempting to destroy half of the army units located on Minnisota. This order can only be issued if a player has the bomb card in their hand.
+
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 18 army units on South Dakota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Minnisota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Iowa
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Manitoba
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 27 army units from Manitoba to Ontario
+Summary: Aggressive is attempting to move 52 army units from Saskatchewan to Manitoba
 
+Invalid command in the current state or syntax error.
+tournament -M USA.map -P Aggressive,Neutral,Neutral,Benevolent -G 1 -D 50
+Valid tournament command.
+Command executed successfully.
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Saskatchewan
+Summary: Aggressive is attempting to put 52 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 23 army units from Saskatchewan to Manitoba
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Benevolent is attempting to put 59 army units on Rhode Island
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Benevolent is attempting to move 29 army units from Rhode Island to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on Texas
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 13 army units on Baja California
+Summary: Benevolent is attempting to put 9 army units on Vermont
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Vermont to New Hampshire
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 13 army units from Baja California to California
+Summary: Benevolent is attempting to move 3 army units from Vermont to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Benevolent is attempting to put 9 army units on Maine
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Oregon
+Summary: Benevolent is attempting to move 4 army units from Maine to New Hampshire
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Baja California
+Summary: Aggressive is attempting to put 2 army units on Kansas
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 16 army units from Baja California to California
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
 
 Order type: Order Type: Bomb
-Summary: Liam is attempting to destroy half of the army units located on California. This order can only be issued if a player has the bomb card in their hand.
+Summary: Aggressive is attempting to destroy half of the army units located on Missouri. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on California
+Summary: Benevolent is attempting to put 9 army units on North Dakota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from North Dakota to Minnisota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 16 army units from California to Nevada
+Summary: Benevolent is attempting to move 3 army units from North Dakota to South Dakota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Summary: Aggressive is attempting to put 2 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 19 army units from California to Oregon
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Missouri. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 6 army units on California
+Summary: Benevolent is attempting to put 9 army units on South Dakota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to North Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 9 army units from California to Nevada
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Minnisota
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Iowa
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on California
+Summary: Aggressive is attempting to put 2 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 12 army units from California to Oregon
+Summary: Aggressive is attempting to move 55 army units from South Dakota to North Dakota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 9 army units on Oregon
+Summary: Benevolent is attempting to put 9 army units on Nebraska
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Iowa
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 8 army units from Oregon to Washington
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Missouri
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Oregon
+Summary: Aggressive is attempting to put 2 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 11 army units from Oregon to Washington
+Summary: Aggressive is attempting to move 55 army units from North Dakota to Saskatchewan
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 12 army units on Eastern Mexico
+Summary: Benevolent is attempting to put 18 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 12 army units from Eastern Mexico to Western Mexico
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Minnisota
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Iowa
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Washington
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 14 army units from Washington to British Columbia
+Summary: Aggressive is attempting to move 57 army units from Saskatchewan to Manitoba
 
+tournament -M USA.map -P Aggressive,Neutral,Neutral,Benevolent -G 1 -D 50
+Valid tournament command.
+Command executed successfully.
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 3 army units on Western Mexico
+Summary: Aggressive is attempting to put 52 army units on Baja California
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 15 army units from Western Mexico to Baja California
+Summary: Aggressive is attempting to move 52 army units from Baja California to Texas
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Baja California. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Deploy
+Summary: Benevolent is attempting to put 59 army units on Rhode Island
 
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 29 army units from Rhode Island to Massachusetts
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on British Columbia
+Summary: Aggressive is attempting to put 2 army units on Texas
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 17 army units from British Columbia to Alberta
+Summary: Aggressive is attempting to move 54 army units from Texas to Oklahoma
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Baja California
+Summary: Benevolent is attempting to put 9 army units on Vermont
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from Vermont to New Hampshire
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 17 army units from Baja California to California
+Summary: Benevolent is attempting to move 3 army units from Vermont to Massachusetts
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Alberta
+Summary: Aggressive is attempting to put 2 army units on Oklahoma
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 20 army units from Alberta to Saskatchewan
+Summary: Aggressive is attempting to move 56 army units from Oklahoma to Kansas
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on California
+Summary: Benevolent is attempting to put 9 army units on Maine
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 19 army units from California to Oregon
+Summary: Benevolent is attempting to move 4 army units from Maine to New Hampshire
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Saskatchewan
+Summary: Aggressive is attempting to put 2 army units on Kansas
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 23 army units from Saskatchewan to Manitoba
+Summary: Aggressive is attempting to move 58 army units from Kansas to Nebraska
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Oregon
+Summary: Benevolent is attempting to put 9 army units on North Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 21 army units from Oregon to Washington
+Summary: Benevolent is attempting to move 3 army units from North Dakota to Minnisota
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Washington. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from North Dakota to South Dakota
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Manitoba
+Summary: Aggressive is attempting to put 2 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 26 army units from Manitoba to Ontario
+Summary: Aggressive is attempting to move 60 army units from Nebraska to South Dakota
+
+Order type: Order Type: Bomb
+Summary: Aggressive is attempting to destroy half of the army units located on Missouri. This order can only be issued if a player has the bomb card in their hand.
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on Washington
+Summary: Benevolent is attempting to put 9 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 23 army units from Washington to British Columbia
+Summary: Benevolent is attempting to move 3 army units from South Dakota to North Dakota
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on British Columbia. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Minnisota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 3 army units from South Dakota to Iowa
 
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Ontario
+Summary: Aggressive is attempting to put 2 army units on South Dakota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 29 army units from Ontario to Quebec
+Summary: Aggressive is attempting to move 55 army units from South Dakota to North Dakota
 
 Order type: Order Type: Deploy
-Summary: Kevin is attempting to put 2 army units on British Columbia
+Summary: Benevolent is attempting to put 9 army units on Nebraska
 
 Order type: Order Type: Advance
-Summary: Kevin is attempting to move 25 army units from British Columbia to Alberta
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Iowa
 
-Order type: Order Type: Bomb
-Summary: Kevin is attempting to destroy half of the army units located on Alberta. This order can only be issued if a player has the bomb card in their hand.
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from Nebraska to Missouri
+
+Order type: Order Type: Deploy
+Summary: Aggressive is attempting to put 2 army units on North Dakota
 
+Order type: Order Type: Advance
+Summary: Aggressive is attempting to move 55 army units from North Dakota to Saskatchewan
+
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 3 army units on Quebec
+Summary: Benevolent is attempting to put 18 army units on South Dakota
+
+Order type: Order Type: Advance
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Minnisota
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 32 army units from Quebec to New Brunswick
+Summary: Benevolent is attempting to move 0 army units from South Dakota to Iowa
 
-Order type: Kevin cheated and aquired California
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Western Mexico
-Order type: Kevin cheated and aquired Texas
 Order type: Order Type: Deploy
-Summary: Liam is attempting to put 13 army units on Western Mexico
+Summary: Aggressive is attempting to put 2 army units on Saskatchewan
 
 Order type: Order Type: Advance
-Summary: Liam is attempting to move 13 army units from Western Mexico to Baja California
+Summary: Aggressive is attempting to move 57 army units from Saskatchewan to Manitoba
 
