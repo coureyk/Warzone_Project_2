@@ -18,6 +18,7 @@ class BenevolentPlayer;
 class Territory;
 
 #include <vector>
+#include <set>
 #include "Map.h"
 #include "Order.h"
 #include "Cards.h"
