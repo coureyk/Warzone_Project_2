@@ -28,7 +28,7 @@ class PlayerStrategy {
         
         PlayerStrategy();
         Player& getPlayer() const;
-        void setPlayer(Player& other);
+        void setPlayer(const Player& other);
         string getPSType() const;
         void setPSType(string psType);
 

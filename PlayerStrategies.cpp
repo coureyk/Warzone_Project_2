@@ -10,8 +10,9 @@ Player& PlayerStrategy::getPlayer() const {
     return *player;
 }
 
-void PlayerStrategy::setPlayer(Player& other){
-    this->player = &other;
+void PlayerStrategy::setPlayer(const Player& other){
+    Player p = other;
+	this->player = &p;
 }
 
 string PlayerStrategy::getPSType() const {
