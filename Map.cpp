@@ -92,12 +92,19 @@ void Territory::setOwner(Player* newOwner) {
         }
         //If newOwner is different from the current owner, modify the previous owners' "territories" vectors
         if (owner->getName() != newOwner->getName()) {
-            vector<Territory*>* territories = &(owner->getTerritories()); 
-            for (int i = 0; i < territories->size(); i++) {
-                if ((*territories)[i]->getName() == this->getName()) {
-                    territories->erase(territories->begin() + i); // remove territory from previous owner's territories vector
+            //vector<Territory*>* territories = &(owner->getTerritories()); 
+            // for (int i = 0; i < territories->size(); i++) {
+            //     if ((*territories)[i]->getName() == this->getName()) {
+            //         territories->erase(territories->begin() + i); // remove territory from previous owner's territories vector
+            //     }
+            // }
+            int counter = 0;
+            for (Territory* territory: owner->getTerritories()) {
+                if (territory->getName() == name) {
+                    owner->getTerritories().erase(owner->getTerritories().begin() + counter); // remove territory from previous owner's territories vector
+                    break;
                 }
-                break;
+                counter++;
             }
         }
     }
