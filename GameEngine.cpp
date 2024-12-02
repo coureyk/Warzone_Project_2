@@ -198,15 +198,14 @@ void GameEngine::issueOrderPhase(Player& player){
     
     player.issueOrder(true,false);
     //For multiple deployments to different territories
-   
     while(player.getOrdersList().getNode(0)!= NULL){
+        
         Order* currentOrder = player.getOrdersList().getNode(0)->getElement();
-        //bus fault
+        
         player.getOrdersList().getNode(0)->getElement()->execute(); //possible removal
-        //segmentation fault
         player.getOrdersList().remove(player.getOrdersList().getNode(0));
         //delete currentOrder;
-        //currentOrder = NULL;
+       // currentOrder = NULL;
         
     }
     

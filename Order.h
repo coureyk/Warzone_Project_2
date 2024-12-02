@@ -31,8 +31,6 @@ public:
     //Default Constructor
     Order();
 
-    virtual ~Order();
-
     virtual bool validate() = 0;
     virtual void execute() = 0;
 
@@ -207,7 +205,6 @@ private:
         //Constructors
         Node();
         Node(Order* const element, Node* const prev, Node* const next);
-        ~Node();
 
         Order* getElement() const;
         Node* getPrev() const;
@@ -226,7 +223,6 @@ private:
 public:
     //Default Constructor
     OrdersList();
-    ~OrdersList();
 
     int getSize() const;
     bool isEmpty() const;
