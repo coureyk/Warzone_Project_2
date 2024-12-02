@@ -63,7 +63,7 @@ bool Card::isCardAvailable() const {
 std::vector<Card*>* Deck::cards = new std::vector<Card*>;
 
 Deck::Deck() {
-    for (int i = 0; i < 4; ++i) {
+    for (int i = 0; i < 10; ++i) {
         cards->push_back(new Card(CardType::BOMB));
         cards->push_back(new Card(CardType::REINFORCEMENT));
         cards->push_back(new Card(CardType::BLOCKADE));
