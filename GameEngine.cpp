@@ -28,7 +28,7 @@ void GameEngine::mainGameLoop(){
         for(Player* player: *players){    
             reinforcementPhase(*player);
         }
-
+        cout<<"===================================================="<<endl;
         for(Player* player: *players){
             
             std::cout<<"("<<player->getPS()->getPSType()<<") "<<"Player: "<<player->getName()<<std::endl;
@@ -45,15 +45,18 @@ void GameEngine::mainGameLoop(){
             executeOrdersPhase(*player);
             //players->erase(std::remove_if(players->begin(), players->end(), [](Player* player) { return player->getTerritories().size() == 0; }), players->end());
         }
+        
 
         int counter = 0;
         for(Player* player: *players){
-            if(player->getTerritories().size() == 0)
+            if(player->getTerritories().size() == 0){
                 players->erase(players->begin() + counter);
+                cout<<player->getName()<< " has been removed from the game";
+            }
             counter++;
         }
 
-   
+        cout<<"===================================================="<<endl;
         
    }
 
@@ -96,7 +99,7 @@ void GameEngine::testMainGameLoop() {
     int srcReinforcementPool = 10;
     int tarReinforcementPool = 10;
 
-    PlayerStrategy* strat1 = new NeutralPlayer; 
+    PlayerStrategy* strat1 = new AggressivePlayer; 
     PlayerStrategy* strat2 = new AggressivePlayer;
     
     Player* sourcePlayer = new Player("Kevin", srcTerritories, srcOrdersList, srcHand, srcReinforcementPool,strat1);

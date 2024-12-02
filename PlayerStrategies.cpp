@@ -573,6 +573,30 @@ vector<Territory*>& HumanPlayer::toAttack() {
 vector<Territory*>& HumanPlayer::toDefend() {
     return getPlayer().getTerritories();
 }
+void HumanPlayer::printTerritories(){
+	//Display defendable territories
+				std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
+				for(Territory* territory: toDefend()){
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
+				
+				//Display attackable territories
+				std::cout<<"Attackable Territories: ";
+				for(Territory* territory: toAttack()){
+					if(territory->getOwner() != nullptr)	
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout<<std::endl<<"Neutral Territories: ";
+				for(Territory* territory: toAttack()){
+					if(territory->getOwner() == nullptr)
+						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
+}
 
 
 NeutralPlayer::NeutralPlayer() {
@@ -614,7 +638,30 @@ vector<Territory*>& NeutralPlayer::toDefend() {
 	return getPlayer().getTerritories();
 }
 
+void NeutralPlayer::printTerritories(){
+	//Display defendable territories
+				std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
+				for(Territory* territory: toDefend()){
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
 
+				std::cout << endl;
+				
+				//Display attackable territories
+				std::cout<<"Attackable Territories: ";
+				for(Territory* territory: toAttack()){
+					if(territory->getOwner() != nullptr)	
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout<<std::endl<<"Neutral Territories: ";
+				for(Territory* territory: toAttack()){
+					if(territory->getOwner() == nullptr)
+						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
+}
 
 CheaterPlayer::CheaterPlayer() {
 	setPSType(std::string("Cheater"));
@@ -662,6 +709,31 @@ vector<Territory*>& CheaterPlayer::toAttack() {
 
 vector<Territory*>& CheaterPlayer::toDefend() {
 	return getPlayer().getTerritories();
+}
+
+void CheaterPlayer::printTerritories(){
+	//Display defendable territories
+				std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
+				for(Territory* territory: toDefend()){
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
+				
+				//Display attackable territories
+				std::cout<<"Attackable Territories: ";
+				for(Territory* territory: toAttack()){
+					if(territory->getOwner() != nullptr)	
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout<<std::endl<<"Neutral Territories: ";
+				for(Territory* territory: toAttack()){
+					if(territory->getOwner() == nullptr)
+						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
 }
 
 AggressivePlayer::AggressivePlayer(){
@@ -796,6 +868,31 @@ std::vector<Territory*>& AggressivePlayer::toDefend(){
 	return getPlayer().getTerritories();
 }
 
+void AggressivePlayer::printTerritories(){
+	//Display defendable territories
+				std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
+				for(Territory* territory: toDefend()){
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
+				
+				//Display attackable territories
+				std::cout<<"Attackable Territories: ";
+				for(Territory* territory: toAttack()){
+					if(territory->getOwner() != nullptr)	
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout<<std::endl<<"Neutral Territories: ";
+				for(Territory* territory: toAttack()){
+					if(territory->getOwner() == nullptr)
+						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
+}
+
 BenevolentPlayer::BenevolentPlayer(){
 	setPSType(std::string("Benevolent"));
 }
@@ -877,6 +974,31 @@ std::vector<Territory*>& BenevolentPlayer::toDefend(){
 	return getPlayer().getTerritories();
 }
 
+void BenevolentPlayer::printTerritories(){
+	//Display defendable territories
+				std::cout<<std::endl<<std::endl<<"Defendable Territories: ";
+				for(Territory* territory: toDefend()){
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
+				
+				//Display attackable territories
+				std::cout<<"Attackable Territories: ";
+				for(Territory* territory: toAttack()){
+					if(territory->getOwner() != nullptr)	
+					std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout<<std::endl<<"Neutral Territories: ";
+				for(Territory* territory: toAttack()){
+					if(territory->getOwner() == nullptr)
+						std::cout<<*territory<<" Units: "+std::to_string(territory->getArmies())<<"|";
+				}
+
+				std::cout << endl;
+}
+
 Territory& AggressivePlayer::optimalPath(Territory& startTerritory) {
     // A queue for BFS
     std::queue<Territory*> queue;
@@ -915,6 +1037,7 @@ Territory& AggressivePlayer::optimalPath(Territory& startTerritory) {
         }
 		if(neutralTerritory != nullptr)
 			return *neutralTerritory;
+
     }
 
     // If no suitable territories are found, return the start territory

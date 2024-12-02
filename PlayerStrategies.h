@@ -37,6 +37,7 @@ class PlayerStrategy {
         virtual void issueOrder(bool toDeploy, bool toAttack) = 0;
         virtual vector<Territory*>& toAttack() = 0;
         virtual vector<Territory*>& toDefend() = 0;
+        virtual void printTerritories() = 0;
         
         
 };
@@ -51,6 +52,7 @@ class NeutralPlayer : public PlayerStrategy {
         void issueOrder(bool toDeploy, bool toAdvance);
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
+        void printTerritories();
 };
 
 class CheaterPlayer : public PlayerStrategy {
@@ -61,6 +63,7 @@ class CheaterPlayer : public PlayerStrategy {
         void issueOrder(bool toDeploy, bool toAdvance);
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
+        void printTerritories();
 };
 
 class HumanPlayer : public PlayerStrategy {
@@ -72,6 +75,7 @@ class HumanPlayer : public PlayerStrategy {
 
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
+        void printTerritories();
 };
 
 class AggressivePlayer : public PlayerStrategy {
@@ -85,6 +89,7 @@ class AggressivePlayer : public PlayerStrategy {
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
         Territory& optimalPath(Territory& territory);
+        void printTerritories();
 };
 
 class BenevolentPlayer : public PlayerStrategy {
@@ -98,5 +103,6 @@ class BenevolentPlayer : public PlayerStrategy {
         vector<Territory*>& toAttack();
         vector<Territory*>& toDefend();
         Player& giveMeARandomPlayer();
+        void printTerritories();
 };
 
