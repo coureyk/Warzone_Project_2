@@ -154,7 +154,7 @@ bool CommandProcessor::validate(Command* command) {
         }
 
 
-     //tournament -M USA.map -P Aggressive,Neutral,Neutral,Benevolent -G 1 -D 50
+     //tournament -M USA.map,Asia.map -P Cheater,Benevolent -G 1 -D 10
        
     }
     else if (commandType == "validatemap" && gameEngine->state == GameEngine::MAP_LOADED) {
