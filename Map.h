@@ -54,7 +54,7 @@ public:
     void setNeighbors(vector<Territory*> neighbors);
     void setArmies(const int& armies);
     void setVisitedStatus(const bool& visitedStatus);
-    void setOwner(Player* const owner);
+    void setOwner(Player* owner);
 
     //Service Methods
     void addNeighbor(Territory* const territory);

@@ -83,7 +83,7 @@ void Territory::setVisitedStatus(const bool& visitedStatus) {
     this->wasVisited = visitedStatus;
 }
 
-void Territory::setOwner(Player* const newOwner) {
+void Territory::setOwner(Player* newOwner) {
     
 
     if (owner != NULL) {
@@ -91,8 +91,8 @@ void Territory::setOwner(Player* const newOwner) {
             return;
         }
         //If newOwner is different from the current owner, modify the previous owners' "territories" vectors
-        if (this->getOwner()->getName() != newOwner->getName()) {
-            vector<Territory*>* territories = &(getOwner()->getTerritories()); 
+        if (owner->getName() != newOwner->getName()) {
+            vector<Territory*>* territories = &(owner->getTerritories()); 
             for (int i = 0; i < territories->size(); i++) {
                 if ((*territories)[i]->getName() == this->getName()) {
                     territories->erase(territories->begin() + i); // remove territory from previous owner's territories vector
