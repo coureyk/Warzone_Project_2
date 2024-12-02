@@ -83,7 +83,7 @@ void Territory::setVisitedStatus(const bool& visitedStatus) {
     this->wasVisited = visitedStatus;
 }
 
-void Territory::setOwner(Player* newOwner) {
+void Territory::setOwner(Player* const newOwner) {
     
 
     if (owner != NULL) {
@@ -91,13 +91,12 @@ void Territory::setOwner(Player* newOwner) {
             return;
         }
         //If newOwner is different from the current owner, modify the previous owners' "territories" vectors
-        if (owner->getName() != newOwner->getName()) {
-            vector<Territory*>* territories = &(owner->getTerritories()); 
+        if (this->getOwner()->getName() != newOwner->getName()) {
+            vector<Territory*>* territories = &(getOwner()->getTerritories()); 
             for (int i = 0; i < territories->size(); i++) {
                 if ((*territories)[i]->getName() == this->getName()) {
                     territories->erase(territories->begin() + i); // remove territory from previous owner's territories vector
                 }
-                break;
             }
         }
     }
@@ -396,7 +395,7 @@ bool MapLoader::loadMap() {
             if (numOfTerritories < MAX_TERRITORIES) {
                 std::regex re("([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1}),(\\d+),(\\d+),([a-zA-Z0-9]+([\\._ ][a-zA-Z0-9]+)*[\\.]{0,1}),([^\\n]+)");
                 std::smatch match;
-      
+    
                 if (std::regex_search(line, match, re) == true) {
                     Territory* t = new Territory(match.str(1)); //I'M MODIFIYING THIS TO ADD A PARENT CONTINENT TO A TERRITORY **********************************
                     territories.push_back(t);
@@ -433,7 +432,6 @@ bool MapLoader::loadMap() {
                         territoriesInContinent.back()++;
                     }
                 } else {
-                    cout<<line<<endl;
                     cout << "Map contains invalid Territory specifications" << endl;
                     return false;
                 }
